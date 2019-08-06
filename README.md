@@ -1,14 +1,14 @@
-# hiynn-layout demo &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zhangwei900808/hiynn-layout) [![npm version](https://img.shields.io/npm/v/hiynn-layout.svg)](https://www.npmjs.com/package/hiynn-layout)
+# hiynn-design &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hiynn-com/hiynn-design) [![npm version](https://img.shields.io/npm/v/hiynn-layout.svg)](https://www.npmjs.com/package/hiynn-design)
 
 ## usage
 
 ```
-yarn add hiynn-layout
-npm install hiynn-layout
+yarn add hiynn-design
+npm install hiynn-design
 ```
 
 ```
-import hiynn from 'hiynn-layout'
+import hiynn from 'hiynn-design'
 ```
 
 ## contact me
