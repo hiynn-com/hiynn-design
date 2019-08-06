@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --port 3001 --mode development --open --config webpack.config.review.js"
   },
   "repository": {
     "type": "git",

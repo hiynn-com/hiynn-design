@@ -51,9 +51,6 @@ module.exports = {
       filename: "[name].css"
     }),
     new WebpackMd5Hash()
-    // new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NamedModulesPlugin(),
-    // new webpack.NoEmitOnErrorsPlugin()
   ],
   //压缩js
   optimization: {

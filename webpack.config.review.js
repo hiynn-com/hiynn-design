@@ -40,10 +40,13 @@ module.exports = {
     }),
     //预览
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src/index.html"), //指定要打包的html路径和文件名
+      template: path.join(__dirname, "public/index.html"), //指定要打包的html路径和文件名
       filename: "./index.html" //指定输出路径和文件名
     }),
-    new WebpackMd5Hash()
+    new WebpackMd5Hash(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   //压缩js
   optimization: {
@@ -69,8 +72,5 @@ module.exports = {
         canPrint: true
       })
     ]
-  },
-  devServer: {
-    port: 3001
   }
 };
