@@ -1,5 +1,5 @@
 import React from "react";
 import { render } from "react-dom";
-import MyComponent from "./Demo";
+import MyComponent from "../src/Demo";
 const App = () => <MyComponent />;
 render(<App />, document.getElementById("root"));

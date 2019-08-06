@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open",
-    "transpile": "babel src -d dist --copy-files"
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
