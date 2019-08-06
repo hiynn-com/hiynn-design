@@ -2,7 +2,7 @@
   "name": "hiynn-design",
   "version": "0.0.1",
   "description": "base on react and antd layout framework",
-  "main": "lib/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
@@ -41,9 +41,14 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.2.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
+    "postcss-url": "^8.0.0",
     "react": "^16.8.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

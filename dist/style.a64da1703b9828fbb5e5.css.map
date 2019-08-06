@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/styles/demo.scss"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA,8BAA8B","file":"style.a64da1703b9828fbb5e5.css","sourcesContent":[".demo-container .demo-wrapper {\n  color: red;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start; }\n"],"sourceRoot":""}
