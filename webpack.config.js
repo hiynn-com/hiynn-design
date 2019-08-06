@@ -8,20 +8,20 @@ const WebpackMd5Hash = require("webpack-md5-hash");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-// const resolve = dir => path.join(__dirname, ".", dir);
+const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-  entry: { main: "./src/index.js" },
-  output: {
-    // path: resolve("dist"), // 输出目录
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js" // 输出文件
-    // libraryTarget: "umd" // 采用通用模块定义
-    // library: "hiynn-design", // 库名称
-    // libraryExport: "default", // 兼容 ES6(ES2015) 的模块系统、CommonJS 和 AMD 模块规范
-    // globalObject: "this" // 兼容node和浏览器运行，避免window is not undefined情况
-  },
+  entry: { main: "./src/App.js" },
+  // output: {
+  //   // path: resolve("dist"), // 输出目录
+  //   path: path.resolve(__dirname, "dist"),
+  //   filename: "[name].js" // 输出文件
+  //   // libraryTarget: "umd" // 采用通用模块定义
+  //   // library: "hiynn-design", // 库名称
+  //   // libraryExport: "default", // 兼容 ES6(ES2015) 的模块系统、CommonJS 和 AMD 模块规范
+  //   // globalObject: "this" // 兼容node和浏览器运行，避免window is not undefined情况
+  // },
   devtool: "#source-map",
   module: {
     rules: [
@@ -41,6 +41,8 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
+  // 注意：本地预览的时候要注释，否则报 require undefined
+  // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
   externals: [nodeExternals()],
   plugins: [
     new CleanWebpackPlugin(),
@@ -48,9 +50,8 @@ module.exports = {
       filename: "[name].css"
     }),
     new HtmlWebpackPlugin({
-      title: "Custom template",
-      template: "./public/index.html", //指定要打包的html路径和文件名
-      filename: "../index.html" //指定输出路径和文件名
+      template: path.join(__dirname, "src/index.html"), //指定要打包的html路径和文件名
+      filename: "./index.html" //指定输出路径和文件名
     }),
     new WebpackMd5Hash()
     // new webpack.HotModuleReplacementPlugin(),
@@ -81,5 +82,8 @@ module.exports = {
         canPrint: true
       })
     ]
+  },
+  devServer: {
+    port: 3001
   }
 };

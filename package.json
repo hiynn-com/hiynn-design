@@ -5,7 +5,8 @@
   "main": "dist/main.js",
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -50,11 +51,13 @@
     "postcss-loader": "^3.0.0",
     "postcss-url": "^8.0.0",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
     "webpack-md5-hash": "^0.0.6",
     "webpack-node-externals": "^1.7.2"
   }
