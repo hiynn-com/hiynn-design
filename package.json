@@ -1,6 +1,6 @@
 {
   "name": "hiynn-design",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "base on react and antd layout framework",
   "main": "dist/main.js",
   "scripts": {
