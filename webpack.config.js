@@ -38,6 +38,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
   externals: [nodeExternals()],
   plugins: [
     new CleanWebpackPlugin(),
