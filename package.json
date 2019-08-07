@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/hiynn-com/hiynn-design#readme",
   "dependencies": {
+    "core-js": "3",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
