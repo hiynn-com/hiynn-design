@@ -56,24 +56,6 @@ module.exports = {
   ],
   //压缩js
   optimization: {
-    // runtimeChunk: {
-    //   name: "manifest"
-    // },
-    // splitChunks: {
-    //   cacheGroups: {
-    //     vendor: {
-    //       test: /[\\/]node_modules[\\/]/,
-    //       name: "vendor",
-    //       chunks: "all"
-    //     },
-    //     "async-vendors": {
-    //       test: /[\\/]node_modules[\\/]/,
-    //       minChunks: 2,
-    //       name: "async-vendors",
-    //       chunks: "async"
-    //     }
-    //   }
-    // },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
@@ -96,16 +78,5 @@ module.exports = {
         canPrint: true
       })
     ]
-  },
-  // 该选项是用来polyfill Node中的某些全局变量或者模块，让最初为Node.js环境写的代码可以在其他环境运行
-  node: {
-    // 防止webpack注入setImmediate的ployfill，因为vue原本就包含了它
-    setImmediate: false,
-    // 防止webpack注入到Nodejs的node_modules里，以下模块/变量在客户端不起作用
-    dgram: "empty",
-    fs: "empty",
-    net: "empty",
-    tls: "empty",
-    child_process: "empty"
   }
 };
