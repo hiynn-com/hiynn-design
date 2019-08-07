@@ -1,8 +1,9 @@
 {
   "name": "hiynn-design",
-  "version": "0.1.19",
+  "version": "0.1.18",
   "description": "base on react and antd layout framework",
   "main": "dist/main.js",
+  "module": "lib/index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",

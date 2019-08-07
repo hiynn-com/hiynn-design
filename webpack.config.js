@@ -16,6 +16,7 @@ module.exports = {
   output: {
     // path: resolve("dist"), // 输出目录
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist/",
     filename: "[name].js", // 输出文件
     //不加下面几行，被引用会被报错
     libraryTarget: "umd", // 采用通用模块定义
