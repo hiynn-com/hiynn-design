@@ -54,24 +54,24 @@ module.exports = {
   ],
   //压缩js
   optimization: {
-    runtimeChunk: {
-      name: "manifest"
-    },
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: "vendor",
-          chunks: "all"
-        },
-        "async-vendors": {
-          test: /[\\/]node_modules[\\/]/,
-          minChunks: 2,
-          name: "async-vendors",
-          chunks: "async"
-        }
-      }
-    },
+    // runtimeChunk: {
+    //   name: "manifest"
+    // },
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: "vendor",
+    //       chunks: "all"
+    //     },
+    //     "async-vendors": {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       minChunks: 2,
+    //       name: "async-vendors",
+    //       chunks: "async"
+    //     }
+    //   }
+    // },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
