@@ -12,7 +12,8 @@ const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-  entry: { main: "./lib/index.js" },
+  mode: "production",
+  entry: { main: "./src/index.js" },
   output: {
     // path: resolve("dist"), // 输出目录
     path: path.resolve(__dirname, "dist"),

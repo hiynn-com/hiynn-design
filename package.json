@@ -3,10 +3,12 @@
   "version": "0.1.39",
   "description": "base on react and antd layout framework",
   "main": "dist/main.js",
-  "module": "lib/index.js",
+  "module": "src/index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel-cli src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel-cli src --out-dir es",
     "start": "webpack-dev-server --port 3001 --mode development --open --config webpack.config.review.js"
   },
   "repository": {
@@ -40,12 +42,12 @@
     "@babel/runtime": "^7.5.5",
     "antd": "^3.20.7",
     "autoprefixer": "^9.6.1",
-    "babel": "^6.23.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^5.2.0",
     "css-loader": "^3.1.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.2.1",
