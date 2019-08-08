@@ -3,12 +3,12 @@
   "version": "0.1.41",
   "description": "base on react and antd layout framework",
   "main": "dist/main.js",
-  "module": "src/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel-cli src --out-dir lib",
-    "build:es": "cross-env BABEL_ENV=es babel-cli src --out-dir es",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "start": "webpack-dev-server --port 3001 --mode development --open --config webpack.config.review.js"
   },
   "repository": {
@@ -34,6 +34,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
