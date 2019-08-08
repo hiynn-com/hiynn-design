@@ -23,7 +23,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _antd = require("antd");
 
-require("./style/demo2.scss");
+require("./style/index.scss");
 
 var Demo2 = function (_Component) {
   (0, _inherits2["default"])(Demo2, _Component);

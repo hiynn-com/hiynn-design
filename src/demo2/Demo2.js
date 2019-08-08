@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "antd";
-import "./style/demo2.scss";
+import "./style/index.scss";
 
 class Demo2 extends Component {
   render() {
