@@ -3,26 +3,28 @@ import React, { Component } from "react";
 import { Button } from "antd";
 import "./style/index.scss";
 
-var Demo2 =
+var Demo =
 /*#__PURE__*/
 function (_Component) {
-  _inheritsLoose(Demo2, _Component);
+  _inheritsLoose(Demo, _Component);
 
-  function Demo2() {
+  function Demo() {
     return _Component.apply(this, arguments) || this;
   }
 
-  var _proto = Demo2.prototype;
+  var _proto = Demo.prototype;
 
   _proto.render = function render() {
     return React.createElement("div", {
       className: "demo-container"
-    }, React.createElement(Button, {
+    }, React.createElement("div", {
+      className: "demo-wrapper"
+    }, "this is my demo wrapper"), React.createElement(Button, {
       type: "primary"
-    }, "this is demo2 component"));
+    }, "this is demo component"));
   };
 
-  return Demo2;
+  return Demo;
 }(Component);
 
-export default Demo2;
+export default Demo;

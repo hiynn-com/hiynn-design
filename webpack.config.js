@@ -48,7 +48,9 @@ module.exports = {
   // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
   externals: [nodeExternals()],
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, "dist"), path.resolve(__dirname, "es"), path.resolve(__dirname, "lib")]
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),

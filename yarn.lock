@@ -1483,6 +1483,13 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
+babel-plugin-add-module-exports@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/babel-plugin-add-module-exports/download/babel-plugin-add-module-exports-1.0.2.tgz#96cd610d089af664f016467fc4567c099cce2d9c"
+  integrity sha1-ls1hDQia9mTwFkZ/xFZ8CZzOLZw=
+  optionalDependencies:
+    chokidar "^2.0.4"
+
 babel-plugin-check-es2015-constants@^6.22.0:
   version "6.22.0"
   resolved "https://registry.npmjs.org/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
@@ -1531,6 +1538,13 @@ babel-plugin-transform-async-to-generator@^6.22.0:
     babel-helper-remap-async-to-generator "^6.24.1"
     babel-plugin-syntax-async-functions "^6.8.0"
     babel-runtime "^6.22.0"
+
+babel-plugin-transform-commonjs@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.npm.taobao.org/babel-plugin-transform-commonjs/download/babel-plugin-transform-commonjs-1.1.5.tgz#ba869f27d41318d723eec4700f29add061bb1cba"
+  integrity sha1-uoafJ9QTGNcj7sRwDymt0GG7HLo=
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
 
 babel-plugin-transform-es2015-arrow-functions@^6.22.0:
   version "6.22.0"

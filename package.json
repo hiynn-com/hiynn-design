@@ -5,10 +5,11 @@
   "main": "dist/main.js",
   "module": "lib/index.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "build:dev": "cross-env BABEL_ENV=umd webpack --config webpack.config.review.js",
+    "build:umd": "cross-env BABEL_ENV=umd webpack --config webpack.config.js",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:prod": "npm run build:umd && npm run build:commonjs && npm run build:es",
     "start": "webpack-dev-server --port 3001 --mode development --open --config webpack.config.review.js"
   },
   "repository": {
@@ -44,7 +45,9 @@
     "antd": "^3.20.7",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-commonjs": "^1.1.5",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",

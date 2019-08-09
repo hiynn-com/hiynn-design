@@ -12,6 +12,7 @@ const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
+  mode: "development",
   // 预览
   entry: { main: "./public/App.js" },
   devtool: "#source-map",
