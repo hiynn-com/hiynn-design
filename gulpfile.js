@@ -10,26 +10,28 @@ const size = require("gulp-filesize");
 const cssnano = require("gulp-cssnano");
 
 const resolve = dir => path.join(__dirname, ".", dir);
-const libDir = resolve("./lib");
-const esDir = resolve("./es");
-const sassDir = resolve("./src/**/*.scss");
-const styleDir = resolve("./src/**/index.scss");
+const libDir = resolve("lib");
+const esDir = resolve("es");
+const sassDir = resolve("src/**/*.scss");
+const styleDir = resolve("src/**/index.scss");
 
-gulp.task("copySass", () => {
+gulp.task("copy-sass", () => {
   return gulp
     .src(sassDir)
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
     .pipe(gulp.dest(esDir));
 });
 
-gulp.task("copyCss", () => {
+gulp.task("compile-sass", () => {
   return gulp
     .src(sassDir)
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(size())
     .pipe(cssnano())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
     .pipe(gulp.dest(esDir));
 });
@@ -58,4 +60,4 @@ gulp.task("compile-with-lib", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copySass", "copyCss")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "compile-sass")));
