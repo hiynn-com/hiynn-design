@@ -1,1 +1,0 @@
-{"version":3,"sources":["demo/style/index.scss"],"names":[],"mappings":"AACE;IACE,UAAU;IACV,aAAa;IACb,mBAAmB;IACnB,2BAA2B;EAC7B","file":"index.scss","sourcesContent":[".demo-container {\n  .demo-wrapper {\n    color: red;\n    display: flex;\n    align-items: center;\n    justify-content: flex-start;\n  }\n}\n"]}
