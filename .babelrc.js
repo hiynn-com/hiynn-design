@@ -9,17 +9,17 @@ switch (babel_env) {
   case "commonjs":
     loose = true;
     modules = "cjs";
-    useESModules: false;
+    useESModules = false;
     break;
   case "es":
     loose = true;
     modules = false;
-    useESModules: true;
+    useESModules = true;
     break;
   case "umd":
     loose = false;
     modules = false;
-    useESModules: false;
+    useESModules = false;
     break;
 }
 
