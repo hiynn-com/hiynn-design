@@ -42,6 +42,7 @@
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/preset-stage-2": "^7.0.0",
     "@babel/runtime": "^7.5.5",
+    "ansi-styles": "^4.0.0",
     "antd": "^3.20.7",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
@@ -74,5 +75,11 @@
     "webpack-dev-server": "^3.7.2",
     "webpack-md5-hash": "^0.0.6",
     "webpack-node-externals": "^1.7.2"
-  }
+  },
+  "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.less"
+  ]
 }

@@ -1,3 +1,5 @@
+const style = require("ansi-styles");
+
 let babel_env = process.env["BABEL_ENV"];
 let loose = false,
   modules = false,
@@ -21,7 +23,7 @@ switch (babel_env) {
     break;
 }
 
-console.log("------ babel_env ------", babel_env);
+console.log(`${style.bgBlue.open}${style.white.open}------ babel ${babel_env} ------ ${style.black.close} ${style.bgColor.close}`);
 
 const presets = [["@babel/env", { loose, modules }], "@babel/preset-react"];
 const plugins = [["@babel/plugin-transform-runtime", { useESModules }]];
