@@ -10,20 +10,18 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
+const { version, name, description } = require("./package.json");
 
 module.exports = {
-  mode: "production",
-  entry: { main: "./src/index.js" },
+  entry: { [name]: "./src/index.js" },
   output: {
     // path: resolve("dist"), // 输出目录
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js", // 输出文件
+    filename: "[name].min.js",
+    umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
     //不加下面几行，被引用会被报错
     libraryTarget: "umd", // 采用通用模块定义
-    library: {
-      root: "hnd",
-      commonjs: "hiynn-design"
-    }
+    library: name
   },
   devtool: "#source-map",
   module: {
@@ -42,7 +40,8 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    enforceExtension: false,
+    extensions: [".js", ".jsx", ".json", ".less", ".css"]
   },
   // 注意：本地预览的时候要注释，否则报 require undefined
   // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
@@ -69,12 +68,7 @@ module.exports = {
         cssProcessor: require("cssnano"),
         cssProcessorOptions: {
           discardComments: { removeAll: true },
-          // 避免 cssnano 重新计算 z-index
           safe: true,
-          // cssnano 集成了autoprefixer的功能
-          // 会使用到autoprefixer进行无关前缀的清理
-          // 关闭autoprefixer功能
-          // 使用postcss的autoprefixer功能
           autoprefixer: false
         },
         canPrint: true
