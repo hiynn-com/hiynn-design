@@ -5,3 +5,4 @@ export default {
   Demo: Demo,
   Demo2: Demo2
 };
+//# sourceMappingURL=index.js.map

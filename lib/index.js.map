@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["Demo","Demo2"],"mappings":";;;;;;;AAAA;;;;AACA;;;eAGe;AAAEA,EAAAA,IAAI,EAAJA,gBAAF;AAAQC,EAAAA,KAAK,EAALA;AAAR,C","sourcesContent":["import Demo from \"./demo\";\nimport Demo2 from \"./demo2\";\n\nexport { Demo, Demo2 };\nexport default { Demo, Demo2 };\n"],"file":"index.js"}
