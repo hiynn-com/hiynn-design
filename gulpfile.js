@@ -22,10 +22,9 @@ gulp.task("copy-sass", () => {
   return gulp
     .src(sassDir)
     .pipe(sourcemaps.init())
-
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
-    .pipe(gulp.dest(esDir))
-    .pipe(sourcemaps.write());
+    .pipe(gulp.dest(esDir));
 });
 
 gulp.task("compile-sass", () => {
@@ -35,10 +34,9 @@ gulp.task("compile-sass", () => {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cssnano())
-
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
-    .pipe(gulp.dest(esDir))
-    .pipe(sourcemaps.write());
+    .pipe(gulp.dest(esDir));
 });
 
 gulp.task("dist", () => {
