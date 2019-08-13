@@ -1,6 +1,7 @@
 import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
 import React, { Component } from "react";
 import { Button } from "antd";
+import "./style/index.scss";
 
 var Demo =
 /*#__PURE__*/

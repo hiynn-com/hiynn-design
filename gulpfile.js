@@ -3,13 +3,16 @@ const path = require("path");
 const minifycss = require("gulp-minify-css");
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
+const concat = require("gulp-concat");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const size = require("gulp-filesize");
 const cssnano = require("gulp-cssnano");
+const { name } = require("./package.json");
 
 const resolve = dir => path.join(__dirname, ".", dir);
+const distDir = resolve("dist");
 const libDir = resolve("lib");
 const esDir = resolve("es");
 const sassDir = resolve("src/**/*.scss");
@@ -19,9 +22,10 @@ gulp.task("copy-sass", () => {
   return gulp
     .src(sassDir)
     .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write("."))
+
     .pipe(gulp.dest(libDir))
-    .pipe(gulp.dest(esDir));
+    .pipe(gulp.dest(esDir))
+    .pipe(sourcemaps.write());
 });
 
 gulp.task("compile-sass", () => {
@@ -31,9 +35,34 @@ gulp.task("compile-sass", () => {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cssnano())
-    .pipe(sourcemaps.write("."))
+
     .pipe(gulp.dest(libDir))
-    .pipe(gulp.dest(esDir));
+    .pipe(gulp.dest(esDir))
+    .pipe(sourcemaps.write());
+});
+
+gulp.task("dist", () => {
+  return gulp
+    .src(sassDir)
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(concat(`${name}.css`))
+    .pipe(size())
+    .pipe(gulp.dest(distDir))
+    .pipe(sourcemaps.write())
+    .pipe(rename(`${name}.css.map`))
+    .pipe(size())
+    .pipe(gulp.dest(distDir))
+
+    .pipe(cssnano())
+    .pipe(concat(`${name}.min.css`))
+    .pipe(size())
+    .pipe(gulp.dest(distDir))
+    .pipe(sourcemaps.write())
+    .pipe(rename(`${name}.min.css.map`))
+    .pipe(size())
+    .pipe(gulp.dest(distDir));
 });
 
 gulp.task("compile-with-es", () => {
@@ -60,4 +89,4 @@ gulp.task("compile-with-lib", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "compile-sass")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "compile-sass", "dist")));
