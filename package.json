@@ -10,10 +10,11 @@
     "es"
   ],
   "scripts": {
-    "build:dev": "cross-env BABEL_ENV=umd webpack --mode development --config webpack.config.js",
-    "build:umd": "cross-env BABEL_ENV=umd webpack --mode production --config webpack.config.js",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --source-maps",
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --source-maps",
+    "clean": "rimraf dist lib es",
+    "build:dev": "cross-env BABEL_ENV=umd webpack --mode development --config webpack.config.test.js",
+    "build:umd": "cross-env BABEL_ENV=umd webpack --mode production --config webpack.config.umd.js",
+    "build:commonjs": "rimraf lib && cross-env BABEL_ENV=commonjs babel src --out-dir lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src --out-dir es --source-maps",
     "build:css": "gulp compile",
     "build": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css",
     "start": "webpack-dev-server --port 3001 --mode development --open --config webpack.config.review.js"

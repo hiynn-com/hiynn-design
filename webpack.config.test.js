@@ -10,19 +10,11 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
-const { version, name, description } = require("./package.json");
 
 module.exports = {
-  entry: { [name]: "./src/index.js" },
-  output: {
-    // path: resolve("dist"), // 输出目录
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].min.js",
-    umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
-    //不加下面几行，被引用会被报错
-    libraryTarget: "umd", // 采用通用模块定义
-    library: name
-  },
+  mode: "development",
+  // 预览
+  entry: { main: "./public/App.js" },
   devtool: "#source-map",
   module: {
     rules: [
@@ -40,20 +32,24 @@ module.exports = {
     ]
   },
   resolve: {
-    enforceExtension: false,
-    extensions: [".js", ".jsx", ".json", ".less", ".css"]
+    extensions: [".js", ".jsx"]
   },
-  // 注意：本地预览的时候要注释，否则报 require undefined
-  // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
-  externals: [nodeExternals()],
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, "dist"), path.resolve(__dirname, "es"), path.resolve(__dirname, "lib")]
+      cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, "dist")]
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
-    new WebpackMd5Hash()
+    //预览
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "public/index.html"), //指定要打包的html路径和文件名
+      filename: "./index.html" //指定输出路径和文件名
+    }),
+    new WebpackMd5Hash(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   //压缩js
   optimization: {
@@ -68,19 +64,16 @@ module.exports = {
         cssProcessor: require("cssnano"),
         cssProcessorOptions: {
           discardComments: { removeAll: true },
+          // 避免 cssnano 重新计算 z-index
           safe: true,
+          // cssnano 集成了autoprefixer的功能
+          // 会使用到autoprefixer进行无关前缀的清理
+          // 关闭autoprefixer功能
+          // 使用postcss的autoprefixer功能
           autoprefixer: false
         },
         canPrint: true
       })
     ]
-  },
-  node: {
-    setImmediate: false,
-    dgram: "empty",
-    fs: "empty",
-    net: "empty",
-    tls: "empty",
-    child_process: "empty"
   }
 };
