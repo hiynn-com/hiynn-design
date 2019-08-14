@@ -14,7 +14,7 @@ const isProd = process.env.NODE_ENV === "production";
 const { version, name, description } = require("./package.json");
 
 module.exports = {
-  entry: { [name]: "./src/index.js" },
+  entry: { [name]: "./components/index.js" },
   output: {
     // path: resolve("dist"), // 输出目录
     path: path.resolve(__dirname, "dist"),

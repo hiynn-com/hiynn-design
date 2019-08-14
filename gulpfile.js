@@ -10,15 +10,15 @@ const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const size = require("gulp-filesize");
-const cssnano = require("gulp-cssnano");
+// const cssnano = require("gulp-cssnano");
 const { name } = require("./package.json");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const distDir = resolve("dist");
 const libDir = resolve("lib");
 const esDir = resolve("es");
-const sassDir = resolve("src/**/*.scss");
-const indexJsDir = resolve("src/**/style/index.js");
+const sassDir = resolve("components/**/*.scss");
+const indexJsDir = resolve("components/**/style/index.js");
 
 // 复制 sass 文件到 lib es 文件夹下
 gulp.task("copy-sass", () => {
@@ -31,7 +31,7 @@ gulp.task("copy-sass", () => {
 });
 
 // 根据 index.js 创建一个全新的 css.js 供按需加载 styel:'css' 使用
-gulp.task("copy-indexjs", () => {
+gulp.task("replace-indexjs", () => {
   return gulp
     .src(indexJsDir)
     .pipe(sourcemaps.init())
@@ -54,7 +54,7 @@ gulp.task("compile-sass", () => {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(cssnano())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
     .pipe(gulp.dest(esDir));
@@ -104,4 +104,4 @@ gulp.task("compile-with-lib", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "copy-indexjs", "compile-sass", "dist-css")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "replace-indexjs", "compile-sass", "dist-css")));
