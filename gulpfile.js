@@ -1,7 +1,7 @@
 const fs = require("fs");
 const gulp = require("gulp");
 const path = require("path");
-const minifycss = require("gulp-minify-css");
+const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
 const concat = require("gulp-concat");
@@ -61,27 +61,22 @@ gulp.task("compile-sass", () => {
 });
 
 // 编译 sass 到 dist 文件夹下
-gulp.task("dist", () => {
+gulp.task("dist-css", () => {
   return gulp
     .src(sassDir)
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
+
     .pipe(concat(`${name}.css`))
     .pipe(size())
-    .pipe(gulp.dest(distDir))
-    .pipe(sourcemaps.write())
-    .pipe(rename(`${name}.css.map`))
-    .pipe(size())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(distDir))
 
-    .pipe(cssnano())
     .pipe(concat(`${name}.min.css`))
     .pipe(size())
-    .pipe(gulp.dest(distDir))
-    .pipe(sourcemaps.write())
-    .pipe(rename(`${name}.min.css.map`))
-    .pipe(size())
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(distDir));
 });
 
@@ -91,7 +86,7 @@ gulp.task("compile-with-es", () => {
     .pipe(sourcemaps.init())
     .pipe(postcss([require("precss"), require("autoprefixer")]))
     .pipe(rename({ extname: ".css" }))
-    .pipe(minifycss())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(esDir));
 });
@@ -103,10 +98,10 @@ gulp.task("compile-with-lib", () => {
       .pipe(sourcemaps.init())
       .pipe(postcss([require("precss"), require("autoprefixer")]))
       // .pipe(rename({ extname: ".css" }))
-      .pipe(minifycss())
+      .pipe(cleanCSS())
       .pipe(sourcemaps.write("."))
       .pipe(gulp.dest(libDir))
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "copy-indexjs", "compile-sass", "dist")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "copy-indexjs", "compile-sass", "dist-css")));

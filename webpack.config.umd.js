@@ -36,8 +36,21 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        // exclude: /(es|lib|dist)/,
-        use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
@@ -60,6 +73,16 @@ module.exports = {
   ],
   //压缩js
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.scss$/,
+          chunks: "all",
+          enforce: true
+        }
+      }
+    },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
