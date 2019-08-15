@@ -11,14 +11,15 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
-const { version, name, description } = require("./package.json");
+const { version, name, description } = require("../package.json");
+const distDir = path.join(process.cwd(), "dist");
 
 module.exports = {
   mode: "production",
   entry: { [name]: "./components/index.js" },
   output: {
     // path: resolve("dist"), // 输出目录
-    path: path.resolve(__dirname, "dist"),
+    path: distDir,
     filename: "[name].min.js",
     umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
     //不加下面几行，被引用会被报错
@@ -64,7 +65,7 @@ module.exports = {
   externals: [nodeExternals()],
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, "dist")]
+      cleanOnceBeforeBuildPatterns: [distDir]
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css"

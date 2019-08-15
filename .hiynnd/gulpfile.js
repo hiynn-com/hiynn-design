@@ -11,14 +11,14 @@ const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const size = require("gulp-filesize");
 // const cssnano = require("gulp-cssnano");
-const { name } = require("./package.json");
+const { name } = require("../package.json");
 
 const resolve = dir => path.join(__dirname, ".", dir);
-const distDir = resolve("dist");
-const libDir = resolve("lib");
-const esDir = resolve("es");
-const sassDir = resolve("components/**/*.scss");
-const indexJsDir = resolve("components/**/style/index.js");
+const distDir = resolve("../dist");
+const libDir = resolve("../lib");
+const esDir = resolve("../es");
+const sassDir = resolve("../components/**/*.scss");
+const indexJsDir = resolve("../components/**/style/index.js");
 
 // 复制 sass 文件到 lib es 文件夹下
 gulp.task("copy-sass", () => {

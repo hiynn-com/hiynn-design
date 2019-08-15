@@ -1,3 +1,4 @@
+const fs = require("fs");
 const path = require("path");
 const webpack = require("webpack");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -10,24 +11,35 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
+const { version, name, description } = require("../package.json");
+const distDir = path.join(process.cwd(), "dist");
 
 module.exports = {
-  mode: "development",
-  // 预览
-  entry: { main: "./public/App.js" },
+  mode: "production",
+  entry: { [name]: "./components/index.js" },
+  output: {
+    // path: resolve("dist"), // 输出目录
+    path: distDir,
+    filename: "[name].min.js",
+    umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
+    //不加下面几行，被引用会被报错
+    libraryTarget: "umd", // 采用通用模块定义
+    library: name
+  },
   devtool: "#source-map",
   module: {
     rules: [
       {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          // fallback to style-loader in development
-          {
-            loader: "style-loader",
-            options: {
-              sourceMap: true
-            }
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -41,38 +53,38 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
       }
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    enforceExtension: false,
+    extensions: [".js", ".jsx", ".json", ".less", ".css"]
   },
+  // 注意：本地预览的时候要注释，否则报 require undefined
+  // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
+  externals: [nodeExternals()],
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, "dist")]
+      cleanOnceBeforeBuildPatterns: [distDir]
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
-    //预览
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "public/index.html"), //指定要打包的html路径和文件名
-      filename: "./index.html" //指定输出路径和文件名
-    }),
     new WebpackMd5Hash(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.BannerPlugin(` \n ${name} v${version} \n ${description} ${fs.readFileSync(path.join(process.cwd(), "LICENSE"))}`)
   ],
   //压缩js
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.scss$/,
+          chunks: "all",
+          enforce: true
+        }
+      }
+    },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
@@ -84,16 +96,19 @@ module.exports = {
         cssProcessor: require("cssnano"),
         cssProcessorOptions: {
           discardComments: { removeAll: true },
-          // 避免 cssnano 重新计算 z-index
           safe: true,
-          // cssnano 集成了autoprefixer的功能
-          // 会使用到autoprefixer进行无关前缀的清理
-          // 关闭autoprefixer功能
-          // 使用postcss的autoprefixer功能
           autoprefixer: false
         },
         canPrint: true
       })
     ]
+  },
+  node: {
+    setImmediate: false,
+    dgram: "empty",
+    fs: "empty",
+    net: "empty",
+    tls: "empty",
+    child_process: "empty"
   }
 };
