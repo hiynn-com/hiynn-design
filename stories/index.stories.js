@@ -9,8 +9,8 @@ import { Button, Welcome } from "@storybook/react/demo";
 storiesOf("欢迎", module).add("使用storybook", () => <Welcome showApp={linkTo("Button")} />);
 
 storiesOf("按钮", module)
-  .add("with text", () => <Button onClick={action("clicked")}>Hello Button</Button>)
-  .add("with some emoji", () => (
+  .add("文本", () => <Button onClick={action("clicked")}>Hello Button</Button>)
+  .add("表情包", () => (
     <Button onClick={action("clicked")}>
       <span role="img" aria-label="so cool">
         😀 😎 👍 💯
