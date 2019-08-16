@@ -32,6 +32,7 @@ if (babel_env) {
 //只引入对应环境必须的 "babel-polyfill" 的子模块，减少了多余的代码引入
 const presets = [["@babel/preset-env", { loose, modules }], "@babel/preset-react"];
 const plugins = [
+  "@babel/plugin-proposal-class-properties",
   "@babel/plugin-proposal-object-rest-spread",
   ["@babel/plugin-transform-runtime", { useESModules }],
   [

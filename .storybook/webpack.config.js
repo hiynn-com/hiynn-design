@@ -1,5 +1,3 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 // you can use this file to add your custom webpack plugins, loaders and anything you like.
 // This is just the basic way to add additional webpack configurations.
 // For more information refer the docs: https://storybook.js.org/configurations/custom-webpack-config
@@ -24,6 +22,17 @@ module.exports = {
           },
           {
             loader: "sass-loader"
+          }
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|ogg|mp3)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10 * 1000
+            }
           }
         ]
       }

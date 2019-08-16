@@ -1,5 +1,5 @@
-import Demo from "./demo";
-import Demo2 from "./demo2";
+import HdLayout from "./hd-layout";
+import HdMaster from "./hd-master";
 
-export { Demo, Demo2 };
-export default { Demo, Demo2 };
+export { HdLayout, HdMaster };
+export default { HdLayout, HdMaster };

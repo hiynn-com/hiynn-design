@@ -1,8 +1,8 @@
-import Demo from "./demo";
-import Demo2 from "./demo2";
-export { Demo, Demo2 };
+import HdLayout from "./hd-layout";
+import HdMaster from "./hd-master";
+export { HdLayout, HdMaster };
 export default {
-  Demo: Demo,
-  Demo2: Demo2
+  HdLayout: HdLayout,
+  HdMaster: HdMaster
 };
 //# sourceMappingURL=index.js.map

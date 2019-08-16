@@ -15,7 +15,7 @@ const distDir = path.join(process.cwd(), "dist");
 module.exports = {
   mode: "development",
   // 预览
-  entry: { main: "./src/App.js" },
+  entry: { main: "./src/index.js" },
   devtool: "#source-map",
   module: {
     rules: [
