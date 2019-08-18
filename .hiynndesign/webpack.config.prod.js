@@ -9,32 +9,54 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const postcssCssNext = require("postcss-cssnext");
 const postcssImport = require("postcss-import");
+const postcssPresetEnv = require("postcss-preset-env");
+
+const { version, name, description } = require("../package.json");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
-const distDir = path.join(process.cwd(), "dist");
-console.log("--- process.cwd ---", process.cwd());
+const buildDir = path.join(process.cwd(), "build");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   // 预览
   entry: { main: "./src/index.js" },
+  output: {
+    // path: resolve("dist"), // 输出目录
+    path: buildDir,
+    filename: `static/js/${name}.min.js`,
+    umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
+    //不加下面几行，被引用会被报错
+    libraryTarget: "umd", // 采用通用模块定义
+    library: [name]
+  },
   devtool: "#source-map",
   module: {
     rules: [
       {
         test: /\.(pc|le|sc|c)ss$/,
         use: [
-          // fallback to style-loader in development
-          {
-            loader: "style-loader"
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { importLoaders: 1 }
+            options: { importLoaders: 1, sourceMap: true }
           },
           {
-            loader: "postcss-loader"
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              sourceMap: true,
+              plugins: () => [
+                postcssPresetEnv({
+                  stage: 3,
+                  features: {
+                    "custom-properties": true,
+                    "nesting-rules": true
+                  },
+                  browsers: "last 2 versions"
+                })
+              ]
+            }
           }
         ]
       },
@@ -61,12 +83,15 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
+  // 注意：本地预览的时候要注释，否则报 require undefined
+  // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
+  // externals: [nodeExternals()],
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [distDir]
+      cleanOnceBeforeBuildPatterns: [buildDir]
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css"
+      filename: `static/css/${name}.min.css`
     }),
     //预览
     new HtmlWebpackPlugin({
@@ -80,6 +105,16 @@ module.exports = {
   ],
   //压缩js
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.pcss$/,
+          chunks: "all",
+          enforce: true
+        }
+      }
+    },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
@@ -90,6 +125,8 @@ module.exports = {
         assetNameRegExp: /\.css\.*(?!.*map)/g, //注意不要写成 /\.css$/g
         cssProcessor: require("cssnano"),
         cssProcessorOptions: {
+          //生成.css.map 文件
+          map: true,
           discardComments: { removeAll: true },
           // 避免 cssnano 重新计算 z-index
           safe: true,

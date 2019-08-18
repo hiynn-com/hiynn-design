@@ -12,19 +12,19 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 const { version, name, description } = require("../package.json");
-const distDir = path.join(process.cwd(), "dist");
+const buildDir = path.join(process.cwd(), "build");
 
 module.exports = {
-  mode: "production",
-  entry: { [name]: "./components/index.js" },
+  mode: "development",
+  entry: { [name]: "./src/index.js" },
   output: {
     // path: resolve("dist"), // 输出目录
-    path: distDir,
+    path: buildDir,
     filename: "[name].min.js",
     umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
     //不加下面几行，被引用会被报错
     libraryTarget: "umd", // 采用通用模块定义
-    library: name
+    library: [name]
   },
   devtool: "#source-map",
   module: {
@@ -39,17 +39,25 @@ module.exports = {
       {
         test: /\.(pc|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // fallback to style-loader in development
           {
-            loader: "css-loader",
-            options: {
-              sourceMap: true
-            }
+            loader: "style-loader"
           },
           {
-            loader: "postcss-loader",
+            loader: "css-loader"
+          },
+          {
+            loader: "postcss-loader"
+          }
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|ogg|mp3)$/,
+        use: [
+          {
+            loader: "url-loader",
             options: {
-              sourceMap: true
+              limit: 10 * 1000
             }
           }
         ]
@@ -60,18 +68,22 @@ module.exports = {
     enforceExtension: false,
     extensions: [".js", ".jsx", ".json", ".less", ".css"]
   },
-  // 注意：本地预览的时候要注释，否则报 require undefined
-  // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
-  externals: [nodeExternals()],
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [distDir]
+      cleanOnceBeforeBuildPatterns: [buildDir]
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
+    //预览
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "../public/index.html"), //指定要打包的html路径和文件名
+      filename: "./index.html" //指定输出路径和文件名
+    }),
     new WebpackMd5Hash(),
-    new webpack.BannerPlugin(` \n ${name} v${version} \n ${description} ${fs.readFileSync(path.join(process.cwd(), "LICENSE"))}`)
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   //压缩js
   optimization: {
@@ -102,13 +114,5 @@ module.exports = {
         canPrint: true
       })
     ]
-  },
-  node: {
-    setImmediate: false,
-    dgram: "empty",
-    fs: "empty",
-    net: "empty",
-    tls: "empty",
-    child_process: "empty"
   }
 };
