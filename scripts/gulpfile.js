@@ -51,30 +51,34 @@ gulp.task("replace-indexjs", () => {
 
 // 编译 sass 文件到 es 和 lib 文件夹下
 gulp.task("compile-postcss", () => {
-  return gulp
-    .src(postcssDir)
-    .pipe(sourcemaps.init())
-    .pipe(
-      postcss([
-        postcssPresetEnv({
-          stage: 3,
-          features: {
-            "custom-properties": true,
-            "nesting-rules": true
-          },
-          browsers: "last 2 versions"
+  return (
+    gulp
+      .src(postcssDir)
+      .pipe(sourcemaps.init())
+      .pipe(
+        postcss([
+          // 编译.pcss 文件
+          postcssPresetEnv({
+            stage: 3,
+            features: {
+              "custom-properties": true,
+              "nesting-rules": true
+            },
+            browsers: "last 2 versions"
+          })
+        ])
+      )
+      .pipe(
+        rename(function(path) {
+          path.extname = ".css";
         })
-      ])
-    )
-    .pipe(
-      rename(function(path) {
-        path.extname = ".css";
-      })
-    )
-    .pipe(cleanCSS({ inline: ["none"] }))
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(libDir))
-    .pipe(gulp.dest(esDir));
+      )
+      // 压缩 css 文件
+      .pipe(cleanCSS({ inline: ["none"] }))
+      .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest(libDir))
+      .pipe(gulp.dest(esDir))
+  );
 });
 
 // 编译 sass 到 dist 文件夹下
