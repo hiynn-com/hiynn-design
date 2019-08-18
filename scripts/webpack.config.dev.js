@@ -84,9 +84,6 @@ module.exports = {
     extensions: [".js", ".jsx", ".json", ".less", ".css"]
   },
   plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [buildDir]
-    }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
@@ -95,23 +92,12 @@ module.exports = {
       template: path.join(__dirname, "../public/index.html"), //指定要打包的html路径和文件名
       filename: "./index.html" //指定输出路径和文件名
     }),
-    new WebpackMd5Hash(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   //压缩js
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: "styles",
-          test: /\.pcss$/,
-          chunks: "all",
-          enforce: true
-        }
-      }
-    },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,

@@ -4,7 +4,6 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
-const WebpackMd5Hash = require("webpack-md5-hash");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const postcssCssNext = require("postcss-cssnext");
@@ -98,23 +97,12 @@ module.exports = {
       template: path.join(__dirname, "../public/index.html"), //指定要打包的html路径和文件名
       filename: "./index.html" //指定输出路径和文件名
     }),
-    new WebpackMd5Hash(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   //压缩js
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: "styles",
-          test: /\.pcss$/,
-          chunks: "all",
-          enforce: true
-        }
-      }
-    },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
