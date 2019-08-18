@@ -7,10 +7,13 @@ const nodeExternals = require("webpack-node-externals");
 const WebpackMd5Hash = require("webpack-md5-hash");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const postcssCssNext = require("postcss-cssnext");
+const postcssImport = require("postcss-import");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 const distDir = path.join(process.cwd(), "dist");
+console.log("--- process.cwd ---", process.cwd());
 
 module.exports = {
   mode: "development",
@@ -20,26 +23,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.(pc|le|sc|c)ss$/,
         use: [
           // fallback to style-loader in development
           {
-            loader: "style-loader",
-            options: {
-              sourceMap: true
-            }
+            loader: "style-loader"
           },
           {
             loader: "css-loader",
-            options: {
-              sourceMap: true
-            }
+            options: { importLoaders: 1 }
           },
           {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true
-            }
+            loader: "postcss-loader"
           }
         ]
       },
@@ -49,6 +44,17 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.(jpe?g|png|gif|ogg|mp3)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10 * 1000
+            }
+          }
+        ]
       }
     ]
   },

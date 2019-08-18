@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["hd-layout/style/index.pcss"],"sourcesContent":[".layout-container {\n  & .layout-sider {\n    background: red;\n    color: #fff;\n  }\n\n  & .layout-header {\n    background: red;\n    color: #fff;\n  }\n}\n"],"file":"index.pcss"}

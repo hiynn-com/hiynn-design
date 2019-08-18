@@ -3,11 +3,22 @@ import { Menu, Icon } from "antd";
 import HdLayout from "../../components/hd-layout";
 import HdMenu from "../../components/hd-menu";
 import "../../components/hd-layout/style";
+import logo from "../assets/images/hiy_logo.png";
 
 class HdLayoutPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      layoutData: {
+        sider: {
+          width: 218,
+          theme: "light",
+          breakpoint: "lg"
+        },
+        logos: <Icon type="logout" />,
+        title: "海云前端标准平台",
+        subTitle: "测试"
+      },
       menus: [
         {
           id: 1,
@@ -63,7 +74,7 @@ class HdLayoutPage extends Component {
     };
   }
   render() {
-    return <HdLayout menu={<HdMenu menus={this.state.menus} />} />;
+    return <HdLayout initData={this.state.layoutData} menus={<HdMenu menus={this.state.menus} />} />;
   }
 }
 

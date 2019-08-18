@@ -1,1 +1,2 @@
-import "./index.scss";
+import "../../styles/index.pcss";
+import "./index.pcss";

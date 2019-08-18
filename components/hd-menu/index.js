@@ -40,7 +40,6 @@ class HdMenu extends Component {
         )
       )
     );
-    console.log("_menus=", _menus);
     return _menus;
   };
   render() {

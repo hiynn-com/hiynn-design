@@ -24,23 +24,23 @@ class HdLayout extends Component {
     );
   };
   render() {
-    const { menu } = this.props;
+    const { initData, menus } = this.props;
     return (
       <Layout className="layout-container">
-        <Sider theme="light" trigger={null} collapsible width={218} breakpoint="lg">
+        <Sider theme="light" trigger={null} collapsible width={218} breakpoint="lg" className="layout-sider">
           <div className="logo">
-            <img width="32" alt="" />
-            <span>logo</span>
+            {initData.logos}
+            <span>{initData.title}</span>
           </div>
-          {menu}
+          {menus}
         </Sider>
-        <Layout className="layout-page-right-container">
-          <Header className="right-header">
-            <div className="right-header-left">
+        <Layout>
+          <Header className="layout-header">
+            <div>
               <Icon className="trigger" />
-              <span>sdfsdf</span>
+              <span>{initData.subTitle}</span>
             </div>
-            <div className="right-header-right">
+            <div>
               <Dropdown overlay={this.renderRightMenu} placement="bottomRight">
                 <div>
                   <Avatar size="default" icon="user" />
@@ -49,7 +49,7 @@ class HdLayout extends Component {
               </Dropdown>
             </div>
           </Header>
-          <Content className="layout-page-right-content" />
+          <Content />
         </Layout>
       </Layout>
     );

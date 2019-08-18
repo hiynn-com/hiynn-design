@@ -4,9 +4,11 @@ const path = require("path");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
+const postcssPresetEnv = require("postcss-preset-env");
+const postcssImport = require("postcss-import");
 const concat = require("gulp-concat");
 const replace = require("gulp-replace");
-const sass = require("gulp-sass");
+// const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const size = require("gulp-filesize");
@@ -17,13 +19,13 @@ const resolve = dir => path.join(__dirname, ".", dir);
 const distDir = resolve("../dist");
 const libDir = resolve("../lib");
 const esDir = resolve("../es");
-const sassDir = resolve("../components/**/*.scss");
+const postcssDir = resolve("../components/**/*.pcss");
 const indexJsDir = resolve("../components/**/style/index.js");
 
 // 复制 sass 文件到 lib es 文件夹下
-gulp.task("copy-sass", () => {
+gulp.task("copy-postcss", () => {
   return gulp
-    .src(sassDir)
+    .src(postcssDir)
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
@@ -35,7 +37,7 @@ gulp.task("replace-indexjs", () => {
   return gulp
     .src(indexJsDir)
     .pipe(sourcemaps.init())
-    .pipe(replace("scss", "css"))
+    .pipe(replace("pcss", "css"))
     .pipe(
       rename(function(path) {
         path.basename = "css";
@@ -48,13 +50,28 @@ gulp.task("replace-indexjs", () => {
 });
 
 // 编译 sass 文件到 es 和 lib 文件夹下
-gulp.task("compile-sass", () => {
+gulp.task("compile-postcss", () => {
   return gulp
-    .src(sassDir)
+    .src(postcssDir)
     .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(cleanCSS())
+    .pipe(
+      postcss([
+        postcssPresetEnv({
+          stage: 3,
+          features: {
+            "custom-properties": true,
+            "nesting-rules": true
+          },
+          browsers: "last 2 versions"
+        })
+      ])
+    )
+    .pipe(
+      rename(function(path) {
+        path.extname = ".css";
+      })
+    )
+    .pipe(cleanCSS({ inline: ["none"] }))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
     .pipe(gulp.dest(esDir));
@@ -62,46 +79,34 @@ gulp.task("compile-sass", () => {
 
 // 编译 sass 到 dist 文件夹下
 gulp.task("dist-css", () => {
-  return gulp
-    .src(sassDir)
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(autoprefixer())
-
-    .pipe(concat(`${name}.css`))
-    .pipe(size())
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(distDir))
-
-    .pipe(concat(`${name}.min.css`))
-    .pipe(size())
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(distDir));
-});
-
-gulp.task("compile-with-es", () => {
-  return gulp
-    .src("src/**/*.scss")
-    .pipe(sourcemaps.init())
-    .pipe(postcss([require("precss"), require("autoprefixer")]))
-    .pipe(rename({ extname: ".css" }))
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(esDir));
-});
-
-gulp.task("compile-with-lib", () => {
   return (
     gulp
-      .src("src/**/*.scss")
+      .src(postcssDir)
       .pipe(sourcemaps.init())
-      .pipe(postcss([require("precss"), require("autoprefixer")]))
-      // .pipe(rename({ extname: ".css" }))
-      .pipe(cleanCSS())
+      .pipe(
+        postcss([
+          postcssPresetEnv({
+            stage: 3,
+            features: {
+              "custom-properties": true,
+              "nesting-rules": true
+            }
+          })
+        ])
+      )
+
+      .pipe(concat(`${name}.css`))
+      .pipe(size())
       .pipe(sourcemaps.write("."))
-      .pipe(gulp.dest(libDir))
+      .pipe(gulp.dest(distDir))
+
+      .pipe(concat(`${name}.min.css`))
+      .pipe(size())
+      //清除.map 干扰
+      .pipe(cleanCSS({ inline: ["none"] }))
+      .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest(distDir))
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-sass", "replace-indexjs", "compile-sass", "dist-css")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-postcss", "replace-indexjs", "compile-postcss", "dist-css")));

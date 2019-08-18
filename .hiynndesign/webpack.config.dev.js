@@ -37,7 +37,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.(pc|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -47,7 +47,7 @@ module.exports = {
             }
           },
           {
-            loader: "sass-loader",
+            loader: "postcss-loader",
             options: {
               sourceMap: true
             }
@@ -79,7 +79,7 @@ module.exports = {
       cacheGroups: {
         styles: {
           name: "styles",
-          test: /\.scss$/,
+          test: /\.pcss$/,
           chunks: "all",
           enforce: true
         }
