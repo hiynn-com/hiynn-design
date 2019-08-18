@@ -18,7 +18,7 @@
     "build:css": "cd .hiynndesign && gulp compile",
     "build:all": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css",
     "start": "cross-env BABEL_ENV=preview webpack-dev-server --port 3006 --open --config .hiynndesign/webpack.config.dev.js",
-    "deploy": "gh-pages -d build"
+    "deploy": "yarn build:prod && gh-pages -d build"
   },
   "repository": {
     "type": "git",
