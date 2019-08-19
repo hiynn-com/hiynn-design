@@ -13,15 +13,16 @@ const postcssPresetEnv = require("postcss-preset-env");
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 const { version, name, description } = require("../package.json");
-const buildDir = path.join(process.cwd(), "build");
+const docsDir = path.join(process.cwd(), "docs");
 
 module.exports = {
   mode: "development",
   entry: { [name]: "./src/index.js" },
   output: {
     // path: resolve("dist"), // 输出目录
-    path: buildDir,
-    filename: "[name].min.js",
+    path: docsDir,
+    filename: "static/js/[name].min.js",
+    chunkFilename: "static/js/[name].chunk.js",
     umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
     //不加下面几行，被引用会被报错
     libraryTarget: "umd", // 采用通用模块定义
@@ -85,7 +86,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css"
+      filename: "static/css/[name].min.css",
+      chunkFilename: "static/css/[name].chunk.css"
     }),
     //预览
     new HtmlWebpackPlugin({

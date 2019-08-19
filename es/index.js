@@ -1,8 +1,10 @@
 import HdLayout from "./hd-layout";
 import HdMaster from "./hd-master";
-export { HdLayout, HdMaster };
+import HdMenus from "./hd-menus";
+export { HdLayout, HdMaster, HdMenus };
 export default {
   HdLayout: HdLayout,
-  HdMaster: HdMaster
+  HdMaster: HdMaster,
+  HdMenus: HdMenus
 };
 //# sourceMappingURL=index.js.map

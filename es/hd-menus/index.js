@@ -5,12 +5,12 @@ import React, { Component } from "react";
 import { Menu, Icon } from "antd";
 import { NavLink } from "react-router-dom";
 
-var HdMenu =
+var HdMenus =
 /*#__PURE__*/
 function (_Component) {
-  _inheritsLoose(HdMenu, _Component);
+  _inheritsLoose(HdMenus, _Component);
 
-  function HdMenu(props) {
+  function HdMenus(props) {
     var _this;
 
     _this = _Component.call(this, props) || this;
@@ -46,7 +46,7 @@ function (_Component) {
     return _this;
   }
 
-  var _proto = HdMenu.prototype;
+  var _proto = HdMenus.prototype;
 
   _proto.render = function render() {
     var menus = this.props.menus;
@@ -67,8 +67,8 @@ function (_Component) {
     }, _menus);
   };
 
-  return HdMenu;
+  return HdMenus;
 }(Component);
 
-export default HdMenu;
+export default HdMenus;
 //# sourceMappingURL=index.js.map

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Menu, Icon } from "antd";
 import HdLayout from "../../components/hd-layout";
-import HdMenu from "../../components/hd-menu";
+import HdMenus from "../../components/hd-menus";
 import "../../components/hd-layout/style";
 import logo from "../assets/images/hiy_logo.png";
 
@@ -74,7 +74,7 @@ class HdLayoutPage extends Component {
     };
   }
   render() {
-    return <HdLayout initData={this.state.layoutData} menus={<HdMenu menus={this.state.menus} />} />;
+    return <HdLayout initData={this.state.layoutData} menus={<HdMenus menus={this.state.menus} />} />;
   }
 }
 

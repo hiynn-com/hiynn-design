@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Menu, Icon } from "antd";
 import { NavLink } from "react-router-dom";
 
-class HdMenu extends Component {
+class HdMenus extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,4 +56,4 @@ class HdMenu extends Component {
   }
 }
 
-export default HdMenu;
+export default HdMenus;
