@@ -7,8 +7,8 @@ const nodeExternals = require("webpack-node-externals");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InlineManifestWebpackPlugin = require("inline-manifest-webpack-plugin");
 const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const postcssPresetEnv = require("postcss-preset-env");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { version, name, description } = require("../package.json");
 
 const resolve = dir => path.join(__dirname, ".", dir);
