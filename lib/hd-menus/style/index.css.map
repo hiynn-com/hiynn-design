@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"index.css","sourcesContent":[]}
+{"version":3,"sources":["hd-menus/style/index.pcss"],"names":[],"mappings":"AAAA,yBACE,WAAA,KACA,WAAA,OACA,OAAA","file":"index.css","sourcesContent":[".hd-sider-menu-container {\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: calc(100% - 64px);\n}\n"]}

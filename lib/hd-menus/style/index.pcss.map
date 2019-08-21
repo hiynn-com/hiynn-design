@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["hd-menus/style/index.pcss"],"sourcesContent":[""],"file":"index.pcss"}
+{"version":3,"names":[],"mappings":"","sources":["hd-menus/style/index.pcss"],"sourcesContent":[".hd-sider-menu-container {\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: calc(100% - 64px);\n}\n"],"file":"index.pcss"}

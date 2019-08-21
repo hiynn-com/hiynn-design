@@ -1,11 +1,88 @@
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+
 .hd-layout-container {
-  & .layout-sider {
-    background: red;
-    color: #fff;
+  width: 100vw;
+  height: 100vh;
+
+  & .hd-layout-sider {
+
+    & .hd-layout-logo {
+      background: var(--primary-deep-color);
+      height: var(--layout-header-height);
+      color: var(--white-color);
+      font-size: var(--font-size-lg);
+      padding: var(--logo-padding);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      & .hd-layout-logo-title {
+        font-size: var(--logo-title-font-size);
+        margin-left: var(--logo-title-left);
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+
+      & .hide-title {
+        opacity: 0;
+        max-width: 0;
+        /* transform: translate3d(0, 0, 0); */
+      }
+    }
   }
 
-  & .layout-header {
-    background: red;
-    color: #fff;
+  & .hd-layout-main {
+    overflow-y: hidden;
+
+    & .hd-layout-main-header {
+      background: var(--primary-color);
+      color: var(--white-color);
+      padding: var(--header-padding);
+      position: relative;
+
+      & .hd-layout-main-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        & .hd-layout-main-header-subtitle {
+          font-size: var(--font-size-lg);
+
+          & .collapse-icon {
+            cursor: pointer;
+          }
+
+          & .sub-title {
+            display: inline-block;
+            margin: var(--header-subtitle-margin);
+          }
+        }
+
+        & .hd-layout-header-toolbar {
+          cursor: pointer;
+
+          & .hd-layout-header-toolbar-content {
+            & .user-avatar {
+              background-color: var(--user-avatar-color);
+            }
+
+            & .user-name {
+              font-size: var(--font-size-base);
+              margin: var(--user-name-margin);
+            }
+          }
+        }
+      }
+    }
+
+    & .hd-layout-main-content {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
   }
+}
+
+.hd-layout-header-dropdown-menu-item {
+  width: var(--header-dropdown-menu-item-height);
 }

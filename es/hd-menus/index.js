@@ -23,7 +23,9 @@ function (_Component) {
           key: menu.id,
           title: React.createElement("div", null, menu.icon ? React.createElement(Icon, {
             type: menu.icon
-          }) : null, React.createElement("span", null, menu.title))
+          }) : React.createElement(Icon, {
+            type: "exclamation-circle"
+          }), React.createElement("span", null, menu.title))
         }, menu.children.map(function (children) {
           return children.show ? React.createElement(Menu.Item, {
             key: children.id
@@ -36,7 +38,9 @@ function (_Component) {
           to: menu.url
         }, menu.icon ? React.createElement(Icon, {
           type: menu.icon
-        }) : null, React.createElement("span", null, menu.title)));
+        }) : React.createElement(Icon, {
+          type: "exclamation-circle"
+        }), React.createElement("span", null, menu.title)));
       });
 
       return _menus;
@@ -51,7 +55,12 @@ function (_Component) {
   var _proto = HdMenus.prototype;
 
   _proto.render = function render() {
-    var menus = this.props.menus;
+    var _this$props = this.props,
+        theme = _this$props.theme,
+        menus = _this$props.menus,
+        width = _this$props.width,
+        collapsed = _this$props.collapsed;
+    console.log("collapsed=", collapsed);
     var _menus = null;
 
     if (menus && menus.length > 0) {
@@ -59,13 +68,12 @@ function (_Component) {
     }
 
     return React.createElement(Menu, {
+      mode: "inline",
       onClick: this.handleClick,
-      style: {
-        width: 256
-      },
+      theme: theme,
       defaultSelectedKeys: ["1"],
       defaultOpenKeys: ["sub1"],
-      mode: "inline"
+      className: "hd-sider-menu-container"
     }, _menus);
   };
 
