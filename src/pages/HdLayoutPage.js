@@ -89,45 +89,6 @@ class HdLayoutPage extends Component {
         menus={this.state.menus}
       >
         <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
-        <div>sdfasdfasdf</div>
       </HdLayout>
     );
   }
