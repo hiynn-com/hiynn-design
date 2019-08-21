@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Menu, Icon } from "antd";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
+import cls from "classnames";
 
 class HdMenus extends Component {
   constructor(props) {
@@ -16,7 +18,7 @@ class HdMenus extends Component {
           key={menu.id}
           title={
             <div>
-              {menu.icon ? <Icon type={menu.icon} /> : null}
+              {menu.icon ? <Icon type={menu.icon} /> : <Icon type="exclamation-circle" />}
               <span>{menu.title}</span>
             </div>
           }
@@ -33,7 +35,7 @@ class HdMenus extends Component {
         menu.show && (
           <Menu.Item key={menu.id}>
             <NavLink to={menu.url}>
-              {menu.icon ? <Icon type={menu.icon} /> : null}
+              {menu.icon ? <Icon type={menu.icon} /> : <Icon type="exclamation-circle" />}
               <span>{menu.title}</span>
             </NavLink>
           </Menu.Item>
@@ -43,13 +45,15 @@ class HdMenus extends Component {
     return _menus;
   };
   render() {
-    const { menus } = this.props;
+    const { theme, menus, width, collapsed } = this.props;
+    console.log("collapsed=", collapsed);
+
     let _menus = null;
     if (menus && menus.length > 0) {
       _menus = this.renderMenus(menus);
     }
     return (
-      <Menu onClick={this.handleClick} style={{ width: 256 }} defaultSelectedKeys={["1"]} defaultOpenKeys={["sub1"]} mode="inline">
+      <Menu mode="inline" onClick={this.handleClick} theme={theme} defaultSelectedKeys={["1"]} defaultOpenKeys={["sub1"]} className="hd-sider-menu-container">
         {_menus}
       </Menu>
     );

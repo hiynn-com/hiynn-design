@@ -8580,6 +8580,14 @@ postcss-advanced-variables@^3.0.0:
     "@csstools/sass-import-resolve" "^1.0.0"
     postcss "^7.0.6"
 
+postcss-apply@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.npm.taobao.org/postcss-apply/download/postcss-apply-0.12.0.tgz#11a47b271b14d81db97ed7f51a6c409d025a9c34"
+  integrity sha1-EaR7JxsU2B25ftf1GmxAnQJanDQ=
+  dependencies:
+    balanced-match "^1.0.0"
+    postcss "^7.0.14"
+
 postcss-apply@^0.8.0:
   version "0.8.0"
   resolved "https://registry.npmjs.org/postcss-apply/-/postcss-apply-0.8.0.tgz#14e544bbb5cb6f1c1e048857965d79ae066b1343"
@@ -9888,8 +9896,8 @@ promise@^7.1.1:
 
 prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
-  resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
-  integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
+  resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
+  integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
   dependencies:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"

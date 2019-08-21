@@ -33,12 +33,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(pc|le|sc|c)ss$/,
+        test: /\.(pc|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { importLoaders: 1, sourceMap: true }
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
           },
           {
             loader: "postcss-loader",
@@ -46,11 +49,13 @@ module.exports = {
               ident: "postcss",
               sourceMap: true,
               plugins: () => [
+                require("postcss-apply"),
                 postcssPresetEnv({
                   stage: 3,
                   features: {
                     "custom-properties": true,
-                    "nesting-rules": true
+                    "nesting-rules": true,
+                    "color-mod-function": { unresolved: "warn" }
                   },
                   browsers: "last 2 versions"
                 })
@@ -67,12 +72,12 @@ module.exports = {
         }
       },
       {
-        test: /\.(jpe?g|png|gif|ogg|mp3)$/,
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
         use: [
           {
             loader: "url-loader",
             options: {
-              limit: 10 * 1000
+              limit: 8192
             }
           }
         ]
@@ -105,6 +110,7 @@ module.exports = {
   ],
   //压缩js
   optimization: {
+    //分离 js 和 css
     splitChunks: {
       cacheGroups: {
         vendors: {

@@ -1,36 +1,30 @@
-import _inheritsLoose from "./node_modules/@babel/runtime/helpers/esm/inheritsLoose";
-import React, { Component } from "./node_modules/react";
-import { Button } from "./node_modules/antd";
+import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
+import React, { Component } from "react";
+import { Button } from "antd";
+import PropTypes from "prop-types";
+import cls from "classnames";
 
-var Demo2 =
-  /*#__PURE__*/
-  (function(_Component) {
-    _inheritsLoose(Demo2, _Component);
+var HdMaster =
+/*#__PURE__*/
+function (_Component) {
+  _inheritsLoose(HdMaster, _Component);
 
-    function Demo2() {
-      return _Component.apply(this, arguments) || this;
-    }
+  function HdMaster() {
+    return _Component.apply(this, arguments) || this;
+  }
 
-    var _proto = Demo2.prototype;
+  var _proto = HdMaster.prototype;
 
-    _proto.render = function render() {
-      return React.createElement(
-        "div",
-        {
-          className: "demo-container"
-        },
-        React.createElement(
-          Button,
-          {
-            type: "primary"
-          },
-          "this is demo2 component"
-        )
-      );
-    };
+  _proto.render = function render() {
+    return React.createElement("div", {
+      className: "demo-container"
+    }, React.createElement(Button, {
+      type: "primary"
+    }, "this is master component"));
+  };
 
-    return Demo2;
-  })(Component);
+  return HdMaster;
+}(Component);
 
-export default Demo2;
+export default HdMaster;
 //# sourceMappingURL=index.js.map

@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import { Button } from "antd";
-class Demo2 extends Component {
+import PropTypes from "prop-types";
+import cls from "classnames";
+
+class HdMaster extends Component {
   render() {
     return (
       <div className="demo-container">
-        <Button type="primary">this is demo2 component</Button>
+        <Button type="primary">this is master component</Button>
       </div>
     );
   }
 }
 
-export default Demo2;
+export default HdMaster;

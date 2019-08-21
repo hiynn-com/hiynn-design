@@ -40,12 +40,15 @@ module.exports = {
       {
         test: /\.(pc|sc|c)ss$/,
         use: [
-          // fallback to style-loader in development
           {
             loader: "style-loader"
           },
           {
-            loader: "css-loader"
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
           },
           {
             loader: "postcss-loader",
@@ -67,12 +70,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpe?g|png|gif|ogg|mp3)$/,
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
         use: [
           {
             loader: "url-loader",
             options: {
-              limit: 10 * 1000
+              limit: 819200
             }
           }
         ]
@@ -81,7 +84,7 @@ module.exports = {
   },
   resolve: {
     enforceExtension: false,
-    extensions: [".js", ".jsx", ".json", ".less", ".css"]
+    extensions: [".js", ".jsx", ".json", "pcss", ".less", ".css"]
   },
   plugins: [
     new MiniCssExtractPlugin({
