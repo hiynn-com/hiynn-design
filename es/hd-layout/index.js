@@ -1,17 +1,26 @@
+import "antd/es/dropdown/style/css";
+import _Dropdown from "antd/es/dropdown";
+import "antd/es/avatar/style/css";
+import _Avatar from "antd/es/avatar";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+import "antd/es/menu/style/css";
+import _Menu from "antd/es/menu";
+import "antd/es/icon/style/css";
+import _Icon from "antd/es/icon";
 import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
+import "antd/es/layout/style/css";
+import _Layout from "antd/es/layout";
 import React, { Component } from "react";
-import { Layout, Menu, Icon, Avatar, Dropdown, Spin } from "antd";
 import { fromJs, Map, Set } from "immutable";
 import PropTypes from "prop-types";
 import cls from "classnames";
 import HdMenus from "../hd-menus";
 import { StyleContext } from "../context/style-context";
-var Header = Layout.Header,
-    Content = Layout.Content,
-    Sider = Layout.Sider;
+var Header = _Layout.Header,
+    Content = _Layout.Content,
+    Sider = _Layout.Sider;
 
 var HdLayout =
 /*#__PURE__*/
@@ -24,15 +33,15 @@ function (_Component) {
     _this = _Component.call(this, props) || this;
 
     _defineProperty(_assertThisInitialized(_this), "renderHeaderMenu", function () {
-      return React.createElement(Menu, null, React.createElement(Menu.Item, {
+      return React.createElement(_Menu, null, React.createElement(_Menu.Item, {
         key: "password",
         className: "hd-layout-header-dropdown-menu-item"
-      }, React.createElement(Icon, {
+      }, React.createElement(_Icon, {
         type: "setting"
-      }), React.createElement("span", null, "\u4FEE\u6539\u5BC6\u7801")), React.createElement(Menu.Item, {
+      }), React.createElement("span", null, "\u4FEE\u6539\u5BC6\u7801")), React.createElement(_Menu.Item, {
         key: "signout",
         className: "hd-layout-header-dropdown-menu-item"
-      }, React.createElement(Icon, {
+      }, React.createElement(_Icon, {
         type: "logout"
       }), React.createElement("span", null, "\u9000\u51FA\u767B\u5F55")));
     });
@@ -71,7 +80,7 @@ function (_Component) {
     var titleCls = cls("hd-layout-logo-title", {
       "hide-title": sider.get("collapsed")
     });
-    return React.createElement(Layout, {
+    return React.createElement(_Layout, {
       className: classnames
     }, React.createElement(Sider, {
       theme: theme,
@@ -90,7 +99,7 @@ function (_Component) {
       menus: menus,
       width: sider.get("width"),
       collapsed: sider.get("collapsed")
-    })), React.createElement(Layout, {
+    })), React.createElement(_Layout, {
       className: "hd-layout-main"
     }, React.createElement(Header, {
       className: "hd-layout-main-header"
@@ -98,7 +107,7 @@ function (_Component) {
       className: "hd-layout-main-header-content"
     }, React.createElement("div", {
       className: "hd-layout-main-header-subtitle"
-    }, typeof sider.get("collapsed") === "undefined" ? null : React.createElement(Icon, {
+    }, typeof sider.get("collapsed") === "undefined" ? null : React.createElement(_Icon, {
       type: sider.get("collapsed") ? "menu-unfold" : "menu-fold",
       className: "collapse-icon",
       onClick: function onClick() {
@@ -108,12 +117,12 @@ function (_Component) {
       className: "sub-title"
     }, subTitle)), React.createElement("div", {
       className: "hd-layout-header-toolbar"
-    }, React.createElement(Dropdown, {
+    }, React.createElement(_Dropdown, {
       overlay: this.renderHeaderMenu,
       placement: "bottomRight"
     }, React.createElement("div", {
       className: "hd-layout-header-toolbar-content"
-    }, React.createElement(Avatar, {
+    }, React.createElement(_Avatar, {
       className: "user-avatar",
       icon: "user"
     }), React.createElement("span", {

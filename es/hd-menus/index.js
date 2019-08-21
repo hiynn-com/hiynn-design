@@ -1,8 +1,11 @@
+import "antd/es/menu/style/css";
+import _Menu from "antd/es/menu";
+import "antd/es/icon/style/css";
+import _Icon from "antd/es/icon";
 import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import React, { Component } from "react";
-import { Menu, Icon } from "antd";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import cls from "classnames";
@@ -19,26 +22,26 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "renderMenus", function (menus) {
       var _menus = menus.map(function (menu) {
-        return menu.show && typeof menu.children !== "undefined" && typeof menu.children !== null && menu.children.length > 0 ? React.createElement(Menu.SubMenu, {
+        return menu.show && typeof menu.children !== "undefined" && typeof menu.children !== null && menu.children.length > 0 ? React.createElement(_Menu.SubMenu, {
           key: menu.id,
-          title: React.createElement("div", null, menu.icon ? React.createElement(Icon, {
+          title: React.createElement("div", null, menu.icon ? React.createElement(_Icon, {
             type: menu.icon
-          }) : React.createElement(Icon, {
+          }) : React.createElement(_Icon, {
             type: "exclamation-circle"
           }), React.createElement("span", null, menu.title))
         }, menu.children.map(function (children) {
-          return children.show ? React.createElement(Menu.Item, {
+          return children.show ? React.createElement(_Menu.Item, {
             key: children.id
           }, React.createElement(NavLink, {
             to: children.url
           }, children.title)) : null;
-        })) : menu.show && React.createElement(Menu.Item, {
+        })) : menu.show && React.createElement(_Menu.Item, {
           key: menu.id
         }, React.createElement(NavLink, {
           to: menu.url
-        }, menu.icon ? React.createElement(Icon, {
+        }, menu.icon ? React.createElement(_Icon, {
           type: menu.icon
-        }) : React.createElement(Icon, {
+        }) : React.createElement(_Icon, {
           type: "exclamation-circle"
         }), React.createElement("span", null, menu.title)));
       });
@@ -67,7 +70,7 @@ function (_Component) {
       _menus = this.renderMenus(menus);
     }
 
-    return React.createElement(Menu, {
+    return React.createElement(_Menu, {
       mode: "inline",
       onClick: this.handleClick,
       theme: theme,

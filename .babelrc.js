@@ -40,19 +40,14 @@ const plugins = [
     {
       legacy: true
     }
-  ]
-];
-
-// 预览情况下添加对 antd 按需加载样式的支持
-if (babel_env === "preview") {
-  plugins.push([
+  ],
+  [
     "import",
     {
       libraryName: "antd",
       libraryDirectory: "es",
       style: "css" // `style: true` 会加载 less 文件
     }
-  ]);
-}
-
+  ]
+];
 module.exports = { presets, plugins };
