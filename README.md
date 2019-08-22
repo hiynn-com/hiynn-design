@@ -7,8 +7,6 @@
 
 </p>
 
-# hiynn-design &middot;
-
 ## Introduction
 
 海云标准化平台组件库是制订公司的前端框架标准和规范，目的是为了提升前端开发效率节省开发时间
