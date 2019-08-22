@@ -6,7 +6,7 @@
 
 **海云标准化平台组件库是制订公司的前端框架标准和规范，目的是为了提升前端开发效率节省开发时间**
 
-## Usage(使用
+## Usage(使用)
 
 ```
 yarn add hiynn-design
@@ -26,7 +26,7 @@ import {HdLayout, HdMaster} from 'hiynn-design'
 3. commonjs -> lib
 4. prod -> docs
 
-### Learning(扩展学习
+### Learning(扩展学习)
 
 - [前端 20 个灵魂拷问 彻底搞明白你就是中级前端工程师 【中篇】](https://segmentfault.com/a/1190000020144498)
 - [JS 模块化 CommonJS/AMD/CMD/UMD/ES6Module 的区别](https://www.cnblogs.com/weiqinl/p/9940549.html)
@@ -35,6 +35,6 @@ import {HdLayout, HdMaster} from 'hiynn-design'
 
 React is [MIT licensed](./LICENSE).
 
-### Contact me(联系我
+### Contact me(联系我)
 
 > zw900808@gmail.com
