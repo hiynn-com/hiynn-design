@@ -1,6 +1,10 @@
 <p align="center"><a href="https://hiynn-com.github.io/hiynn-design/#/" target="_blank" rel="noopener noreferrer"><img width="100" src="http://cdn.awbeci.com/hiyun/WechatIMG222.png" alt="Vue logo"></a></p>
 
-# hiynn-design &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hiynn-com/hiynn-design) [![npm version](https://img.shields.io/npm/v/hiynn-design.svg)](https://www.npmjs.com/package/hiynn-design)
+<p align="center">
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hiynn-com/hiynn-design) [![npm version](https://img.shields.io/npm/v/hiynn-design.svg)](https://www.npmjs.com/package/hiynn-design)
+</p>
+
+# hiynn-design &middot;
 
 ## Introduction
 
