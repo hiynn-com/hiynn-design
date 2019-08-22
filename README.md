@@ -33,7 +33,7 @@ import {HdLayout, HdMaster} from 'hiynn-design'
 
 ### License
 
-React is [MIT licensed](./LICENSE).
+HiynnDesign is [MIT licensed](./LICENSE).
 
 ### Contact me
 
