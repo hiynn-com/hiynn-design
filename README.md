@@ -45,6 +45,7 @@ import 'hiynn-design/dist/hiynn-design.css';
 
 ### Learning
 
+- [教程：使用 umd、commonjs 和 es 三种模式制作自己的 React 组件(库)](https://segmentfault.com/a/1190000020093455)
 - [前端 20 个灵魂拷问 彻底搞明白你就是中级前端工程师 【中篇】](https://segmentfault.com/a/1190000020144498)
 - [JS 模块化 CommonJS/AMD/CMD/UMD/ES6Module 的区别](https://www.cnblogs.com/weiqinl/p/9940549.html)
 
