@@ -50,7 +50,7 @@ import 'hiynn-design/dist/hiynn-design.css';
 
 ### License
 
-HiynnDesign is [MIT licensed](./LICENSE).
+Hiynn Design is [MIT licensed](./LICENSE).
 
 ### Contact me
 
