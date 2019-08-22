@@ -6,15 +6,24 @@
 
 海云标准化平台组件库是制订公司的前端框架标准和规范，目的是为了提升前端开发效率节省开发时间
 
-## Usage
+## Install
 
 ```
 yarn add hiynn-design
 npm install hiynn-design
 ```
 
+## Usage
+
 ```
 import {HdLayout, HdMaster} from 'hiynn-design'
+ReactDOM.render(<HdLayout />, mountNode);
+```
+
+And import style manually:
+
+```
+import 'hiynn-design/dist/hiynn-design.css';
 ```
 
 ### Note
