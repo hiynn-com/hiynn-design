@@ -1,4 +1,4 @@
-<p align="center"><a href="https://hiynn-com.github.io/hiynn-design/#/" target="_blank" rel="noopener noreferrer"><img width="100" src="http://cdn.awbeci.com/hiyun/WechatIMG222.png" alt="Vue logo"></a></p>
+<p align="center"><a href="https://hiynn-com.github.io/hiynn-design/#/" target="_blank" rel="noopener noreferrer"><img width="100" src="http://cdn.awbeci.com/hiyun/WechatIMG224.png" alt="Vue logo"></a></p>
 
 <div align="center">
 
@@ -48,6 +48,7 @@ import 'hiynn-design/dist/hiynn-design.css';
 - [教程：使用 umd、commonjs 和 es 三种模式制作自己的 React 组件(库)](https://segmentfault.com/a/1190000020093455)
 - [前端 20 个灵魂拷问 彻底搞明白你就是中级前端工程师 【中篇】](https://segmentfault.com/a/1190000020144498)
 - [JS 模块化 CommonJS/AMD/CMD/UMD/ES6Module 的区别](https://www.cnblogs.com/weiqinl/p/9940549.html)
+- [前端构建工具发展及其比较](https://juejin.im/entry/5ae5c8c9f265da0b9f400d8e)
 
 ### License
 

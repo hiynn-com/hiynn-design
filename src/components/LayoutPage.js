@@ -4,7 +4,7 @@ import { renderRoutes, matchRoutes } from "react-router-config";
 import HdLayout from "../../components/hd-layout";
 import "../../components/hd-layout/style";
 import "../../components/hd-menus/style";
-import logo from "../assets/images/hiy_logo.png";
+import logo from "../assets/images/hd_logo.jpg";
 import { Map } from "immutable";
 import routes from "../router";
 
@@ -87,7 +87,7 @@ class HdLayoutPage extends Component {
         title={this.state.title}
         subTitle={this.state.subTitle}
         sider={this.state.sider}
-        logo={<img src={logo} width={32} />}
+        logo={<img src={logo} width={40} style={{ borderRadius: "100%" }} />}
         menus={this.state.menus}
       >
         {renderRoutes(routes)}

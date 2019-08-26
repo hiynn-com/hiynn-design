@@ -488,7 +488,7 @@ template {
       justify-content: flex-start
     }
 
-.hd-layout-container .hd-layout-sider .hd-layout-logo .hd-layout-logo-title {
+.hd-layout-container .hd-layout-sider .hd-layout-logo .title {
         font-size: var(--logo-title-font-size);
         margin-left: var(--logo-title-left);
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -526,7 +526,7 @@ template {
             cursor: pointer;
           }
 
-.hd-layout-container .hd-layout-main .hd-layout-main-header .hd-layout-main-header-content .hd-layout-main-header-subtitle .sub-title {
+.hd-layout-container .hd-layout-main .hd-layout-main-header .hd-layout-main-header-content .hd-layout-main-header-subtitle .title {
             display: inline-block;
             margin: var(--header-subtitle-margin);
           }
