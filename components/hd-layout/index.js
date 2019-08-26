@@ -53,7 +53,7 @@ class HdLayout extends Component {
     const { toggleCollapse } = this.props;
     if (sider) {
       const icon =
-        typeof sider.get("collapsed") === "undefined" ? null : <Icon type={sider.get("collapsed") ? "menu-unfold" : "menu-fold"} className="collapse-icon" onClick={() => this.toggleCollapse()} />;
+        typeof sider.get("collapsed") === "undefined" ? null : <Icon type={sider.get("collapsed") ? "menu-unfold" : "menu-fold"} className="collapse-icon" onClick={() => toggleCollapse()} />;
       return (
         <>
           {icon}
