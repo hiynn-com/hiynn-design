@@ -68,6 +68,22 @@ class HdLayoutPage extends Component {
               url: "/components/hd-master",
               show: true,
               order: 2
+            },
+            {
+              id: 43,
+              title: "HdAdmin",
+              icon: null,
+              url: "/components/hd-admin",
+              show: true,
+              order: 3
+            },
+            {
+              id: 44,
+              title: "HdFormValidation",
+              icon: null,
+              url: "/components/hd-formValidation",
+              show: true,
+              order: 4
             }
           ]
         }
