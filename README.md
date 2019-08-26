@@ -1,4 +1,4 @@
-<p align="center"><a href="https://hiynn-com.github.io/hiynn-design/#/" target="_blank" rel="noopener noreferrer"><img width="100" src="http://cdn.awbeci.com/hiyun/WechatIMG224.png" alt="Vue logo"></a></p>
+<p align="center"><a href="https://hiynn-com.github.io/hiynn-design/#/" target="_blank" rel="noopener noreferrer"><img width="100" src="http://cdn.awbeci.com/hiyun/WechatIMG224.png" alt="Hiynn Design logo"></a></p>
 
 <div align="center">
 
