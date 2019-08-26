@@ -38,12 +38,12 @@ import 'hiynn-design/dist/hiynn-design.css';
 
 文件夹 dist、es 和 lib 是通过 umd、es 和 commonjs 打包的，而 docs 是在线预览文件夹
 
-- 1. yarn build:css -> es|lib|dist
-- 2. yarn build:umd -> dist
-- 3. yarn build:es -> es
-- 4. yarn build:commonjs -> lib
-- 5. yarn start -> src(本地预览)
-- 6. yarn build:prod -> docs(在线预览，需通过 gh-pages 推送到 github)
+- yarn build:css -> es|lib|dist
+- yarn build:umd -> dist
+- yarn build:es -> es
+- yarn build:commonjs -> lib
+- yarn start -> src(本地预览)
+- yarn build:prod -> docs(在线预览，需通过 gh-pages 推送到 github)
 
 ### Learning
 
