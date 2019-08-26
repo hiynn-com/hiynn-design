@@ -36,12 +36,13 @@ import 'hiynn-design/dist/hiynn-design.css';
 
 ### Note
 
-文件夹 dist、es 和 lib 是通过 umd、es 和 commonjs 打包的，而 docs 是文档用的文件夹
+文件夹 dist、es 和 lib 是通过 umd、es 和 commonjs 打包的，而 docs 是在线预览文件夹
 
 1. umd -> dist
 2. es -> es
 3. commonjs -> lib
-4. prod -> docs
+4. dev -> src(本地预览)
+5. prod -> docs(在线预览，需通过 gh-pages 推送到 github)
 
 ### Learning
 
