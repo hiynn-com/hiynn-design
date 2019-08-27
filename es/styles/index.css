@@ -1,2 +1,2 @@
-@import url(normalize.pcss);@import url(vars.pcss);@import url(app.pcss);
+@import url(normalize.pcss);@import url(vars.pcss);@import url(app.pcss);@import url(override-antd.pcss);
 /*# sourceMappingURL=index.css.map */

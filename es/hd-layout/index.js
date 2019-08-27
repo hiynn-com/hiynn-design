@@ -87,13 +87,14 @@ function (_Component) {
           logo = _this$props2.logo,
           title = _this$props2.title,
           subTitle = _this$props2.subTitle;
+      var toggleCollapse = _this.props.toggleCollapse;
 
       if (sider) {
         var icon = typeof sider.get("collapsed") === "undefined" ? null : React.createElement(_Icon, {
           type: sider.get("collapsed") ? "menu-unfold" : "menu-fold",
           className: "collapse-icon",
           onClick: function onClick() {
-            return _this.toggleCollapse();
+            return toggleCollapse();
           }
         });
         return React.createElement(React.Fragment, null, icon, React.createElement("span", {
@@ -134,7 +135,6 @@ function (_Component) {
         menus = _this$props4.menus,
         atr = _objectWithoutPropertiesLoose(_this$props4, ["children", "theme", "sider", "logo", "title", "subTitle", "menus"]);
 
-    var toggleCollapse = this.props.toggleCollapse;
     var prefixCls = "hd";
     var classnames = cls(prefixCls, className, (_cls = {}, _cls[prefixCls + "-layout-container"] = true, _cls));
     return React.createElement(_Layout, {
