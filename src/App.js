@@ -5,6 +5,7 @@ import HdLayoutPage from "./pages/HdLayoutPage";
 import HdHGroupPage from './pages/HdHGroupPage';
 import HdVGroupPage from './pages/HdVGroupPage';
 import HdCodeAreaPage from './pages/HdCodeAreaPage';
+import HdCodeZonePage from './pages/HdCodeZonePage';
 import HdPanelPage from './pages/HdPanelPage';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/HGroup" component={HdHGroupPage} />
           <Route path="/VGroup" component={HdVGroupPage} />
           <Route path="/CodeArea" component={HdCodeAreaPage} />
+          <Route path="/CodeZone" component={HdCodeZonePage} />
           <Route path="/Panel" component={HdPanelPage} />
         </Switch>
       </HashRouter>
