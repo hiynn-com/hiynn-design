@@ -8,6 +8,7 @@ const QuicklyPage = loadable(() => import("../pages/QuicklyPage"), { fallback: <
 const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Loading /> });
 const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
 const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
+const HdCardPage = loadable(() => import("../pages/HdCardPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -50,6 +51,13 @@ const routes = [
         path: "/components/hd-master",
         exact: true,
         component: HdMasterPage
+      },
+      {
+        key: "4-3",
+        name: "HdCardPage",
+        path: "/components/hd-card",
+        exact: true,
+        component: HdCardPage,
       }
     ]
   }

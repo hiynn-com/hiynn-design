@@ -68,6 +68,14 @@ class HdLayoutPage extends Component {
               url: "/components/hd-master",
               show: true,
               order: 2
+            },
+            {
+              id: 43,
+              title: "HdCard",
+              icon: null,
+              url: "/components/hd-card",
+              show: true,
+              order: 3
             }
           ]
         }
