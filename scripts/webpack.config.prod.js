@@ -33,6 +33,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.md$/,
+        use: "raw-loader"
+      },
+      {
         test: /\.(pc|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
