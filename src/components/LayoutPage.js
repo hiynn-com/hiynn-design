@@ -89,6 +89,7 @@ class HdLayoutPage extends Component {
         sider={this.state.sider}
         logo={<img src={logo} width={40} style={{ borderRadius: "100%" }} />}
         menus={this.state.menus}
+        showUserDropdown={true}
       >
         {renderRoutes(routes)}
       </HdLayout>
