@@ -68,6 +68,14 @@ class HdLayoutPage extends Component {
               url: "/components/hd-master",
               show: true,
               order: 2
+            },
+            {
+              id: 43,
+              title: "HdFilter",
+              icon: null,
+              url: "/components/hd-filter",
+              show: true,
+              order: 2
             }
           ]
         }
