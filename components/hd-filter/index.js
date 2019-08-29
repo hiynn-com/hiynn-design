@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { message, Icon } from 'antd'
+import { message, Icon, Button } from 'antd'
 import './style'
 export default class HdFilter extends Component{
+
   state={
     filterShow:true,
     filterData:[],
@@ -62,7 +63,7 @@ export default class HdFilter extends Component{
               {filterData.map(item=>(
                 <li key={`${item.categoryId}${item.id}`} className='hd-filter-options-tag'>
                   {item.name}
-                  <Icon type="close" style={{paddingLeft:5}} onClick={()=>this.deleteOption(item)} />
+                  <Icon type="close" style={{paddingLeft:5,fontSize:12}} onClick={()=>this.deleteOption(item)} />
                 </li>)
               )}
             </ul>
@@ -81,9 +82,10 @@ export default class HdFilter extends Component{
             </li>
           ))}
         </ul>
-        <div className='hd-filter-btn' onClick={this.tabShow}>{filterShow ? '收起':'展开'}
-          {filterShow ? <Icon type="caret-up" />:<Icon type="caret-down" />}
-        </div>
+        <Button type='primary' block onClick={this.tabShow}>
+          {filterShow ? '收起':'展开'}
+          <Icon type="caret-up" rotate={`${filterShow ? 0:180}`} />
+        </Button>
       </div>
     )
   }

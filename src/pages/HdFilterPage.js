@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HdFilter from '../../components/hd-filter'
 
-class HdLayoutPage extends Component {
+class HdFilterPage extends Component {
   getFilterOptions = (filterData) => {
     console.log(filterData)
   }
@@ -76,4 +76,4 @@ class HdLayoutPage extends Component {
   }
 }
 
-export default HdLayoutPage;
+export default HdFilterPage;
