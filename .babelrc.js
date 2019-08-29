@@ -47,7 +47,17 @@ const plugins = [
       libraryName: "antd",
       libraryDirectory: "es",
       style: "css" // `style: true` 会加载 less 文件
-    }
+    },
+    'antd'
+  ],
+  [
+    "import",
+    {
+      libraryName: "react-code-previewer",
+      libraryDirectory: "es",
+      style: "css" // `style: true` 会加载 less 文件
+    },
+    'rcp'
   ]
 ];
 module.exports = { presets, plugins };
