@@ -1,24 +1,14 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, HashRouter, Route } from "react-router-dom";
 import { Switch, Redirect } from "react-router";
-import HdLayoutPage from "./pages/HdLayoutPage";
-import HdHGroupPage from './pages/HdHGroupPage';
-import HdVGroupPage from './pages/HdVGroupPage';
-import HdCodeAreaPage from './pages/HdCodeAreaPage';
-import HdCodeZonePage from './pages/HdCodeZonePage';
-import HdPanelPage from './pages/HdPanelPage';
+import LayoutPage from "./components/LayoutPage";
 
 class App extends Component {
   render() {
     return (
       <HashRouter>
         <Switch>
-          <Route path="/" exact component={HdLayoutPage} />
-          <Route path="/HGroup" component={HdHGroupPage} />
-          <Route path="/VGroup" component={HdVGroupPage} />
-          <Route path="/CodeArea" component={HdCodeAreaPage} />
-          <Route path="/CodeZone" component={HdCodeZonePage} />
-          <Route path="/Panel" component={HdPanelPage} />
+          <Route path="/" component={LayoutPage} />} />
         </Switch>
       </HashRouter>
     );

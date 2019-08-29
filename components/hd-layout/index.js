@@ -29,43 +29,88 @@ class HdLayout extends Component {
   componentWillReceiveProps(nextProps) {
     console.log("nextProps", nextProps);
   }
+  renderSider = () => {
+    const { sider, theme, logo, menus, title } = this.props;
+
+    let titleCls = "title";
+    if (sider) {
+      titleCls = cls(titleCls, {
+        "hide-title": sider.get("collapsed")
+      });
+    }
+    return sider ? (
+      <Sider theme={theme} trigger={null} collapsible width={sider.get("width")} collapsed={sider.get("collapsed")} breakpoint={sider.breakpoint} className="hd-layout-sider">
+        <div className="hd-layout-logo">
+          {logo}
+          <span className={titleCls}>{title}</span>
+        </div>
+        <HdMenus theme={theme} menus={menus} width={sider.get("width")} collapsed={sider.get("collapsed")} />
+      </Sider>
+    ) : null;
+  };
+  renderSubtitle = () => {
+    const { sider, logo, title, subTitle } = this.props;
+    const { toggleCollapse } = this.props;
+    if (sider) {
+      const icon =
+        typeof sider.get("collapsed") === "undefined" ? null : <Icon type={sider.get("collapsed") ? "menu-unfold" : "menu-fold"} className="collapse-icon" onClick={() => toggleCollapse()} />;
+      return (
+        <>
+          {icon}
+          <span className="title">{subTitle}</span>
+        </>
+      );
+    } else {
+      return (
+        <>
+          {logo}
+          <span className="title">{title}</span>
+        </>
+      );
+    }
+  };
+  renderUserDropdown = () => {
+    const { showUserDropdown } = this.props;
+    return showUserDropdown ? (
+      <Dropdown overlay={this.renderHeaderMenu} placement="bottomRight">
+        <div className="hd-layout-header-toolbar-content">
+          <Avatar className="user-avatar" icon="user" />
+          <span className="user-name">用户</span>
+        </div>
+      </Dropdown>
+    ) : null;
+  };
   render() {
     let styleContext = this.context;
 
     const { className, style } = this.props;
     const { children, theme, sider, logo, title, subTitle, menus, ...atr } = this.props;
-    const { toggleCollapse } = this.props;
+
     const prefixCls = "hd";
+
     const classnames = cls(prefixCls, className, {
       [`${prefixCls}-layout-container`]: true
     });
 
-    let titleCls = cls("hd-layout-logo-title", {
-      "hide-title": sider.get("collapsed")
-    });
     return (
       <Layout className={classnames}>
-        <Sider theme={theme} trigger={null} collapsible width={sider.get("width")} collapsed={sider.get("collapsed")} breakpoint={sider.breakpoint} className="hd-layout-sider">
-          <div className="hd-layout-logo">
-            {logo}
-            <span className={titleCls}>{title}</span>
-          </div>
-          <HdMenus theme={theme} menus={menus} width={sider.get("width")} collapsed={sider.get("collapsed")} />
-        </Sider>
+        {this.renderSider()}
         <Layout className="hd-layout-main">
           <Header className="hd-layout-main-header">
             <div className="hd-layout-main-header-content">
-              <div className="hd-layout-main-header-subtitle">
-                {typeof sider.get("collapsed") === "undefined" ? null : <Icon type={sider.get("collapsed") ? "menu-unfold" : "menu-fold"} className="collapse-icon" onClick={() => toggleCollapse()} />}
-                <span className="sub-title">{subTitle}</span>
+              <div className="hd-layout-main-header-left">
+                <div className="hd-layout-main-header-subtitle">{this.renderSubtitle()}</div>
               </div>
-              <div className="hd-layout-header-toolbar">
-                <Dropdown overlay={this.renderHeaderMenu} placement="bottomRight">
-                  <div className="hd-layout-header-toolbar-content">
-                    <Avatar className="user-avatar" icon="user" />
-                    <span className="user-name">用户</span>
-                  </div>
-                </Dropdown>
+              <div className="hd-layout-main-header-right">
+                <div>
+                  {/* <Menu mode="horizontal">
+                    <Menu.Item key="mail">
+                      <Icon type="mail" />
+                      Navigation One
+                    </Menu.Item>
+                  </Menu> */}
+                </div>
+                <div className="hd-layout-header-toolbar">{this.renderUserDropdown()}</div>
               </div>
             </div>
           </Header>
