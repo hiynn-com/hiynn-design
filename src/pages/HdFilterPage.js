@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import HdFilter from '../../components/hd-filter'
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import installMd from '../md/hd-filter/install.md'
+import apiMd from '../md/hd-filter/api.md'
 
 class HdFilterPage extends Component {
   getFilterOptions = (filterData) => {
@@ -147,6 +148,7 @@ class HdFilterPage extends Component {
     <CodePreviewer code={filterCode} showCode={true}>
       <HdFilter filterData={filterData} getFilterOptions={this.getFilterOptions} />
     </CodePreviewer>
+    <MdPreviewer md={apiMd}></MdPreviewer>
   </PreviewLayout>
   }
 }
