@@ -1,13 +1,29 @@
 import React, { Component } from 'react'
 import { message, Icon, Button } from 'antd'
+import PropTypes from 'prop-types'
 import './style'
-export default class HdFilter extends Component{
 
+export default class HdFilter extends Component{
+  /**
+   * filterShow:筛选面板收起或者展开标识
+   * dictData:筛选项数据
+   * filterData:选中的条件
+   */
   state={
     filterShow:true,
     filterData:[],
-    dictData:{},
+    dictData:[],
   }
+  /**
+   * 参数验证
+   */
+  static propTypes = {
+    filterData:PropTypes.array.isRequired,
+    getFilterOptions:PropTypes.func.isRequired,
+  }
+  /**
+   * 拿到用户传参初始化筛选项dictData
+   */
   componentWillMount(){
     let { filterData } = this.props
     filterData.map(item=>item.children.map(items=>items.checked=false))
@@ -23,7 +39,12 @@ export default class HdFilter extends Component{
       filterShow:!filterShow,
     })
   }
-  /*筛选条件选择*/
+  /**
+   * 筛选条件选择
+   * itemData:选中的条件对象
+   * index:选中条件对象的所属索引值
+   * flag:是否已选择
+   */
   changeOption = (itemData,index,flag) => {
     if(!flag){
       const { dictData, filterData } = this.state
@@ -33,7 +54,7 @@ export default class HdFilter extends Component{
       this.setState({
         dictData,
         filterData:[...filterLists]
-      },function(){
+      },()=>{
         this.props.getFilterOptions(this.state.filterData)
       })
     }else{
@@ -48,7 +69,7 @@ export default class HdFilter extends Component{
     this.setState({
       filterData,
       dictData,
-    },function(){
+    },()=>{
       this.props.getFilterOptions(this.state.filterData)
     })
   }
