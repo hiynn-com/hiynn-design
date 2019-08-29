@@ -9,6 +9,11 @@ const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Load
 const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
 const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
 
+const HdHGroupPage = loadable(() => import("../pages/HdHGroupPage"), { fallback: <Loading /> });
+const HdVGroupPage = loadable(() => import("../pages/HdVGroupPage"), { fallback: <Loading /> });
+const HdPanelPage = loadable(() => import("../pages/HdPanelPage"), { fallback: <Loading /> });
+const HdCodeAreaPage = loadable(() => import("../pages/HdCodeAreaPage"), { fallback: <Loading /> });
+
 const routes = [
   {
     key: "1",
@@ -50,6 +55,34 @@ const routes = [
         path: "/components/hd-master",
         exact: true,
         component: HdMasterPage
+      },
+      {
+        key: "4-3",
+        name: "HdHGroupPage",
+        path: "/components/hd-hGroup",
+        exact: true,
+        component: HdHGroupPage
+      },
+      {
+        key: "4-4",
+        name: "HdVGroupPage",
+        path: "/components/hd-vGroup",
+        exact: true,
+        component: HdVGroupPage
+      },
+      {
+        key: "4-5",
+        name: "HdPanelPage",
+        path: "/components/hd-panel",
+        exact: true,
+        component: HdPanelPage
+      },
+      {
+        key: "4-6",
+        name: "HdCodeAreaPage",
+        path: "/components/hd-codeArea",
+        exact: true,
+        component: HdCodeAreaPage
       }
     ]
   }

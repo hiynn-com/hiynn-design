@@ -68,6 +68,46 @@ class HdLayoutPage extends Component {
               url: "/components/hd-master",
               show: true,
               order: 2
+            },
+            {
+              id: 43,
+              title: "HdHGroup",
+              icon: null,
+              url: "/components/hd-hGroup",
+              show: true,
+              order: 3
+            },
+            {
+              id: 44,
+              title: "HdVGroup",
+              icon: null,
+              url: "/components/hd-vGroup",
+              show: true,
+              order: 4
+            },
+            {
+              id: 45,
+              title: "HdPanel",
+              icon: null,
+              url: "/components/hd-panel",
+              show: true,
+              order: 5
+            },
+            {
+              id: 46,
+              title: "HdCodeArea",
+              icon: null,
+              url: "/components/hd-codeArea",
+              show: true,
+              order: 6
+            },
+            {
+              id: 47,
+              title: "HdCodeZone",
+              icon: null,
+              url: "/components/hd-codeZone",
+              show: true,
+              order: 7
             }
           ]
         }

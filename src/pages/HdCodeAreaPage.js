@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import CodeArea from '../../components/hd-CodeArea/index';
-import '../../components/hd-CodeArea/style/index';
+import CodeArea from '../../components/hd-codeArea/index';
+import '../../components/hd-codeArea/style/index';
 
 export default class HdCodeAreaPage extends Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    componentDidMount() {
+  componentDidMount() {
 
-    }
+  }
 
-    render() {
-        return (
-            <CodeArea width='400' height='300'/>
-        );
-    }
+  render() {
+    return (
+      <CodeArea width='400' height='300' />
+    );
+  }
 }

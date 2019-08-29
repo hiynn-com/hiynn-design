@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import CodeZone from '../../components/hd-CodeZone/index';
-import '../../components/hd-CodeZone/style/index';
+import CodeZone from '../../components/hd-codeZone/index';
+import '../../components/hd-codeZone/style/index';
 
 export default class HdCodeZonePage extends Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    componentDidMount() {
+  componentDidMount() {
 
-    }
+  }
 
-    render() {
-        return (
-            <CodeZone width='400' height='300'/>
-        );
-    }
+  render() {
+    return (
+      <CodeZone width='400' height='300' />
+    );
+  }
 }
