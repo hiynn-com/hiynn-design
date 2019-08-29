@@ -29,7 +29,7 @@ const flexMapping = {
   between: 'space-between',
 };
 
-export default class HGroup extends Component {
+export default class VGroup extends Component {
 
   // 类型检查
   static propTypes = {
@@ -41,7 +41,7 @@ export default class HGroup extends Component {
 
   // 默认props
   static defaultProps = {
-    ['vertical-align']: 'top',              // 垂直对齐
+    ['vertical-align']: 'justify',          // 垂直对齐
     ['horizontal-align']: 'center',         // 水平对齐
     width: '100%',                          // 宽度
     height: 'auto',                         // 高度
