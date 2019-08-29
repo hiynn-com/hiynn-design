@@ -61,6 +61,7 @@ a {
 @import "./normalize.pcss";
 @import "./vars.pcss";
 @import "./app.pcss";
+@import "./override-antd.pcss";
 
 /* stylelint-disable */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -439,6 +440,8 @@ template {
   display: none;
 }
 
+
+
 :root {
   /** 全局主色*/
   --primary-color: #0E64C7;
@@ -553,6 +556,12 @@ template {
   width: var(--header-dropdown-menu-item-height);
 }
 
+.hd-sider-menu-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 64px);
+}
+
 
   .demo-container.demo-wrapper {
     color: red;
@@ -560,12 +569,6 @@ template {
     align-items: center;
     justify-content: flex-start;
   }
-
-.hd-sider-menu-container {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: calc(100% - 64px);
-}
 
 
 

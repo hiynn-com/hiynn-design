@@ -1,8 +1,8 @@
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 import "antd/es/dropdown/style/css";
 import _Dropdown from "antd/es/dropdown";
 import "antd/es/avatar/style/css";
 import _Avatar from "antd/es/avatar";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 import "antd/es/menu/style/css";
 import _Menu from "antd/es/menu";
 import "antd/es/icon/style/css";
@@ -87,13 +87,14 @@ function (_Component) {
           logo = _this$props2.logo,
           title = _this$props2.title,
           subTitle = _this$props2.subTitle;
+      var toggleCollapse = _this.props.toggleCollapse;
 
       if (sider) {
         var icon = typeof sider.get("collapsed") === "undefined" ? null : React.createElement(_Icon, {
           type: sider.get("collapsed") ? "menu-unfold" : "menu-fold",
           className: "collapse-icon",
           onClick: function onClick() {
-            return _this.toggleCollapse();
+            return toggleCollapse();
           }
         });
         return React.createElement(React.Fragment, null, icon, React.createElement("span", {
@@ -104,6 +105,21 @@ function (_Component) {
           className: "title"
         }, title));
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "renderUserDropdown", function () {
+      var showUserDropdown = _this.props.showUserDropdown;
+      return showUserDropdown ? React.createElement(_Dropdown, {
+        overlay: _this.renderHeaderMenu,
+        placement: "bottomRight"
+      }, React.createElement("div", {
+        className: "hd-layout-header-toolbar-content"
+      }, React.createElement(_Avatar, {
+        className: "user-avatar",
+        icon: "user"
+      }), React.createElement("span", {
+        className: "user-name"
+      }, "\u7528\u6237"))) : null;
     });
 
     _this.state = {};
@@ -134,7 +150,6 @@ function (_Component) {
         menus = _this$props4.menus,
         atr = _objectWithoutPropertiesLoose(_this$props4, ["children", "theme", "sider", "logo", "title", "subTitle", "menus"]);
 
-    var toggleCollapse = this.props.toggleCollapse;
     var prefixCls = "hd";
     var classnames = cls(prefixCls, className, (_cls = {}, _cls[prefixCls + "-layout-container"] = true, _cls));
     return React.createElement(_Layout, {
@@ -153,17 +168,7 @@ function (_Component) {
       className: "hd-layout-main-header-right"
     }, React.createElement("div", null), React.createElement("div", {
       className: "hd-layout-header-toolbar"
-    }, React.createElement(_Dropdown, {
-      overlay: this.renderHeaderMenu,
-      placement: "bottomRight"
-    }, React.createElement("div", {
-      className: "hd-layout-header-toolbar-content"
-    }, React.createElement(_Avatar, {
-      className: "user-avatar",
-      icon: "user"
-    }), React.createElement("span", {
-      className: "user-name"
-    }, "\u7528\u6237"))))))), React.createElement(Content, {
+    }, this.renderUserDropdown())))), React.createElement(Content, {
       className: "hd-layout-main-content"
     }, children)));
   };
