@@ -53,22 +53,22 @@ class HdLayoutPage extends Component {
           show: true,
           order: 4,
           children: [
-            {
-              id: 41,
-              title: "HdLayout",
-              icon: null,
-              url: "/components/hd-layout",
-              show: true,
-              order: 1
-            },
-            {
-              id: 42,
-              title: "HdMaster",
-              icon: null,
-              url: "/components/hd-master",
-              show: true,
-              order: 2
-            },
+            // {
+            //   id: 41,
+            //   title: "HdLayout",
+            //   icon: null,
+            //   url: "/components/hd-layout",
+            //   show: true,
+            //   order: 1
+            // },
+            // {
+            //   id: 42,
+            //   title: "HdMaster",
+            //   icon: null,
+            //   url: "/components/hd-master",
+            //   show: true,
+            //   order: 2
+            // },
             {
               id: 43,
               title: "HdHGroup",

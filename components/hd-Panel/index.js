@@ -31,6 +31,9 @@ const sizeValidationFn = (props, propName, componentName) => {
 // 十六进制数输入的验证函数
 const hexValidationFn = (props, propName, componentName) => {
     const val = props[propName];
+    if (val === 'not specified') {
+        return;
+    }
     const reg = /^#[0-9a-fA-F]{6}$/g;
     if (!reg.test(val)) {
         return new Error(`传给组件${componentName}的属性${propName}的值不合法，校验失败`);
@@ -43,13 +46,13 @@ export default class Panel extends Component {
     static propTypes = {
         width: sizeValidationFn,                                            // panel宽度
         height: sizeValidationFn,                                           // panel高度
-        ['corner-radius']: PropTypes.number,                                // 标题栏圆角
+        ['corner-radius']: PropTypes.string,                                // 标题栏圆角
         title: PropTypes.string,                                            // 标题栏内容
         ['title-height']: sizeValidationFn,                                 // 标题栏高度
         ['title-background']: hexValidationFn,                              // 标题栏背景色
         ['title-color']: hexValidationFn,                                   // 标题栏字体颜色
         ['text-align']: PropTypes.oneOf(['left', 'middle', 'right']),       // 标题栏标题位置
-        ['font-size']: PropTypes.number,                                    // 标题栏字体大小
+        ['title-fontsize']: PropTypes.string,                               // 标题栏字体大小
         background: hexValidationFn,                                        // 内容区背景色
         color: hexValidationFn,                                             // 内容区字体颜色
     };
@@ -61,9 +64,9 @@ export default class Panel extends Component {
         ['corner-radius']: '5',                 // 标题栏圆角
         title: '',                              // 标题栏内容
         ['title-height']: '30',                 // 标题栏高度
-        ['title-background']: '#25AFF3',        // 标题栏背景色
+        ['title-background']: '#1890FF',        // 标题栏背景色
         ['title-color']: '#ffffff',             // 标题栏字体颜色
-        ['font-size']: '16',                    // 标题栏字体大小
+        ['title-fontsize']: '16',               // 标题栏字体大小
         ['text-align']: 'left',                 // 标题栏字体对齐方式
         background: 'not specified',            // 内容区背景色
         color: '#000000',                       // 内容区字体颜色
@@ -91,7 +94,7 @@ export default class Panel extends Component {
             height: this.unitConvertor(this.props.height),
             ['title-height']: this.unitConvertor(this.props['title-height']),
             ['corner-radius']: this.unitConvertor(this.props['corner-radius']),
-            ['font-size']: this.unitConvertor(this.props['font-size']),
+            ['title-fontsize']: this.unitConvertor(this.props['title-fontsize']),
         }
     }
 
@@ -117,7 +120,7 @@ export default class Panel extends Component {
         const { width, height } = sizeRst;
         const titleHeight = sizeRst['title-height'];
         const titleCornerRadius = sizeRst['corner-radius'];
-        const titleFont = sizeRst['font-size'];
+        const titleFont = sizeRst['title-fontsize'];
         // 容器宽高
         wrapperStyle = {
             ...wrapperStyle,
@@ -146,10 +149,12 @@ export default class Panel extends Component {
         // 设置内容区其他样式
         const background = this.props['background'];
         const color = this.props['color'];
+        const contentHeight = `calc(${height} - ${titleHeight})`;
         contentStyle = {
             ...contentStyle,
             background,
             color,
+            height: contentHeight,
         };
 
         return {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input } from 'antd';
 import HGroup from '../../components/hd-hGroup';
 import '../../components/hd-hGroup/style/index';
 import { PreviewLayout, CodePreviewer, MdPreviewer } from 'react-code-previewer';
@@ -22,7 +23,7 @@ export default class HdHGroupPage extends Component {
     const demo1 = `<HGroup style={{ background: 'lightblue' }} key={1}>
   <div style={{background: '#FFBB55'}}>i'm a div</div>
   <p style={{background: '#99BB33'}}>this is a p</p>
-  <input type="text" value='输入框'/>
+  <Input placeholder="small size" style={{width: '200px'}} />
   <span style={{background: '#FF4444'}}>span span...</span>
 </HGroup>`;
 
@@ -52,7 +53,7 @@ export default class HdHGroupPage extends Component {
             <HGroup style={{ background: '#108EE9' }} key={1}>
               <div style={{ background: '#FFBB55' }}>i'm a div</div>
               <p style={{ background: '#99BB33' }}>this is a p</p>
-              <input type="text" value='输入框' />
+              <Input placeholder="small size" style={{width: '200px'}} />
               <span style={{ background: '#FF4444' }}>span span...</span>
             </HGroup>
           </CodePreviewer>
