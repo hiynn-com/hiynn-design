@@ -14,7 +14,7 @@
 
 | 参数        | 说明                              | 类型                      | 默认值 | 版本 |
 | ----------- | --------------------------------- | ------------------------- | ------ | ---- |
-| key         | 表单的属性 key                    | string                    | -      |
+| key         | 表单的属性 key                    | string                    | -      | -    |
 | label       | 表单 label 名称                   | string                    | 空     | -    |
 | type        | 表单的类型                        | "text，password， select" | text   | -    |
 | labelCol    | label 占据的等份                  | number                    | -      | -    |
@@ -28,7 +28,7 @@
 
 | 参数  | 说明                                          | 类型    | 默认值 | 版本 |
 | ----- | --------------------------------------------- | ------- | ------ | ---- |
-| text  | 按钮文字内容                                  | string  | -      |
+| text  | 按钮文字内容                                  | string  | -      | -    |
 | block | 块级按钮                                      | Boolean | false  | -    |
 | type  | 按钮颜色 ,参考 Ant Design Button 按钮样式 Api | string  | text   | -    |
 | style | 可自定义 css 样式                             | { }     | -      | -    |
