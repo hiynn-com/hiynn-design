@@ -68,7 +68,31 @@ class HdLayoutPage extends Component {
               url: "/components/hd-master",
               show: true,
               order: 2
-            }
+            },
+            {
+              id: 42,
+              title: "HdMaster",
+              icon: null,
+              url: "/components/hd-master",
+              show: true,
+              order: 2
+            },
+            {
+              id: 43,
+              title: "HdArticle",
+              icon: null,
+              url: "/components/hd-article",
+              show: true,
+              order: 2
+            },
+            {
+              id: 44,
+              title: "HdComment",
+              icon: null,
+              url: "/components/hd-comment",
+              show: true,
+              order: 2
+            },
           ]
         }
       ]

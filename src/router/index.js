@@ -9,6 +9,9 @@ const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Load
 const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
 const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
 
+const ArticlePage = loadable(() => import("../pages/articlePage"), { fallback: <Loading /> });
+const CommentPage = loadable(() => import("../pages/commentPage"), { fallback: <Loading /> });
+
 const routes = [
   {
     key: "1",
@@ -50,6 +53,20 @@ const routes = [
         path: "/components/hd-master",
         exact: true,
         component: HdMasterPage
+      },
+      {
+        key: "4-3",
+        name: "ArticlePage",
+        path: "/components/hd-article",
+        exact: true,
+        component: ArticlePage
+      },
+      {
+        key: "4-4",
+        name: "CommentPage",
+        path: "/components/hd-comment",
+        exact: true,
+        component: CommentPage
       }
     ]
   }

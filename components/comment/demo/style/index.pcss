@@ -1,0 +1,109 @@
+.comment-box{
+    width: 100%;
+    padding:10px 20px;
+    display: flex;
+}
+.comment-avatar{
+        width: 50px;
+        &>span{
+            &>img{
+            width:40;
+            height:40;
+            }
+        }
+    }
+.author-style{
+    font-size: 18px;
+    color: block;
+    margin-right: 15px;
+}
+.time-style{
+    font-size: 16px;
+    color: #999;
+    margin-right: 15px;
+}
+.content-style{
+    font-size: 18px;
+    margin: 5px 0;
+    color: block;
+}
+.comment-reply{
+    display: block;
+    margin: 10px 0;
+    &>div{
+    display: flex;
+    margin: 10px 0;
+    }
+}
+.click-style{
+    font-size: 16px;
+    color: blue;
+    cursor: pointer;
+}
+.answer-button{
+    color: blue;
+}
+
+.answer-first{
+    text-align: right;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 70%;
+    margin: 0 auto;
+    & div{
+        position: relative;
+        width: 100%;
+        & textarea{
+            width:100%;
+            height:100px;
+            padding: 7px;
+            font-size: 18px;
+            background-color: transparent;
+        }
+        & input{
+            text-align: right;
+            width: 300px;
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            color:#999;
+            border: 0;
+            background-color: transparent;
+        }
+    }
+    & button{
+        margin: 8px 0 0 8px;
+    }
+}
+
+.answer-second{
+        display: none;
+        text-align: right;
+        padding: 10px 0;
+        font-size: 14px;
+        width: 50%;
+        & div{
+            position: relative;
+            width: 100%;
+            & textarea{
+                width:100%;
+                height:100px;
+                padding: 7px;
+                font-size: 18px;
+                background-color: transparent;
+            }
+            & input{
+                text-align: right;
+                width: 300px;
+                position: absolute;
+                right: 15px;
+                bottom: 10px;
+                color:#999;
+                border: 0;
+                background-color: transparent;
+            }
+        }
+        & button{
+            margin: 8px 0 0 8px;
+        }
+    }
