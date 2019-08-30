@@ -33,4 +33,9 @@
 | type  | 按钮颜色 ,参考 Ant Design Button 按钮样式 Api | string  | text   | -    |
 | style | 可自定义 css 样式                             | { }     | -      | -    |
 
+## 任务列表
+
+- [x] 基础用法
+- [ ] 扩展更多属性
+
 ### 测试阶段 未完待续 ...
