@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import { Layout, Menu, Icon, Avatar, Dropdown, Spin, Form, Input, Button, Checkbox, message, Select } from "antd";
+import { Form, Input, Button, Checkbox, message, Select } from "antd";
 import { fromJs, Map, Set } from "immutable";
 import PropTypes from "prop-types";
-import cls from "classnames";
-import HdMenus from "../hd-menus";
-import { StyleContext } from "../context/style-context";
-const { Header, Content, Sider } = Layout;
+
 const { Option } = Select;
 
 class HdFormValidation extends Component {

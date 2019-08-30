@@ -74,10 +74,10 @@ class HdFormValidationPages extends Component {
   }
 
   onChange = data => {
-    console.log(data);
+    console.log("监听数据变化:", data);
   };
   submit = data => {
-    console.log("确定获取的数据", data);
+    console.log("点击按钮获取数据:", data);
   };
 
   render() {
