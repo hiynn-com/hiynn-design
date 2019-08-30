@@ -1,17 +1,21 @@
 .hd-card-wrap {
-  border: 1px solid #ccc;
   display: inline-block;
   background: #fff;
   margin:20px;
   padding: var(--padding-md);
   font-size: var(---font-size-base);
-  min-width: 300px;
+  min-width: 200px;
   & .hd-card-title {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-base);
+    color: var(--card-title-color);
+    margin-bottom: 10px;
+  }
+  & .hd-card-value {
+    font-size: var(--font-size-xxl);
+    color: var(--color-333);
     font-weight: bold;
   }
-  & .hd-card-cell {
-    line-height: 40px;
+  & .hd-card-content {
     &::before,&::after{
       content: '';
       display: table;
@@ -19,81 +23,20 @@
     &::after {
       clear: both;
     }
-    & .hd-card-cell-title {
-      text-align: right;
-    }
-    
-    & .hd-card-cell-value {
-    }
-  }
-  &.hd-card-lg {
-    font-size: var(--font-size-md);
-    padding: var(--padding-lg);
-  }
-  &.hd-card-sm {
-    font-size: var(--font-size-sm);
-    padding: var(--padding-sm);
-  }
-  &.inline {
-    & .hd-card-cell {
-      display: inline-block;
+    & .hd-card-content-cell {
+      font-size: var(--font-size-base);
+      color: var(--card-title-color);
+      margin-top: 5px;
       margin-right: 20px;
-      & .hd-card-cell-title {
-        display: inline-block;
-      }
-      & .hd-card-cell-value {
-        display: inline-block;
-      }
+      display: inline-block;
     }
   }
-}
-.hd-col-1{
-  width: 10%; 
-  display: block; 
-  float: left;
-}
-.hd-col-2{
-  width: 20%;  
-  display: block; 
-  float: left;
-}
-.hd-col-3{
-  width: 30%;  
-  display: block; 
-  float: left;
-}
-.hd-col-4{
-  width: 40%;  
-  display: block; 
-  float: left;
-}
-.hd-col-5{
-  width: 50%;  
-  display: block; 
-  float: left;
-}
-.hd-col-6{
-  width: 60%;  
-  display: block; 
-  float: left;
-}
-.hd-col-7{
-  width: 70%;  
-  display: block; 
-  float: left;
-}
-.hd-col-8{
-  width: 80%;  
-  display: block; 
-  float: left;
-}
-.hd-col-9{
-  width: 90%;  
-  display: block; 
-  float: left;
-}
-.hd-col-10{
-  width: 100%;  
-  display: block; 
-  float: left;
+  & .hd-card-desc {
+    margin-top: 5px;
+  }
+  &.block {
+     & .hd-card-content-cell {
+      display: block;
+    }
+  }
 }
