@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import HdFormValidation from "../../components/hd-formValidation";
 import { Input, message } from "antd";
+import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
+import IndexMD from "./FormMD/Index.md";
+import ApiMD from "./FormMD/Api.md";
 
 class HdFormValidationPages extends Component {
   constructor(props) {
@@ -82,13 +85,17 @@ class HdFormValidationPages extends Component {
 
   render() {
     return (
-      <div className="content">
-        <div>
-          <HdFormValidation layout="inline" Hdbtn={this.state.btn} Hdchange={this.onChange} Hddata={this.state.searchData} Hdsubmit={this.submit}></HdFormValidation>
-        </div>
-        <div style={{ width: "500px" }}>
-          <HdFormValidation Hdbtn={this.state.subbtn} Hdchange={this.onChange} Hddata={this.state.submitData} Hdsubmit={this.submit}></HdFormValidation>
-        </div>
+      <div style={{ marginLeft: "40px" }}>
+        <PreviewLayout>
+          <MdPreviewer md={IndexMD}></MdPreviewer>
+          <div className="content">
+            <div style={{ width: "500px" }}>
+              <HdFormValidation Hdbtn={this.state.subbtn} Hdchange={this.onChange} Hddata={this.state.submitData} Hdsubmit={this.submit}></HdFormValidation>
+              {/* <HdFormValidation layout="inline" Hdbtn={this.state.btn} Hdchange={this.onChange} Hddata={this.state.searchData} Hdsubmit={this.submit}></HdFormValidation> */}
+            </div>
+          </div>
+          <MdPreviewer md={ApiMD}></MdPreviewer>
+        </PreviewLayout>
       </div>
     );
   }
