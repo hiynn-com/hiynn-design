@@ -1,8 +1,8 @@
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 import "antd/es/dropdown/style/css";
 import _Dropdown from "antd/es/dropdown";
 import "antd/es/avatar/style/css";
 import _Avatar from "antd/es/avatar";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
 import "antd/es/menu/style/css";
 import _Menu from "antd/es/menu";
 import "antd/es/icon/style/css";
@@ -107,6 +107,21 @@ function (_Component) {
       }
     });
 
+    _defineProperty(_assertThisInitialized(_this), "renderUserDropdown", function () {
+      var showUserDropdown = _this.props.showUserDropdown;
+      return showUserDropdown ? React.createElement(_Dropdown, {
+        overlay: _this.renderHeaderMenu,
+        placement: "bottomRight"
+      }, React.createElement("div", {
+        className: "hd-layout-header-toolbar-content"
+      }, React.createElement(_Avatar, {
+        className: "user-avatar",
+        icon: "user"
+      }), React.createElement("span", {
+        className: "user-name"
+      }, "\u7528\u6237"))) : null;
+    });
+
     _this.state = {};
     return _this;
   }
@@ -153,17 +168,7 @@ function (_Component) {
       className: "hd-layout-main-header-right"
     }, React.createElement("div", null), React.createElement("div", {
       className: "hd-layout-header-toolbar"
-    }, React.createElement(_Dropdown, {
-      overlay: this.renderHeaderMenu,
-      placement: "bottomRight"
-    }, React.createElement("div", {
-      className: "hd-layout-header-toolbar-content"
-    }, React.createElement(_Avatar, {
-      className: "user-avatar",
-      icon: "user"
-    }), React.createElement("span", {
-      className: "user-name"
-    }, "\u7528\u6237"))))))), React.createElement(Content, {
+    }, this.renderUserDropdown())))), React.createElement(Content, {
       className: "hd-layout-main-content"
     }, children)));
   };

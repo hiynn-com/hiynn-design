@@ -69,6 +69,17 @@ class HdLayout extends Component {
       );
     }
   };
+  renderUserDropdown = () => {
+    const { showUserDropdown } = this.props;
+    return showUserDropdown ? (
+      <Dropdown overlay={this.renderHeaderMenu} placement="bottomRight">
+        <div className="hd-layout-header-toolbar-content">
+          <Avatar className="user-avatar" icon="user" />
+          <span className="user-name">用户</span>
+        </div>
+      </Dropdown>
+    ) : null;
+  };
   render() {
     let styleContext = this.context;
 
@@ -99,14 +110,7 @@ class HdLayout extends Component {
                     </Menu.Item>
                   </Menu> */}
                 </div>
-                <div className="hd-layout-header-toolbar">
-                  <Dropdown overlay={this.renderHeaderMenu} placement="bottomRight">
-                    <div className="hd-layout-header-toolbar-content">
-                      <Avatar className="user-avatar" icon="user" />
-                      <span className="user-name">用户</span>
-                    </div>
-                  </Dropdown>
-                </div>
+                <div className="hd-layout-header-toolbar">{this.renderUserDropdown()}</div>
               </div>
             </div>
           </Header>
