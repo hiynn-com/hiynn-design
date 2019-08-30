@@ -70,20 +70,12 @@ class HdLayoutPage extends Component {
               order: 2
             },
             {
-              id: 42,
-              title: "HdMaster",
-              icon: null,
-              url: "/components/hd-master",
-              show: true,
-              order: 2
-            },
-            {
               id: 43,
               title: "HdArticle",
               icon: null,
               url: "/components/hd-article",
               show: true,
-              order: 2
+              order: 3
             },
             {
               id: 44,
@@ -91,7 +83,7 @@ class HdLayoutPage extends Component {
               icon: null,
               url: "/components/hd-comment",
               show: true,
-              order: 2
+              order: 4
             },
           ]
         }

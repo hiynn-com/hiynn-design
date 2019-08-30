@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Demo from "../../components/comment/demo";
-import "../../components/comment/demo/style";
+import Demo from "../../components/hd-comment/demo";
+import "../../components/hd-comment/demo/style";
 import Item from "antd/lib/list/Item";
 
 class DemoPage extends Component {

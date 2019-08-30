@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Demo from "../../components/article/demo";
-import "../../components/article/demo/style";
+import Demo from "../../components/hd-article/demo";
+import "../../components/hd-article/demo/style";
 
 class DemoPage extends Component {
   constructor(props) {
