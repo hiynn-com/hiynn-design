@@ -38,7 +38,8 @@
     "classnames": "^2.2.6",
     "core-js": "3",
     "lodash": "^4.17.4",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-code-previewer": "^0.1.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
