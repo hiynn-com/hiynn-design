@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Layout, Menu, Icon, Avatar, Dropdown, Spin, Form, Input, Button, Checkbox, message } from "antd";
+import { Layout, Menu, Icon, Avatar, Dropdown, Spin, Form, Input, Button, Checkbox, message, Select } from "antd";
 import { fromJs, Map, Set } from "immutable";
 import PropTypes from "prop-types";
 import cls from "classnames";
 import HdMenus from "../hd-menus";
 import { StyleContext } from "../context/style-context";
 const { Header, Content, Sider } = Layout;
+const { Option } = Select;
 
 class HdFormValidation extends Component {
   constructor(props) {
@@ -17,24 +18,25 @@ class HdFormValidation extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log("Received values of form: ", values);
+        this.props.Hdsubmit(values);
       }
     });
   };
 
   render() {
     const { getFieldDecorator } = this.props.form;
+    const { Hdbtn, Hdchange, Hddata, Hdsubmit, layout } = this.props;
+    // 判断表单类型
+
     return (
       <div>
-        <Form onSubmit={this.handleSubmit} className="login-form">
-          {this.props.HdData.map((item, index) => {
-            //  return
-            console.log(item, index);
+        <Form layout={layout} onSubmit={this.handleSubmit}>
+          {Hddata.map((item, index) => {
             return (
               <Form.Item key={index} label={item.label} labelCol={{ span: item.labelCol }} wrapperCol={{ span: item.wrapperCol }}>
                 {getFieldDecorator(`${item.key}`, {
                   rules: [
-                    { required: item.required, message: `请输入${item.label}` },
+                    { required: item.required, message: `${item.placeholder}` },
                     { pattern: item.reg, message: item.message }
                     // {
                     //   validator: (rule, value, callback, source, options) => {
@@ -53,13 +55,29 @@ class HdFormValidation extends Component {
                     //   }
                     // }
                   ]
-                })(<Input type={`${item.type}`} prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />} placeholder={item.placeholder} />)}
+                })(
+                  item.type == "password" ? (
+                    <Input.Password type={`${item.type}`} placeholder={item.placeholder} />
+                  ) : item.type == "select" ? (
+                    <Select placeholder="请选择">
+                      <Option value="1">Option 1</Option>
+                      <Option value="2">Option 2</Option>
+                      <Option value="3">Option 3</Option>
+                    </Select>
+                  ) : (
+                    <Input type={`${item.type}`} placeholder={item.placeholder} />
+                  )
+                )}
               </Form.Item>
             );
           })}
-          <Button type="primary" htmlType="submit" className="login-form-button">
-            Log in
-          </Button>
+          {Hdbtn ? (
+            <Button style={{ ...Hdbtn.style }} block={Hdbtn.block} type={Hdbtn.type} htmlType="submit">
+              {Hdbtn.text}
+            </Button>
+          ) : (
+            ""
+          )}
         </Form>
       </div>
     );
@@ -69,7 +87,6 @@ class HdFormValidation extends Component {
 HdFormValidation = Form.create({
   name: "normal_login",
   onValuesChange(props, changedValues, allValues) {
-    // console.log(allValues);
     props.Hdchange(allValues);
   }
 })(HdFormValidation);
