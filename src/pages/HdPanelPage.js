@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Input, Button } from 'antd';
 
-
 import Panel from '../../components/hd-panel';
 import '../../components/hd-panel/style/index';
 import HGroup from '../../components/hd-hGroup';
