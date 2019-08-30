@@ -23,7 +23,6 @@ class HdFormValidation extends Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     const { Hdbtn, Hdchange, Hddata, Hdsubmit, layout } = this.props;
-    // 判断表单类型
 
     return (
       <div>
@@ -82,7 +81,7 @@ class HdFormValidation extends Component {
 }
 
 HdFormValidation = Form.create({
-  name: "normal_login",
+  name: "",
   onValuesChange(props, changedValues, allValues) {
     props.Hdchange(allValues);
   }
