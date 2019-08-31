@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Demo from "../../components/hd-article/demo";
+import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
+import articleMd from "../md/article.md"
 import "../../components/hd-article/demo/style";
 
 class DemoPage extends Component {
@@ -31,13 +33,16 @@ class DemoPage extends Component {
   render() {
     const { data, voteStatus } = this.state;
     return (
-      <div>
-        <Demo
-          data={data}
-          voteStatus={voteStatus}
-          giveLike={this.giveLike}
-        />
-      </div>
+      <PreviewLayout>
+        {/* <CodePreviewer code={code} showCode={true}> */}
+          <Demo
+            data={data}
+            voteStatus={voteStatus}
+            giveLike={this.giveLike}
+          />
+        {/* </CodePreviewer> */}
+        <MdPreviewer md={articleMd}></MdPreviewer>
+      </PreviewLayout>
     );
   }
 }
