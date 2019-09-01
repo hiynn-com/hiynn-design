@@ -556,12 +556,6 @@ template {
   width: var(--header-dropdown-menu-item-height);
 }
 
-.hd-sider-menu-container {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: calc(100% - 64px);
-}
-
 
   .demo-container.demo-wrapper {
     color: red;
@@ -569,6 +563,12 @@ template {
     align-items: center;
     justify-content: flex-start;
   }
+
+.hd-sider-menu-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 64px);
+}
 
 
 

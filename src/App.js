@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, HashRouter, Route } from "react-router-dom";
 import { Switch, Redirect } from "react-router";
-import LayoutPage from "./components/LayoutPage";
+import LayoutContainer from "./components/LayoutContainer";
 
 class App extends Component {
+  componentDidMount() {
+    console.log("process.env.PUBLIC_URL", process.env.PUBLIC_URL);
+  }
   render() {
     return (
-      <HashRouter>
+      <Router>
         <Switch>
-          <Route path="/" component={LayoutPage} />} />
+          <Route path="/" component={LayoutContainer} />
         </Switch>
-      </HashRouter>
+      </Router>
     );
   }
 }

@@ -1,6 +1,7 @@
 const path = require("path");
+const fs = require("fs");
 const webpack = require("webpack");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
@@ -14,12 +15,16 @@ const { version, name, description } = require("../package.json");
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 const docsDir = path.join(process.cwd(), "docs");
+// const appDirectory = fs.realpathSync(process.cwd());
+// const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   mode: "production",
   // 预览
   entry: { main: "./src/index.js" },
   output: {
+    //配合 github pages 域名设置该路径，如果是本地则用'/'
+    publicPath: "/hiynn-design/",
     // path: resolve("dist"), // 输出目录
     path: docsDir,
     filename: "static/js/[name].min.js",
@@ -139,7 +144,7 @@ module.exports = {
     // 生成运行时.js 文件，并写入到.html
     runtimeChunk: "single",
     minimizer: [
-      new UglifyJsPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
         sourceMap: true

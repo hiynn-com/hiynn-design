@@ -33,13 +33,15 @@
   "bugs": {
     "url": "https://github.com/hiynn-com/hiynn-design/issues"
   },
-  "homepage": "https://github.com/hiynn-com/hiynn-design#readme",
+  "homepage": "https://github.com/hiynn-com/hiynn-design",
   "dependencies": {
+    "@loadable/component": "^5.10.2",
     "classnames": "^2.2.6",
     "core-js": "3",
     "lodash": "^4.17.4",
     "prop-types": "^15.7.2",
-    "react-code-previewer": "^0.1.1"
+    "react-code-previewer": "^0.2.2",
+    "react-router-hash-link": "^1.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -52,7 +54,6 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.5",
-    "@loadable/component": "^5.10.2",
     "ansi-styles": "^4.0.0",
     "antd": "^3.20.7",
     "autoprefixer": "^9.6.1",

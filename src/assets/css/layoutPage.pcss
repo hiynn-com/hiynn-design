@@ -1,0 +1,88 @@
+.layout-container {
+  height: 100vh;
+  background: #fff;
+
+  & .header-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+
+    & .header-left {
+      color: #fff;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      & .menu {
+        display: flex;
+        align-items: center;
+
+        & .menu-item {
+
+          width: 100px;
+          text-align: center;
+          font-weight: normal;
+          cursor: pointer;
+
+          & a {
+            color: #fff;
+            font-size: 16px;
+          }
+        }
+      }
+
+      & .title {
+        margin-left: 8px;
+        color: #fff;
+      }
+    }
+
+    & .header-right {
+      cursor: pointer;
+      color: #fff
+    }
+  }
+
+  & .content-layout-container {
+
+    & .content-layout-sider {
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      & .content-layout-sider-menu {
+        height: calc(100vh - 64px);
+
+        & .ant-menu-item {
+          font-size: 16px;
+          padding-left: 3.7rem !important;
+        }
+
+        & .ant-menu-submenu {
+          & .ant-menu-submenu-title {
+            font-size: 16px;
+            padding-left: 3.7rem !important;
+          }
+        }
+
+        & .ant-menu-sub {
+          & .ant-menu-item {
+            padding-left: 5.7rem !important;
+          }
+        }
+      }
+    }
+
+    & .content {
+      background: #fff;
+      color: #000;
+    }
+  }
+}

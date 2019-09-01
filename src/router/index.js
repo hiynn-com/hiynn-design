@@ -21,14 +21,12 @@ const routes = [
     key: "2",
     name: "快速上手",
     path: "/quickly",
-    exact: true,
     component: QuicklyPage
   },
   {
     key: "3",
     name: "主题设置",
     path: "/theme",
-    exact: true,
     component: ThemePage
   },
   {
@@ -38,17 +36,15 @@ const routes = [
     component: RouteViewer,
     routes: [
       {
-        key: "4-1",
+        key: "41",
         name: "HdLayoutPage",
         path: "/components/hd-layout",
-        exact: true,
         component: HdLayoutPage
       },
       {
-        key: "4-2",
+        key: "42",
         name: "HdMasterPage",
         path: "/components/hd-master",
-        exact: true,
         component: HdMasterPage
       }
     ]
