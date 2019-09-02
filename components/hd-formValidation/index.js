@@ -56,9 +56,13 @@ class HdFormValidation extends Component {
                     <Input.Password type={`${item.type}`} placeholder={item.placeholder} />
                   ) : item.type == "select" ? (
                     <Select placeholder="请选择">
-                      <Option value="1">Option 1</Option>
-                      <Option value="2">Option 2</Option>
-                      <Option value="3">Option 3</Option>
+                      {item.selectData.map((selItem, index) => {
+                        return (
+                          <Option key={index} value={selItem.value}>
+                            {selItem.text}
+                          </Option>
+                        );
+                      })}
                     </Select>
                   ) : (
                     <Input type={`${item.type}`} placeholder={item.placeholder} />

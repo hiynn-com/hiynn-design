@@ -50,6 +50,16 @@ class HdFormValidationPages extends Component {
           key: "sel",
           label: "option",
           type: "select",
+          selectData: [
+            {
+              value: "1",
+              text: "第一"
+            },
+            {
+              value: "2",
+              text: "第二"
+            }
+          ],
           labelCol: 5,
           wrapperCol: 15,
           placeholder: "请选择",
@@ -105,6 +115,16 @@ class HdFormValidationPages extends Component {
               key: "sel",
               label: "option",
               type: "select",
+              selectData: [
+                {
+                  value: "1",
+                  text: "第一"
+                },
+                {
+                  value: "2",
+                  text: "第二"
+                }
+              ],
               labelCol: 5,
               wrapperCol: 15,
               placeholder: "请选择",

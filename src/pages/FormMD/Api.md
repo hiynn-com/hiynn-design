@@ -23,6 +23,7 @@
 | placeholder | 表单的 placeholder 属性           | string                    | -      | -    |
 | required    | 是否必填                          | Boolean                   | false  | -    |
 | message     | 配合 reg 使用，不匹配时的提示信息 | string                    | -      | -    |
+| selectData  | type 为 select 时 option 中的数据 | Array []                  | -      | -    |
 
 ### Hdbtn
 
@@ -34,6 +35,7 @@
 | style | 可自定义 css 样式                             | { }     | -      | -    |
 
 ## 任务列表
+--------------
 
 - [x] 基础用法
 - [ ] 扩展更多属性

@@ -1,2 +1,68 @@
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
+
+.master-page-container {
+  height: 100%;
+  & .mp-layout {
+    background: inherit;
+    height: 100%;
+
+    & .mpl-layout {
+      height: 100%;
+      & .holder-content {
+        padding: 0 10px 10px 10px;
+        background: var(--white-color);
+      }
+
+      & .holder-content-side {
+        min-height: 100%;
+        height: auto;
+        padding: 10px;
+        background: var(--white-color);
+        border-left: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      & .holder-search {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        background: var(--white-color);
+
+        /* // border-bottom: 1px solid #eee; */
+        & > div {
+          width: 100%;
+        }
+      }
+
+      & .mp-side {
+        background: var(--white-color);
+        margin-right: 6px;
+        border-right: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+
+        & .mp-ph {
+          border-bottom: 1px solid #e8e8e8;
+        }
+      }
+    }
+
+    & .holder-top {
+      background: var(--white-color);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e8e8e8;
+
+      > div {
+        width: 100%;
+      }
+    }
+
+    & .ant-page-header {
+      padding: 16px;
+    }
+  }
+}
