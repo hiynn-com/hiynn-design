@@ -111,6 +111,13 @@ module.exports = {
       //指定输出路径和文件名
       filename: "./index.html"
     }),
+    // 解决 github pages history 模式刷新页面报 404 问题
+    new HtmlWebpackPlugin({
+      //指定要打包的html路径和文件名
+      template: "./public/index.html",
+      //指定输出路径和文件名
+      filename: "./404.html"
+    }),
     new InlineManifestWebpackPlugin(),
     new HtmlWebpackInlineSourcePlugin(),
     new webpack.HotModuleReplacementPlugin(),

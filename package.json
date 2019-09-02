@@ -17,8 +17,7 @@
     "build:all": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css",
     "build:prod": "cross-env BABEL_ENV=preview webpack --mode production --config scripts/webpack.config.prod.js",
     "start": "cross-env BABEL_ENV=preview webpack-dev-server --port 6006 --open --config scripts/webpack.config.dev.js",
-    "deploy:docs": "yarn build:prod && gh-pages -d docs",
-    "deploy": "gh-pages -d docs"
+    "deploy:docs": "yarn build:prod && gh-pages -d docs"
   },
   "repository": {
     "type": "git",
