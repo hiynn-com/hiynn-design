@@ -17,7 +17,8 @@
     "build:all": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css",
     "build:prod": "cross-env BABEL_ENV=preview webpack --mode production --config scripts/webpack.config.prod.js",
     "start": "cross-env BABEL_ENV=preview webpack-dev-server --port 6006 --open --config scripts/webpack.config.dev.js",
-    "deploy:docs": "yarn build:prod && gh-pages -d docs"
+    "deploy:docs": "yarn build:prod && gh-pages -d docs",
+    "deploy": "gh-pages -d docs"
   },
   "repository": {
     "type": "git",
@@ -37,11 +38,16 @@
   "dependencies": {
     "@loadable/component": "^5.10.2",
     "classnames": "^2.2.6",
+    "connected-react-router": "^6.5.2",
     "core-js": "3",
+    "history": "^4.9.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.7.2",
     "react-code-previewer": "^0.2.2",
-    "react-router-hash-link": "^1.2.2"
+    "react-redux": "^7.1.1",
+    "react-router-hash-link": "^1.2.2",
+    "redux": "^4.0.4",
+    "redux-persist": "^5.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

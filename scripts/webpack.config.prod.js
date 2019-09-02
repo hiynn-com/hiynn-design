@@ -107,7 +107,7 @@ module.exports = {
     //预览
     new HtmlWebpackPlugin({
       //指定要打包的html路径和文件名
-      template: path.join(__dirname, "../public/index.html"),
+      template: "./public/index.html",
       //指定输出路径和文件名
       filename: "./index.html"
     }),
