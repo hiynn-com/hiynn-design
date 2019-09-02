@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Menu, Icon, Layout } from "antd";
+import { connect } from "react-redux";
 import { renderRoutes, matchRoutes } from "react-router-config";
 import HdLayout from "../../components/hd-layout";
+import layoutAction from "../redux/layout/layoutAction";
 import "../../components/hd-layout/style";
 import "../../components/hd-menus/style";
 import "../assets/css/layoutPage.pcss";
@@ -13,6 +15,11 @@ import { NavLink, withRouter, Route, Link } from "react-router-dom";
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 
+@withRouter
+@connect(
+  ({ layoutReducer }) => ({ layoutReducer }),
+  { saveMenuIndex: layoutAction.saveMenuIndex }
+)
 class LayoutContainer extends Component {
   constructor(props) {
     super(props);
@@ -24,61 +31,64 @@ class LayoutContainer extends Component {
         collapsed: false
       }),
       title: "HiynnDesign",
-      subTitle: "海云前端标准化团队出品",
-      menus: [
-        {
-          id: 1,
-          title: "介绍",
-          icon: "read",
-          url: "/",
-          show: true,
-          order: 1
-        },
-        {
-          id: 2,
-          title: "快速上手",
-          icon: "tool",
-          url: "/quickly",
-          show: true,
-          order: 2
-        },
-        {
-          id: 3,
-          title: "主题设置",
-          icon: "bg-colors",
-          url: "/theme",
-          show: true,
-          order: 3
-        },
-        {
-          id: 4,
-          title: " 组件",
-          icon: "build",
-          url: "/components",
-          show: true,
-          order: 4,
-          children: [
-            {
-              id: 41,
-              title: "HdLayout",
-              icon: null,
-              url: "/components/hd-layout",
-              show: true,
-              order: 1
-            },
-            {
-              id: 42,
-              title: "HdMaster",
-              icon: null,
-              url: "/components/hd-master",
-              show: true,
-              order: 2
-            }
-          ]
-        }
-      ]
+      subTitle: "海云前端标准化团队出品"
+      // menus: [
+      //   {
+      //     id: 1,
+      //     title: "介绍",
+      //     icon: "read",
+      //     url: "/",
+      //     show: true,
+      //     order: 1
+      //   },
+      //   {
+      //     id: 2,
+      //     title: "快速上手",
+      //     icon: "tool",
+      //     url: "/quickly",
+      //     show: true,
+      //     order: 2
+      //   },
+      //   {
+      //     id: 3,
+      //     title: "主题设置",
+      //     icon: "bg-colors",
+      //     url: "/theme",
+      //     show: true,
+      //     order: 3
+      //   },
+      //   {
+      //     id: 4,
+      //     title: " 组件",
+      //     icon: "build",
+      //     url: "/components",
+      //     show: true,
+      //     order: 4,
+      //     children: [
+      //       {
+      //         id: 41,
+      //         title: "HdLayout",
+      //         icon: null,
+      //         url: "/components/hd-layout",
+      //         show: true,
+      //         order: 1
+      //       },
+      //       {
+      //         id: 42,
+      //         title: "HdMaster",
+      //         icon: null,
+      //         url: "/components/hd-master",
+      //         show: true,
+      //         order: 2
+      //       }
+      //     ]
+      //   }
+      // ]
     };
   }
+  clickMenu = ({ item, key, keyPath }) => {
+    this.props.saveMenuIndex(keyPath);
+  };
   toggleCollapse = () => {
     this.setState({
       sider: this.state.sider.set("collapsed", !this.state.sider.get("collapsed"))
@@ -88,6 +98,7 @@ class LayoutContainer extends Component {
     window.location.href = "https://github.com/hiynn-com/hiynn-design";
   };
   render() {
+    const { layoutReducer } = this.props;
     return (
       <Layout className="layout-container">
         <Header className="header-container">
@@ -113,7 +124,15 @@ class LayoutContainer extends Component {
         </Header>
         <Layout className="content-layout-container">
           <Sider theme="light" className="content-layout-sider" width={300}>
-            <Menu className="content-layout-sider-menu" onClick={this.handleClick} defaultSelectedKeys={["1"]} defaultOpenKeys={["sub1"]} mode="inline">
+            <Menu
+              className="content-layout-sider-menu"
+              mode="inline"
+              theme="light"
+              defaultSelectedKeys={[layoutReducer.get("index")]}
+              selectedKeys={[layoutReducer.get("index")]}
+              defaultOpenKeys={[layoutReducer.get("subIndex")]}
+              onClick={this.clickMenu}
+            >
               <Menu.Item key="1">
                 <NavLink to="/">介绍</NavLink>
               </Menu.Item>
