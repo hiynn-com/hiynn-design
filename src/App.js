@@ -7,6 +7,8 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import configureStore, { history } from "./redux/store";
 import LayoutContainer from "./layout/LayoutContainer";
+import IndexPage from "./pages/IndexPage";
+
 const { persistor, store } = configureStore(/* provide initial state if any */);
 
 class App extends Component {
@@ -19,9 +21,10 @@ class App extends Component {
         <PersistGate loading={null} persistor={persistor}>
           <ConnectedRouter history={history}>
             <Switch>
-              <Route path="/" component={LayoutContainer} />
+              <Route path="/" exact component={IndexPage} />
+              <Route path="/docs" component={LayoutContainer} />
             </Switch>
-          </ConnectedRouter>{" "}
+          </ConnectedRouter>
         </PersistGate>
       </Provider>
     );

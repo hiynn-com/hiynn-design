@@ -10689,10 +10689,10 @@ react-clipboard.js@^2.0.13:
     clipboard "^2.0.0"
     prop-types "^15.5.0"
 
-react-code-previewer@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/react-code-previewer/-/react-code-previewer-0.2.2.tgz#d2cc5dbdd9599398b82483d5d74fdced14440bb6"
-  integrity sha512-po+2yX9EKFx2D/Qi+7EZNPdEMfRZXh6uFCZLNWwpxelVaaJcvdWMtl96FbaSqS/nWMzGqq/aG/wFipTZ0vZHMA==
+react-code-previewer@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.npmjs.org/react-code-previewer/-/react-code-previewer-0.2.3.tgz#1f3501aa5fc7382ad6bf707fe0ce0951c8bb69c0"
+  integrity sha512-Njgr2mxj/FM7zTUr75gPEWX+Pw0u7H5rM9/90EVcZ27RgKOOc4zcNe2kO/0bkpltAPKiwsmVJD4mvpdeyTEmJg==
   dependencies:
     classnames "^2.2.6"
     prop-types "^15.7.2"

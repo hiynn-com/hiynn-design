@@ -134,20 +134,20 @@ class LayoutContainer extends Component {
               onClick={this.clickMenu}
             >
               <Menu.Item key="1">
-                <NavLink to="/">介绍</NavLink>
+                <NavLink to="/docs/introduction">介绍</NavLink>
               </Menu.Item>
               <Menu.Item key="2">
-                <NavLink to="/quickly">快速上手</NavLink>
+                <NavLink to="/docs/quickly">快速上手</NavLink>
               </Menu.Item>
               <Menu.Item key="3">
-                <NavLink to="/theme">主题设置</NavLink>
+                <NavLink to="/docs/theme">主题设置</NavLink>
               </Menu.Item>
               <SubMenu key="4" title={<span>组件</span>}>
                 <Menu.Item key="41">
-                  <NavLink to="/components/hd-layout">HdLayout</NavLink>
+                  <NavLink to="/docs/components/hd-layout">HdLayout</NavLink>
                 </Menu.Item>
                 <Menu.Item key="42">
-                  <NavLink to="/components/hd-master">HdMaster</NavLink>
+                  <NavLink to="/docs/components/hd-master">HdMaster</NavLink>
                 </Menu.Item>
               </SubMenu>
             </Menu>
