@@ -19,6 +19,9 @@ const HdVGroupPage = loadable(() => import("../pages/HdVGroupPage"), { fallback:
 const HdCodeAreaPage = loadable(() => import("../pages/HdCodeAreaPage"), { fallback: <Loading /> });
 const HdPanelPage = loadable(() => import("../pages/HdPanelPage"), { fallback: <Loading /> });
 
+const ArticlePage = loadable(() => import("../pages/articlePage"), { fallback: <Loading /> });
+const CommentPage = loadable(() => import("../pages/commentPage"), { fallback: <Loading /> });
+
 const routes = [
   {
     key: "1",
@@ -117,6 +120,18 @@ const routes = [
             name: "HdPanelPage",
             path: "/docs/components/hd-panel",
             component: HdCardPage
+          },
+          {
+            key: "251",
+            name: "ArticlePage",
+            path: "/components/hd-article",
+            component: ArticlePage
+          },
+          {
+            key: "252",
+            name: "CommentPage",
+            path: "/components/hd-comment",
+            component: CommentPage
           }
         ]
       }

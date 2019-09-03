@@ -193,6 +193,12 @@ class LayoutContainer extends Component {
                 <Menu.Item key="50">
                   <NavLink to="/docs/components/hd-panel">HdPanel</NavLink>
                 </Menu.Item>
+                <Menu.Item key="51">
+                  <NavLink to="/docs/components/hd-article">HdArticle</NavLink>
+                </Menu.Item>
+                <Menu.Item key="52">
+                  <NavLink to="/docs/components/hd-comment">HdComment</NavLink>
+                </Menu.Item>
               </SubMenu>
             </Menu>
           </Sider>
