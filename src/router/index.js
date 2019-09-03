@@ -10,6 +10,7 @@ const QuicklyPage = loadable(() => import("../pages/QuicklyPage"), { fallback: <
 const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Loading /> });
 const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
 const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
+const HdFilterPage = loadable(() => import("../pages/HdFilterPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -60,6 +61,13 @@ const routes = [
             name: "HdMasterPage",
             path: "/docs/components/hd-master",
             component: HdMasterPage
+          },
+          {
+            key: "4-3",
+            name: "HdFilterPage",
+            path: "/components/hd-filter",
+            exact: true,
+            component: HdFilterPage
           }
         ]
       }
