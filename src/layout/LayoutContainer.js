@@ -177,6 +177,9 @@ class LayoutContainer extends Component {
                 <Menu.Item key="45">
                   <NavLink to="/docs/components/hd-FormModal">HdFormModalPage</NavLink>
                 </Menu.Item>
+                <Menu.Item key="46">
+                  <NavLink to="/docs/components/hd-card">HdCardPage</NavLink>
+                </Menu.Item>
               </SubMenu>
             </Menu>
           </Sider>

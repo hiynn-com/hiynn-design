@@ -13,6 +13,7 @@ const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback:
 const HdFilterPage = loadable(() => import("../pages/HdFilterPage"), { fallback: <Loading /> });
 const HdSearchForm = loadable(() => import("../pages/HdSearchFormPage"), { fallback: <Loading /> });
 const HdFormModalPage = loadable(() => import("../pages/HdFormModalPage"), { fallback: <Loading /> });
+const HdCardPage = loadable(() => import("../pages/HdCardPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -81,6 +82,12 @@ const routes = [
             name: "HdFormModalPage",
             path: "/docs/components/hd-FormModal",
             component: HdFormModalPage
+          },
+          {
+            key: "246",
+            name: "HdCardPage",
+            path: "/docs/components/hd-card",
+            component: HdCardPage
           }
         ]
       }

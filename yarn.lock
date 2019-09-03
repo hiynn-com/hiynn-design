@@ -776,6 +776,11 @@
 >>>>>>> shiyuyuan
   integrity sha512-gJJX9Jjdt3bIAePQRRjYWG20dIhAgEqonguyHxXuqALxsoDsDLimihqrSg8fXgVTJ4KZCzkfglKtwsh/8dLfbA==
 
+"@types/clipboard@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/@types/clipboard/download/@types/clipboard-2.0.1.tgz#75a74086c293d75b12bc93ff13bc7797fef05a40"
+  integrity sha1-dadAhsKT11sSvJP/E7x3l/7wWkA=
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.npmjs.org/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -2761,6 +2766,7 @@ comma-separated-tokens@^1.0.0:
   version "1.0.7"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.7.tgz#419cd7fb3258b1ed838dc0953167a25e152f5b59"
 =======
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.7.tgz#419cd7fb3258b1ed838dc0953167a25e152f5b59"
@@ -2769,6 +2775,10 @@ comma-separated-tokens@^1.0.0:
 =======
   resolved "https://registry.npm.taobao.org/comma-separated-tokens/download/comma-separated-tokens-1.0.7.tgz#419cd7fb3258b1ed838dc0953167a25e152f5b59"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/comma-separated-tokens/download/comma-separated-tokens-1.0.7.tgz#419cd7fb3258b1ed838dc0953167a25e152f5b59"
+  integrity sha1-QZzX+zJYse2DjcCVMWeiXhUvW1k=
+>>>>>>> origin/dev
 
 commander@2.17.x:
   version "2.17.1"
@@ -3635,6 +3645,7 @@ domhandler@^3.0, domhandler@^3.0.0:
   version "3.0.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/domhandler/-/domhandler-3.0.0.tgz#51cd13efca31da95bbb0c5bee3a48300e333b3e9"
 =======
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-3.0.0.tgz#51cd13efca31da95bbb0c5bee3a48300e333b3e9"
@@ -3643,6 +3654,10 @@ domhandler@^3.0, domhandler@^3.0.0:
 =======
   resolved "https://registry.npm.taobao.org/domhandler/download/domhandler-3.0.0.tgz#51cd13efca31da95bbb0c5bee3a48300e333b3e9"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/domhandler/download/domhandler-3.0.0.tgz#51cd13efca31da95bbb0c5bee3a48300e333b3e9"
+  integrity sha1-Uc0T78ox2pW7sMW+46SDAOMzs+k=
+>>>>>>> origin/dev
   dependencies:
     domelementtype "^2.0.1"
 
@@ -3664,6 +3679,7 @@ domutils@^2.0.0:
   version "2.0.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/domutils/-/domutils-2.0.0.tgz#15b8278e37bfa8468d157478c58c367718133c08"
 =======
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-2.0.0.tgz#15b8278e37bfa8468d157478c58c367718133c08"
@@ -3672,6 +3688,10 @@ domutils@^2.0.0:
 =======
   resolved "https://registry.npm.taobao.org/domutils/download/domutils-2.0.0.tgz#15b8278e37bfa8468d157478c58c367718133c08"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/domutils/download/domutils-2.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdomutils%2Fdownload%2Fdomutils-2.0.0.tgz#15b8278e37bfa8468d157478c58c367718133c08"
+  integrity sha1-Fbgnjje/qEaNFXR4xYw2dxgTPAg=
+>>>>>>> origin/dev
   dependencies:
     dom-serializer "^0.2.1"
     domelementtype "^2.0.1"
@@ -4175,6 +4195,13 @@ fault@^1.0.2:
   dependencies:
     format "^0.2.2"
 
+fault@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.npm.taobao.org/fault/download/fault-1.0.3.tgz#4da88cf979b6b792b4e13c7ec836767725170b7e"
+  integrity sha1-TaiM+Xm2t5K04Tx+yDZ2dyUXC34=
+  dependencies:
+    format "^0.2.2"
+
 faye-websocket@^0.10.0:
   version "0.10.0"
   resolved "https://registry.npmjs.org/faye-websocket/-/faye-websocket-0.10.0.tgz#4e492f8d04dfb6f89003507f6edbf2d501e7c6f4"
@@ -4393,6 +4420,7 @@ format@^0.2.2:
   version "0.2.2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
 =======
   resolved "https://registry.yarnpkg.com/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
@@ -4401,6 +4429,10 @@ format@^0.2.2:
 =======
   resolved "https://registry.npm.taobao.org/format/download/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/format/download/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
+  integrity sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
+>>>>>>> origin/dev
 
 forwarded@~0.1.2:
   version "0.1.2"
@@ -5018,6 +5050,7 @@ hast-util-parse-selector@^2.2.0:
   version "2.2.2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-2.2.2.tgz#66aabccb252c47d94975f50a281446955160380b"
 =======
   resolved "https://registry.yarnpkg.com/hast-util-parse-selector/-/hast-util-parse-selector-2.2.2.tgz#66aabccb252c47d94975f50a281446955160380b"
@@ -5034,11 +5067,19 @@ hastscript@^5.0.0:
   integrity sha512-7mOQX5VfVs/gmrOGlN8/EDfp1GqV6P3gTNVt+KnX4gbYhpASTM8bklFdFQCbFRAadURXAmw0R1QQdBdqp7jswQ==
 =======
   resolved "https://registry.npm.taobao.org/hast-util-parse-selector/download/hast-util-parse-selector-2.2.2.tgz#66aabccb252c47d94975f50a281446955160380b"
+=======
+  resolved "https://registry.npm.taobao.org/hast-util-parse-selector/download/hast-util-parse-selector-2.2.2.tgz#66aabccb252c47d94975f50a281446955160380b"
+  integrity sha1-Zqq8yyUsR9lJdfUKKBRGlVFgOAs=
+>>>>>>> origin/dev
 
 hastscript@^5.0.0:
   version "5.1.0"
   resolved "https://registry.npm.taobao.org/hastscript/download/hastscript-5.1.0.tgz#a19b3cca6a26a2bcd0f1b1eac574af9427c1c7df"
+<<<<<<< HEAD
 >>>>>>> zzytest
+=======
+  integrity sha1-oZs8ymomorzQ8bHqxXSvlCfBx98=
+>>>>>>> origin/dev
   dependencies:
     comma-separated-tokens "^1.0.0"
     hast-util-parse-selector "^2.2.0"
@@ -5065,6 +5106,11 @@ highlight.js@~9.13.0:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.13.1.tgz#054586d53a6863311168488a0f58d6c505ce641e"
 >>>>>>> shiyuyuan
   integrity sha512-Sc28JNQNDzaH6PORtRLMvif9RSn1mYuOoX3omVjnb0+HbpPygU2ALBI0R/wsiqCb4/fcp07Gdo8g+fhtFrQl6A==
+
+highlight.js@~9.13.0:
+  version "9.13.1"
+  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-9.13.1.tgz#054586d53a6863311168488a0f58d6c505ce641e"
+  integrity sha1-BUWG1TpoYzERaEiKD1jWxQXOZB4=
 
 history@^4.9.0:
   version "4.9.0"
@@ -5153,6 +5199,7 @@ html-to-react@^1.3.4:
   version "1.4.1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/html-to-react/-/html-to-react-1.4.1.tgz#64f67657c6335056866e334c097556f25894dd47"
 =======
   resolved "https://registry.yarnpkg.com/html-to-react/-/html-to-react-1.4.1.tgz#64f67657c6335056866e334c097556f25894dd47"
@@ -5161,6 +5208,10 @@ html-to-react@^1.3.4:
 =======
   resolved "https://registry.npm.taobao.org/html-to-react/download/html-to-react-1.4.1.tgz#64f67657c6335056866e334c097556f25894dd47"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/html-to-react/download/html-to-react-1.4.1.tgz#64f67657c6335056866e334c097556f25894dd47"
+  integrity sha1-ZPZ2V8YzUFaGbjNMCXVW8liU3Uc=
+>>>>>>> origin/dev
   dependencies:
     domhandler "^3.0"
     htmlparser2 "^4.0"
@@ -5202,6 +5253,7 @@ htmlparser2@^4.0:
   version "4.0.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-4.0.0.tgz#6034658db65b7713a572a9ebf79f650832dceec8"
 =======
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-4.0.0.tgz#6034658db65b7713a572a9ebf79f650832dceec8"
@@ -5210,6 +5262,10 @@ htmlparser2@^4.0:
 =======
   resolved "https://registry.npm.taobao.org/htmlparser2/download/htmlparser2-4.0.0.tgz#6034658db65b7713a572a9ebf79f650832dceec8"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/htmlparser2/download/htmlparser2-4.0.0.tgz#6034658db65b7713a572a9ebf79f650832dceec8"
+  integrity sha1-YDRljbZbdxOlcqnr959lCDLc7sg=
+>>>>>>> origin/dev
   dependencies:
     domelementtype "^2.0.1"
     domhandler "^3.0.0"
@@ -6274,6 +6330,7 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 =======
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
@@ -6282,6 +6339,10 @@ lodash.camelcase@^4.3.0:
 =======
   resolved "https://registry.npm.taobao.org/lodash.camelcase/download/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/lodash.camelcase/download/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
+  integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
+>>>>>>> origin/dev
 
 lodash.clonedeep@^4.3.2:
   version "4.5.0"
@@ -6479,6 +6540,14 @@ lowlight@~1.11.0:
     fault "^1.0.2"
     highlight.js "~9.13.0"
 
+lowlight@~1.11.0:
+  version "1.11.0"
+  resolved "https://registry.npm.taobao.org/lowlight/download/lowlight-1.11.0.tgz#1304d83005126d4e8b1dc0f07981e9b689ec2efc"
+  integrity sha1-EwTYMAUSbU6LHcDweYHptonsLvw=
+  dependencies:
+    fault "^1.0.2"
+    highlight.js "~9.13.0"
+
 lru-cache@^4.0.1, lru-cache@^4.1.1:
   version "4.1.5"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
@@ -6599,6 +6668,7 @@ mdast-add-list-metadata@1.0.1:
   version "1.0.1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/mdast-add-list-metadata/-/mdast-add-list-metadata-1.0.1.tgz#95e73640ce2fc1fa2dcb7ec443d09e2bfe7db4cf"
 =======
   resolved "https://registry.yarnpkg.com/mdast-add-list-metadata/-/mdast-add-list-metadata-1.0.1.tgz#95e73640ce2fc1fa2dcb7ec443d09e2bfe7db4cf"
@@ -6607,6 +6677,10 @@ mdast-add-list-metadata@1.0.1:
 =======
   resolved "https://registry.npm.taobao.org/mdast-add-list-metadata/download/mdast-add-list-metadata-1.0.1.tgz#95e73640ce2fc1fa2dcb7ec443d09e2bfe7db4cf"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/mdast-add-list-metadata/download/mdast-add-list-metadata-1.0.1.tgz#95e73640ce2fc1fa2dcb7ec443d09e2bfe7db4cf"
+  integrity sha1-lec2QM4vwfoty37EQ9CeK/59tM8=
+>>>>>>> origin/dev
   dependencies:
     unist-util-visit-parents "1.1.2"
 
@@ -8870,6 +8944,7 @@ property-information@^5.0.1:
   version "5.2.2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/property-information/-/property-information-5.2.2.tgz#20555eafd2296278a682e5a51d5123e7878ecc30"
 =======
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-5.2.2.tgz#20555eafd2296278a682e5a51d5123e7878ecc30"
@@ -8878,6 +8953,10 @@ property-information@^5.0.1:
 =======
   resolved "https://registry.npm.taobao.org/property-information/download/property-information-5.2.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fproperty-information%2Fdownload%2Fproperty-information-5.2.2.tgz#20555eafd2296278a682e5a51d5123e7878ecc30"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/property-information/download/property-information-5.2.2.tgz#20555eafd2296278a682e5a51d5123e7878ecc30"
+  integrity sha1-IFVer9IpYnimguWlHVEj54eOzDA=
+>>>>>>> origin/dev
   dependencies:
     xtend "^4.0.1"
 
@@ -8998,6 +9077,7 @@ ramda@^0.26:
   version "0.26.1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
 =======
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
@@ -9006,6 +9086,10 @@ ramda@^0.26:
 =======
   resolved "https://registry.npm.taobao.org/ramda/download/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/ramda/download/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+  integrity sha1-jUE1HrgRHFU1Nhf8O7/62OTTXQY=
+>>>>>>> origin/dev
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
@@ -9037,6 +9121,7 @@ raw-loader@^3.1.0:
   version "3.1.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/raw-loader/-/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
 =======
   resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
@@ -9045,6 +9130,10 @@ raw-loader@^3.1.0:
 =======
   resolved "https://registry.npm.taobao.org/raw-loader/download/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/raw-loader/download/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
+  integrity sha1-Xp05mloiLMDeGPQsO8XklndTKz8=
+>>>>>>> origin/dev
   dependencies:
     loader-utils "^1.1.0"
     schema-utils "^2.0.1"
@@ -9462,6 +9551,7 @@ react-clipboard.js@^2.0.13:
   version "2.0.13"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/react-clipboard.js/-/react-clipboard.js-2.0.13.tgz#4430d4ef989c4c39303553c2c22f20b72b2d73dd"
 =======
   resolved "https://registry.yarnpkg.com/react-clipboard.js/-/react-clipboard.js-2.0.13.tgz#4430d4ef989c4c39303553c2c22f20b72b2d73dd"
@@ -9470,11 +9560,16 @@ react-clipboard.js@^2.0.13:
 =======
   resolved "https://registry.npm.taobao.org/react-clipboard.js/download/react-clipboard.js-2.0.13.tgz#4430d4ef989c4c39303553c2c22f20b72b2d73dd"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/react-clipboard.js/download/react-clipboard.js-2.0.13.tgz#4430d4ef989c4c39303553c2c22f20b72b2d73dd"
+  integrity sha1-RDDU75icTDkwNVPCwi8gtystc90=
+>>>>>>> origin/dev
   dependencies:
     "@types/clipboard" "^2.0.1"
     clipboard "^2.0.0"
     prop-types "^15.5.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 react-code-previewer@^0.2.7:
@@ -9492,6 +9587,12 @@ react-code-previewer@^0.1.6:
   version "0.1.6"
   resolved "https://registry.npm.taobao.org/react-code-previewer/download/react-code-previewer-0.1.6.tgz#b3dd4132ba497b3c5f1dc5679e4b2ee41925a330"
 >>>>>>> zzytest
+=======
+react-code-previewer@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.npm.taobao.org/react-code-previewer/download/react-code-previewer-0.1.6.tgz#b3dd4132ba497b3c5f1dc5679e4b2ee41925a330"
+  integrity sha1-s91BMrpJezxfHcVnnksu5BklozA=
+>>>>>>> origin/dev
   dependencies:
     classnames "^2.2.6"
     prop-types "^15.7.2"
@@ -9603,6 +9704,10 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
 react-markdown@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npm.taobao.org/react-markdown/download/react-markdown-4.1.0.tgz#7fdf840ecbabc803f28156f7411c726b58f25a73"
+<<<<<<< HEAD
+=======
+  integrity sha1-f9+EDsuryAPygVb3QRxya1jyWnM=
+>>>>>>> origin/dev
   dependencies:
     html-to-react "^1.3.4"
     mdast-add-list-metadata "1.0.1"
@@ -9612,6 +9717,7 @@ react-markdown@^4.1.0:
     unist-util-visit "^1.3.0"
     xtend "^4.0.1"
 
+<<<<<<< HEAD
 react-markdown@^4.1.0:
 <<<<<<< HEAD
   version "4.1.0"
@@ -9650,6 +9756,8 @@ react-redux@^7.1.1:
 
 =======
 >>>>>>> shiyuyuan
+=======
+>>>>>>> origin/dev
 react-router-config@^5.0.1:
   version "5.0.1"
 <<<<<<< HEAD
@@ -9790,6 +9898,7 @@ react-syntax-highlighter@^11.0.2:
   version "11.0.2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/react-syntax-highlighter/-/react-syntax-highlighter-11.0.2.tgz#4e3f376e752b20d2f54e4c55652fd663149e4029"
 =======
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-11.0.2.tgz#4e3f376e752b20d2f54e4c55652fd663149e4029"
@@ -9798,6 +9907,10 @@ react-syntax-highlighter@^11.0.2:
 =======
   resolved "https://registry.npm.taobao.org/react-syntax-highlighter/download/react-syntax-highlighter-11.0.2.tgz#4e3f376e752b20d2f54e4c55652fd663149e4029"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/react-syntax-highlighter/download/react-syntax-highlighter-11.0.2.tgz?cache=0&sync_timestamp=1563056357386&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-syntax-highlighter%2Fdownload%2Freact-syntax-highlighter-11.0.2.tgz#4e3f376e752b20d2f54e4c55652fd663149e4029"
+  integrity sha1-Tj83bnUrINL1TkxVZS/WYxSeQCk=
+>>>>>>> origin/dev
   dependencies:
     "@babel/runtime" "^7.3.1"
     highlight.js "~9.13.0"
@@ -9932,6 +10045,7 @@ reduce-function-call@^1.0.1, reduce-function-call@^1.0.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 reduce-reducers@^0.4.3:
   version "0.4.3"
   resolved "https://registry.npm.taobao.org/reduce-reducers/download/reduce-reducers-0.4.3.tgz#8e052618801cd8fc2714b4915adaa8937eb6d66c"
@@ -9982,6 +10096,12 @@ refractor@^2.4.1:
   version "2.10.0"
   resolved "https://registry.npm.taobao.org/refractor/download/refractor-2.10.0.tgz#4cc7efc0028a87924a9b31d82d129dec831a287b"
 >>>>>>> zzytest
+=======
+refractor@^2.4.1:
+  version "2.10.0"
+  resolved "https://registry.npm.taobao.org/refractor/download/refractor-2.10.0.tgz#4cc7efc0028a87924a9b31d82d129dec831a287b"
+  integrity sha1-TMfvwAKKh5JKmzHYLRKd7IMaKHs=
+>>>>>>> origin/dev
   dependencies:
     hastscript "^5.0.0"
     parse-entities "^1.1.2"
@@ -10105,6 +10225,27 @@ remark-parse@^5.0.0:
   resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-5.0.0.tgz#4c077f9e499044d1d5c13f80d7a98cf7b9285d95"
 >>>>>>> shiyuyuan
   integrity sha512-b3iXszZLH1TLoyUzrATcTQUZrwNl1rE70rVdSruJFlDaJ9z5aMkhrG43Pp68OgfHndL/ADz6V69Zow8cTQu+JA==
+  dependencies:
+    collapse-white-space "^1.0.2"
+    is-alphabetical "^1.0.0"
+    is-decimal "^1.0.0"
+    is-whitespace-character "^1.0.0"
+    is-word-character "^1.0.0"
+    markdown-escapes "^1.0.0"
+    parse-entities "^1.1.0"
+    repeat-string "^1.5.4"
+    state-toggle "^1.0.0"
+    trim "0.0.1"
+    trim-trailing-lines "^1.0.0"
+    unherit "^1.0.4"
+    unist-util-remove-position "^1.0.0"
+    vfile-location "^2.0.0"
+    xtend "^4.0.1"
+
+remark-parse@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/remark-parse/download/remark-parse-5.0.0.tgz#4c077f9e499044d1d5c13f80d7a98cf7b9285d95"
+  integrity sha1-TAd/nkmQRNHVwT+A16mM97koXZU=
   dependencies:
     collapse-white-space "^1.0.2"
     is-alphabetical "^1.0.0"
@@ -10523,6 +10664,14 @@ schema-utils@^2.0.1:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
+schema-utils@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.npm.taobao.org/schema-utils/download/schema-utils-2.1.0.tgz#940363b6b1ec407800a22951bdcc23363c039393"
+  integrity sha1-lANjtrHsQHgAoilRvcwjNjwDk5M=
+  dependencies:
+    ajv "^6.1.0"
+    ajv-keywords "^3.1.0"
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.npmjs.org/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
@@ -10818,6 +10967,11 @@ space-separated-tokens@^1.0.0:
   resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.4.tgz#27910835ae00d0adfcdbd0ad7e611fb9544351fa"
 >>>>>>> shiyuyuan
   integrity sha512-UyhMSmeIqZrQn2UdjYpxEkwY9JUrn8pP+7L4f91zRzOQuI8MF1FGLfYU9DKCYeLdo7LXMxwrX5zKFy7eeeVHuA==
+
+space-separated-tokens@^1.0.0:
+  version "1.1.4"
+  resolved "https://registry.npm.taobao.org/space-separated-tokens/download/space-separated-tokens-1.1.4.tgz#27910835ae00d0adfcdbd0ad7e611fb9544351fa"
+  integrity sha1-J5EINa4A0K3829CtfmEfuVRDUfo=
 
 sparkles@^1.0.0:
   version "1.0.1"
@@ -11585,6 +11739,18 @@ unified@^6.1.5:
     vfile "^2.0.0"
     x-is-string "^0.1.0"
 
+unified@^6.1.5:
+  version "6.2.0"
+  resolved "https://registry.npm.taobao.org/unified/download/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
+  integrity sha1-f71jD3GRJtZ9QMZEt+P2FwNfbbo=
+  dependencies:
+    bail "^1.0.0"
+    extend "^3.0.0"
+    is-plain-obj "^1.1.0"
+    trough "^1.0.0"
+    vfile "^2.0.0"
+    x-is-string "^0.1.0"
+
 unified@^7.0.0:
   version "7.1.0"
   resolved "https://registry.npmjs.org/unified/-/unified-7.1.0.tgz#5032f1c1ee3364bd09da12e27fdd4a7553c7be13"
@@ -11660,6 +11826,11 @@ unist-util-visit-parents@1.1.2:
   resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-1.1.2.tgz#f6e3afee8bdbf961c0e6f028ea3c0480028c3d06"
 >>>>>>> shiyuyuan
   integrity sha512-yvo+MMLjEwdc3RhhPYSximset7rwjMrdt9E41Smmvg25UQIenzrN83cRnF1JMzoMi9zZOQeYXHSDf7p+IQkW3Q==
+
+unist-util-visit-parents@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npm.taobao.org/unist-util-visit-parents/download/unist-util-visit-parents-1.1.2.tgz#f6e3afee8bdbf961c0e6f028ea3c0480028c3d06"
+  integrity sha1-9uOv7ovb+WHA5vAo6jwEgAKMPQY=
 
 unist-util-visit-parents@^2.0.0:
   version "2.1.2"
@@ -11840,6 +12011,7 @@ vfile@^2.0.0:
   version "2.3.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/vfile/-/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
 =======
   resolved "https://registry.yarnpkg.com/vfile/-/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
@@ -11848,6 +12020,10 @@ vfile@^2.0.0:
 =======
   resolved "https://registry.npm.taobao.org/vfile/download/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
 >>>>>>> zzytest
+=======
+  resolved "https://registry.npm.taobao.org/vfile/download/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
+  integrity sha1-5i2OcrIOg8MkvGxnJ47ickiL+Eo=
+>>>>>>> origin/dev
   dependencies:
     is-buffer "^1.1.4"
     replace-ext "1.0.0"
