@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import FormModal from "../../../components/hd-formModal";
 import { message, Button } from "antd";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import installMd from "../../md/hd-formModal/intro.md";
-import apiMd from "../../md/hd-formModal/api.md";
-import example from "../../md/hd-formModal/example.md";
+import installMd from "./md/intro.md";
+import apiMd from "./md/api.md";
+import example from "./md/example.md";
 
 const popUpFormConfig = {
   layout: "horizontal", //horizontal,vertical,inline

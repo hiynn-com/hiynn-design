@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import HdFilter from "../../../components/hd-filter";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import installMd from "../../md/hd-filter/install.md";
-import apiMd from "../../md/hd-filter/api.md";
+import installMd from "./md/install.md";
+import apiMd from "./md/api.md";
 
 class HdFilterPage extends Component {
   getFilterOptions = filterData => {

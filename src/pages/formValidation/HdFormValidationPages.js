@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import HdFormValidation from "../../../components/hd-formValidation";
 import { Input, message } from "antd";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import IndexMD from "../../md/form/index.md";
-import ApiMD from "../../md/form/api.md";
+import IndexMD from "./md/index.md";
+import ApiMD from "./md/api.md";
 
 class HdFormValidationPages extends Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import { Button } from "antd";
-import layoutMd from "../../md/layout/layout.md";
+import layoutMd from "./md/layout.md";
 
 class HdLayoutPage extends Component {
   componentDidMount() {

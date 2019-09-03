@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import SearchForm from "../../../components/hd-searchForm";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import installMd from "../../md/hd-searchForm/intro.md";
-import apiMd from "../../md/hd-searchForm/api.md";
-import example from "../../md/hd-searchForm/example.md";
+import installMd from "./md/intro.md";
+import apiMd from "./md/api.md";
+import example from "./md/example.md";
 
 const searchFormOption = {
   forms: [

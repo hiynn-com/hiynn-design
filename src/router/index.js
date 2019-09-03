@@ -13,8 +13,8 @@ const HdFilterPage = loadable(() => import("../pages/filter/HdFilterPage"), { fa
 const HdSearchForm = loadable(() => import("../pages/searchForm/HdSearchFormPage"), { fallback: <Loading /> });
 const HdFormModalPage = loadable(() => import("../pages/formModal/HdFormModalPage"), { fallback: <Loading /> });
 const HdCardPage = loadable(() => import("../pages/card/HdCardPage"), { fallback: <Loading /> });
-const HdHGroupPage = loadable(() => import("../pages/group/HdHGroupPage"), { fallback: <Loading /> });
-const HdVGroupPage = loadable(() => import("../pages/group/HdVGroupPage"), { fallback: <Loading /> });
+const HdHGroupPage = loadable(() => import("../pages/hgroup/HdHGroupPage"), { fallback: <Loading /> });
+const HdVGroupPage = loadable(() => import("../pages/vgroup/HdVGroupPage"), { fallback: <Loading /> });
 const HdCodeAreaPage = loadable(() => import("../pages/codeArea/HdCodeAreaPage"), { fallback: <Loading /> });
 const HdPanelPage = loadable(() => import("../pages/panel/HdPanelPage"), { fallback: <Loading /> });
 const HdCodeZonePage = loadable(() => import("../pages/codeZone/HdCodeZonePage"), { fallback: <Loading /> });

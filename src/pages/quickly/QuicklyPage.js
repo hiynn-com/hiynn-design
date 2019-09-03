@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import quicklyMd from "../../md/quickly/quickly.md";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
+import quicklyMd from "./md/quickly.md";
 
 class QuicklyPage extends Component {
   render() {

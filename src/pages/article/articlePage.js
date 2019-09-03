@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Article from "../../../components/hd-article/demo";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import articleMd from "../../md/article/article.md";
-import exampleMd from "../../md/article/example.md";
-import apiMd from "../../md/article/api.md";
+import articleMd from "./md/article.md";
+import exampleMd from "./md/example.md";
+import apiMd from "./md/api.md";
 import "../../../components/hd-article/demo/style";
 
 class DemoPage extends Component {

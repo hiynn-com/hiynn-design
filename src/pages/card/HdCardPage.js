@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { HdCard } from "../../../components";
 import { PreviewLayout, MdPreviewer, CodePreviewer } from "react-code-previewer";
-import install from "../../md/hd-card/install.md";
-import apiMd from "../../md/hd-card/api.md";
+import install from "./md/install.md";
+import apiMd from "./md/api.md";
 
 class HdCardPage extends Component {
   render() {

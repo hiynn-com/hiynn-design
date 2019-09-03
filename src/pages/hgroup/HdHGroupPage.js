@@ -4,11 +4,11 @@ import HGroup from "../../../components/hd-hGroup";
 import "../../../components/hd-hGroup/style/index";
 import { PreviewLayout, CodePreviewer, MdPreviewer } from "react-code-previewer";
 
-import introMd from "../../md/hd-hGroup/intro.md";
-import exampleMd from "../../md/hd-hGroup/examples.md";
-import example1 from "../../md/hd-hGroup/example1.md";
-import example2 from "../../md/hd-hGroup/example2.md";
-import api from "../../md/hd-hGroup/api.md";
+import introMd from "./md/intro.md";
+import exampleMd from "./md/examples.md";
+import example1 from "./md/example1.md";
+import example2 from "./md/example2.md";
+import api from "./md/api.md";
 
 export default class HdHGroupPage extends Component {
   constructor(props) {

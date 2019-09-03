@@ -4,11 +4,11 @@ import VGroup from "../../../components/hd-vGroup";
 import "../../../components/hd-vGroup/style/index";
 import { PreviewLayout, CodePreviewer, MdPreviewer } from "react-code-previewer";
 
-import introMd from "../../md/hd-vGroup/intro.md";
-import exampleMd from "../../md/hd-vGroup/examples.md";
-import example1 from "../../md/hd-vGroup/example1.md";
-import example2 from "../../md/hd-vGroup/example2.md";
-import api from "../../md/hd-vGroup/api.md";
+import introMd from "./md/intro.md";
+import exampleMd from "./md/examples.md";
+import example1 from "./md/example1.md";
+import example2 from "./md/example2.md";
+import api from "./md/api.md";
 
 export default class HdVGroupPage extends Component {
   constructor(props) {

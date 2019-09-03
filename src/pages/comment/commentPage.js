@@ -3,9 +3,9 @@ import Comment from "../../../components/hd-comment/demo";
 import "../../../components/hd-comment/demo/style";
 
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import commentMd from "../../md/comment/comment.md";
-import exampleMd from "../../md/comment/example.md";
-import apiMd from "../../md/comment/api.md";
+import commentMd from "./md/comment.md";
+import exampleMd from "./md/example.md";
+import apiMd from "./md/api.md";
 
 class DemoPage extends Component {
   constructor(props) {

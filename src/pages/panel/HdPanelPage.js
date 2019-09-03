@@ -7,10 +7,10 @@ import HGroup from "../../../components/hd-hGroup";
 import "../../../components/hd-hGroup/style/index";
 import VGroup from "../../../components/hd-vGroup";
 import "../../../components/hd-vGroup/style/index";
-import introMd from "../../md/hd-panel/intro.md";
-import exampleMd from "../../md/hd-panel/examples.md";
-import example1 from "../../md/hd-panel/example1.md";
-import api from "../../md/hd-panel/api.md";
+import introMd from "./md/intro.md";
+import exampleMd from "./md/examples.md";
+import example1 from "./md/example1.md";
+import api from "./md/api.md";
 
 export default class HdPanelPage extends Component {
   constructor(props) {
