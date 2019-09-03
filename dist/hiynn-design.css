@@ -611,6 +611,78 @@ template {
     width: var(--width);
     height: var(--height);
 }
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+
+.master-page-container {
+  height: 100%
+}
+
+.master-page-container .mp-layout {
+    background: inherit;
+    height: 100%
+  }
+
+.master-page-container .mp-layout .mpl-layout {
+      height: 100%
+    }
+
+.master-page-container .mp-layout .mpl-layout .holder-content {
+        padding: 0 10px 10px 10px;
+        background: var(--white-color);
+      }
+
+.master-page-container .mp-layout .mpl-layout .holder-content-side {
+        min-height: 100%;
+        height: auto;
+        padding: 10px;
+        background: var(--white-color);
+        border-left: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+.master-page-container .mp-layout .mpl-layout .holder-search {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        background: var(--white-color)
+
+        /* // border-bottom: 1px solid #eee; */
+      }
+
+.master-page-container .mp-layout .mpl-layout .holder-search > div {
+          width: 100%;
+        }
+
+.master-page-container .mp-layout .mpl-layout .mp-side {
+        background: var(--white-color);
+        margin-right: 6px;
+        border-right: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8
+      }
+
+.master-page-container .mp-layout .mpl-layout .mp-side .mp-ph {
+          border-bottom: 1px solid #e8e8e8;
+        }
+
+.master-page-container .mp-layout .holder-top {
+      background: var(--white-color);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e8e8e8;
+
+      > div {
+        width: 100%;
+      }
+    }
+
+.master-page-container .mp-layout .ant-page-header {
+      padding: 16px;
+    }
+
 .hd-card-wrap {
   display: inline-block;
   background: #fff;
@@ -702,6 +774,9 @@ template {
     margin-top:20px;
     margin-left:20px;
 }
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
