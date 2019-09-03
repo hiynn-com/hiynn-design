@@ -1,9 +1,10 @@
 import React from "react";
 import loadable from "@loadable/component";
-import RouteViewer from "../components/RouteViewer";
-import Loading from "../components/Loading";
+import RouteViewer from "../layout/RouteViewer";
+import LayoutContainer from "../layout/LayoutContainer";
 
-const IndexPage = loadable(() => import("../pages/IndexPage"), { fallback: <Loading /> });
+import Loading from "../layout/Loading";
+const HomePage = loadable(() => import("../pages/HomePage"), { fallback: <Loading /> });
 const IntroductionPage = loadable(() => import("../pages/IntroductionPage"), { fallback: <Loading /> });
 const QuicklyPage = loadable(() => import("../pages/QuicklyPage"), { fallback: <Loading /> });
 const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Loading /> });
@@ -11,6 +12,13 @@ const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback:
 const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
 
 const routes = [
+  {
+    key: "1",
+    name: "首页",
+    path: "/",
+    exact: true,
+    component: HomePage
+  },
   {
     key: "2",
     name: "文档",

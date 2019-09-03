@@ -106,14 +106,14 @@ class LayoutContainer extends Component {
             <img src={logo} width={36}></img>
             <span className="title">Hiynn Design</span>
             <div className="menu">
-              <div className="menu-item">
-                <NavLink to="/" activeClassName="selected">
-                  Home
+              <div className="menu-item" onClick={() => (window.location.href = "https://hiynn-com.github.io/hiynn-design-landing/")}>
+                <NavLink to="#" activeClassName="selected">
+                  首页
                 </NavLink>
               </div>
               <div className="menu-item">
                 <NavLink to="/docs" activeClassName="selected">
-                  Documentation
+                  文档
                 </NavLink>
               </div>
             </div>

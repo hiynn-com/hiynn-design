@@ -103,6 +103,7 @@ module.exports = {
     }),
     //预览
     new HtmlWebpackPlugin({
+      favicon: "./public/hd_logo.jpg",
       template: "./public/index.html", //指定要打包的html路径和文件名
       filename: "./index.html" //指定输出路径和文件名
     }),
