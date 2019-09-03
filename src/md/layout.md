@@ -1,5 +1,7 @@
 # react-code-previewer
 
+这是一段文字
+
 ## Install
 
 ```javascript

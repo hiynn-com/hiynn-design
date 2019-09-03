@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import introductionMd from "../md/introduction.md";
+import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 
 class IntroductionPage extends Component {
   render() {
-    return <div>this is Introduction page</div>;
+    return (
+      <PreviewLayout>
+        <MdPreviewer md={introductionMd} />
+      </PreviewLayout>
+    );
   }
 }
 
