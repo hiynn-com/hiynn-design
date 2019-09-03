@@ -7,9 +7,7 @@ import "antd/es/menu/style/css";
 import _Menu from "antd/es/menu";
 import "antd/es/icon/style/css";
 import _Icon from "antd/es/icon";
-import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
-import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import "antd/es/layout/style/css";
 import _Layout from "antd/es/layout";
 import React, { Component } from "react";
@@ -32,7 +30,7 @@ function (_Component) {
 
     _this = _Component.call(this, props) || this;
 
-    _defineProperty(_assertThisInitialized(_this), "renderHeaderMenu", function () {
+    _this.renderHeaderMenu = function () {
       return React.createElement(_Menu, null, React.createElement(_Menu.Item, {
         key: "password",
         className: "hd-layout-header-dropdown-menu-item"
@@ -44,9 +42,9 @@ function (_Component) {
       }, React.createElement(_Icon, {
         type: "logout"
       }), React.createElement("span", null, "\u9000\u51FA\u767B\u5F55")));
-    });
+    };
 
-    _defineProperty(_assertThisInitialized(_this), "renderSider", function () {
+    _this.renderSider = function () {
       var _this$props = _this.props,
           sider = _this$props.sider,
           theme = _this$props.theme,
@@ -79,9 +77,9 @@ function (_Component) {
         width: sider.get("width"),
         collapsed: sider.get("collapsed")
       })) : null;
-    });
+    };
 
-    _defineProperty(_assertThisInitialized(_this), "renderSubtitle", function () {
+    _this.renderSubtitle = function () {
       var _this$props2 = _this.props,
           sider = _this$props2.sider,
           logo = _this$props2.logo,
@@ -105,9 +103,9 @@ function (_Component) {
           className: "title"
         }, title));
       }
-    });
+    };
 
-    _defineProperty(_assertThisInitialized(_this), "renderUserDropdown", function () {
+    _this.renderUserDropdown = function () {
       var showUserDropdown = _this.props.showUserDropdown;
       return showUserDropdown ? React.createElement(_Dropdown, {
         overlay: _this.renderHeaderMenu,
@@ -120,7 +118,7 @@ function (_Component) {
       }), React.createElement("span", {
         className: "user-name"
       }, "\u7528\u6237"))) : null;
-    });
+    };
 
     _this.state = {};
     return _this;

@@ -4,6 +4,10 @@ import HdMenus from "./hd-menus";
 import HdCard from "./hd-card";
 import HdArticle from "./hd-article";
 import HdComment from "./hd-comment";
+import HGroup from "./hd-hGroup";
+import VGroup from "./hd-vGroup";
+import CodeArea from "./hd-codeArea";
+import Panel from "./hd-panel";
 
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment };
-export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment };
+export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel };
+export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel };

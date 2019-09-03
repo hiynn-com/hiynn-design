@@ -38,10 +38,18 @@ export default class HGroup extends Component {
     height: sizeValidationFn
   };
 
+  // 类型检查
+  static propTypes = {
+    ["vertical-align"]: PropTypes.oneOf(["top", "center", "bottom"]),
+    ["horizontal-align"]: PropTypes.oneOf(["left", "center", "right", "justify", "between"]),
+    width: sizeValidationFn,
+    height: sizeValidationFn
+  };
+
   // 默认props
   static defaultProps = {
     ["vertical-align"]: "center", // 垂直对齐
-    ["horizontal-align"]: "left", // 水平对齐
+    ["horizontal-align"]: "justify", // 水平对齐
     width: "100%", // 宽度
     height: "auto" // 高度
   };

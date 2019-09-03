@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["hd-formModal/style/index.pcss"],"sourcesContent":["@import \"../../styles/vars.pcss\";\n@import \"../../styles/animate.pcss\";\n.hd-searchForm-box{\n    margin-top:20px;\n    margin-left:20px;\n}"],"file":"index.pcss"}

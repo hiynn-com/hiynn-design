@@ -18,6 +18,7 @@ const HdHGroupPage = loadable(() => import("../pages/group/HdHGroupPage"), { fal
 const HdVGroupPage = loadable(() => import("../pages/group/HdVGroupPage"), { fallback: <Loading /> });
 const HdCodeAreaPage = loadable(() => import("../pages/codeArea/HdCodeAreaPage"), { fallback: <Loading /> });
 const HdPanelPage = loadable(() => import("../pages/panel/HdPanelPage"), { fallback: <Loading /> });
+const HdCodeZonePage = loadable(() => import("../pages/codeZone/HdCodeZonePage"), { fallback: <Loading /> });
 
 const ArticlePage = loadable(() => import("../pages/article/articlePage"), { fallback: <Loading /> });
 const CommentPage = loadable(() => import("../pages/comment/commentPage"), { fallback: <Loading /> });
@@ -101,36 +102,42 @@ const routes = [
             key: "247",
             name: "HdHGroupPage",
             path: "/docs/components/hd-hgroup",
-            component: HdCardPage
+            component: HdHGroupPage
           },
           {
             key: "248",
             name: "HdVGroupPage",
             path: "/docs/components/hd-vgroup",
-            component: HdCardPage
+            component: HdVGroupPage
           },
           {
             key: "249",
             name: "HdCodeAreaPage",
             path: "/docs/components/hd-codearea",
-            component: HdCardPage
+            component: HdCodeAreaPage
           },
           {
             key: "250",
+            title: "HdCodeZone",
+            path: "/docs/components/hd-codeZone",
+            component: HdCodeZonePage
+          },
+          {
+            key: "251",
             name: "HdPanelPage",
             path: "/docs/components/hd-panel",
             component: HdCardPage
           },
           {
-            key: "251",
+            key: "252",
             name: "ArticlePage",
-            path: "/components/hd-article",
+            path: "/docs/components/hd-article",
             component: ArticlePage
           },
           {
-            key: "252",
+            key: "253",
             name: "CommentPage",
-            path: "/components/hd-comment",
+            path: "/docs/components/hd-comment",
             component: CommentPage
           }
         ]

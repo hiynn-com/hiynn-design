@@ -1,0 +1,42 @@
+.hd-card-wrap {
+  display: inline-block;
+  background: #fff;
+  margin:20px;
+  padding: var(--padding-md);
+  font-size: var(---font-size-base);
+  min-width: 200px;
+  & .hd-card-title {
+    font-size: var(--font-size-base);
+    color: var(--card-title-color);
+    margin-bottom: 10px;
+  }
+  & .hd-card-value {
+    font-size: var(--font-size-xxl);
+    color: var(--color-333);
+    font-weight: bold;
+  }
+  & .hd-card-content {
+    &::before,&::after{
+      content: '';
+      display: table;
+    }
+    &::after {
+      clear: both;
+    }
+    & .hd-card-content-cell {
+      font-size: var(--font-size-base);
+      color: var(--card-title-color);
+      margin-top: 5px;
+      margin-right: 20px;
+      display: inline-block;
+    }
+  }
+  & .hd-card-desc {
+    margin-top: 5px;
+  }
+  &.block {
+     & .hd-card-content-cell {
+      display: block;
+    }
+  }
+}

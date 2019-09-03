@@ -163,41 +163,44 @@ class LayoutContainer extends Component {
               </Menu.Item>
               <SubMenu key="4" title={<span>组件</span>}>
                 <Menu.Item key="41">
-                  <NavLink to="/docs/components/hd-layout">HdLayout</NavLink>
+                  <NavLink to="/docs/components/hd-layout">Layout</NavLink>
                 </Menu.Item>
                 <Menu.Item key="42">
-                  <NavLink to="/docs/components/hd-master">HdMaster</NavLink>
+                  <NavLink to="/docs/components/hd-master">Master</NavLink>
                 </Menu.Item>
                 <Menu.Item key="43">
-                  <NavLink to="/docs/components/hd-filter">HdFilter</NavLink>
+                  <NavLink to="/docs/components/hd-filter">Filter</NavLink>
                 </Menu.Item>
                 <Menu.Item key="44">
-                  <NavLink to="/docs/components/hd-searchForm">HdSearchForm</NavLink>
+                  <NavLink to="/docs/components/hd-searchForm">SearchForm</NavLink>
                 </Menu.Item>
                 <Menu.Item key="45">
-                  <NavLink to="/docs/components/hd-FormModal">HdFormModal</NavLink>
+                  <NavLink to="/docs/components/hd-FormModal">FormModal</NavLink>
                 </Menu.Item>
                 <Menu.Item key="46">
-                  <NavLink to="/docs/components/hd-card">HdCard</NavLink>
+                  <NavLink to="/docs/components/hd-card">Card</NavLink>
                 </Menu.Item>
 
                 <Menu.Item key="47">
-                  <NavLink to="/docs/components/hd-hgroup">HdHGroup</NavLink>
+                  <NavLink to="/docs/components/hd-hgroup">HGroup</NavLink>
                 </Menu.Item>
                 <Menu.Item key="48">
-                  <NavLink to="/docs/components/hd-vgroup">HdVGroup</NavLink>
+                  <NavLink to="/docs/components/hd-vgroup">VGroup</NavLink>
                 </Menu.Item>
                 <Menu.Item key="49">
-                  <NavLink to="/docs/components/hd-codearea">HdCodeArea</NavLink>
+                  <NavLink to="/docs/components/hd-codearea">CodeArea</NavLink>
                 </Menu.Item>
                 <Menu.Item key="50">
-                  <NavLink to="/docs/components/hd-panel">HdPanel</NavLink>
+                  <NavLink to="/docs/components/hd-codeZone">CodeZone</NavLink>
                 </Menu.Item>
                 <Menu.Item key="51">
-                  <NavLink to="/docs/components/hd-article">HdArticle</NavLink>
+                  <NavLink to="/docs/components/hd-panel">Panel</NavLink>
                 </Menu.Item>
                 <Menu.Item key="52">
-                  <NavLink to="/docs/components/hd-comment">HdComment</NavLink>
+                  <NavLink to="/docs/components/hd-article">Article</NavLink>
+                </Menu.Item>
+                <Menu.Item key="53">
+                  <NavLink to="/docs/components/hd-comment">Comment</NavLink>
                 </Menu.Item>
               </SubMenu>
             </Menu>

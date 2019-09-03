@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CodeArea from "../../../components/hd-CodeArea/index";
-import "../../../components/hd-CodeArea/style/index";
+import CodeArea from "../../../components/hd-codeArea/index";
+import "../../../components/hd-codeArea/style/index";
 
 export default class HdCodeAreaPage extends Component {
   constructor(props) {
