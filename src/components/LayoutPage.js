@@ -68,6 +68,22 @@ class HdLayoutPage extends Component {
               url: "/components/hd-master",
               show: true,
               order: 2
+            },
+            {
+              id: 43,
+              title: "HdSearchForm",
+              icon: null,
+              url: "/components/hd-searchForm",
+              show: true,
+              order: 3
+            },       
+            {
+              id: 44,
+              title: "HdFormModalPage",
+              icon: null,
+              url: "/components/hd-formModal",
+              show: true,
+              order: 3
             }
           ]
         }

@@ -8,7 +8,8 @@ const QuicklyPage = loadable(() => import("../pages/QuicklyPage"), { fallback: <
 const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Loading /> });
 const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
 const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
-
+const HdSearchForm = loadable(() => import("../pages/HdSearchFormPage"), { fallback: <Loading /> });
+const HdFormModalPage = loadable(() => import("../pages/HdFormModalPage"), { fallback: <Loading /> });
 const routes = [
   {
     key: "1",
@@ -50,6 +51,18 @@ const routes = [
         path: "/components/hd-master",
         exact: true,
         component: HdMasterPage
+      },{
+        key: "4-3",
+        name: "HdSearchForm",
+        path: "/components/hd-searchForm",
+        exact: true,
+        component: HdSearchForm
+      },{
+        key: "4-4",
+        name: "HdFormModalPage",
+        path: "/components/hd-FormModal",
+        exact: true,
+        component: HdFormModalPage
       }
     ]
   }
