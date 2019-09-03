@@ -11,6 +11,8 @@ const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Load
 const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
 const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
 const HdFilterPage = loadable(() => import("../pages/HdFilterPage"), { fallback: <Loading /> });
+const HdSearchForm = loadable(() => import("../pages/HdSearchFormPage"), { fallback: <Loading /> });
+const HdFormModalPage = loadable(() => import("../pages/HdFormModalPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -63,11 +65,22 @@ const routes = [
             component: HdMasterPage
           },
           {
-            key: "4-3",
+            key: "243",
             name: "HdFilterPage",
             path: "/docs/components/hd-filter",
-            exact: true,
             component: HdFilterPage
+          },
+          {
+            key: "244",
+            name: "HdSearchForm",
+            path: "/docs/components/hd-searchForm",
+            component: HdSearchForm
+          },
+          {
+            key: "245",
+            name: "HdFormModalPage",
+            path: "/docs/components/hd-FormModal",
+            component: HdFormModalPage
           }
         ]
       }

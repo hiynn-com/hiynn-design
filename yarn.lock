@@ -858,7 +858,11 @@
 
 "@types/clipboard@^2.0.1":
   version "2.0.1"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/@types/clipboard/-/clipboard-2.0.1.tgz#75a74086c293d75b12bc93ff13bc7797fef05a40"
+=======
+  resolved "https://registry.yarnpkg.com/@types/clipboard/-/clipboard-2.0.1.tgz#75a74086c293d75b12bc93ff13bc7797fef05a40"
+>>>>>>> shiyuyuan
   integrity sha512-gJJX9Jjdt3bIAePQRRjYWG20dIhAgEqonguyHxXuqALxsoDsDLimihqrSg8fXgVTJ4KZCzkfglKtwsh/8dLfbA==
 
 "@types/events@*":
@@ -3145,7 +3149,11 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
 
 comma-separated-tokens@^1.0.0:
   version "1.0.7"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.7.tgz#419cd7fb3258b1ed838dc0953167a25e152f5b59"
+=======
+  resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.7.tgz#419cd7fb3258b1ed838dc0953167a25e152f5b59"
+>>>>>>> shiyuyuan
   integrity sha512-Jrx3xsP4pPv4AwJUDWY9wOXGtwPXARej6Xd99h4TUGotmf8APuquKMpK+dnD3UgyxK7OEWaisjZz+3b5jtL6xQ==
 
 commander@2.17.x:
@@ -4147,7 +4155,11 @@ domhandler@^2.3.0:
 
 domhandler@^3.0, domhandler@^3.0.0:
   version "3.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/domhandler/-/domhandler-3.0.0.tgz#51cd13efca31da95bbb0c5bee3a48300e333b3e9"
+=======
+  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-3.0.0.tgz#51cd13efca31da95bbb0c5bee3a48300e333b3e9"
+>>>>>>> shiyuyuan
   integrity sha512-eKLdI5v9m67kbXQbJSNn1zjh0SDzvzWVWtX+qEI3eMjZw8daH9k8rlj1FZY9memPwjiskQFbe7vHVVJIAqoEhw==
   dependencies:
     domelementtype "^2.0.1"
@@ -4170,7 +4182,11 @@ domutils@^1.5.1, domutils@^1.7.0:
 
 domutils@^2.0.0:
   version "2.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/domutils/-/domutils-2.0.0.tgz#15b8278e37bfa8468d157478c58c367718133c08"
+=======
+  resolved "https://registry.yarnpkg.com/domutils/-/domutils-2.0.0.tgz#15b8278e37bfa8468d157478c58c367718133c08"
+>>>>>>> shiyuyuan
   integrity sha512-n5SelJ1axbO636c2yUtOGia/IcJtVtlhQbFiVDBZHKV5ReJO1ViX7sFEemtuyoAnBxk5meNSYgA8V4s0271efg==
   dependencies:
     dom-serializer "^0.2.1"
@@ -4734,7 +4750,11 @@ fast-levenshtein@~2.0.4:
 
 fault@^1.0.2:
   version "1.0.3"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/fault/-/fault-1.0.3.tgz#4da88cf979b6b792b4e13c7ec836767725170b7e"
+=======
+  resolved "https://registry.yarnpkg.com/fault/-/fault-1.0.3.tgz#4da88cf979b6b792b4e13c7ec836767725170b7e"
+>>>>>>> shiyuyuan
   integrity sha512-sfFuP4X0hzrbGKjAUNXYvNqsZ5F6ohx/dZ9I0KQud/aiZNwg263r5L9yGB0clvXHCkzXh5W3t7RSHchggYIFmA==
   dependencies:
     format "^0.2.2"
@@ -4987,7 +5007,11 @@ form-data@~2.3.2:
 
 format@^0.2.2:
   version "0.2.2"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
+=======
+  resolved "https://registry.yarnpkg.com/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
+>>>>>>> shiyuyuan
   integrity sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
 
 forwarded@~0.1.2:
@@ -5686,12 +5710,20 @@ hash.js@^1.0.0, hash.js@^1.0.3:
 
 hast-util-parse-selector@^2.2.0:
   version "2.2.2"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-2.2.2.tgz#66aabccb252c47d94975f50a281446955160380b"
+=======
+  resolved "https://registry.yarnpkg.com/hast-util-parse-selector/-/hast-util-parse-selector-2.2.2.tgz#66aabccb252c47d94975f50a281446955160380b"
+>>>>>>> shiyuyuan
   integrity sha512-jIMtnzrLTjzqgVEQqPEmwEZV+ea4zHRFTP8Z2Utw0I5HuBOXHzUPPQWr6ouJdJqDKLbFU/OEiYwZ79LalZkmmw==
 
 hastscript@^5.0.0:
   version "5.1.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/hastscript/-/hastscript-5.1.0.tgz#a19b3cca6a26a2bcd0f1b1eac574af9427c1c7df"
+=======
+  resolved "https://registry.yarnpkg.com/hastscript/-/hastscript-5.1.0.tgz#a19b3cca6a26a2bcd0f1b1eac574af9427c1c7df"
+>>>>>>> shiyuyuan
   integrity sha512-7mOQX5VfVs/gmrOGlN8/EDfp1GqV6P3gTNVt+KnX4gbYhpASTM8bklFdFQCbFRAadURXAmw0R1QQdBdqp7jswQ==
   dependencies:
     comma-separated-tokens "^1.0.0"
@@ -5711,7 +5743,11 @@ hex-color-regex@^1.1.0:
 
 highlight.js@~9.13.0:
   version "9.13.1"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-9.13.1.tgz#054586d53a6863311168488a0f58d6c505ce641e"
+=======
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.13.1.tgz#054586d53a6863311168488a0f58d6c505ce641e"
+>>>>>>> shiyuyuan
   integrity sha512-Sc28JNQNDzaH6PORtRLMvif9RSn1mYuOoX3omVjnb0+HbpPygU2ALBI0R/wsiqCb4/fcp07Gdo8g+fhtFrQl6A==
 
 history@^4.9.0:
@@ -5806,7 +5842,11 @@ html-minifier@^3.2.3:
 
 html-to-react@^1.3.4:
   version "1.4.1"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/html-to-react/-/html-to-react-1.4.1.tgz#64f67657c6335056866e334c097556f25894dd47"
+=======
+  resolved "https://registry.yarnpkg.com/html-to-react/-/html-to-react-1.4.1.tgz#64f67657c6335056866e334c097556f25894dd47"
+>>>>>>> shiyuyuan
   integrity sha512-Ys2gGxF8LBF9bD8tbnsU0xgEDOTC3Sy81mtpIH/61hSqGE1l4QetnN1yv0oAK/PuvwABmiNS+ggqvuzo+GfoiA==
   dependencies:
     domhandler "^3.0"
@@ -5850,7 +5890,11 @@ htmlparser2@^3.3.0:
 
 htmlparser2@^4.0:
   version "4.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-4.0.0.tgz#6034658db65b7713a572a9ebf79f650832dceec8"
+=======
+  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-4.0.0.tgz#6034658db65b7713a572a9ebf79f650832dceec8"
+>>>>>>> shiyuyuan
   integrity sha512-cChwXn5Vam57fyXajDtPXL1wTYc8JtLbr2TN76FYu05itVVVealxLowe2B3IEznJG4p9HAYn/0tJaRlGuEglFQ==
   dependencies:
     domelementtype "^2.0.1"
@@ -7110,7 +7154,11 @@ lodash._shimkeys@~2.4.1:
 
 lodash.camelcase@^4.3.0:
   version "4.3.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
+=======
+  resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
+>>>>>>> shiyuyuan
   integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
 
 lodash.clonedeep@^4.3.2:
@@ -7322,7 +7370,11 @@ lowercase-keys@^1.0.1:
 
 lowlight@~1.11.0:
   version "1.11.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/lowlight/-/lowlight-1.11.0.tgz#1304d83005126d4e8b1dc0f07981e9b689ec2efc"
+=======
+  resolved "https://registry.yarnpkg.com/lowlight/-/lowlight-1.11.0.tgz#1304d83005126d4e8b1dc0f07981e9b689ec2efc"
+>>>>>>> shiyuyuan
   integrity sha512-xrGGN6XLL7MbTMdPD6NfWPwY43SNkjf/d0mecSx/CW36fUZTjRHEq0/Cdug3TWKtRXLWi7iMl1eP0olYxj/a4A==
   dependencies:
     fault "^1.0.2"
@@ -7466,7 +7518,11 @@ md5@^2.0.0:
 
 mdast-add-list-metadata@1.0.1:
   version "1.0.1"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/mdast-add-list-metadata/-/mdast-add-list-metadata-1.0.1.tgz#95e73640ce2fc1fa2dcb7ec443d09e2bfe7db4cf"
+=======
+  resolved "https://registry.yarnpkg.com/mdast-add-list-metadata/-/mdast-add-list-metadata-1.0.1.tgz#95e73640ce2fc1fa2dcb7ec443d09e2bfe7db4cf"
+>>>>>>> shiyuyuan
   integrity sha512-fB/VP4MJ0LaRsog7hGPxgOrSL3gE/2uEdZyDuSEnKCv/8IkYHiDkIQSbChiJoHyxZZXZ9bzckyRk+vNxFzh8rA==
   dependencies:
     unist-util-visit-parents "1.1.2"
@@ -10052,7 +10108,11 @@ prop-types@15.x, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, pr
 
 property-information@^5.0.1:
   version "5.2.2"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/property-information/-/property-information-5.2.2.tgz#20555eafd2296278a682e5a51d5123e7878ecc30"
+=======
+  resolved "https://registry.yarnpkg.com/property-information/-/property-information-5.2.2.tgz#20555eafd2296278a682e5a51d5123e7878ecc30"
+>>>>>>> shiyuyuan
   integrity sha512-N2moasZmjn2mjVGIWpaqz5qnz6QyeQSGgGvMtl81gA9cPTWa6wpesRSe/quNnOjUHpvSH1oZx0pdz0EEckLFnA==
   dependencies:
     xtend "^4.0.1"
@@ -10193,7 +10253,11 @@ raf@^3.4.0, raf@^3.4.1:
 
 ramda@^0.26:
   version "0.26.1"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+=======
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+>>>>>>> shiyuyuan
   integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
@@ -10228,7 +10292,11 @@ raw-body@2.4.0:
 
 raw-loader@^3.1.0:
   version "3.1.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/raw-loader/-/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
+=======
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
+>>>>>>> shiyuyuan
   integrity sha512-lzUVMuJ06HF4rYveaz9Tv0WRlUMxJ0Y1hgSkkgg+50iEdaI0TthyEDe08KIHb0XsF6rn8WYTqPCaGTZg3sX+qA==
   dependencies:
     loader-utils "^1.1.0"
@@ -10682,17 +10750,28 @@ rc@^1.2.7:
 
 react-clipboard.js@^2.0.13:
   version "2.0.13"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/react-clipboard.js/-/react-clipboard.js-2.0.13.tgz#4430d4ef989c4c39303553c2c22f20b72b2d73dd"
+=======
+  resolved "https://registry.yarnpkg.com/react-clipboard.js/-/react-clipboard.js-2.0.13.tgz#4430d4ef989c4c39303553c2c22f20b72b2d73dd"
+>>>>>>> shiyuyuan
   integrity sha512-1tjFU52LbtETZe223bc/q9JnbguWXqrgWCHpnVWJ4YYhzoV62jJP0NghAYH6+F7G5SI80wnQHdBjgqppNTY7Xg==
   dependencies:
     "@types/clipboard" "^2.0.1"
     clipboard "^2.0.0"
     prop-types "^15.5.0"
 
+<<<<<<< HEAD
 react-code-previewer@^0.2.7:
   version "0.2.7"
   resolved "https://registry.npmjs.org/react-code-previewer/-/react-code-previewer-0.2.7.tgz#eab1bdafb64b8ec2d0124e96fda3933e230569fd"
   integrity sha512-Vd2k178wSkVSkv+1YyPGkuLWz00OZoGbN+q/Ud9R+xwVmgWfMRDUK6mbQT1NlN+zl9h8fi9R+lwR4cO/IzbuOg==
+=======
+react-code-previewer@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/react-code-previewer/-/react-code-previewer-0.2.3.tgz#1f3501aa5fc7382ad6bf707fe0ce0951c8bb69c0"
+  integrity sha512-Njgr2mxj/FM7zTUr75gPEWX+Pw0u7H5rM9/90EVcZ27RgKOOc4zcNe2kO/0bkpltAPKiwsmVJD4mvpdeyTEmJg==
+>>>>>>> shiyuyuan
   dependencies:
     classnames "^2.2.6"
     prop-types "^15.7.2"
@@ -10784,7 +10863,11 @@ react-icons@^3.7.0:
   dependencies:
     camelcase "^5.0.0"
 
+<<<<<<< HEAD
 react-is@^16.6.0, react-is@^16.9.0:
+=======
+react-is@^16.6.0, react-is@^16.8.6:
+>>>>>>> shiyuyuan
   version "16.9.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
@@ -10810,18 +10893,29 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
 react-markdown@^4.1.0:
+<<<<<<< HEAD
   version "4.1.0"
   resolved "https://registry.npmjs.org/react-markdown/-/react-markdown-4.1.0.tgz#7fdf840ecbabc803f28156f7411c726b58f25a73"
   integrity sha512-EOHsEAN+aoP8UVz7vTHx6Z63GJfhrO9KItKlfsiBtVVS9tmSWtUaBTw73+2SObrWiOiE2Cs9qUBL7ORsvVhOrA==
+=======
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-4.2.0.tgz#35cf4090b5b8c7fbffa6f8e9a2a90e831916c2d9"
+  integrity sha512-X0RYa7hRjVBR6eujKNSeSeCjDKU4dtqCZzugTI76cVU6C/36JyuHxGvW9fnsvX298XfdwEpxQzc8b/CBq3QkYQ==
+>>>>>>> shiyuyuan
   dependencies:
     html-to-react "^1.3.4"
     mdast-add-list-metadata "1.0.1"
     prop-types "^15.7.2"
+<<<<<<< HEAD
+=======
+    react-is "^16.8.6"
+>>>>>>> shiyuyuan
     remark-parse "^5.0.0"
     unified "^6.1.5"
     unist-util-visit "^1.3.0"
     xtend "^4.0.1"
 
+<<<<<<< HEAD
 react-redux@^7.1.1:
   version "7.1.1"
   resolved "https://registry.npm.taobao.org/react-redux/download/react-redux-7.1.1.tgz#ce6eee1b734a7a76e0788b3309bf78ff6b34fa0a"
@@ -10834,6 +10928,8 @@ react-redux@^7.1.1:
     prop-types "^15.7.2"
     react-is "^16.9.0"
 
+=======
+>>>>>>> shiyuyuan
 react-router-config@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npm.taobao.org/react-router-config/download/react-router-config-5.0.1.tgz#e6663010f42aa5e39c2f21412d8f958f6866e48a"
@@ -10963,7 +11059,11 @@ react-styleguidist@^9.1.14:
 
 react-syntax-highlighter@^11.0.2:
   version "11.0.2"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/react-syntax-highlighter/-/react-syntax-highlighter-11.0.2.tgz#4e3f376e752b20d2f54e4c55652fd663149e4029"
+=======
+  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-11.0.2.tgz#4e3f376e752b20d2f54e4c55652fd663149e4029"
+>>>>>>> shiyuyuan
   integrity sha512-kqmpM2OH5OodInbEADKARwccwSQWBfZi0970l5Jhp4h39q9Q65C4frNcnd6uHE5pR00W8pOWj9HDRntj2G4Rww==
   dependencies:
     "@babel/runtime" "^7.3.1"
@@ -11113,6 +11213,7 @@ reduce-function-call@^1.0.1, reduce-function-call@^1.0.2:
   dependencies:
     balanced-match "^0.4.2"
 
+<<<<<<< HEAD
 reduce-reducers@^0.4.3:
   version "0.4.3"
   resolved "https://registry.npm.taobao.org/reduce-reducers/download/reduce-reducers-0.4.3.tgz#8e052618801cd8fc2714b4915adaa8937eb6d66c"
@@ -11152,6 +11253,11 @@ redux@^4.0.4:
 refractor@^2.4.1:
   version "2.10.0"
   resolved "https://registry.npmjs.org/refractor/-/refractor-2.10.0.tgz#4cc7efc0028a87924a9b31d82d129dec831a287b"
+=======
+refractor@^2.4.1:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.10.0.tgz#4cc7efc0028a87924a9b31d82d129dec831a287b"
+>>>>>>> shiyuyuan
   integrity sha512-maW2ClIkm9IYruuFYGTqKzj+m31heq92wlheW4h7bOstP+gf8bocmMec+j7ljLcaB1CAID85LMB3moye31jH1g==
   dependencies:
     hastscript "^5.0.0"
@@ -11266,7 +11372,11 @@ relateurl@0.2.x:
 
 remark-parse@^5.0.0:
   version "5.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/remark-parse/-/remark-parse-5.0.0.tgz#4c077f9e499044d1d5c13f80d7a98cf7b9285d95"
+=======
+  resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-5.0.0.tgz#4c077f9e499044d1d5c13f80d7a98cf7b9285d95"
+>>>>>>> shiyuyuan
   integrity sha512-b3iXszZLH1TLoyUzrATcTQUZrwNl1rE70rVdSruJFlDaJ9z5aMkhrG43Pp68OgfHndL/ADz6V69Zow8cTQu+JA==
   dependencies:
     collapse-white-space "^1.0.2"
@@ -11726,7 +11836,11 @@ schema-utils@^2.0.0:
 
 schema-utils@^2.0.1:
   version "2.1.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/schema-utils/-/schema-utils-2.1.0.tgz#940363b6b1ec407800a22951bdcc23363c039393"
+=======
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.1.0.tgz#940363b6b1ec407800a22951bdcc23363c039393"
+>>>>>>> shiyuyuan
   integrity sha512-g6SViEZAfGNrToD82ZPUjq52KUPDYc+fN5+g6Euo5mLokl/9Yx14z0Cu4RR1m55HtBXejO0sBt+qw79axN+Fiw==
   dependencies:
     ajv "^6.1.0"
@@ -12061,7 +12175,11 @@ sourcemap-codec@^1.4.4:
 
 space-separated-tokens@^1.0.0:
   version "1.1.4"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.4.tgz#27910835ae00d0adfcdbd0ad7e611fb9544351fa"
+=======
+  resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.4.tgz#27910835ae00d0adfcdbd0ad7e611fb9544351fa"
+>>>>>>> shiyuyuan
   integrity sha512-UyhMSmeIqZrQn2UdjYpxEkwY9JUrn8pP+7L4f91zRzOQuI8MF1FGLfYU9DKCYeLdo7LXMxwrX5zKFy7eeeVHuA==
 
 sparkles@^1.0.0:
@@ -12926,7 +13044,11 @@ unicode-property-aliases-ecmascript@^1.0.4:
 
 unified@^6.1.5:
   version "6.2.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
+=======
+  resolved "https://registry.yarnpkg.com/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
+>>>>>>> shiyuyuan
   integrity sha512-1k+KPhlVtqmG99RaTbAv/usu85fcSRu3wY8X+vnsEhIxNP5VbVIDiXnLqyKIG+UMdyTg0ZX9EI6k2AfjJkHPtA==
   dependencies:
     bail "^1.0.0"
@@ -13011,7 +13133,11 @@ unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
 
 unist-util-visit-parents@1.1.2:
   version "1.1.2"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-1.1.2.tgz#f6e3afee8bdbf961c0e6f028ea3c0480028c3d06"
+=======
+  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-1.1.2.tgz#f6e3afee8bdbf961c0e6f028ea3c0480028c3d06"
+>>>>>>> shiyuyuan
   integrity sha512-yvo+MMLjEwdc3RhhPYSximset7rwjMrdt9E41Smmvg25UQIenzrN83cRnF1JMzoMi9zZOQeYXHSDf7p+IQkW3Q==
 
 unist-util-visit-parents@^2.0.0:
@@ -13224,7 +13350,11 @@ vfile-message@^1.0.0:
 
 vfile@^2.0.0:
   version "2.3.0"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/vfile/-/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
+=======
+  resolved "https://registry.yarnpkg.com/vfile/-/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
+>>>>>>> shiyuyuan
   integrity sha512-ASt4mBUHcTpMKD/l5Q+WJXNtshlWxOogYyGYYrg4lt/vuRjC1EFQtlAofL5VmtVNIZJzWYFJjzGWZ0Gw8pzW1w==
   dependencies:
     is-buffer "^1.1.4"
