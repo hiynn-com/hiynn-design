@@ -476,141 +476,6 @@ template {
   --color-333: #333333;
 }
 
-.hd-codearea {
-    border: 1px solid lightgray;
-    overflow: hidden;
-    height: 150px;
-    border-radius: 3px;
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: nowrap
-}
-.hd-codearea > p.hd-codearea-p {
-        min-width: 15px;
-        flex-grow: 0;
-        height: 100%;
-        background-color: #F2F2F2;
-        margin: 0;
-        padding: 2px;
-        border-radius: 3px 0 0 3px;
-        font-size: 12px;
-        line-height: 15px;
-        text-align: center;
-        white-space: pre-line;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-        color: gray;
-        overflow: hidden;
-    }
-.hd-codearea > textarea.hd-codearea-textarea {
-        flex-grow: 1;
-        height: 100%;
-        border: none;
-        outline: none;
-        border-radius: 0 3px 3px 0;
-        font-size: 12px;
-        line-height: 15px;
-        white-space: pre;
-        padding-left: 5px;
-        resize: none;
-    }
-.hd-codezone {
-    border: 1px solid lightgray;
-    overflow: hidden;
-    height: 150px;
-    border-radius: 3px;
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: nowrap
-}
-.hd-codezone > p.hd-codezone-p {
-        min-width: 15px;
-        flex-grow: 0;
-        height: 100%;
-        background-color: #F2F2F2;
-        margin: 0;
-        padding: 2px;
-        border-radius: 3px 0 0 3px;
-        font-size: 12px;
-        line-height: 15px;
-        text-align: center;
-        white-space: pre-line;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-        color: gray;
-        overflow: hidden;
-    }
-.hd-codezone > textzone.hd-codezone-textzone {
-        flex-grow: 1;
-        height: 100%;
-        border: none;
-        outline: none;
-        border-radius: 0 3px 3px 0;
-        font-size: 12px;
-        line-height: 15px;
-        white-space: pre;
-        padding-left: 5px;
-        resize: none;
-    }
-.hd-hgroup {
-    /** 
-    --width: 宽度，由js设置此属性
-    --height: 高度，由js设置此属性
-    --vertical-align: 垂直对齐方式，由js设置此属性
-    --horizontal-align: 水平对齐方式，由js设置此属性
-     */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: var(--horizontal-align);
-    align-items: var(--vertical-align);
-    width: var(--width);
-    height: var(--height);
-}
-.hd-panel {
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, .1);
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, .2)
-}
-.hd-panel .hd-panel-title {
-        width: 100%;
-        box-sizing: border-box;  
-        -webkit-user-select: none;  
-           -moz-user-select: none;  
-            -ms-user-select: none;  
-                user-select: none;
-        /* background: #25AFF3; */
-        /* color: white; */
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 5px 10px;
-        /* border-radius: 5px 5px 0 0; */
-    }
-.hd-panel .hd-panel-content {
-        width: 100%;
-        box-sizing: border-box;
-        height: auto;
-    }
-.hd-vgroup {
-    /** 
-    --width: 宽度，由js设置此属性
-    --height: 高度，由js设置此属性
-    --vertical-align: 垂直对齐方式，由js设置此属性
-    --horizontal-align: 水平对齐方式，由js设置此属性
-     */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: var(--vertical-align);
-    align-items: var(--horizontal-align);
-    width: var(--width);
-    height: var(--height);
-}
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -721,6 +586,86 @@ template {
 .hd-card-wrap.block .hd-card-content-cell {
       display: block;
     }
+.hd-codearea {
+    border: 1px solid lightgray;
+    overflow: hidden;
+    height: 150px;
+    border-radius: 3px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: nowrap
+}
+.hd-codearea > p.hd-codearea-p {
+        min-width: 15px;
+        flex-grow: 0;
+        height: 100%;
+        background-color: #F2F2F2;
+        margin: 0;
+        padding: 2px;
+        border-radius: 3px 0 0 3px;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        white-space: pre-line;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        color: gray;
+        overflow: hidden;
+    }
+.hd-codearea > textarea.hd-codearea-textarea {
+        flex-grow: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 0 3px 3px 0;
+        font-size: 12px;
+        line-height: 15px;
+        white-space: pre;
+        padding-left: 5px;
+        resize: none;
+    }
+.hd-codezone {
+    border: 1px solid lightgray;
+    overflow: hidden;
+    height: 150px;
+    border-radius: 3px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: nowrap
+}
+.hd-codezone > p.hd-codezone-p {
+        min-width: 15px;
+        flex-grow: 0;
+        height: 100%;
+        background-color: #F2F2F2;
+        margin: 0;
+        padding: 2px;
+        border-radius: 3px 0 0 3px;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        white-space: pre-line;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        color: gray;
+        overflow: hidden;
+    }
+.hd-codezone > textzone.hd-codezone-textzone {
+        flex-grow: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 0 3px 3px 0;
+        font-size: 12px;
+        line-height: 15px;
+        white-space: pre;
+        padding-left: 5px;
+        resize: none;
+    }
 .hd-filter-box {
   margin: 20px
 }
@@ -777,6 +722,21 @@ template {
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
+.hd-hgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: var(--horizontal-align);
+    align-items: var(--vertical-align);
+    width: var(--width);
+    height: var(--height);
+}
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -875,6 +835,31 @@ template {
   height: calc(100% - 64px);
 }
 
+.hd-panel {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, .2)
+}
+.hd-panel .hd-panel-title {
+        width: 100%;
+        box-sizing: border-box;  
+        -webkit-user-select: none;  
+           -moz-user-select: none;  
+            -ms-user-select: none;  
+                user-select: none;
+        /* background: #25AFF3; */
+        /* color: white; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px 10px;
+        /* border-radius: 5px 5px 0 0; */
+    }
+.hd-panel .hd-panel-content {
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+    }
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 .hd-searchForm-box{
@@ -884,6 +869,21 @@ template {
 
 
 
+.hd-vgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--vertical-align);
+    align-items: var(--horizontal-align);
+    width: var(--width);
+    height: var(--height);
+}
 .article-container {
     width: 80%;
     margin: 0 auto;

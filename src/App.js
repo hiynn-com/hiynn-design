@@ -15,9 +15,6 @@ import routes from "./router";
 const { persistor, store } = configureStore(/* provide initial state if any */);
 
 class App extends Component {
-  componentDidMount() {
-    console.log("process.env.PUBLIC_URL", process.env.PUBLIC_URL);
-  }
   render() {
     return (
       <Provider store={store}>

@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../components/hd-article/index.js"],"names":["Demo"],"mappings":";;;;;;;AAAA;;;eAGe;AAAEA,EAAAA,IAAI,EAAJA;AAAF,C","sourcesContent":["import Demo from \"./demo\";\n\nexport { Demo };\nexport default { Demo };\n"],"file":"index.js"}

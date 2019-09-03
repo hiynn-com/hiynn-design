@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Article from "../../../components/hd-article/demo";
+import Article from "../../../components/article/demo";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import articleMd from "./md/article.md";
 import exampleMd from "./md/example.md";
 import apiMd from "./md/api.md";
-import "../../../components/hd-article/demo/style";
+import "../../../components/article/demo/style";
 
 class DemoPage extends Component {
   constructor(props) {

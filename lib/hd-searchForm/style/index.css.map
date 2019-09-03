@@ -1,1 +1,0 @@
-{"version":3,"sources":["hd-searchForm/style/index.pcss"],"names":[],"mappings":"AAAA,oCACA,uCACA,mBACI,WAAA,KACA,YAAA","file":"index.css","sourcesContent":["@import \"../../styles/vars.pcss\";\n@import \"../../styles/animate.pcss\";\n.hd-searchForm-box{\n    margin-top:20px;\n    margin-left:20px;\n}"]}

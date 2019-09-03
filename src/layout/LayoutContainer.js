@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Menu, Icon, Layout, Input, Button } from "antd";
 import { connect } from "react-redux";
 import { renderRoutes, matchRoutes } from "react-router-config";
-import HdLayout from "../../components/hd-layout";
+import HdLayout from "../../components/layout";
 import layoutAction from "../redux/layout/layoutAction";
-import "../../components/hd-layout/style";
-import "../../components/hd-menus/style";
+import "../../components/layout/style";
+import "../../components/menus/style";
 import "../assets/css/layoutPage.pcss";
 import logo from "../assets/images/hd_logo.jpg";
 import { Map } from "immutable";
@@ -70,7 +70,7 @@ class LayoutContainer extends Component {
       //         id: 41,
       //         title: "HdLayout",
       //         icon: null,
-      //         url: "/components/hd-layout",
+      //         url: "/components/layout",
       //         show: true,
       //         order: 1
       //       },
@@ -78,7 +78,7 @@ class LayoutContainer extends Component {
       //         id: 42,
       //         title: "HdMaster",
       //         icon: null,
-      //         url: "/components/hd-master",
+      //         url: "/components/master",
       //         show: true,
       //         order: 2
       //       }
@@ -113,17 +113,14 @@ class LayoutContainer extends Component {
           <div className="header-left">
             <img src={logo} width={36}></img>
             <span className="title">Hiynn Design</span>
-            {/* <Search placeholder="在 hiynn.design 中搜索" className="search" onSearch={value => console.log(value)} style={{ width: 400 }} /> */}
           </div>
           <div className="header-right">
             <div className="menu">
               <div className="menu-item" onClick={() => this.home()}>
-                <a href="javascript:;">首页</a>
+                <span className="title">首页</span>
               </div>
               <div className="menu-item" onClick={() => this.docs()}>
-                <a href="javascript:;" className="selected">
-                  组件
-                </a>
+                <span className="title selected">组件</span>
               </div>
               <div className="menu-item">
                 <NavLink to="/about" activeClassName="selected">
@@ -163,50 +160,49 @@ class LayoutContainer extends Component {
               </Menu.Item>
               <SubMenu key="4" title={<span>组件</span>}>
                 <Menu.Item key="41">
-                  <NavLink to="/docs/components/hd-layout">Layout</NavLink>
+                  <NavLink to="/docs/components/layout">Layout</NavLink>
                 </Menu.Item>
                 <Menu.Item key="42">
-                  <NavLink to="/docs/components/hd-master">Master</NavLink>
+                  <NavLink to="/docs/components/master">Master</NavLink>
                 </Menu.Item>
                 <Menu.Item key="43">
-                  <NavLink to="/docs/components/hd-filter">Filter</NavLink>
+                  <NavLink to="/docs/components/filter">Filter</NavLink>
                 </Menu.Item>
                 <Menu.Item key="44">
-                  <NavLink to="/docs/components/hd-searchForm">SearchForm</NavLink>
+                  <NavLink to="/docs/components/searchForm">SearchForm</NavLink>
                 </Menu.Item>
                 <Menu.Item key="45">
-                  <NavLink to="/docs/components/hd-FormModal">FormModal</NavLink>
+                  <NavLink to="/docs/components/formModal">FormModal</NavLink>
                 </Menu.Item>
                 <Menu.Item key="46">
-                  <NavLink to="/docs/components/hd-card">Card</NavLink>
+                  <NavLink to="/docs/components/card">Card</NavLink>
                 </Menu.Item>
-
                 <Menu.Item key="47">
-                  <NavLink to="/docs/components/hd-hgroup">HGroup</NavLink>
+                  <NavLink to="/docs/components/hgroup">HGroup</NavLink>
                 </Menu.Item>
                 <Menu.Item key="48">
-                  <NavLink to="/docs/components/hd-vgroup">VGroup</NavLink>
+                  <NavLink to="/docs/components/vgroup">VGroup</NavLink>
                 </Menu.Item>
                 <Menu.Item key="49">
-                  <NavLink to="/docs/components/hd-codearea">CodeArea</NavLink>
+                  <NavLink to="/docs/components/codearea">CodeArea</NavLink>
                 </Menu.Item>
                 <Menu.Item key="50">
-                  <NavLink to="/docs/components/hd-codeZone">CodeZone</NavLink>
+                  <NavLink to="/docs/components/codeZone">CodeZone</NavLink>
                 </Menu.Item>
                 <Menu.Item key="51">
-                  <NavLink to="/docs/components/hd-panel">Panel</NavLink>
+                  <NavLink to="/docs/components/panel">Panel</NavLink>
                 </Menu.Item>
                 <Menu.Item key="52">
-                  <NavLink to="/docs/components/hd-article">Article</NavLink>
+                  <NavLink to="/docs/components/article">Article</NavLink>
                 </Menu.Item>
                 <Menu.Item key="53">
-                  <NavLink to="/docs/components/hd-comment">Comment</NavLink>
+                  <NavLink to="/docs/components/comment">Comment</NavLink>
                 </Menu.Item>
                 <Menu.Item key="54">
-                  <NavLink to="/docs/components/hd-admin">Admin</NavLink>
+                  <NavLink to="/docs/components/admin">Admin</NavLink>
                 </Menu.Item>
                 <Menu.Item key="55">
-                  <NavLink to="/docs/components/hd-formValidation">FormValidation</NavLink>
+                  <NavLink to="/docs/components/formValidation">FormValidation</NavLink>
                 </Menu.Item>
               </SubMenu>
             </Menu>

@@ -1,13 +1,13 @@
-import HdLayout from "./hd-layout";
-import HdMaster from "./hd-master";
-import HdMenus from "./hd-menus";
-import HdCard from "./hd-card";
-import HdArticle from "./hd-article";
-import HdComment from "./hd-comment";
-import HGroup from "./hd-hGroup";
-import VGroup from "./hd-vGroup";
-import CodeArea from "./hd-codeArea";
-import Panel from "./hd-panel";
+import HdLayout from "./layout";
+import HdMaster from "./master";
+import HdMenus from "./menus";
+import HdCard from "./card";
+import HdArticle from "./article";
+import HdComment from "./comment";
+import HGroup from "./hgroup";
+import VGroup from "./vGroup";
+import CodeArea from "./codeArea";
+import Panel from "./panel";
 export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel };
 export default {
   HdLayout: HdLayout,

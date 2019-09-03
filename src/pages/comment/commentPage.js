@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Comment from "../../../components/hd-comment/demo";
-import "../../../components/hd-comment/demo/style";
+import Comment from "../../../components/comment/demo";
+import "../../../components/comment/demo/style";
 
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import commentMd from "./md/comment.md";
