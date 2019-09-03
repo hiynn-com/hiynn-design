@@ -6,7 +6,16 @@ class Demo extends Component {
     super(props);
     this.state = {
       voteStatus: false,
-      data: {},
+      data: {
+        title: null,
+        blockName: null,
+        ownerName: null,
+        viewCount: null,
+        replyCount: null,
+        voteCount: null,
+        creationDate: null,
+        content: null,
+      },
     };
   }
 

@@ -10,48 +10,7 @@ class Demo extends Component {
       maxLength: 0,
       isVote: true,
       info: '',
-      data: [
-        {
-          author: "张三",
-          avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-          creationDate: "2019-08-28",
-          commentId: "111",
-          content: "66666666666666666667",
-          like: 10,
-          dislike: 3,
-          children: [
-            {
-              author: "张三",
-              avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              creationDate: "2019-08-28",
-              commentId: "222",
-              content: "65345436534765537564475788758",
-              like: 10,
-              dislike: 3,
-            }
-          ]
-        },
-        {
-          author: "张三",
-          avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-          creationDate: "2019-08-28",
-          commentId: "111",
-          content: "66666666666666666667",
-          like: 10,
-          dislike: 3,
-          children: [
-            {
-              author: "张三",
-              avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              creationDate: "2019-08-28",
-              commentId: "222",
-              content: "65345436534765537564475788758",
-              like: 10,
-              dislike: 3,
-            }
-          ]
-        },
-      ]
+      data: [],
     };
   }
 
@@ -104,7 +63,7 @@ class Demo extends Component {
   render() {
     const { data, maxLength, isVote } = this.state;
     return (
-      <div>
+      <div style={{ backgroundColor: "#fff" }}>
         <div className='answer-first'>
           <div>
             <textarea maxLength={maxLength} onChange={this.changeWords.bind(this)}></textarea>
@@ -113,7 +72,7 @@ class Demo extends Component {
           <Button onClick={this.resetComment.bind(this)}>重置</Button>
           <Button type='primary' onClick={this.replyComment.bind(this)}>回复</Button>
         </div>
-        <Divider style={{ height: 2 }} />
+        <Divider />
         {
           data.map((val, index) =>
             <Comment

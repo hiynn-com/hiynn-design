@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import Comment from "../../components/hd-comment/demo";
-import "../../components/hd-comment/demo/style";
-
-import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import commentMd from "../md/comment/comment.md";
-import exampleMd from "../md/comment/example.md";
-import apiMd from "../md/comment/api.md";
+import { HdComment } from 'hiynn-design';
+import 'hiynn-design/dist/hiynn-design.css';
 
 class DemoPage extends Component {
   constructor(props) {
@@ -34,9 +29,6 @@ class DemoPage extends Component {
         },
       ]
     }
-  }
-  componentDidMount() {
-
   }
   replySubmit = (commentId, value, time) => {
     let data = this.state.data;
@@ -98,21 +90,14 @@ class DemoPage extends Component {
   }
   render() {
     return (
-      <PreviewLayout>
-        <MdPreviewer md={commentMd}></MdPreviewer>
-        <CodePreviewer code={exampleMd} showCode={true}>
-          <Comment
+          <HdComment
             maxLength={2000}//输入框输入最多字数
             isVote={true}//是否显示点赞
             data={this.state.data}//渲染数据
             replySubmit={this.replySubmit}//点击回复的回调函数
             voteClick={this.voteClick}//点赞的回调函数
           />
-        </CodePreviewer>
-        <MdPreviewer md={apiMd}></MdPreviewer>
-      </PreviewLayout>
     );
   }
 }
-
 export default DemoPage;

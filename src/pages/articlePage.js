@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import Demo from "../../components/hd-article/demo";
+import Article from "../../components/hd-article/demo";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
-import articleMd from "../md/article.md"
+import articleMd from "../md/article/article.md"
+import exampleMd from "../md/article/example.md"
+import apiMd from "../md/article/api.md"
 import "../../components/hd-article/demo/style";
 
 class DemoPage extends Component {
@@ -34,14 +36,15 @@ class DemoPage extends Component {
     const { data, voteStatus } = this.state;
     return (
       <PreviewLayout>
-        {/* <CodePreviewer code={code} showCode={true}> */}
-          <Demo
+        <MdPreviewer md={articleMd}></MdPreviewer>
+        <CodePreviewer code={exampleMd} showCode={true}>
+          <Article
             data={data}
             voteStatus={voteStatus}
             giveLike={this.giveLike}
           />
-        {/* </CodePreviewer> */}
-        <MdPreviewer md={articleMd}></MdPreviewer>
+        </CodePreviewer>
+        <MdPreviewer md={apiMd}></MdPreviewer>
       </PreviewLayout>
     );
   }
