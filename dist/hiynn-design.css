@@ -476,44 +476,6 @@ template {
   --color-333: #333333;
 }
 
-.hd-card-wrap {
-  display: inline-block;
-  background: #fff;
-  margin:20px;
-  padding: var(--padding-md);
-  font-size: var(---font-size-base);
-  min-width: 200px
-}
-.hd-card-wrap .hd-card-title {
-    font-size: var(--font-size-base);
-    color: var(--card-title-color);
-    margin-bottom: 10px;
-  }
-.hd-card-wrap .hd-card-value {
-    font-size: var(--font-size-xxl);
-    color: var(--color-333);
-    font-weight: bold;
-  }
-.hd-card-wrap .hd-card-content::before,.hd-card-wrap .hd-card-content::after{
-      content: '';
-      display: table;
-    }
-.hd-card-wrap .hd-card-content::after {
-      clear: both;
-    }
-.hd-card-wrap .hd-card-content .hd-card-content-cell {
-      font-size: var(--font-size-base);
-      color: var(--card-title-color);
-      margin-top: 5px;
-      margin-right: 20px;
-      display: inline-block;
-    }
-.hd-card-wrap .hd-card-desc {
-    margin-top: 5px;
-  }
-.hd-card-wrap.block .hd-card-content-cell {
-      display: block;
-    }
 .hd-codearea {
     border: 1px solid lightgray;
     overflow: hidden;
@@ -594,12 +556,99 @@ template {
         padding-left: 5px;
         resize: none;
     }
-@import "../../styles/vars.pcss";
-@import "../../styles/animate.pcss";
-.hd-searchForm-box{
-    margin-top:20px;
-    margin-left:20px;
+.hd-hgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: var(--horizontal-align);
+    align-items: var(--vertical-align);
+    width: var(--width);
+    height: var(--height);
 }
+.hd-panel {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, .2)
+}
+.hd-panel .hd-panel-title {
+        width: 100%;
+        box-sizing: border-box;  
+        -webkit-user-select: none;  
+           -moz-user-select: none;  
+            -ms-user-select: none;  
+                user-select: none;
+        /* background: #25AFF3; */
+        /* color: white; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px 10px;
+        /* border-radius: 5px 5px 0 0; */
+    }
+.hd-panel .hd-panel-content {
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+    }
+.hd-vgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--vertical-align);
+    align-items: var(--horizontal-align);
+    width: var(--width);
+    height: var(--height);
+}
+.hd-card-wrap {
+  display: inline-block;
+  background: #fff;
+  margin:20px;
+  padding: var(--padding-md);
+  font-size: var(---font-size-base);
+  min-width: 200px
+}
+.hd-card-wrap .hd-card-title {
+    font-size: var(--font-size-base);
+    color: var(--card-title-color);
+    margin-bottom: 10px;
+  }
+.hd-card-wrap .hd-card-value {
+    font-size: var(--font-size-xxl);
+    color: var(--color-333);
+    font-weight: bold;
+  }
+.hd-card-wrap .hd-card-content::before,.hd-card-wrap .hd-card-content::after{
+      content: '';
+      display: table;
+    }
+.hd-card-wrap .hd-card-content::after {
+      clear: both;
+    }
+.hd-card-wrap .hd-card-content .hd-card-content-cell {
+      font-size: var(--font-size-base);
+      color: var(--card-title-color);
+      margin-top: 5px;
+      margin-right: 20px;
+      display: inline-block;
+    }
+.hd-card-wrap .hd-card-desc {
+    margin-top: 5px;
+  }
+.hd-card-wrap.block .hd-card-content-cell {
+      display: block;
+    }
 .hd-filter-box {
   margin: 20px
 }
@@ -647,20 +696,11 @@ template {
       height: 0;
     }
 
-.hd-hgroup {
-    /** 
-    --width: 宽度，由js设置此属性
-    --height: 高度，由js设置此属性
-    --vertical-align: 垂直对齐方式，由js设置此属性
-    --horizontal-align: 水平对齐方式，由js设置此属性
-     */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: var(--horizontal-align);
-    align-items: var(--vertical-align);
-    width: var(--width);
-    height: var(--height);
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+.hd-searchForm-box{
+    margin-top:20px;
+    margin-left:20px;
 }
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
@@ -760,51 +800,11 @@ template {
   height: calc(100% - 64px);
 }
 
-.hd-panel {
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, .1);
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, .2)
-}
-.hd-panel .hd-panel-title {
-        width: 100%;
-        box-sizing: border-box;  
-        -webkit-user-select: none;  
-           -moz-user-select: none;  
-            -ms-user-select: none;  
-                user-select: none;
-        /* background: #25AFF3; */
-        /* color: white; */
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 5px 10px;
-        /* border-radius: 5px 5px 0 0; */
-    }
-.hd-panel .hd-panel-content {
-        width: 100%;
-        box-sizing: border-box;
-        height: auto;
-    }
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 .hd-searchForm-box{
     margin-top:20px;
     margin-left:20px;
-}
-.hd-vgroup {
-    /** 
-    --width: 宽度，由js设置此属性
-    --height: 高度，由js设置此属性
-    --vertical-align: 垂直对齐方式，由js设置此属性
-    --horizontal-align: 水平对齐方式，由js设置此属性
-     */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: var(--vertical-align);
-    align-items: var(--horizontal-align);
-    width: var(--width);
-    height: var(--height);
 }
 
 
