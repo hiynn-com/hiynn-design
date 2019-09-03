@@ -175,10 +175,23 @@ class LayoutContainer extends Component {
                   <NavLink to="/docs/components/hd-searchForm">HdSearchForm</NavLink>
                 </Menu.Item>
                 <Menu.Item key="45">
-                  <NavLink to="/docs/components/hd-FormModal">HdFormModalPage</NavLink>
+                  <NavLink to="/docs/components/hd-FormModal">HdFormModal</NavLink>
                 </Menu.Item>
                 <Menu.Item key="46">
-                  <NavLink to="/docs/components/hd-card">HdCardPage</NavLink>
+                  <NavLink to="/docs/components/hd-card">HdCard</NavLink>
+                </Menu.Item>
+
+                <Menu.Item key="47">
+                  <NavLink to="/docs/components/hd-hgroup">HdHGroup</NavLink>
+                </Menu.Item>
+                <Menu.Item key="48">
+                  <NavLink to="/docs/components/hd-vgroup">HdVGroup</NavLink>
+                </Menu.Item>
+                <Menu.Item key="49">
+                  <NavLink to="/docs/components/hd-codearea">HdCodeArea</NavLink>
+                </Menu.Item>
+                <Menu.Item key="50">
+                  <NavLink to="/docs/components/hd-panel">HdPanel</NavLink>
                 </Menu.Item>
               </SubMenu>
             </Menu>

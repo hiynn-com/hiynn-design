@@ -14,6 +14,10 @@ const HdFilterPage = loadable(() => import("../pages/HdFilterPage"), { fallback:
 const HdSearchForm = loadable(() => import("../pages/HdSearchFormPage"), { fallback: <Loading /> });
 const HdFormModalPage = loadable(() => import("../pages/HdFormModalPage"), { fallback: <Loading /> });
 const HdCardPage = loadable(() => import("../pages/HdCardPage"), { fallback: <Loading /> });
+const HdHGroupPage = loadable(() => import("../pages/HdHGroupPage"), { fallback: <Loading /> });
+const HdVGroupPage = loadable(() => import("../pages/HdVGroupPage"), { fallback: <Loading /> });
+const HdCodeAreaPage = loadable(() => import("../pages/HdCodeAreaPage"), { fallback: <Loading /> });
+const HdPanelPage = loadable(() => import("../pages/HdPanelPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -87,6 +91,31 @@ const routes = [
             key: "246",
             name: "HdCardPage",
             path: "/docs/components/hd-card",
+            component: HdCardPage
+          },
+
+          {
+            key: "247",
+            name: "HdHGroupPage",
+            path: "/docs/components/hd-hgroup",
+            component: HdCardPage
+          },
+          {
+            key: "248",
+            name: "HdVGroupPage",
+            path: "/docs/components/hd-vgroup",
+            component: HdCardPage
+          },
+          {
+            key: "249",
+            name: "HdCodeAreaPage",
+            path: "/docs/components/hd-codearea",
+            component: HdCardPage
+          },
+          {
+            key: "250",
+            name: "HdPanelPage",
+            path: "/docs/components/hd-panel",
             component: HdCardPage
           }
         ]
