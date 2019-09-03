@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Icon, Layout } from "antd";
+import { Menu, Icon, Layout, Input, Button } from "antd";
 import { connect } from "react-redux";
 import { renderRoutes, matchRoutes } from "react-router-config";
 import HdLayout from "../../components/hd-layout";
@@ -14,6 +14,7 @@ import { NavLink, withRouter, Route, Link } from "react-router-dom";
 
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
+const { Search } = Input;
 
 @withRouter
 @connect(
@@ -97,6 +98,13 @@ class LayoutContainer extends Component {
   github = () => {
     window.location.href = "https://github.com/hiynn-com/hiynn-design";
   };
+  home = () => {
+    window.location.href = "https://hiynn-com.github.io/hiynn-design-landing";
+  };
+  docs = () => {
+    this.props.saveMenuIndex("1");
+    this.props.history.push("/docs/introduction");
+  };
   render() {
     const { layoutReducer } = this.props;
     return (
@@ -105,21 +113,32 @@ class LayoutContainer extends Component {
           <div className="header-left">
             <img src={logo} width={36}></img>
             <span className="title">Hiynn Design</span>
+            {/* <Search placeholder="在 hiynn.design 中搜索" className="search" onSearch={value => console.log(value)} style={{ width: 400 }} /> */}
+          </div>
+          <div className="header-right">
             <div className="menu">
-              <div className="menu-item" onClick={() => (window.location.href = "https://hiynn-com.github.io/hiynn-design-landing/")}>
-                <NavLink to="#" activeClassName="selected">
-                  首页
+              <div className="menu-item" onClick={() => this.home()}>
+                <a href="javascript:;">首页</a>
+              </div>
+              <div className="menu-item" onClick={() => this.docs()}>
+                <a href="javascript:;" className="selected">
+                  组件
+                </a>
+              </div>
+              <div className="menu-item">
+                <NavLink to="/about" activeClassName="selected">
+                  关于
                 </NavLink>
               </div>
               <div className="menu-item">
-                <NavLink to="/docs" activeClassName="selected">
-                  文档
-                </NavLink>
+                <Button type="primary" ghost onClick={() => (window.location.href = "https://github.com/hiynn-com/hiynn-design/releases")}>
+                  下载
+                </Button>
               </div>
             </div>
-          </div>
-          <div className="header-right" onClick={() => this.github()}>
-            <Icon type="github" style={{ fontSize: "28px" }} />
+            <div className="icon-wrapper">
+              <Icon type="github" style={{ fontSize: "28px" }} onClick={() => this.github()} />
+            </div>
           </div>
         </Header>
         <Layout className="content-layout-container">
