@@ -1,0 +1,15 @@
+.hd-vgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--vertical-align);
+    align-items: var(--horizontal-align);
+    width: var(--width);
+    height: var(--height);
+}

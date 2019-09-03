@@ -1,6 +1,7 @@
 const path = require("path");
+const fs = require("fs");
 const webpack = require("webpack");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
@@ -14,12 +15,16 @@ const { version, name, description } = require("../package.json");
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
 const docsDir = path.join(process.cwd(), "docs");
+// const appDirectory = fs.realpathSync(process.cwd());
+// const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   mode: "production",
   // 预览
   entry: { main: "./src/index.js" },
   output: {
+    //配合 github pages 域名设置该路径，如果是本地则用'/'
+    publicPath: "/hiynn-design/",
     // path: resolve("dist"), // 输出目录
     path: docsDir,
     filename: "static/js/[name].min.js",
@@ -32,6 +37,10 @@ module.exports = {
   devtool: "#source-map",
   module: {
     rules: [
+      {
+        test: /\.md$/,
+        use: "raw-loader"
+      },
       {
         test: /\.(pc|sc|c)ss$/,
         use: [
@@ -97,10 +106,21 @@ module.exports = {
     }),
     //预览
     new HtmlWebpackPlugin({
+      favicon: "./public/hd_logo.jpg",
+
       //指定要打包的html路径和文件名
-      template: path.join(__dirname, "../public/index.html"),
+      template: "./public/index.html",
       //指定输出路径和文件名
       filename: "./index.html"
+    }),
+    // 解决 github pages history 模式刷新页面报 404 问题
+    new HtmlWebpackPlugin({
+      favicon: "./public/hd_logo.jpg",
+
+      //指定要打包的html路径和文件名
+      template: "./public/index.html",
+      //指定输出路径和文件名
+      filename: "./404.html"
     }),
     new InlineManifestWebpackPlugin(),
     new HtmlWebpackInlineSourcePlugin(),
@@ -135,7 +155,7 @@ module.exports = {
     // 生成运行时.js 文件，并写入到.html
     runtimeChunk: "single",
     minimizer: [
-      new UglifyJsPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
         sourceMap: true

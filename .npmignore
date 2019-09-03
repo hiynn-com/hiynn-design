@@ -67,3 +67,8 @@ yarn.lock
 .babelrc
 
 test
+
+dist
+docs
+es
+lib

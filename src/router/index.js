@@ -1,71 +1,160 @@
 import React from "react";
 import loadable from "@loadable/component";
-import RouteViewer from "../components/RouteViewer";
-import Loading from "../components/Loading";
+import RouteViewer from "../layout/RouteViewer";
+import LayoutContainer from "../layout/LayoutContainer";
+import Loading from "../layout/Loading";
+const HomePage = loadable(() => import("../pages/home/HomePage"), { fallback: <Loading /> });
+const IntroductionPage = loadable(() => import("../pages/introduction/IntroductionPage"), { fallback: <Loading /> });
+const QuicklyPage = loadable(() => import("../pages/quickly/QuicklyPage"), { fallback: <Loading /> });
+const ThemePage = loadable(() => import("../pages/theme/ThemePage"), { fallback: <Loading /> });
+const HdLayoutPage = loadable(() => import("../pages/layout/HdLayoutPage"), { fallback: <Loading /> });
+const HdMasterPage = loadable(() => import("../pages/master/HdMasterPage"), { fallback: <Loading /> });
+const HdFilterPage = loadable(() => import("../pages/filter/HdFilterPage"), { fallback: <Loading /> });
+const HdSearchForm = loadable(() => import("../pages/searchForm/HdSearchFormPage"), { fallback: <Loading /> });
+const HdFormModalPage = loadable(() => import("../pages/formModal/HdFormModalPage"), { fallback: <Loading /> });
+const HdCardPage = loadable(() => import("../pages/card/HdCardPage"), { fallback: <Loading /> });
+const HdHGroupPage = loadable(() => import("../pages/group/HdHGroupPage"), { fallback: <Loading /> });
+const HdVGroupPage = loadable(() => import("../pages/group/HdVGroupPage"), { fallback: <Loading /> });
+const HdCodeAreaPage = loadable(() => import("../pages/codeArea/HdCodeAreaPage"), { fallback: <Loading /> });
+const HdPanelPage = loadable(() => import("../pages/panel/HdPanelPage"), { fallback: <Loading /> });
+const HdCodeZonePage = loadable(() => import("../pages/codeZone/HdCodeZonePage"), { fallback: <Loading /> });
 
-const IntroductionPage = loadable(() => import("../pages/IntroductionPage"), { fallback: <Loading /> });
-const QuicklyPage = loadable(() => import("../pages/QuicklyPage"), { fallback: <Loading /> });
-const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Loading /> });
-const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
-const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
-const HdFormValidationPages = loadable(() => import("../pages/HdFormValidationPages"), { fallback: <Loading /> });
-const HdAdmin = loadable(() => import("../pages/HdAdminPage"), { fallback: <Loading></Loading> });
+const ArticlePage = loadable(() => import("../pages/article/articlePage"), { fallback: <Loading /> });
+const CommentPage = loadable(() => import("../pages/comment/commentPage"), { fallback: <Loading /> });
+
+const HdFormValidationPages = loadable(() => import("../pages/formValidation/HdFormValidationPages"), { fallback: <Loading /> });
+const HdAdmin = loadable(() => import("../pages/admin/HdAdminPage"), { fallback: <Loading></Loading> });
 
 const routes = [
   {
     key: "1",
-    name: "介绍",
+    name: "首页",
     path: "/",
     exact: true,
-    component: IntroductionPage
+    component: HomePage
   },
   {
     key: "2",
-    name: "快速上手",
-    path: "/quickly",
-    exact: true,
-    component: QuicklyPage
-  },
-  {
-    key: "3",
-    name: "主题设置",
-    path: "/theme",
-    exact: true,
-    component: ThemePage
-  },
-  {
-    key: "4",
-    name: "组件",
-    path: "/components",
+    name: "文档",
+    path: "/docs",
     component: RouteViewer,
     routes: [
       {
-        key: "4-1",
-        name: "HdLayoutPage",
-        path: "/components/hd-layout",
-        exact: true,
-        component: HdLayoutPage
+        key: "21",
+        name: "介绍",
+        path: "/docs/introduction",
+        component: IntroductionPage
       },
       {
-        key: "4-2",
-        name: "HdMasterPage",
-        path: "/components/hd-master",
-        exact: true,
-        component: HdMasterPage
+        key: "22",
+        name: "快速上手",
+        path: "/docs/quickly",
+        component: QuicklyPage
       },
       {
-        key: "4-3",
-        name: "HdAdmin",
-        path: "/components/hd-admin",
-        exact: true,
-        component: HdAdmin
+        key: "23",
+        name: "主题设置",
+        path: "/docs/theme",
+        component: ThemePage
       },
       {
-        key: "4-4",
-        name: "HdFormValidation",
-        path: "/components/hd-formValidation",
-        exact: true,
-        component: HdFormValidationPages
+        key: "24",
+        name: "组件",
+        path: "/docs/components",
+        component: RouteViewer,
+        routes: [
+          {
+            key: "241",
+            name: "HdLayoutPage",
+            path: "/docs/components/hd-layout",
+            component: HdLayoutPage
+          },
+          {
+            key: "242",
+            name: "HdMasterPage",
+            path: "/docs/components/hd-master",
+            component: HdMasterPage
+          },
+          {
+            key: "243",
+            name: "HdFilterPage",
+            path: "/docs/components/hd-filter",
+            component: HdFilterPage
+          },
+          {
+            key: "244",
+            name: "HdSearchForm",
+            path: "/docs/components/hd-searchForm",
+            component: HdSearchForm
+          },
+          {
+            key: "245",
+            name: "HdFormModalPage",
+            path: "/docs/components/hd-FormModal",
+            component: HdFormModalPage
+          },
+          {
+            key: "246",
+            name: "HdCardPage",
+            path: "/docs/components/hd-card",
+            component: HdCardPage
+          },
+
+          {
+            key: "247",
+            name: "HdHGroupPage",
+            path: "/docs/components/hd-hgroup",
+            component: HdHGroupPage
+          },
+          {
+            key: "248",
+            name: "HdVGroupPage",
+            path: "/docs/components/hd-vgroup",
+            component: HdVGroupPage
+          },
+          {
+            key: "249",
+            name: "HdCodeAreaPage",
+            path: "/docs/components/hd-codearea",
+            component: HdCodeAreaPage
+          },
+          {
+            key: "250",
+            title: "HdCodeZone",
+            path: "/docs/components/hd-codeZone",
+            component: HdCodeZonePage
+          },
+          {
+            key: "251",
+            name: "HdPanelPage",
+            path: "/docs/components/hd-panel",
+            component: HdCardPage
+          },
+          {
+            key: "252",
+            name: "ArticlePage",
+            path: "/docs/components/hd-article",
+            component: ArticlePage
+          },
+          {
+            key: "253",
+            name: "CommentPage",
+            path: "/docs/components/hd-comment",
+            component: CommentPage
+          },
+          {
+            key: "254",
+            name: "HdAdmin",
+            path: "/docs/components/hd-admin",
+            component: HdAdmin
+          },
+          {
+            key: "255",
+            name: "HdFormValidation",
+            path: "/docs/components/hd-formValidation",
+            component: HdFormValidationPages
+          }
+        ]
       }
     ]
   }

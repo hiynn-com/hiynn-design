@@ -2,9 +2,7 @@ import "antd/es/menu/style/css";
 import _Menu from "antd/es/menu";
 import "antd/es/icon/style/css";
 import _Icon from "antd/es/icon";
-import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
-import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -20,7 +18,7 @@ function (_Component) {
 
     _this = _Component.call(this, props) || this;
 
-    _defineProperty(_assertThisInitialized(_this), "renderMenus", function (menus) {
+    _this.renderMenus = function (menus) {
       var _menus = menus.map(function (menu) {
         return menu.show && typeof menu.children !== "undefined" && typeof menu.children !== null && menu.children.length > 0 ? React.createElement(_Menu.SubMenu, {
           key: menu.id,
@@ -47,7 +45,7 @@ function (_Component) {
       });
 
       return _menus;
-    });
+    };
 
     _this.state = {
       menus: []
