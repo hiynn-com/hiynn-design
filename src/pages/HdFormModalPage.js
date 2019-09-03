@@ -106,12 +106,14 @@ class HdSearchFormPage extends Component{
 
     handleAdd = ()=>{
       this.setState({
-        visible:true
+        visible:true,
+        record:null
       })
     }
     handleEdit = ()=>{
       this.setState({
         visible:true,
+        title:"修改",
         record:{input:'输入框',inputNumber:'7878787',textarea:'66666',datePicker:'2018-12-12 12:54:34',checkbox:['Apple1','Pear1'],radio:"Pear2",select:"2"},
        })
     }

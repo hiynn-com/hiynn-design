@@ -2,8 +2,13 @@
 import React,{Component} from 'react';
 import FormModal from '../../components/hd-formModal'
 import { message,Button  } from 'antd';
+import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
+import installMd from '../md/hd-formModal/intro.md'
+import apiMd from '../md/hd-formModal/api.md'
+import example from '../md/hd-formModal/example.md'
+
 const popUpFormConfig = {
-  layout:'horizontal', //horizontal,vertical
+  layout:'horizontal', //horizontal,vertical,inline
   formLayout:{
     labelCol: { xs: { span: 24 }, sm: { span: 5 } },
     wrapperCol: { xs: { span: 22 }, sm: { span: 18 } }
@@ -80,9 +85,8 @@ const popUpFormConfig = {
 }
 class HdSearchFormPage extends Component{
     state = {
-      disabled:true,
       visible:false,
-      isEditText:"新增"
+      title:"新增"
     }
     // 表单提交
     handleCreate = ()=>{
@@ -102,34 +106,37 @@ class HdSearchFormPage extends Component{
 
     handleAdd = ()=>{
       this.setState({
-        visible:true
+        visible:true,
+        record:null
       })
     }
     handleEdit = ()=>{
       this.setState({
         visible:true,
+        title:"修改",
         record:{input:'输入框',inputNumber:'7878787',textarea:'66666',datePicker:'2018-12-12 12:54:34',checkbox:['Apple1','Pear1'],radio:"Pear2",select:"2"},
        })
     }
     render(){
+    
         return <div>
-            <FormModal
-                wrappedComponentRef={form => (this.formRef = form)}
-                visible={this.state.visible}
-                onCancel={this.handleCancel}
-                onCreate={this.handleCreate}
-                record={this.state.record}
-                formConfig={popUpFormConfig}
-                isEdit={this.state.isEdit}
-                isEditText = {this.state.isEditText}
-                destroyOnClose = "true"
-                width="600px"
-                okText="提交"
-                cancelText="取消"
-                destroyOnClose = "true"
-          />
+          <FormModal
+              wrappedComponentRef={form => (this.formRef = form)}
+              visible={this.state.visible}
+              onCancel={this.handleCancel}
+              onCreate={this.handleCreate}
+              record={this.state.record}
+              formConfig={popUpFormConfig}
+              isEdit={this.state.isEdit}
+              title = {this.state.title}
+              destroyOnClose = "true"
+              width="600px"
+              okText="提交"
+              cancelText="取消"
+              
+        />
               <Button type="primary" onClick = {this.handleAdd}>增加</Button>
-              <Button type="danger"  onClick = {this.handleEdit}>修改</Button>
+              <Button type="danger"  onClick = {this.handleEdit} style={{"marginLeft":'20px'}}>修改</Button>
       </div>
     }
 }
