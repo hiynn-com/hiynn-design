@@ -65,7 +65,7 @@ const routes = [
           {
             key: "4-3",
             name: "HdFilterPage",
-            path: "/components/hd-filter",
+            path: "/docs/components/hd-filter",
             exact: true,
             component: HdFilterPage
           }
