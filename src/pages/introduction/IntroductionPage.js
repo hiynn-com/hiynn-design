@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import introductionMd from "../md/introduction.md";
+import introductionMd from "../../md/introduction/introduction.md";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 
 class IntroductionPage extends Component {

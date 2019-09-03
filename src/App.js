@@ -8,7 +8,7 @@ import { renderRoutes, matchRoutes } from "react-router-config";
 
 import configureStore, { history } from "./redux/store";
 import LayoutContainer from "./layout/LayoutContainer";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home/HomePage";
 import RouteViewer from "./layout/RouteViewer";
 import routes from "./router";
 

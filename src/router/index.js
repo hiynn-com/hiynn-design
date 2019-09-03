@@ -4,23 +4,23 @@ import RouteViewer from "../layout/RouteViewer";
 import LayoutContainer from "../layout/LayoutContainer";
 
 import Loading from "../layout/Loading";
-const HomePage = loadable(() => import("../pages/HomePage"), { fallback: <Loading /> });
-const IntroductionPage = loadable(() => import("../pages/IntroductionPage"), { fallback: <Loading /> });
-const QuicklyPage = loadable(() => import("../pages/QuicklyPage"), { fallback: <Loading /> });
-const ThemePage = loadable(() => import("../pages/ThemePage"), { fallback: <Loading /> });
-const HdLayoutPage = loadable(() => import("../pages/HdLayoutPage"), { fallback: <Loading /> });
-const HdMasterPage = loadable(() => import("../pages/HdMasterPage"), { fallback: <Loading /> });
-const HdFilterPage = loadable(() => import("../pages/HdFilterPage"), { fallback: <Loading /> });
-const HdSearchForm = loadable(() => import("../pages/HdSearchFormPage"), { fallback: <Loading /> });
-const HdFormModalPage = loadable(() => import("../pages/HdFormModalPage"), { fallback: <Loading /> });
-const HdCardPage = loadable(() => import("../pages/HdCardPage"), { fallback: <Loading /> });
-const HdHGroupPage = loadable(() => import("../pages/HdHGroupPage"), { fallback: <Loading /> });
-const HdVGroupPage = loadable(() => import("../pages/HdVGroupPage"), { fallback: <Loading /> });
-const HdCodeAreaPage = loadable(() => import("../pages/HdCodeAreaPage"), { fallback: <Loading /> });
-const HdPanelPage = loadable(() => import("../pages/HdPanelPage"), { fallback: <Loading /> });
+const HomePage = loadable(() => import("../pages/home/HomePage"), { fallback: <Loading /> });
+const IntroductionPage = loadable(() => import("../pages/introduction/IntroductionPage"), { fallback: <Loading /> });
+const QuicklyPage = loadable(() => import("../pages/quickly/QuicklyPage"), { fallback: <Loading /> });
+const ThemePage = loadable(() => import("../pages/theme/ThemePage"), { fallback: <Loading /> });
+const HdLayoutPage = loadable(() => import("../pages/layout/HdLayoutPage"), { fallback: <Loading /> });
+const HdMasterPage = loadable(() => import("../pages/master/HdMasterPage"), { fallback: <Loading /> });
+const HdFilterPage = loadable(() => import("../pages/filter/HdFilterPage"), { fallback: <Loading /> });
+const HdSearchForm = loadable(() => import("../pages/searchForm/HdSearchFormPage"), { fallback: <Loading /> });
+const HdFormModalPage = loadable(() => import("../pages/formModal/HdFormModalPage"), { fallback: <Loading /> });
+const HdCardPage = loadable(() => import("../pages/card/HdCardPage"), { fallback: <Loading /> });
+const HdHGroupPage = loadable(() => import("../pages/group/HdHGroupPage"), { fallback: <Loading /> });
+const HdVGroupPage = loadable(() => import("../pages/group/HdVGroupPage"), { fallback: <Loading /> });
+const HdCodeAreaPage = loadable(() => import("../pages/codeArea/HdCodeAreaPage"), { fallback: <Loading /> });
+const HdPanelPage = loadable(() => import("../pages/panel/HdPanelPage"), { fallback: <Loading /> });
 
-const ArticlePage = loadable(() => import("../pages/articlePage"), { fallback: <Loading /> });
-const CommentPage = loadable(() => import("../pages/commentPage"), { fallback: <Loading /> });
+const ArticlePage = loadable(() => import("../pages/article/articlePage"), { fallback: <Loading /> });
+const CommentPage = loadable(() => import("../pages/comment/commentPage"), { fallback: <Loading /> });
 
 const routes = [
   {
