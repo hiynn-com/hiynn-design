@@ -128,7 +128,7 @@ const routes = [
             key: "251",
             name: "HdPanelPage",
             path: "/docs/components/hd-panel",
-            component: HdCardPage
+            component: HdPanelPage
           },
           {
             key: "252",
