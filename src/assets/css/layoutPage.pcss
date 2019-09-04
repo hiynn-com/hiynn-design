@@ -79,9 +79,14 @@
     & .content-layout-sider {
       overflow-x: hidden;
       overflow-y: auto;
+      border-right: 1px solid #e8e8e8;
+
+      & .ant-menu-inline {
+        border-right: none;
+      }
 
       & .content-layout-sider-menu {
-        height: calc(100vh - 64px);
+        /* height: calc(100vh - 64px); */
 
         & .ant-menu-item {
           font-size: 16px;
