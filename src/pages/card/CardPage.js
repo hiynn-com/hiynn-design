@@ -21,6 +21,8 @@ class HdCardPage extends Component {
       }
     ];
     const mdCode = `
+    import {hd-card} from "hiynn-design"
+
     let data = [{
       label: "同比：",
       content: '12%',
@@ -31,17 +33,36 @@ class HdCardPage extends Component {
       label: "同比历史均值：",
       content: '10%',
     }] 
-     <HdCard 
+
+    ReactDOM.render(
+      <HdCard 
         title="近7日立案(2019-08-23~2019-08-29)"
-        value={12222}
+        value={122}
+        precision={2}
         description="描述"
-     ></HdCard>
+      ></HdCard>,
+      mountNode,
+    );
     `;
     return (
       <PreviewLayout>
         <MdPreviewer md={install}></MdPreviewer>
         <CodePreviewer code={mdCode} showCode={true}>
-          <HdCard title="近7日立案(2019-08-23~2019-08-29)" data={data} value={12222} description="描述" />
+          <div style={{ display: 'flex' }}>
+            <HdCard
+              title="近7日立案(2019-08-23~2019-08-29)"
+              data={data}
+              precision={2}
+              value={122}
+              description="描述"
+            />
+            <HdCard
+              title="近7日立案(2019-08-23~2019-08-29)"
+              data={data}
+              value={'10%'}
+              description="描述"
+              type="block" />
+          </div>
         </CodePreviewer>
         <MdPreviewer md={apiMd}></MdPreviewer>
       </PreviewLayout>
