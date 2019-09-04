@@ -1,6 +1,3 @@
-import React,{Component} from 'react';
-import SearchForm from '../../components/hd-searchForm'
-
 const searchFormOption = {
     forms: [
       {
@@ -81,9 +78,6 @@ const searchFormOption = {
         disabled:false
       }]
   };
-class HdSearchFormPage extends Component{
-    state = {
-    }
     // 搜索框操作
     handleChange = (val)=>{
         const form = this.searchFormRef.props.form;
@@ -94,18 +88,10 @@ class HdSearchFormPage extends Component{
             }
         })
     }
-    handleAdd = ()=>{
-
-    }
-    render(){
-        return
-            <SearchForm 
-              searchFormOption = {searchFormOption} 
-              wrappedComponentRef = {form =>(this.searchFormRef = form)}
-              handleChange = {this.handleChange}
-              handleAdd = {this.handleAdd}
-              layout = "inline"
-            />
-    }
-}
-export default HdSearchFormPage
+    <SearchForm 
+      searchFormOption = {searchFormOption} 
+      wrappedComponentRef = {form =>(this.searchFormRef = form)}
+      handleChange = {this.handleChange}
+      handleAdd = {this.handleAdd}
+      layout = "inline"
+    />

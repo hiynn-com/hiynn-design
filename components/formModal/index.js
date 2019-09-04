@@ -19,19 +19,7 @@ const FormItem = Form.Item;
 const Option = Select.Option;
 const Dragger = Upload.Dragger;
 // 单独上传文件
-const props = {
-  name: "file",
-  multiple: true,
-  action: `http://192.168.8.58:8086/dataManagerSystem/file`,
-  onChange(info) {
-    const status = info.file.status;
-    if (status === "done") {
-      message.success(`${info.file.name} 上传成功！`);
-    } else if (status === "error") {
-      message.error(`${info.file.name} 上传失败！`);
-    }
-  }
-};
+
 const horizontalLayout = {
   labelCol: { xs: { span: 24 }, sm: { span: 5 } },
   wrapperCol: { xs: { span: 22 }, sm: { span: 18 } }
@@ -152,13 +140,13 @@ const FormModel = Form.create()(
         case "upload":
           domEl = <div className="no-height" />;
             domEl = (
-              <Dragger name="files" {...props}>
+              <Dragger name="files" {...item.uploadProps}>
                 <p className="ant-upload-drag-icon">
                   <Icon type="inbox" />
                 </p>
                 <p className="ant-upload-text">选择或拖动文件到这里进行上传</p>
                 <p className="ant-upload-hint">
-                  支持多文件上传，支持Excel、jpg、png等格式的文件
+                  {item.tips}
                 </p>
               </Dragger>
             );
