@@ -18,6 +18,7 @@ const VGroupPage = loadable(() => import("../pages/vgroup/VGroupPage"), { fallba
 const CodeAreaPage = loadable(() => import("../pages/codeArea/CodeAreaPage"), { fallback: <Loading /> });
 const PanelPage = loadable(() => import("../pages/panel/PanelPage"), { fallback: <Loading /> });
 const CodeZonePage = loadable(() => import("../pages/codeZone/CodeZonePage"), { fallback: <Loading /> });
+const EditableTablePage = loadable(() => import("../pages/editableTable/EditableTablePage"), { fallback: <Loading /> });
 
 const ArticlePage = loadable(() => import("../pages/article/ArticlePage"), { fallback: <Loading /> });
 const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fallback: <Loading /> });
@@ -153,6 +154,12 @@ const routes = [
             name: "HdFormValidation",
             path: "/docs/components/formValidation",
             component: FormValidationPages
+          },
+          {
+            key: "256",
+            name: "EditableTablePage",
+            path: "/docs/components/editableTable",
+            component: EditableTablePage
           }
         ]
       }
