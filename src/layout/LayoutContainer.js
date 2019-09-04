@@ -98,11 +98,15 @@ class LayoutContainer extends Component {
   github = () => {
     window.location.href = "https://github.com/hiynn-com/hiynn-design";
   };
+  //跳转到首页
   home = () => {
-    window.location.href = "https://hiynn-com.github.io/hiynn-design-landing";
+    this.props.history.push("/");
+    this.props.saveMenuIndex(["1", "4"]);
+    // window.location.href = "https://hiynn-com.github.io/hiynn-design-landing";
   };
+  //跳转到文档
   docs = () => {
-    this.props.saveMenuIndex("1");
+    this.props.saveMenuIndex(["1", "4"]);
     this.props.history.push("/docs/introduction");
   };
   render() {

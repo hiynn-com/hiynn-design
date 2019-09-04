@@ -3,7 +3,7 @@ import loadable from "@loadable/component";
 import RouteViewer from "../layout/RouteViewer";
 import LayoutContainer from "../layout/LayoutContainer";
 import Loading from "../layout/Loading";
-const HomePage = loadable(() => import("../pages/home/HomePage"), { fallback: <Loading /> });
+const HomePage = loadable(() => import("../pages/home/index"), { fallback: <Loading /> });
 const IntroductionPage = loadable(() => import("../pages/introduction/IntroductionPage"), { fallback: <Loading /> });
 const QuicklyPage = loadable(() => import("../pages/quickly/QuicklyPage"), { fallback: <Loading /> });
 const ThemePage = loadable(() => import("../pages/theme/ThemePage"), { fallback: <Loading /> });
