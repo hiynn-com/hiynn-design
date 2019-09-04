@@ -159,51 +159,64 @@ class LayoutContainer extends Component {
                 <NavLink to="/docs/theme">主题设置</NavLink>
               </Menu.Item>
               <SubMenu key="4" title={<span>组件</span>}>
-                <Menu.Item key="41">
-                  <NavLink to="/docs/components/layout">Layout</NavLink>
-                </Menu.Item>
-                <Menu.Item key="42">
-                  <NavLink to="/docs/components/master">Master</NavLink>
-                </Menu.Item>
-                <Menu.Item key="43">
-                  <NavLink to="/docs/components/filter">Filter</NavLink>
-                </Menu.Item>
-                <Menu.Item key="44">
-                  <NavLink to="/docs/components/searchForm">SearchForm</NavLink>
-                </Menu.Item>
-                <Menu.Item key="45">
-                  <NavLink to="/docs/components/formModal">FormModal</NavLink>
-                </Menu.Item>
-                <Menu.Item key="46">
-                  <NavLink to="/docs/components/card">Card</NavLink>
-                </Menu.Item>
-                <Menu.Item key="47">
-                  <NavLink to="/docs/components/hgroup">HGroup</NavLink>
-                </Menu.Item>
-                <Menu.Item key="48">
-                  <NavLink to="/docs/components/vgroup">VGroup</NavLink>
-                </Menu.Item>
-                <Menu.Item key="49">
-                  <NavLink to="/docs/components/codearea">CodeArea</NavLink>
-                </Menu.Item>
-                <Menu.Item key="50">
-                  <NavLink to="/docs/components/codeZone">CodeZone</NavLink>
-                </Menu.Item>
-                <Menu.Item key="51">
-                  <NavLink to="/docs/components/panel">Panel</NavLink>
-                </Menu.Item>
-                <Menu.Item key="52">
-                  <NavLink to="/docs/components/article">Article</NavLink>
-                </Menu.Item>
-                <Menu.Item key="53">
-                  <NavLink to="/docs/components/comment">Comment</NavLink>
-                </Menu.Item>
-                <Menu.Item key="54">
-                  <NavLink to="/docs/components/admin">Admin</NavLink>
-                </Menu.Item>
-                <Menu.Item key="55">
-                  <NavLink to="/docs/components/formValidation">FormValidation</NavLink>
-                </Menu.Item>
+                <Menu.ItemGroup key="g-blog" title="Blog">
+                  <Menu.Item key="52">
+                    <NavLink to="/docs/components/article">Article</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="53">
+                    <NavLink to="/docs/components/comment">Comment</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="g-card" title="Card">
+                  <Menu.Item key="46">
+                    <NavLink to="/docs/components/card">Card</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="51">
+                    <NavLink to="/docs/components/panel">Panel</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="g-code" title="Code">
+                  <Menu.Item key="49">
+                    <NavLink to="/docs/components/codearea">CodeArea</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="50">
+                    <NavLink to="/docs/components/codeZone">CodeZone</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+
+                <Menu.ItemGroup key="g-form" title="Form">
+                  <Menu.Item key="43">
+                    <NavLink to="/docs/components/filter">Filter</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="45">
+                    <NavLink to="/docs/components/formModal">FormModal</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="55">
+                    <NavLink to="/docs/components/formValidation">FormValidation</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="44">
+                    <NavLink to="/docs/components/searchForm">SearchForm</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="g-group" title="Group">
+                  <Menu.Item key="47">
+                    <NavLink to="/docs/components/hgroup">HGroup</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="48">
+                    <NavLink to="/docs/components/vgroup">VGroup</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="g-layout" title="Laout">
+                  <Menu.Item key="54">
+                    <NavLink to="/docs/components/admin">Admin</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="41">
+                    <NavLink to="/docs/components/layout">Layout</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="42">
+                    <NavLink to="/docs/components/master">Master</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
               </SubMenu>
             </Menu>
           </Sider>
