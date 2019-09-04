@@ -14,10 +14,10 @@
     "build:umd": "cross-env BABEL_ENV=umd webpack --mode production --config scripts/webpack.config.umd.js",
     "build:commonjs": "rimraf lib && cross-env BABEL_ENV=commonjs babel components -d lib --source-maps",
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel components -d es --source-maps",
-    "build:all": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css",
+    "build:all": "npm run build:umd && npm run build:commonjs && npm run build:es && npm run build:css",
     "build:prod": "cross-env BABEL_ENV=preview webpack --mode production --config scripts/webpack.config.prod.js",
     "start": "cross-env BABEL_ENV=preview webpack-dev-server --port 6006 --open --config scripts/webpack.config.dev.js",
-    "deploy:docs": "yarn build:prod && gh-pages -d docs"
+    "deploy:docs": "npm run build:prod && gh-pages -d docs"
   },
   "repository": {
     "type": "git",
