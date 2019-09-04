@@ -1,3 +1,9 @@
-# Article
+# Article 文章
 
-<!-- <h2 id="Usage"><span>Usage</span> <a href="#Usage">#</a></h2> -->
+- 通过传入相关参数可以展示文章详情功能的组件
+
+## 何时使用
+
+- 文章的详情页中适合使用
+
+## 代码演示
