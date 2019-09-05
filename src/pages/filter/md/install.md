@@ -5,7 +5,7 @@
 ## 安装
 
 ```javascript
-yarn add hd-filter
+import { HdFilter } from "hiynn-design";
 ```
 
 ## 使用

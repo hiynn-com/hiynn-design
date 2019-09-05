@@ -8,6 +8,7 @@ import HGroup from "./hgroup";
 import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
+import HdFilter from './filter'
 
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel };
-export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel };
+export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter };
+export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter };

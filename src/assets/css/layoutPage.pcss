@@ -52,6 +52,10 @@
           & .title {
             color: hsla(0, 0%, 100%, .65);
             font-size: 16px;
+
+            &:hover {
+              color: #fff;
+            }
           }
 
           & .selected {
@@ -62,6 +66,10 @@
           & a {
             color: hsla(0, 0%, 100%, .65);
             font-size: 16px;
+
+            &:hover {
+              color: #fff;
+            }
           }
         }
       }
@@ -79,19 +87,39 @@
     & .content-layout-sider {
       overflow-x: hidden;
       overflow-y: auto;
+      border-right: 1px solid #e8e8e8;
+
+      & .ant-menu-inline {
+        border-right: none;
+      }
 
       & .content-layout-sider-menu {
-        height: calc(100vh - 64px);
+
+        & .ant-menu-item-group {
+          & .ant-menu-item-group-title {
+            padding-left: 4rem !important;
+          }
+
+          & .ant-menu-item-group-list {
+            & .ant-menu-item {
+              font-size: 16px;
+              padding-left: 5.7rem !important;
+            }
+          }
+        }
+
+        /* height: calc(100vh - 64px); */
+
 
         & .ant-menu-item {
           font-size: 16px;
-          padding-left: 3.7rem !important;
+          padding-left: 2.7rem !important;
         }
 
         & .ant-menu-submenu {
           & .ant-menu-submenu-title {
             font-size: 16px;
-            padding-left: 3.7rem !important;
+            padding-left: 2.7rem !important;
           }
         }
 

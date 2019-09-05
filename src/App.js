@@ -5,12 +5,14 @@ import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router/immutable";
 import { PersistGate } from "redux-persist/integration/react";
 import { renderRoutes, matchRoutes } from "react-router-config";
+import Loading from "./layout/Loading";
+import loadable from "@loadable/component";
 
 import configureStore, { history } from "./redux/store";
 import LayoutContainer from "./layout/LayoutContainer";
-import HomePage from "./pages/home/HomePage";
 import RouteViewer from "./layout/RouteViewer";
 import routes from "./router";
+const HomePage = loadable(() => import("./pages/home/index"), { fallback: <Loading /> });
 
 const { persistor, store } = configureStore(/* provide initial state if any */);
 
