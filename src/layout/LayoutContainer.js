@@ -109,6 +109,9 @@ class LayoutContainer extends Component {
     this.props.saveMenuIndex(["1", "4"]);
     this.props.history.push("/docs/introduction");
   };
+  issues = () => {
+    window.location.href = "https://github.com/hiynn-com/hiynn-design/issues";
+  };
   render() {
     const { layoutReducer } = this.props;
     return (
@@ -125,6 +128,9 @@ class LayoutContainer extends Component {
               </div>
               <div className="menu-item" onClick={() => this.docs()}>
                 <span className="title selected">组件</span>
+              </div>
+              <div className="menu-item" onClick={() => this.issues()}>
+                <span className="title">提问</span>
               </div>
               <div className="menu-item">
                 <NavLink to="/about" activeClassName="selected">
