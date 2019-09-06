@@ -1,92 +1,99 @@
 import React, { Component } from "react";
-import moment from 'moment';
-import { Divider, Button } from 'antd';
-import Comment from './comment';
+import { List, Divider } from 'antd';
+import CommentL from './comment';
+import Reply from "./reply";
 
 class Demo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      maxLength: 0,
-      isVote: true,
-      info: '',
-      data: [],
+    state = {
+        data: [],
+        value: '',
+        replyAllShow: false,
     };
-  }
 
-  componentDidMount() {
-    this.setState({
-      maxLength: this.props.maxLength,
-      isVote: this.props.isVote,
-      data: this.props.data
-    })
-  }
-
-  UNSAFE_componentWillReceiveProps(nextprops) {
-    if (this.props != nextprops) {
-      this.setState({
-        maxLength: nextprops.maxLength,
-        isVote: nextprops.isVote,
-        data: nextprops.data
-      })
+    componentDidMount() {
+        this.setState({
+            data: this.props.data
+        })
     }
-  }
 
-  replyComment = (e) => {
-    let commentId = '';
-    let time = moment().format('YYYY-MM-DD HH:mm:ss');
-    let value = e.target.previousSibling.previousSibling.firstElementChild.value;
-    this.props.replySubmit(commentId, value, time);
-  }
-
-
-  resetComment = (e) => {
-    e.target.previousSibling.firstElementChild.value = '';
-    this.setState({
-      info: `还可以输入${this.props.maxLength}个字！`
-    })
-  }
-
-
-  changeWords(e) {
-    let maxLength = this.state.maxLength;
-    let val = e.target.value;
-    let length = val.length;
-    if (length > maxLength) {
-      e.target.nextSibling.value = `不能输入超过${maxLength}个字!`;
-      e.target.value = val.slice(0, maxLength);
-    } else {
-      e.target.nextSibling.value = `还可以输入${maxLength - length}个字！`;
-    }
-  }
-
-  render() {
-    const { data, maxLength, isVote } = this.state;
-    return (
-      <div style={{ backgroundColor: "#fff" }}>
-        <div className='answer-first'>
-          <div>
-            <textarea maxLength={maxLength} onChange={this.changeWords.bind(this)}></textarea>
-            <input disabled value={this.state.info} />
-          </div>
-          <Button onClick={this.resetComment.bind(this)}>重置</Button>
-          <Button type='primary' onClick={this.replyComment.bind(this)}>回复</Button>
-        </div>
-        <Divider />
-        {
-          data.map((val, index) =>
-            <Comment
-              key={index}
-              data={val}
-              maxLength={maxLength}
-              isVote={isVote}
-              replySubmit={this.props.replySubmit}
-              voteClick={this.props.voteClick}
-            />)
+    UNSAFE_componentWillReceiveProps(nextprops) {
+        if (this.props != nextprops) {
+            this.setState({
+                data: nextprops.data
+            })
         }
-      </div>
-    );
-  }
+    }
+
+    handleSubmit = () => {
+        if (!this.state.value) {
+            return;
+        }
+        this.setState({ value: '' });
+    };
+
+    handleChange = e => {
+        this.setState({
+            value: e.target.value,
+        });
+    };
+    isShowAllReply = () => {
+        this.setState((preState) => {
+            return {
+                replyAllShow: !preState.replyAllShow
+            }
+        })
+    }
+    render() {
+        const { data, replyAllShow } = this.state
+        const pStyle = {
+            color:'blue',
+            cursor: 'pointer',
+        }
+        const CommentList = ({ comments }) => {
+            return <List
+                dataSource={comments}
+                itemLayout="horizontal"
+                renderItem={
+                    props => {
+                        return props.childlist && props.childlist.length > 0 ? <CommentL voteClick={this.props.voteClick} singleComment={props} isMain={false} loginInfo={this.props.loginInfo} replySubmit={this.props.replySubmit}>
+                            {
+                                replyAllShow
+                                    ?
+                                    <List
+                                        dataSource={props.childlist}
+                                        itemLayout="horizontal"
+                                        renderItem={item => <CommentL voteClick={this.props.voteClick} singleComment={item} />}
+                                    />
+                                    :
+                                    <List
+                                        dataSource={props.childlist.slice(0, 3)}
+                                        itemLayout="horizontal"
+                                        renderItem={item => <CommentL voteClick={this.props.voteClick} singleComment={item} />}
+                                    />
+                            }
+                            {
+                                props.childlist.length > 3 ? (replyAllShow ?
+                                    <p onClick={this.isShowAllReply} style={pStyle}>收起</p>
+                                    :
+                                    <p onClick={this.isShowAllReply} style={pStyle}>展示全部{props.childlist.length}条评论 >></p>)
+                                    : ''
+                            }
+                        </CommentL>
+                            :
+                            <CommentL singleComment={props} voteClick={this.props.voteClick} isMain={false} loginInfo={this.props.loginInfo} replySubmit={this.props.replySubmit} />
+                    }
+                }
+            />
+        };
+
+        return (
+            <div>
+                <Reply loginInfo={this.props.loginInfo} isMain={true} replySubmit={this.props.replySubmit} />
+                <Divider />
+                {data.length > 0 && <CommentList comments={data} />}
+            </div>
+        );
+    }
 }
 
 export default Demo;
