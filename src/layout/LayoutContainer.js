@@ -145,7 +145,7 @@ class LayoutContainer extends Component {
               </div>
             </div>
             <div className="icon-wrapper">
-              <Icon type="github" style={{ fontSize: "28px" }} onClick={() => this.github()} />
+              <Icon type="github" className="icon-github" onClick={() => this.github()} />
             </div>
           </div>
         </Header>
@@ -169,7 +169,7 @@ class LayoutContainer extends Component {
               <Menu.Item key="3">
                 <NavLink to="/docs/theme">主题设置</NavLink>
               </Menu.Item>
-              <SubMenu key="4" title={<span>组件</span>}>
+              <SubMenu key="4" title={<span>标准化组件</span>}>
                 <Menu.ItemGroup key="g-blog" title="Blog">
                   <Menu.Item key="52">
                     <NavLink to="/docs/components/article">Article</NavLink>
@@ -226,6 +226,16 @@ class LayoutContainer extends Component {
                   </Menu.Item>
                   <Menu.Item key="42">
                     <NavLink to="/docs/components/master">Master</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
+              <SubMenu key="v-0" title={<span>可视化组件</span>}>
+                <Menu.ItemGroup key="v-echart" title="Echarts">
+                  <Menu.Item key="v-echart-1">
+                    <NavLink to="/docs/components/article">Pie</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-echart-2">
+                    <NavLink to="/docs/components/comment">Line</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
