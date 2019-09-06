@@ -186,14 +186,14 @@ class LayoutContainer extends Component {
                     <NavLink to="/docs/components/panel">Panel</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
-                <Menu.ItemGroup key="g-code" title="Code">
+                {/* <Menu.ItemGroup key="g-code" title="Code">
                   <Menu.Item key="49">
                     <NavLink to="/docs/components/codearea">CodeArea</NavLink>
                   </Menu.Item>
                   <Menu.Item key="50">
                     <NavLink to="/docs/components/codeZone">CodeZone</NavLink>
                   </Menu.Item>
-                </Menu.ItemGroup>
+                </Menu.ItemGroup> */}
 
                 <Menu.ItemGroup key="g-form" title="Form">
                   <Menu.Item key="43">
