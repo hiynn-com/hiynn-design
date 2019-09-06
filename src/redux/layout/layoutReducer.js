@@ -4,7 +4,7 @@ import { Map, fromJS, merge, List } from "immutable";
 
 const initState = fromJS({
   index: "1",
-  subIndex: ""
+  subIndex: "4"
 });
 
 const layoutReducer = handleActions(

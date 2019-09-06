@@ -1,4 +1,4 @@
-## Hiynn Design of React & Ant.Design
+# Hiynn Design of React & Ant.Design
 
 Hiynn Design 是基于 Ant Design 设计体系的 React UI 组件库，主要用于研发企业级中后台产品，目的是解决企业前端开发人员之痛，降低重复代码，提高组件复用率。
 
@@ -12,7 +12,7 @@ Hiynn Design 是基于 Ant Design 设计体系的 React UI 组件库，主要用
 
 - 提炼自企业级中后台产品的交互语言和视觉风格。
 - 开箱即用的高质量 React 组件。
-- 使用 TypeScript 构建，提供完整的类型定义文件。
+- 二次封装 and.design 组件，提供大而全的交互组件。
 - 全链路开发和设计工具体系。
 
 ## 支持环境
