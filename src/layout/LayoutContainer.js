@@ -131,6 +131,7 @@ class LayoutContainer extends Component {
               </div>
               <div className="menu-item" onClick={() => this.issues()}>
                 <span className="title">提问</span>
+                <Icon type="exclamation-circle" className="icon" />
               </div>
               <div className="menu-item">
                 <NavLink to="/about" activeClassName="selected">
