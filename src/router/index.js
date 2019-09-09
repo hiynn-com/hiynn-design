@@ -15,9 +15,7 @@ const FormModalPage = loadable(() => import("../pages/formModal/FormModalPage"),
 const CardPage = loadable(() => import("../pages/card/CardPage"), { fallback: <Loading /> });
 const HGroupPage = loadable(() => import("../pages/hgroup/HGroupPage"), { fallback: <Loading /> });
 const VGroupPage = loadable(() => import("../pages/vgroup/VGroupPage"), { fallback: <Loading /> });
-const CodeAreaPage = loadable(() => import("../pages/codeArea/CodeAreaPage"), { fallback: <Loading /> });
 const PanelPage = loadable(() => import("../pages/panel/PanelPage"), { fallback: <Loading /> });
-const CodeZonePage = loadable(() => import("../pages/codeZone/CodeZonePage"), { fallback: <Loading /> });
 const EditableTablePage = loadable(() => import("../pages/editableTable/EditableTablePage"), { fallback: <Loading /> });
 
 const ArticlePage = loadable(() => import("../pages/article/ArticlePage"), { fallback: <Loading /> });
@@ -100,7 +98,6 @@ const routes = [
             path: "/docs/components/card",
             component: CardPage
           },
-
           {
             key: "247",
             name: "HdHGroupPage",
@@ -112,18 +109,6 @@ const routes = [
             name: "HdVGroupPage",
             path: "/docs/components/vgroup",
             component: VGroupPage
-          },
-          {
-            key: "249",
-            name: "HdCodeAreaPage",
-            path: "/docs/components/codearea",
-            component: CodeAreaPage
-          },
-          {
-            key: "250",
-            title: "HdCodeZone",
-            path: "/docs/components/codeZone",
-            component: CodeZonePage
           },
           {
             key: "251",
