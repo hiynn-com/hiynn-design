@@ -8,7 +8,8 @@ import HGroup from "./hgroup";
 import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel };
+import HdFilter from './filter';
+export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter };
 export default {
   HdLayout: HdLayout,
   HdMaster: HdMaster,
@@ -19,6 +20,7 @@ export default {
   HGroup: HGroup,
   VGroup: VGroup,
   CodeArea: CodeArea,
-  Panel: Panel
+  Panel: Panel,
+  HdFilter: HdFilter
 };
 //# sourceMappingURL=index.js.map

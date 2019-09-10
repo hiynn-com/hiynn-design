@@ -98,12 +98,19 @@ class LayoutContainer extends Component {
   github = () => {
     window.location.href = "https://github.com/hiynn-com/hiynn-design";
   };
+  //跳转到首页
   home = () => {
-    window.location.href = "https://hiynn-com.github.io/hiynn-design-landing";
+    this.props.history.push("/");
+    this.props.saveMenuIndex(["1", "4"]);
+    // window.location.href = "https://hiynn-com.github.io/hiynn-design-landing";
   };
+  //跳转到文档
   docs = () => {
-    this.props.saveMenuIndex("1");
+    this.props.saveMenuIndex(["1", "4"]);
     this.props.history.push("/docs/introduction");
+  };
+  issues = () => {
+    window.location.href = "https://github.com/hiynn-com/hiynn-design/issues";
   };
   render() {
     const { layoutReducer } = this.props;
@@ -122,6 +129,10 @@ class LayoutContainer extends Component {
               <div className="menu-item" onClick={() => this.docs()}>
                 <span className="title selected">组件</span>
               </div>
+              <div className="menu-item" onClick={() => this.issues()}>
+                <span className="title">提问</span>
+                <Icon type="exclamation-circle" className="icon" />
+              </div>
               <div className="menu-item">
                 <NavLink to="/about" activeClassName="selected">
                   关于
@@ -134,7 +145,7 @@ class LayoutContainer extends Component {
               </div>
             </div>
             <div className="icon-wrapper">
-              <Icon type="github" style={{ fontSize: "28px" }} onClick={() => this.github()} />
+              <Icon type="github" className="icon-github" onClick={() => this.github()} />
             </div>
           </div>
         </Header>
@@ -158,52 +169,75 @@ class LayoutContainer extends Component {
               <Menu.Item key="3">
                 <NavLink to="/docs/theme">主题设置</NavLink>
               </Menu.Item>
-              <SubMenu key="4" title={<span>组件</span>}>
-                <Menu.Item key="41">
-                  <NavLink to="/docs/components/layout">Layout</NavLink>
-                </Menu.Item>
-                <Menu.Item key="42">
-                  <NavLink to="/docs/components/master">Master</NavLink>
-                </Menu.Item>
-                <Menu.Item key="43">
-                  <NavLink to="/docs/components/filter">Filter</NavLink>
-                </Menu.Item>
-                <Menu.Item key="44">
-                  <NavLink to="/docs/components/searchForm">SearchForm</NavLink>
-                </Menu.Item>
-                <Menu.Item key="45">
-                  <NavLink to="/docs/components/formModal">FormModal</NavLink>
-                </Menu.Item>
-                <Menu.Item key="46">
-                  <NavLink to="/docs/components/card">Card</NavLink>
-                </Menu.Item>
-                <Menu.Item key="47">
-                  <NavLink to="/docs/components/hgroup">HGroup</NavLink>
-                </Menu.Item>
-                <Menu.Item key="48">
-                  <NavLink to="/docs/components/vgroup">VGroup</NavLink>
-                </Menu.Item>
-                <Menu.Item key="49">
-                  <NavLink to="/docs/components/codearea">CodeArea</NavLink>
-                </Menu.Item>
-                <Menu.Item key="50">
-                  <NavLink to="/docs/components/codeZone">CodeZone</NavLink>
-                </Menu.Item>
-                <Menu.Item key="51">
-                  <NavLink to="/docs/components/panel">Panel</NavLink>
-                </Menu.Item>
-                <Menu.Item key="52">
-                  <NavLink to="/docs/components/article">Article</NavLink>
-                </Menu.Item>
-                <Menu.Item key="53">
-                  <NavLink to="/docs/components/comment">Comment</NavLink>
-                </Menu.Item>
-                <Menu.Item key="54">
-                  <NavLink to="/docs/components/admin">Admin</NavLink>
-                </Menu.Item>
-                <Menu.Item key="55">
-                  <NavLink to="/docs/components/formValidation">FormValidation</NavLink>
-                </Menu.Item>
+              <SubMenu key="4" title={<span>标准化组件</span>}>
+                <Menu.ItemGroup key="g-blog" title="Blog">
+                  <Menu.Item key="52">
+                    <NavLink to="/docs/components/article">Article</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="53">
+                    <NavLink to="/docs/components/comment">Comment</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="g-card" title="Card">
+                  <Menu.Item key="46">
+                    <NavLink to="/docs/components/card">Card</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="51">
+                    <NavLink to="/docs/components/panel">Panel</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                {/* <Menu.ItemGroup key="g-code" title="Code">
+                  <Menu.Item key="49">
+                    <NavLink to="/docs/components/codearea">CodeArea</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="50">
+                    <NavLink to="/docs/components/codeZone">CodeZone</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup> */}
+
+                <Menu.ItemGroup key="g-form" title="Form">
+                  <Menu.Item key="43">
+                    <NavLink to="/docs/components/filter">Filter</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="45">
+                    <NavLink to="/docs/components/formModal">FormModal</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="55">
+                    <NavLink to="/docs/components/formValidation">FormValidation</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="44">
+                    <NavLink to="/docs/components/searchForm">SearchForm</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="g-group" title="Group">
+                  <Menu.Item key="47">
+                    <NavLink to="/docs/components/hgroup">HGroup</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="48">
+                    <NavLink to="/docs/components/vgroup">VGroup</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="g-layout" title="Laout">
+                  <Menu.Item key="54">
+                    <NavLink to="/docs/components/admin">Admin</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="41">
+                    <NavLink to="/docs/components/layout">Layout</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="42">
+                    <NavLink to="/docs/components/master">Master</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
+              <SubMenu key="v-0" title={<span>可视化组件</span>}>
+                <Menu.ItemGroup key="v-echart" title="Echarts">
+                  <Menu.Item key="v-echart-1">
+                    <NavLink to="/docs/components/article">Pie</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-echart-2">
+                    <NavLink to="/docs/components/comment">Line</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
               </SubMenu>
             </Menu>
           </Sider>
