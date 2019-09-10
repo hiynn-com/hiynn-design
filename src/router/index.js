@@ -17,6 +17,7 @@ const HGroupPage = loadable(() => import("../pages/hgroup/HGroupPage"), { fallba
 const VGroupPage = loadable(() => import("../pages/vgroup/VGroupPage"), { fallback: <Loading /> });
 const PanelPage = loadable(() => import("../pages/panel/PanelPage"), { fallback: <Loading /> });
 const EditableTablePage = loadable(() => import("../pages/editableTable/EditableTablePage"), { fallback: <Loading /> });
+const DivideBoxPage = loadable(() => import("../pages/divideBox/DivideBoxPage"), { fallback: <Loading /> });
 
 const ArticlePage = loadable(() => import("../pages/article/ArticlePage"), { fallback: <Loading /> });
 const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fallback: <Loading /> });
@@ -145,6 +146,12 @@ const routes = [
             name: "EditableTablePage",
             path: "/docs/components/editableTable",
             component: EditableTablePage
+          },
+          {
+            key: "257",
+            name: "DivideBoxPage",
+            path: "/docs/components/divideBox",
+            component: DivideBoxPage
           }
         ]
       }

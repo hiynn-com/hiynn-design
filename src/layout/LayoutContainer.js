@@ -33,58 +33,6 @@ class LayoutContainer extends Component {
       }),
       title: "HiynnDesign",
       subTitle: "海云前端标准化团队出品"
-      // menus: [
-      //   {
-      //     id: 1,
-      //     title: "介绍",
-      //     icon: "read",
-      //     url: "/",
-      //     show: true,
-      //     order: 1
-      //   },
-      //   {
-      //     id: 2,
-      //     title: "快速上手",
-      //     icon: "tool",
-      //     url: "/quickly",
-      //     show: true,
-      //     order: 2
-      //   },
-      //   {
-      //     id: 3,
-      //     title: "主题设置",
-      //     icon: "bg-colors",
-      //     url: "/theme",
-      //     show: true,
-      //     order: 3
-      //   },
-      //   {
-      //     id: 4,
-      //     title: " 组件",
-      //     icon: "build",
-      //     url: "/components",
-      //     show: true,
-      //     order: 4,
-      //     children: [
-      //       {
-      //         id: 41,
-      //         title: "HdLayout",
-      //         icon: null,
-      //         url: "/components/layout",
-      //         show: true,
-      //         order: 1
-      //       },
-      //       {
-      //         id: 42,
-      //         title: "HdMaster",
-      //         icon: null,
-      //         url: "/components/master",
-      //         show: true,
-      //         order: 2
-      //       }
-      //     ]
-      //   }
-      // ]
     };
   }
   clickMenu = ({ item, key, keyPath }) => {
@@ -200,6 +148,9 @@ class LayoutContainer extends Component {
                 </Menu.Item>
                 <Menu.Item key="56">
                   <NavLink to="/docs/components/editableTable">EditableTable</NavLink>
+                </Menu.Item>
+                <Menu.Item key="57">
+                  <NavLink to="/docs/components/divideBox">DivideBox</NavLink>
                 </Menu.Item>
               </SubMenu>
             </Menu>

@@ -5,8 +5,10 @@ import { style } from "../context/style-context";
 
 // 组件容器的类名，前面需加上前缀‘hd’
 const cmpClsName = "hgroup";
+
 // 默认的高度height值
 const defaultH = "auto";
+
 // 宽高的props输入验证函数
 const sizeValidationFn = (props, propName, componentName) => {
   const val = props[propName];
@@ -18,6 +20,7 @@ const sizeValidationFn = (props, propName, componentName) => {
     return new Error(`传给组件${componentName}的属性${propName}的值不合法，校验失败`);
   }
 };
+
 // 设置的对齐方式与flex布局的映射
 const flexMapping = {
   left: "flex-start",
@@ -30,14 +33,6 @@ const flexMapping = {
 };
 
 export default class HGroup extends Component {
-  // 类型检查
-  static propTypes = {
-    ["vertical-align"]: PropTypes.oneOf(["top", "center", "bottom"]),
-    ["horizontal-align"]: PropTypes.oneOf(["left", "center", "right", "justify", "between"]),
-    width: sizeValidationFn,
-    height: sizeValidationFn
-  };
-
   // 类型检查
   static propTypes = {
     ["vertical-align"]: PropTypes.oneOf(["top", "center", "bottom"]),
