@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { PageHeader, Layout, Icon } from "antd";
+import { PageHeader, Layout, Icon, Modal } from "antd";
 import { If, Then } from "react-if";
-import "./style";
 const { Header, Footer, Sider, Content } = Layout;
 class HdAdmin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      backIcon: false
+      backIcon: false,
+      visible: true
     };
   }
   componentWillReceiveProps(nextProps) {
@@ -21,7 +21,7 @@ class HdAdmin extends Component {
     const { route } = this.props;
     console.log("route --- --- ", this.props);
 
-    const { className, children, title, subTitle, side, search, topRight, topFooter, onBack } = this.props;
+    const { className, children, title, subTitle, side, search, topRight, topFooter, onBack, modal, visible, handleOk, handleCancel } = this.props;
     return (
       <div className={`${className ? `${className} master-page-container` : "master-page-container"}`}>
         <Layout className="mp-layout">
@@ -51,6 +51,13 @@ class HdAdmin extends Component {
             </Content>
           </Layout>
         </Layout>
+        <If condition={modal !== null && typeof modal !== "undefined"}>
+          <Then>
+            <Modal title={modal.title} visible={modal.visible} onOk={modal.handleOk} onCancel={modal.handleCancel}>
+              {modal.content}
+            </Modal>
+          </Then>
+        </If>
       </div>
     );
   }
