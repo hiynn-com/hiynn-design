@@ -109,6 +109,9 @@ class LayoutContainer extends Component {
     this.props.saveMenuIndex(["1", "4"]);
     this.props.history.push("/docs/introduction");
   };
+  issues = () => {
+    window.location.href = "https://github.com/hiynn-com/hiynn-design/issues";
+  };
   render() {
     const { layoutReducer } = this.props;
     return (
@@ -126,6 +129,10 @@ class LayoutContainer extends Component {
               <div className="menu-item" onClick={() => this.docs()}>
                 <span className="title selected">组件</span>
               </div>
+              <div className="menu-item" onClick={() => this.issues()}>
+                <span className="title">提问</span>
+                <Icon type="exclamation-circle" className="icon" />
+              </div>
               <div className="menu-item">
                 <NavLink to="/about" activeClassName="selected">
                   关于
@@ -138,7 +145,7 @@ class LayoutContainer extends Component {
               </div>
             </div>
             <div className="icon-wrapper">
-              <Icon type="github" style={{ fontSize: "28px" }} onClick={() => this.github()} />
+              <Icon type="github" className="icon-github" onClick={() => this.github()} />
             </div>
           </div>
         </Header>
@@ -162,7 +169,7 @@ class LayoutContainer extends Component {
               <Menu.Item key="3">
                 <NavLink to="/docs/theme">主题设置</NavLink>
               </Menu.Item>
-              <SubMenu key="4" title={<span>组件</span>}>
+              <SubMenu key="4" title={<span>标准化组件</span>}>
                 <Menu.ItemGroup key="g-blog" title="Blog">
                   <Menu.Item key="52">
                     <NavLink to="/docs/components/article">Article</NavLink>
@@ -179,14 +186,14 @@ class LayoutContainer extends Component {
                     <NavLink to="/docs/components/panel">Panel</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
-                <Menu.ItemGroup key="g-code" title="Code">
+                {/* <Menu.ItemGroup key="g-code" title="Code">
                   <Menu.Item key="49">
                     <NavLink to="/docs/components/codearea">CodeArea</NavLink>
                   </Menu.Item>
                   <Menu.Item key="50">
                     <NavLink to="/docs/components/codeZone">CodeZone</NavLink>
                   </Menu.Item>
-                </Menu.ItemGroup>
+                </Menu.ItemGroup> */}
 
                 <Menu.ItemGroup key="g-form" title="Form">
                   <Menu.Item key="43">
@@ -219,6 +226,16 @@ class LayoutContainer extends Component {
                   </Menu.Item>
                   <Menu.Item key="42">
                     <NavLink to="/docs/components/master">Master</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+              </SubMenu>
+              <SubMenu key="v-0" title={<span>可视化组件</span>}>
+                <Menu.ItemGroup key="v-echart" title="Echarts">
+                  <Menu.Item key="v-echart-1">
+                    <NavLink to="/docs/components/article">Pie</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-echart-2">
+                    <NavLink to="/docs/components/comment">Line</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>

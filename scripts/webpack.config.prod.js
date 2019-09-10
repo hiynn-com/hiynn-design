@@ -24,7 +24,8 @@ module.exports = {
   entry: { main: "./src/index.js" },
   output: {
     //配合 github pages 域名设置该路径，如果是本地则用'/'
-    publicPath: "/hiynn-design/",
+    // publicPath: "/hiynn-design/",
+    publicPath: "/",
     // path: resolve("dist"), // 输出目录
     path: docsDir,
     filename: "static/js/[name].min.js",

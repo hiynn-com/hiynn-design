@@ -1,6 +1,6 @@
 {
   "name": "hiynn-design",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "description": "base on react and antd layout framework",
   "main": "lib/index.js",
   "module": "es/index.js",
