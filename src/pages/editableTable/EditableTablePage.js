@@ -46,7 +46,7 @@ export default class EditableTablePage extends Component {
   }
 
   componentDidMount() {
-
+    
   }
 
   handleSave(arr) {

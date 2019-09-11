@@ -136,6 +136,37 @@ export default class EditableTable extends Component {
     this.setDataSource();
   }
 
+  componentDidUpdate(prevProps) {
+    const isIdentical = this.isObjectIdentical(prevProps, this.props);
+    if (!isIdentical) {
+      this.setAddButton();
+      this.setColumns();
+      this.setDataSource();
+    }
+  }
+
+  isObjectIdentical(prev, next) {
+    const toString = Object.prototype.toString;
+    for (let prop in prev) {
+      if (!next[prop]) {
+        return false;
+      } else if (next[prop] !== prev[prop]) {
+        return false;
+      } else if (toString.call(prev[prop]) === '[object Array]' && toString.call(next[prop]) === '[object Array]') {
+        if (prev[prop].length !== next[prop].length) {
+          return false;
+        } else {
+          for (let i = 0; i < prev[prop].length; i++) {
+            this.isObjectIdentical(prev[prop][i], next[prop][i]);
+          }
+        }
+      } else if (toString.call(prev[prop]) === '[object Object]' && toString.call(next[prop]) === '[object Object]') {
+        this.isObjectIdentical(prev[prop], next[prop]);
+      }
+    }
+    return true;
+  }
+
   handleDelete = key => {
     const dataSource = [...this.state.dataSource];
     this.setState({ dataSource: dataSource.filter(item => item.key !== key) }, () => {
