@@ -7,6 +7,7 @@ import HdComment from "./comment";
 import HGroup from "./hgroup";
 import VGroup from "./vGroup";
 import Panel from "./panel";
+import DivideBox from './divideBox';
 
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, Panel };
-export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, Panel };
+export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, Panel, DivideBox };
+export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, Panel, DivideBox };
