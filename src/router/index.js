@@ -24,6 +24,7 @@ const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fal
 
 const FormValidationPages = loadable(() => import("../pages/formValidation/FormValidationPages"), { fallback: <Loading /> });
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
+const HdTreePage = loadable(() => import("../pages/hdTree/HdTreePage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -153,6 +154,12 @@ const routes = [
             name: "HdFormValidation",
             path: "/docs/components/formValidation",
             component: FormValidationPages
+          },
+          {
+            key: "256",
+            name: "HdTree",
+            path: "/docs/components/hdTree",
+            component: HdTreePage
           }
         ]
       }

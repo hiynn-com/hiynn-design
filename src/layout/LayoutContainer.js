@@ -208,6 +208,9 @@ class LayoutContainer extends Component {
                   <Menu.Item key="44">
                     <NavLink to="/docs/components/searchForm">SearchForm</NavLink>
                   </Menu.Item>
+                  <Menu.Item key="hdTree">
+                    <NavLink to="/docs/components/hdTree">hdTree</NavLink>
+                  </Menu.Item>
                 </Menu.ItemGroup>
                 <Menu.ItemGroup key="g-group" title="Group">
                   <Menu.Item key="47">
