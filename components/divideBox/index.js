@@ -10,7 +10,7 @@ const cmpClsName = "divideBox";
 const defaultH = "auto";
 
 // 分隔容器移动分隔栏时，容器可达到的最小的尺寸
-const minSize = 20;
+const minSize = 30;
 
 // 宽高的props输入验证函数
 const sizeValidationFn = (props, propName, componentName) => {
@@ -76,8 +76,8 @@ export default class DivideBox extends Component {
   // 默认props
   static defaultProps = {
     direction: "row",   // 分隔容器的方向，默认水平方向
-    width: "100%",      // 宽度
-    height: "auto"      // 高度
+    width: "400",      // 宽度
+    height: "200"      // 高度
   };
 
   constructor(props) {
@@ -147,8 +147,10 @@ export default class DivideBox extends Component {
     e.stopPropagation();
     e.preventDefault();
     let offsetX, offsetY;
-    offsetX = e.clientX - this.wrapper.offsetLeft;
-    offsetY = e.clientY - this.wrapper.offsetTop;
+    let node = this.wrapper;
+    const { top, left } = node.getBoundingClientRect();
+    offsetX = e.clientX - left;
+    offsetY = e.clientY - top;
 
     this.resizeChilds(offsetX, offsetY);
   }
