@@ -1,0 +1,1 @@
+通过设置表格columns、dataSource、onSave和enableAdd属性，来设置表格内容和行为。
