@@ -24,6 +24,7 @@ const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fal
 
 const FormValidationPages = loadable(() => import("../pages/formValidation/FormValidationPages"), { fallback: <Loading /> });
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
+const Ranking = loadable(() => import("../pages/ranking/RankingPage"), { fallback: <Loading></Loading> });
 
 const routes = [
   {
@@ -153,6 +154,12 @@ const routes = [
             name: "HdFormValidation",
             path: "/docs/components/formValidation",
             component: FormValidationPages
+          },
+          {
+            key: "256",
+            name: "RankingPage",
+            path: "/docs/components/ranking",
+            component: Ranking
           }
         ]
       }

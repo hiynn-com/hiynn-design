@@ -238,6 +238,20 @@ class LayoutContainer extends Component {
                     <NavLink to="/docs/components/comment">Line</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
+                <Menu.ItemGroup key="v-interaction" title="Interaction">
+                  <Menu.Item key="v-interaction-1">
+                    <NavLink to="/docs/components/ranking">Ranking</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-2">
+                    <NavLink to="/docs/components/comment">时间选择器</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-3">
+                    <NavLink to="/docs/components/comment">tab标签页</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-4">
+                    <NavLink to="/docs/components/comment">下拉列表</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
               </SubMenu>
             </Menu>
           </Sider>
