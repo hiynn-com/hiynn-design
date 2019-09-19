@@ -233,7 +233,7 @@ export default class RankingPage extends Component {
     const style = {
       height: "300px",
       width: "200px",
-      border: "1px solid #9198A7",
+      border: "1px solid #E8E8E8",
       fontSize: "16px"
     };
     /**
