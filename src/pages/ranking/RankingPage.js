@@ -100,6 +100,12 @@ export default class RankingPage extends Component {
           ]
         };
       }
+      const style = {
+        height: "300px",
+        width: "200px",
+        border: "1px solid #9198A7",
+        fontSize: "16px"
+      };
       <HdRanking data={this.state.data} style={style}></HdRanking>
       `,
       code2: `
@@ -151,6 +157,12 @@ export default class RankingPage extends Component {
           ]
         };
       }
+      const style = {
+        height: "300px",
+        width: "200px",
+        border: "1px solid #9198A7",
+        fontSize: "16px"
+      };
       <HdRanking data={this.state.data} showTop  style={style}></HdRanking>
 
       `,
@@ -203,6 +215,12 @@ export default class RankingPage extends Component {
           ]
         };
       }
+      const style = {
+        height: "300px",
+        width: "200px",
+        border: "1px solid #9198A7",
+        fontSize: "16px"
+      };
       <HdRanking data={this.state.data} showTop corner style={style}></HdRanking>
 
       `
