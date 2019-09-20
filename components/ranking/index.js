@@ -5,11 +5,35 @@ import axios from "axios";
 class HdRanking extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    console.log(props.url);
+    this.state = {
+      data: ""
+    };
+  }
+  componentWillMount() {
+    console.log(this.props.url);
+    if (this.props.url) {
+      axios
+        .get(this.props.url)
+        .then(response => {
+          this.setState(
+            {
+              data: response.data
+            },
+            () => {
+              console.log(this.state.data);
+            }
+          );
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
   }
 
   render() {
-    let { data, style, showTop, corner } = this.props;
+    let { data, style, showTop, corner, url } = this.props;
+
     return (
       <div className="ranking" style={style}>
         {data
@@ -25,6 +49,7 @@ class HdRanking extends Component {
               );
             })
           : ""}
+
         {/* 四个角样式 */}
         {corner ? <span className={"corner-top-left"}></span> : ""}
         {corner ? <span className={"corner-top-right"}></span> : ""}

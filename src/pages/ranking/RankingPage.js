@@ -227,8 +227,6 @@ export default class RankingPage extends Component {
     };
   }
 
-  componentDidMount() {}
-
   render() {
     const style = {
       height: "300px",
@@ -251,7 +249,7 @@ export default class RankingPage extends Component {
           <HdRanking data={this.state.data} showTop style={style}></HdRanking>
         </CodePreviewer>
         <CodePreviewer code={this.state.code3} showCode={true}>
-          <HdRanking data={this.state.data} corner showTop style={style}></HdRanking>
+          <HdRanking data={this.state.data} url={"http://yapi.demo.qunar.com/mock/93290/xushanpei/test"} corner showTop style={style}></HdRanking>
         </CodePreviewer>
         <MdPreviewer md={ApiMD}></MdPreviewer>
       </PreviewLayout>

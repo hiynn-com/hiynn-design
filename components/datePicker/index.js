@@ -13,14 +13,32 @@ class HdDatePicker extends Component {
   }
 
   render() {
-    const { onChange, size, showTime, format, placeholder, onOk, defaultValue, label } = this.props;
+    const { type, onChange, size, showTime, format, placeholder, onOk, defaultValue, label } = this.props;
     return (
       <div className="datePicker">
         {label ? <span className="datePicker-title">{label} ： </span> : ""}
-        {defaultValue ? (
+        {defaultValue && type == "range" ? (
           <RangePicker defaultValue={defaultValue} locale={locale} size={size} onChange={onChange} showTime={showTime} format={format} onOk={onOk} />
-        ) : (
+        ) : type == "range" ? (
           <RangePicker locale={locale} size={size} onChange={onChange} showTime={showTime} format={format} onOk={onOk} />
+        ) : (
+          ""
+        )}
+        {defaultValue && type == "month" ? (
+          <MonthPicker defaultValue={defaultValue} locale={locale} size={size} onChange={onChange} showTime={showTime} format={format} onOk={onOk} />
+        ) : type == "month" ? (
+          <MonthPicker locale={locale} size={size} onChange={onChange} showTime={showTime} format={format} onOk={onOk} />
+        ) : (
+          ""
+        )}
+
+        {/* DatePicker  */}
+        {defaultValue && type == "date" ? (
+          <DatePicker defaultValue={defaultValue} locale={locale} size={size} onChange={onChange} showTime={showTime} format={format} onOk={onOk} />
+        ) : type == "date" ? (
+          <DatePicker locale={locale} size={size} onChange={onChange} showTime={showTime} format={format} onOk={onOk} />
+        ) : (
+          ""
         )}
       </div>
     );
