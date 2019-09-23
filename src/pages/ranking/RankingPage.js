@@ -221,7 +221,7 @@ export default class RankingPage extends Component {
         border: "1px solid #9198A7",
         fontSize: "16px"
       };
-      <HdRanking data={this.state.data} showTop corner style={style}></HdRanking>
+      <HdRanking data={this.state.data}  url={"http://yapi.demo.qunar.com/mock/93290/xushanpei/test"} showTop corner style={style}></HdRanking>
 
       `
     };

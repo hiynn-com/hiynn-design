@@ -18,7 +18,7 @@ class HdRanking extends Component {
         .then(response => {
           this.setState(
             {
-              data: response.data
+              data: response.data.data
             },
             () => {
               console.log(this.state.data);
@@ -36,8 +36,22 @@ class HdRanking extends Component {
 
     return (
       <div className="ranking" style={style}>
-        {data
+        {data && !this.state.data
           ? data.map((item, index) => {
+              return (
+                <div key={index}>
+                  <span style={showTop ? { width: "35%" } : { width: "50%" }} ref="rankingname" className="ranking-name">
+                    {item.name} :{" "}
+                  </span>
+                  <span className="ranking-value">{item.value}</span>
+                  {showTop ? <span className={`ranking-top ranking-top${index}`}>Top{index + 1}</span> : ""}
+                </div>
+              );
+            })
+          : ""}
+
+        {this.state.data
+          ? this.state.data.map((item, index) => {
               return (
                 <div key={index}>
                   <span style={showTop ? { width: "35%" } : { width: "50%" }} ref="rankingname" className="ranking-name">
