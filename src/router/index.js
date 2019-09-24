@@ -26,6 +26,7 @@ const FormValidationPages = loadable(() => import("../pages/formValidation/FormV
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
 const Ranking = loadable(() => import("../pages/ranking/RankingPage"), { fallback: <Loading></Loading> });
 const DatePicker = loadable(() => import("../pages/datePicker/DatePickerPage"), { fallback: <Loading></Loading> });
+const Tab = loadable(() => import("../pages/tab/TabPage"), { fallback: <Loading></Loading> });
 
 const routes = [
   {
@@ -167,6 +168,12 @@ const routes = [
             name: "DatePickerPage",
             path: "/docs/components/datePicker",
             component: DatePicker
+          },
+          {
+            key: "258",
+            name: "TabPage",
+            path: "/docs/components/Tab",
+            component: Tab
           }
         ]
       }
