@@ -249,7 +249,7 @@ class LayoutContainer extends Component {
                     <NavLink to="/docs/components/tab">Tab</NavLink>
                   </Menu.Item>
                   <Menu.Item key="v-interaction-4">
-                    <NavLink to="/docs/components/comment">下拉列表</NavLink>
+                    <NavLink to="/docs/components/dropdown">DropDown</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>

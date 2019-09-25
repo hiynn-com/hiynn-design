@@ -27,6 +27,7 @@ const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Lo
 const Ranking = loadable(() => import("../pages/ranking/RankingPage"), { fallback: <Loading></Loading> });
 const DatePicker = loadable(() => import("../pages/datePicker/DatePickerPage"), { fallback: <Loading></Loading> });
 const Tab = loadable(() => import("../pages/tab/TabPage"), { fallback: <Loading></Loading> });
+const DropDown = loadable(() => import("../pages/dropDown/DropDown"), { fallback: <Loading></Loading> });
 
 const routes = [
   {
@@ -174,6 +175,12 @@ const routes = [
             name: "TabPage",
             path: "/docs/components/Tab",
             component: Tab
+          },
+          {
+            key: "259",
+            name: "DropDown",
+            path: "/docs/components/dropdown",
+            component: DropDown
           }
         ]
       }
