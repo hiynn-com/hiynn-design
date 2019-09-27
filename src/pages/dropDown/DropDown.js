@@ -13,14 +13,31 @@ export default class DropDownPage extends Component {
     this.state = {
       code: `
       import { HdDropDown } from 'hiynn-design';
+      import data from "./data";
+      //数据格式
+      // [
+      //   {name:'上海', 
+      //     cityList:[		   
+      //           {name:'市辖区', 
+      //               areaList:['黄浦区','卢湾区','徐汇区','长宁区','静安区','普陀区','闸北区','虹口区','杨浦区','闵行区','宝山区','嘉定区','浦东新区','金山区','松江区','青浦区','南汇区','奉贤区']},		   
+      //           {name:'县', 
+      //               areaList:['崇明县']},
+      //           ],
+      //   }
+      // ]
       
+      onChange = (province, city, county) => {
+        console.log("dropdown回调的数据：", province, city, county);
+      };
+
+      <HdDropDown data={data} onChange={this.onChange}></HdDropDown>
       `
     };
   }
 
   componentDidMount() {}
-  onChange = data => {
-    console.log("回调的数据：", data);
+  onChange = (province, city, county) => {
+    console.log("dropdown回调的数据：", province, city, county);
   };
 
   render() {

@@ -7,15 +7,20 @@ class HdDropDown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      capitals: [] // 省份
+      capitals: [], // 省份
       // city: [], // 市
       // areaList: [] // 区
+      data: {
+        province: "",
+        city: "",
+        county: ""
+      }
     };
   }
 
   componentDidMount() {
     this.handleAddressData();
-    console.log("传过来的值", this.props.data);
+    // console.log("传过来的值", this.props.data);
     this.setState({
       capitals: this.props.data
     });
@@ -28,7 +33,7 @@ class HdDropDown extends Component {
           capitals: da
         },
         () => {
-          console.log("da", da);
+          // console.log("da", da);
         }
       );
     }
@@ -55,9 +60,16 @@ class HdDropDown extends Component {
             city: da
           },
           () => {
-            console.log("*******************", this.state.city[0]);
+            // 点击城市获取默认的数据
+            // console.log("*******************", value, this.state.city[0].name, this.state.city[0].areaList[0]);
+            this.props.onChange(value, this.state.city[0].name, this.state.city[0].areaList[0]);
             this.setState({
-              areaList: this.state.city[0] ? this.state.city[0].areaList : ""
+              areaList: this.state.city[0] ? this.state.city[0].areaList : "",
+              data: {
+                province: value,
+                city: this.state.city[0].name,
+                county: this.state.city[0].areaList[0]
+              }
             });
           }
         );
@@ -77,20 +89,42 @@ class HdDropDown extends Component {
             ci = item.areaList;
           }
         });
-        this.setState({
-          areaList: ci
-        });
+        this.setState(
+          {
+            areaList: ci
+          },
+          () => {
+            // console.log("**********市级************", value, this.state.areaList[0]);
+            this.props.onChange(this.state.data.province, value, this.state.areaList[0]);
+            this.setState({
+              data: {
+                province: this.state.data.province,
+                city: value,
+                county: this.state.areaList[0]
+              }
+            });
+          }
+        );
       }
     );
   };
   getData = value => {
-    console.log(`selected ${value}`);
+    // console.log(`selected ${value}`);
+    this.props.onChange(this.state.data.province, this.state.data.city, value);
+    this.setState({
+      data: {
+        province: this.state.data.province,
+        city: this.state.data.city,
+        county: value
+      }
+    });
   };
 
   render() {
     return (
       <div className={"dropdown"} style={{ padding: "20px" }}>
         <Select
+          ref={"no1"}
           showSearch
           style={{ width: 128, marginRight: "5px" }}
           placeholder="请选择"
