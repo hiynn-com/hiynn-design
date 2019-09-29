@@ -124,7 +124,6 @@ class HdDropDown extends Component {
     return (
       <div className={"dropdown"} style={{ padding: "20px" }}>
         <Select
-          ref={"no1"}
           showSearch
           style={{ width: 128, marginRight: "5px" }}
           placeholder="请选择"
