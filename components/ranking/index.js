@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-import { Form, Input, Button, Checkbox, message, Select } from "antd";
 import axios from "axios";
+import React, { Component } from "react";
 
 class HdRanking extends Component {
   constructor(props) {

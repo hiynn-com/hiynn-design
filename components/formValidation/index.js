@@ -1,7 +1,5 @@
+import { Button, Form, Input, Select } from "antd";
 import React, { Component } from "react";
-import { Form, Input, Button, Checkbox, message, Select } from "antd";
-import { fromJs, Map, Set } from "immutable";
-import PropTypes from "prop-types";
 
 const { Option } = Select;
 
