@@ -29,26 +29,7 @@ class HdFormValidation extends Component {
             return (
               <Form.Item key={index} label={item.label} labelCol={{ span: item.labelCol }} wrapperCol={{ span: item.wrapperCol }}>
                 {getFieldDecorator(`${item.key}`, {
-                  rules: [
-                    { required: item.required, message: `${item.placeholder}` },
-                    { pattern: item.reg, message: item.message }
-                    // {
-                    //   validator: (rule, value, callback, source, options) => {
-                    //     let patten = new RegExp(item.reg);
-                    //     if (!patten.test(value)) {
-                    //       let key = item.key;
-                    //       console.log(key);
-                    //       // message.warning("输入有误");
-                    //       this.props.form.setFieldsValue({
-                    //         [key]: value.substring(0, value.length - 1)
-                    //       });
-                    //       return callback("输入有误");
-                    //     } else {
-                    //       // return callback("输入有误!!!");
-                    //     }
-                    //   }
-                    // }
-                  ]
+                  rules: [{ required: item.required, message: `${item.placeholder}` }, { pattern: item.reg, message: item.message }]
                 })(
                   item.type == "password" ? (
                     <Input.Password type={`${item.type}`} placeholder={item.placeholder} />
