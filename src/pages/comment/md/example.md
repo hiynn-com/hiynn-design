@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HdComment } from 'hiynn-design';
+import { Comment } from 'hiynn-design';
 import 'hiynn-design/dist/hiynn-design.css';
 
 class DemoPage extends Component {

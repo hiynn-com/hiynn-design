@@ -1,0 +1,40 @@
+.chartTitle_wrap {
+  border-bottom: 1px solid #0c7884;
+  /* border-bottom: 1px solid #14f1e9; */
+  &>.chartTitle {
+    padding-left: 25px;
+    padding-right: 100px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 25px;
+      height: 30px;
+      background: url('./img/title_bg1.png') no-repeat;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 100px;
+      height: 30px;
+      background: url('./img/title_bg3.png') no-repeat;
+    }
+    &>.title {
+      font-size: 16px;
+      color: #14f1e9;
+      display: inline-block;
+      min-width: 200px;
+      height: 100%;
+      line-height: 30px;
+      background: url('./img/title_bg2.png') repeat-x;
+    }
+  }
+}

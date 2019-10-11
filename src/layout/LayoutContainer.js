@@ -237,6 +237,9 @@ class LayoutContainer extends Component {
                   <Menu.Item key="v-echart-2">
                     <NavLink to="/docs/components/comment">Line</NavLink>
                   </Menu.Item>
+                  <Menu.Item key="v-echart-3">
+                    <NavLink to="/docs/components/echarsTitle">EcharsTitle</NavLink>
+                  </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
             </Menu>

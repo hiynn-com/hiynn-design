@@ -21,6 +21,7 @@ const CodeZonePage = loadable(() => import("../pages/codeZone/CodeZonePage"), { 
 
 const ArticlePage = loadable(() => import("../pages/article/ArticlePage"), { fallback: <Loading /> });
 const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fallback: <Loading /> });
+const EcharsTitle = loadable(() => import("../pages/echarsTitle/echarsTitle"), { fallback: <Loading /> });
 
 const FormValidationPages = loadable(() => import("../pages/formValidation/FormValidationPages"), { fallback: <Loading /> });
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
@@ -153,6 +154,12 @@ const routes = [
             name: "HdFormValidation",
             path: "/docs/components/formValidation",
             component: FormValidationPages
+          },
+          {
+            key: "256",
+            name: "EcharsTitle",
+            path: "/docs/components/echarsTitle",
+            component: EcharsTitle
           }
         ]
       }

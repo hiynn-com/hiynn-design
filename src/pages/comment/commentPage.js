@@ -14,7 +14,7 @@ class DemoPage extends Component {
       loginInfo: {
         loginId: 100,
         loginName: "李四",
-        loginAvatar: "http://img3.duitang.com/uploads/item/201504/12/20150412H5653_LWfVe.jpeg",
+        loginAvatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
       },
       data: [
         {
