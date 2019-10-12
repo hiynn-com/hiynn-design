@@ -3,7 +3,6 @@
 ### HdSelect
 
 
-size, loading, onChange, style, mode, defaultValue, placeholder, label, data
 
 | 参数         | 说明                           | 类型            | 默认值   | 版本 |
 | ------------ | ------------------------------ | --------------- | -------- | ---- |
