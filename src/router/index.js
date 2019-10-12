@@ -28,6 +28,7 @@ const Ranking = loadable(() => import("../pages/ranking/RankingPage"), { fallbac
 const DatePicker = loadable(() => import("../pages/datePicker/DatePickerPage"), { fallback: <Loading></Loading> });
 const Tab = loadable(() => import("../pages/tab/TabPage"), { fallback: <Loading></Loading> });
 const DropDown = loadable(() => import("../pages/dropDown/DropDown"), { fallback: <Loading></Loading> });
+const Select = loadable(() => import("../pages/select/Select"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -181,6 +182,12 @@ const routes = [
             name: "DropDown",
             path: "/docs/components/dropdown",
             component: DropDown
+          },
+          {
+            key: "260",
+            name: "Select",
+            path: "/docs/components/select",
+            component: Select
           }
         ]
       }

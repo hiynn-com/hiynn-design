@@ -52,7 +52,7 @@ class HdDropDown extends Component {
         let da = [];
         capitals.map(item => {
           if (item.name === value) {
-            da = item.cityList;
+            da = item.firstList;
           }
         });
         this.setState(
@@ -61,14 +61,14 @@ class HdDropDown extends Component {
           },
           () => {
             // 点击城市获取默认的数据
-            // console.log("*******************", value, this.state.city[0].name, this.state.city[0].areaList[0]);
-            this.props.onChange(value, this.state.city[0].name, this.state.city[0].areaList[0]);
+            // console.log("*******************", value, this.state.city[0].name, this.state.city[0].secondList[0]);
+            this.props.onChange(value, this.state.city[0].name, this.state.city[0].secondList[0]);
             this.setState({
-              areaList: this.state.city[0] ? this.state.city[0].areaList : "",
+              areaList: this.state.city[0] ? this.state.city[0].secondList : "",
               data: {
                 province: value,
                 city: this.state.city[0].name,
-                county: this.state.city[0].areaList[0]
+                county: this.state.city[0].secondList[0]
               }
             });
           }
@@ -86,7 +86,7 @@ class HdDropDown extends Component {
         let ci = [];
         city.map(item => {
           if (item.name === value) {
-            ci = item.areaList;
+            ci = item.secondList;
           }
         });
         this.setState(

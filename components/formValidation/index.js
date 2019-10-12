@@ -20,7 +20,7 @@ class HdFormValidation extends Component {
 
   render() {
     const { getFieldDecorator } = this.props.form;
-    const { Hdbtn, Hdchange, Hddata, Hdsubmit, layout } = this.props;
+    const { Hdbtn, Hdchange, Hddata, Hdsubmit, layout, data } = this.props;
 
     return (
       <div>
