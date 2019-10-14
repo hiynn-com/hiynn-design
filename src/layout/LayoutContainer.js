@@ -260,6 +260,9 @@ class LayoutContainer extends Component {
                   <Menu.Item key="v-interaction-5">
                     <NavLink to="/docs/components/select">Select</NavLink>
                   </Menu.Item>
+                  <Menu.Item key="v-interaction-6">
+                    <NavLink to="/docs/components/button">Button</NavLink>
+                  </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
             </Menu>
