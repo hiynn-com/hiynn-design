@@ -244,6 +244,23 @@ class LayoutContainer extends Component {
                     <NavLink to="/docs/components/Stack">Stack</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
+                <Menu.ItemGroup key="v-interaction" title="Interaction">
+                  <Menu.Item key="v-interaction-1">
+                    <NavLink to="/docs/components/ranking">Ranking</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-2">
+                    <NavLink to="/docs/components/datePicker">DatePicker</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-3">
+                    <NavLink to="/docs/components/tab">Tab</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-4">
+                    <NavLink to="/docs/components/dropdown">DropDown</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-5">
+                    <NavLink to="/docs/components/select">Select</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
               </SubMenu>
             </Menu>
           </Sider>
