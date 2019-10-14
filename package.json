@@ -1,6 +1,6 @@
 {
   "name": "hiynn-design",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "base on react and antd layout framework",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -35,10 +35,10 @@
   },
   "dependencies": {
     "@loadable/component": "^5.10.2",
+    "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.2",
     "core-js": "3",
-    "axios": "^0.19.0",
     "enquire-js": "^0.2.1",
     "history": "^4.9.0",
     "lodash": "^4.17.4",

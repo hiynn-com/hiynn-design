@@ -83,7 +83,7 @@ class HdFormValidationPages extends Component {
           marginLeft: "105px"
         }
       },
-      submitCode: `import HdFormValidation from "../../components/hd-formValidation" 
+      submitCode: `import { HdFormValidation } from "hiynn-design" 
       constructor(props) {
         super(props);
         this.state = {
@@ -146,7 +146,7 @@ class HdFormValidationPages extends Component {
       <HdFormValidation Hdbtn={this.state.subbtn} Hdchange={this.onChange} Hddata={this.state.submitData} Hdsubmit={this.submit}></HdFormValidation>
       `,
       searchCode: `
-      import HdFormValidation from "../../components/hd-formValidation";
+      import { HdFormValidation } from "hiynn-design";
       constructor(props) {
         super(props);
         this.state = {

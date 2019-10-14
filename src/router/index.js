@@ -24,6 +24,11 @@ const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fal
 
 const FormValidationPages = loadable(() => import("../pages/formValidation/FormValidationPages"), { fallback: <Loading /> });
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
+const Ranking = loadable(() => import("../pages/ranking/RankingPage"), { fallback: <Loading></Loading> });
+const DatePicker = loadable(() => import("../pages/datePicker/DatePickerPage"), { fallback: <Loading></Loading> });
+const Tab = loadable(() => import("../pages/tab/TabPage"), { fallback: <Loading></Loading> });
+const DropDown = loadable(() => import("../pages/dropDown/DropDown"), { fallback: <Loading></Loading> });
+const Select = loadable(() => import("../pages/select/Select"), { fallback: <Loading /> });
 
 const PiePage = loadable(() => import("../pages/pie/PiePage"), { fallback: <Loading></Loading> });
 const LinePage = loadable(() => import("../pages/line/linePage"), { fallback: <Loading></Loading> });
@@ -187,6 +192,36 @@ const routes = [
             path: "/docs/components/Stack",
             component: StackPage
           },
+          {
+            key: "260",
+            name: "RankingPage",
+            path: "/docs/components/ranking",
+            component: Ranking
+          },
+          {
+            key: "261",
+            name: "DatePickerPage",
+            path: "/docs/components/datePicker",
+            component: DatePicker
+          },
+          {
+            key: "262",
+            name: "TabPage",
+            path: "/docs/components/Tab",
+            component: Tab
+          },
+          {
+            key: "263",
+            name: "DropDown",
+            path: "/docs/components/dropdown",
+            component: DropDown
+          },
+          {
+            key: "264",
+            name: "Select",
+            path: "/docs/components/select",
+            component: Select
+          }
         ]
       }
     ]

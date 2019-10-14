@@ -1,18 +1,18 @@
 .layout-container {
-  height: 100vh;
+  overflow-y: auto;
   background: #fff;
 
   & .header-container {
-    position: sticky;
+    /* position: sticky;
     top: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     width: 100vw;
     z-index: 11;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 
     & .header-left {
       color: #fff;
@@ -43,14 +43,12 @@
         margin-right: 20px;
 
         & .menu-item {
-
           width: 80px;
           text-align: center;
           font-weight: normal;
           cursor: pointer;
 
           &:hover {
-
             & .icon,
             & .title {
               color: #fff;
@@ -59,12 +57,12 @@
 
           & .icon {
             margin-left: 5px;
-            color: hsla(0, 0%, 100%, .65);
+            color: hsla(0, 0%, 100%, 0.65);
             font-size: 16px;
           }
 
           & .title {
-            color: hsla(0, 0%, 100%, .65);
+            color: hsla(0, 0%, 100%, 0.65);
             font-size: 16px;
           }
 
@@ -74,7 +72,7 @@
           }
 
           & a {
-            color: hsla(0, 0%, 100%, .65);
+            color: hsla(0, 0%, 100%, 0.65);
             font-size: 16px;
 
             &:hover {
@@ -91,7 +89,7 @@
 
         & .icon-github {
           font-size: 28px;
-          color: hsla(0, 0%, 100%, .65);
+          color: hsla(0, 0%, 100%, 0.65);
 
           &:hover {
             color: #fff;
@@ -102,10 +100,9 @@
   }
 
   & .content-layout-container {
-
     & .content-layout-sider {
-      overflow-x: hidden;
-      overflow-y: auto;
+      /* overflow-x: hidden;
+      overflow-y: auto; */
       border-right: 1px solid #e8e8e8;
 
       & .ant-menu-inline {
@@ -113,7 +110,6 @@
       }
 
       & .content-layout-sider-menu {
-
         & .ant-menu-item-group {
           & .ant-menu-item-group-title {
             padding-left: 4rem !important;
@@ -128,7 +124,6 @@
         }
 
         /* height: calc(100vh - 64px); */
-
 
         & .ant-menu-item {
           font-size: 16px;
