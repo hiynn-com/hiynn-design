@@ -22,10 +22,12 @@ class App extends Component {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <ConnectedRouter history={history}>
+            {/* <HashRouter> */}
             <Switch>
               <Route path="/" exact component={HomePage} />
               <Route path="/docs" component={LayoutContainer} />
             </Switch>
+            {/* </HashRouter> */}
           </ConnectedRouter>
         </PersistGate>
       </Provider>
