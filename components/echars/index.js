@@ -6,7 +6,7 @@ import './style'
 
 // 存储
 let seriesFetchData = [];
-class HdPie extends Component {
+class HdEchars extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -216,12 +216,12 @@ class HdPie extends Component {
         )
     }
 }
-HdPie.defaultProps = {
+HdEchars.defaultProps = {
     data: [],
     title: '',
     value: 0
 }
-HdPie.propTypes = {
+HdEchars.propTypes = {
     data: PropTypes.array,
     title: PropTypes.string,
     value: PropTypes.oneOfType([
@@ -230,4 +230,4 @@ HdPie.propTypes = {
     ]),
 };
 
-export default HdPie;
+export default HdEchars;
