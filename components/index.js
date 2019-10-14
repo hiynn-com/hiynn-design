@@ -9,6 +9,7 @@ import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
 import HdFilter from './filter'
+import HdEchars from './echars'
 
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter };
-export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter };
+export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEchars };
+export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEchars };
