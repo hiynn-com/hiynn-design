@@ -25,6 +25,11 @@ const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fal
 const FormValidationPages = loadable(() => import("../pages/formValidation/FormValidationPages"), { fallback: <Loading /> });
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
 
+const PiePage = loadable(() => import("../pages/pie/PiePage"), { fallback: <Loading></Loading> });
+const LinePage = loadable(() => import("../pages/line/linePage"), { fallback: <Loading></Loading> });
+const BarPage = loadable(() => import("../pages/bar/barPage"), { fallback: <Loading></Loading> });
+const StackPage = loadable(() => import("../pages/stack/stackPage"), { fallback: <Loading></Loading> });
+
 const routes = [
   {
     key: "1",
@@ -153,7 +158,35 @@ const routes = [
             name: "HdFormValidation",
             path: "/docs/components/formValidation",
             component: FormValidationPages
-          }
+          },
+          // 饼图
+          {
+            key: "256",
+            name: "HdPie",
+            path: "/docs/components/Pie",
+            component: PiePage
+          },
+          // 折线图
+          {
+            key: "257",
+            name: "HdLine",
+            path: "/docs/components/Line",
+            component: LinePage
+          },
+          // 柱状图
+          {
+            key: "258",
+            name: "HdLine",
+            path: "/docs/components/Bar",
+            component: BarPage
+          },
+          // 堆叠图
+          {
+            key: "259",
+            name: "HdLine",
+            path: "/docs/components/Stack",
+            component: StackPage
+          },
         ]
       }
     ]
