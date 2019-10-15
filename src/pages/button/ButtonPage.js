@@ -11,8 +11,8 @@ export default class ButtonPage extends Component {
     this.state = {
       code: `import { HdButton } from "hiynn-design";
 
-<HdButton>明细</HdButton>
-<HdButton>导出</HdButton>`
+<HdButton title="明细"/>
+<HdButton title="导出"/>`
     };
   }
 
@@ -21,8 +21,8 @@ export default class ButtonPage extends Component {
       <PreviewLayout>
         <MdPreviewer md={IndexMD}/>
         <CodePreviewer code={this.state.code} showCode>
-          <HdButton>明细</HdButton>
-          <HdButton>导出</HdButton>
+          <HdButton title="明细"/>
+          <HdButton title="导出"/>
         </CodePreviewer>
         <MdPreviewer md={ApiMD}/>
       </PreviewLayout>
