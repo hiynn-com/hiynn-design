@@ -35,6 +35,9 @@ const LinePage = loadable(() => import("../pages/line/linePage"), { fallback: <L
 const BarPage = loadable(() => import("../pages/bar/barPage"), { fallback: <Loading></Loading> });
 const StackPage = loadable(() => import("../pages/stack/stackPage"), { fallback: <Loading></Loading> });
 
+const ButtonPage = loadable(() => import("../pages/button/ButtonPage"), { fallback: <Loading/> });
+const RadioPage = loadable(() => import("../pages/radio/RadioPage"), { fallback: <Loading/> });
+
 const routes = [
   {
     key: "1",
@@ -221,6 +224,18 @@ const routes = [
             name: "Select",
             path: "/docs/components/select",
             component: Select
+          },
+          {
+            key: "265",
+            name: "HdButtonPage",
+            path: "/docs/components/button",
+            component: ButtonPage
+          },
+          {
+            key: "266",
+            name: "HdRadioPage",
+            path: "/docs/components/radio",
+            component: RadioPage
           }
         ]
       }
