@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Icon, Divider } from 'antd';
+import { When } from "react-if";
 
 class Demo extends Component {
   constructor(props) {
@@ -52,15 +53,15 @@ class Demo extends Component {
       <div className="article-container">
         <h1>{data.title ? data.title : ''}</h1>
         <div className='subheader'>
-          {data.blockName ? <span>板块: {data.blockName}</span> : ''}
-          {data.ownerName ? <span>作者: {data.ownerName}</span> : ''}
-          {data.viewCount ? <span><Icon type="eye" /><span>{data.viewCount}</span></span> : ''}
-          {data.replyCount ? <span><Icon type="message" /><span>{data.replyCount}</span></span> : ''}
-          {data.voteCount ? <span><Icon type="like" /><span>{data.voteCount}</span></span> : ''}
-          {data.creationDate ? <span>发表于: {data.creationDate}</span> : ''}
+          <When condition={data.blockName}><span>板块: {data.blockName}</span></When>
+          <When condition={data.ownerName}><span>作者: {data.ownerName}</span></When>
+          <When condition={data.viewCount}><span><Icon type="eye" /><span>{data.viewCount}</span></span></When>
+          <When condition={data.replyCount}><span><Icon type="message" /><span>{data.replyCount}</span></span></When>
+          <When condition={data.voteCount}><span><Icon type="like" /><span>{data.voteCount}</span></span></When>
+          <When condition={data.creationDate}><span>发表于: {data.creationDate}</span></When>
         </div>
         <div className='content' dangerouslySetInnerHTML={{ __html: data.content }} />
-        <Divider style={{ height: '2px' }} />
+        <Divider />
         <div className='ent-good'>
           <div>
             <div onClick={this.entGoog.bind(this)}>

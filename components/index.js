@@ -19,7 +19,7 @@ import HdSelect from "./select";
 import HdTab from "./tab";
 import HdButton from "./button";
 import HdRadio from "./radio";
-
+import EcharsTitle from "./echarsTitle";
 export {
   HdLayout,
   HdMaster,
@@ -41,7 +41,8 @@ export {
   HdSelect,
   HdTab,
   HdButton,
-  HdRadio
+  HdRadio,
+  EcharsTitle
 };
 export default {
   HdLayout,
@@ -64,5 +65,6 @@ export default {
   HdSelect,
   HdTab,
   HdButton,
-  HdRadio
+  HdRadio,
+  EcharsTitle
 };

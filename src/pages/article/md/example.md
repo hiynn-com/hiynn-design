@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-const { HdArticle } from "hiynn-design";
+const { Article } from "hiynn-design";
 import 'hiynn-design/dist/hiynn-design.css';
 
 class HdArticle extends Component {
@@ -31,7 +31,7 @@ class HdArticle extends Component {
   render() {
     const { data, voteStatus } = this.state;
     return (
-          <HdArticle
+          <Article
             data={data}
             voteStatus={voteStatus}
             giveLike={this.giveLike}
