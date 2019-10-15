@@ -36,6 +36,7 @@ const BarPage = loadable(() => import("../pages/bar/barPage"), { fallback: <Load
 const StackPage = loadable(() => import("../pages/stack/stackPage"), { fallback: <Loading></Loading> });
 
 const ButtonPage = loadable(() => import("../pages/button/ButtonPage"), { fallback: <Loading/> });
+const RadioPage = loadable(() => import("../pages/radio/RadioPage"), { fallback: <Loading/> });
 
 const routes = [
   {
@@ -229,6 +230,12 @@ const routes = [
             name: "HdButtonPage",
             path: "/docs/components/button",
             component: ButtonPage
+          },
+          {
+            key: "266",
+            name: "HdRadioPage",
+            path: "/docs/components/radio",
+            component: RadioPage
           }
         ]
       }
