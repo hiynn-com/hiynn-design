@@ -1,4 +1,4 @@
-# EcharsTitle 评论
+# EcharsTitle 图表标题
 
 具有统一样式的图表标题。
 
