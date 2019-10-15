@@ -231,6 +231,9 @@ class LayoutContainer extends Component {
               </SubMenu>
               <SubMenu key="v-0" title={<span>可视化组件</span>}>
                 <Menu.ItemGroup key="v-echart" title="Echarts">
+                  <Menu.Item key="v-echart-0">
+                    <NavLink to="/docs/components/echarsTitle">EcharsTitle</NavLink>
+                  </Menu.Item>
                   <Menu.Item key="v-echart-1">
                     <NavLink to="/docs/components/Pie">Pie</NavLink>
                   </Menu.Item>
@@ -265,9 +268,6 @@ class LayoutContainer extends Component {
                   </Menu.Item>
                   <Menu.Item key="v-interaction-7">
                     <NavLink to="/docs/components/radio">Radio</NavLink>
-                  </Menu.Item>
-                  <Menu.Item key="v-echart-3">
-                    <NavLink to="/docs/components/echarsTitle">EcharsTitle</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
