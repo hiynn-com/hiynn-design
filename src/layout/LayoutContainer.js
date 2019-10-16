@@ -266,6 +266,9 @@ class LayoutContainer extends Component {
                   <Menu.Item key="v-interaction-7">
                     <NavLink to="/docs/components/radio">Radio</NavLink>
                   </Menu.Item>
+                  <Menu.Item key="v-interaction-8">
+                    <NavLink to="/docs/components/checkboxBar">CheckboxBar</NavLink>
+                  </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
             </Menu>
