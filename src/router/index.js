@@ -38,6 +38,7 @@ const StackPage = loadable(() => import("../pages/stack/stackPage"), { fallback:
 
 const ButtonPage = loadable(() => import("../pages/button/ButtonPage"), { fallback: <Loading /> });
 const RadioPage = loadable(() => import("../pages/radio/RadioPage"), { fallback: <Loading /> });
+const CheckboxBarPage = loadable(() => import("../pages/checkboxBar/CheckboxBarPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -243,6 +244,12 @@ const routes = [
             name: "EcharsTitle",
             path: "/docs/components/echarsTitle",
             component: EcharsTitle
+          },
+          {
+            key: "268",
+            name: "HdCheckboxBarPage",
+            path: "/docs/components/checkboxBar",
+            component: CheckboxBarPage
           }
         ]
       }

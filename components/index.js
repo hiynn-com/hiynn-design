@@ -20,6 +20,8 @@ import HdTab from "./tab";
 import HdButton from "./button";
 import HdRadio from "./radio";
 import EcharsTitle from "./echarsTitle";
+import HdCheckboxBar from "./checkboxBar";
+
 export {
   HdLayout,
   HdMaster,
@@ -42,7 +44,8 @@ export {
   HdTab,
   HdButton,
   HdRadio,
-  EcharsTitle
+  EcharsTitle,
+  HdCheckboxBar
 };
 export default {
   HdLayout,
@@ -66,5 +69,6 @@ export default {
   HdTab,
   HdButton,
   HdRadio,
-  EcharsTitle
+  EcharsTitle,
+  HdCheckboxBar
 };
