@@ -21,6 +21,7 @@ const CodeZonePage = loadable(() => import("../pages/codeZone/CodeZonePage"), { 
 
 const ArticlePage = loadable(() => import("../pages/article/ArticlePage"), { fallback: <Loading /> });
 const CommentPage = loadable(() => import("../pages/comment/CommentPage"), { fallback: <Loading /> });
+const EcharsTitle = loadable(() => import("../pages/echarsTitle/echarsTitle"), { fallback: <Loading /> });
 
 const FormValidationPages = loadable(() => import("../pages/formValidation/FormValidationPages"), { fallback: <Loading /> });
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
@@ -34,6 +35,10 @@ const PiePage = loadable(() => import("../pages/pie/PiePage"), { fallback: <Load
 const LinePage = loadable(() => import("../pages/line/linePage"), { fallback: <Loading></Loading> });
 const BarPage = loadable(() => import("../pages/bar/barPage"), { fallback: <Loading></Loading> });
 const StackPage = loadable(() => import("../pages/stack/stackPage"), { fallback: <Loading></Loading> });
+
+const ButtonPage = loadable(() => import("../pages/button/ButtonPage"), { fallback: <Loading /> });
+const RadioPage = loadable(() => import("../pages/radio/RadioPage"), { fallback: <Loading /> });
+const CheckboxBarPage = loadable(() => import("../pages/checkboxBar/CheckboxBarPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -221,6 +226,30 @@ const routes = [
             name: "Select",
             path: "/docs/components/select",
             component: Select
+          },
+          {
+            key: "265",
+            name: "HdButtonPage",
+            path: "/docs/components/button",
+            component: ButtonPage
+          },
+          {
+            key: "266",
+            name: "HdRadioPage",
+            path: "/docs/components/radio",
+            component: RadioPage
+          },
+          {
+            key: "267",
+            name: "EcharsTitle",
+            path: "/docs/components/echarsTitle",
+            component: EcharsTitle
+          },
+          {
+            key: "268",
+            name: "HdCheckboxBarPage",
+            path: "/docs/components/checkboxBar",
+            component: CheckboxBarPage
           }
         ]
       }

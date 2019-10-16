@@ -17,6 +17,10 @@ import HdFormValidation from "./formValidation";
 import HdRanking from "./ranking";
 import HdSelect from "./select";
 import HdTab from "./tab";
+import HdButton from "./button";
+import HdRadio from "./radio";
+import EcharsTitle from "./echarsTitle";
+import HdCheckboxBar from "./checkboxBar";
 
 export {
   HdLayout,
@@ -37,7 +41,11 @@ export {
   HdFormValidation,
   HdRanking,
   HdSelect,
-  HdTab
+  HdTab,
+  HdButton,
+  HdRadio,
+  EcharsTitle,
+  HdCheckboxBar
 };
 export default {
   HdLayout,
@@ -58,5 +66,9 @@ export default {
   HdFormValidation,
   HdRanking,
   HdSelect,
-  HdTab
+  HdTab,
+  HdButton,
+  HdRadio,
+  EcharsTitle,
+  HdCheckboxBar
 };

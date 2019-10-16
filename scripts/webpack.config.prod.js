@@ -11,6 +11,7 @@ const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin
 const postcssPresetEnv = require("postcss-preset-env");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { version, name, description } = require("../package.json");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
@@ -162,6 +163,7 @@ module.exports = {
       //指定输出路径和文件名
       filename: "./404.html"
     }),
+    new CopyPlugin([{ from: "./public/CNAME", to: "." }]),
     new InlineManifestWebpackPlugin(),
     new HtmlWebpackInlineSourcePlugin(),
     new webpack.HotModuleReplacementPlugin(),
