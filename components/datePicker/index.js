@@ -6,7 +6,7 @@ import "moment/locale/zh-cn";
 moment.locale("zh-cn");
 const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
 
-class HdDatePicker extends Component {
+class DatePicker extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -45,4 +45,4 @@ class HdDatePicker extends Component {
   }
 }
 
-export default HdDatePicker;
+export default DatePicker;
