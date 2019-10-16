@@ -276,12 +276,12 @@ class HdEcharts extends Component {
     return <ReactEcharts option={optionProp} notMerge={true} lazyUpdate={true} style={{ width: width ? width + "px" : "100%", height: height ? height + "px" : "100%" }} />;
   }
 }
-HdEchars.defaultProps = {
+HdEcharts.defaultProps = {
   data: [],
   title: "",
   value: 0
 };
-HdEchars.propTypes = {
+HdEcharts.propTypes = {
   data: PropTypes.array,
   title: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])

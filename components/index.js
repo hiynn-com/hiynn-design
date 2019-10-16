@@ -9,7 +9,7 @@ import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
 import HdFilter from "./filter";
-import HdEchars from "./hd-echarts";
+import HdEcharts from "./hd-echarts";
 import HdAdmin from "./admin";
 import HdDatePicker from "./hd-date-picker";
 import HdDropDown from "./dropDown";
@@ -34,7 +34,7 @@ export {
   CodeArea,
   Panel,
   HdFilter,
-  HdEchars,
+  HdEcharts,
   HdAdmin,
   HdDatePicker,
   HdDropDown,
@@ -59,7 +59,7 @@ export default {
   CodeArea,
   Panel,
   HdFilter,
-  HdEchars,
+  HdEcharts,
   HdAdmin,
   HdDatePicker,
   HdDropDown,
