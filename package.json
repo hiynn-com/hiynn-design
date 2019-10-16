@@ -1,6 +1,6 @@
 {
   "name": "hiynn-design",
-  "version": "0.3.2",
+  "version": "0.3.5",
   "description": "base on react and antd layout framework",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -9,6 +9,7 @@
     "lib",
     "es"
   ],
+  "homepage": "http://hiynn.design",
   "scripts": {
     "build:css": "cd scripts && gulp compile",
     "build:umd": "cross-env BABEL_ENV=umd webpack --mode production --config scripts/webpack.config.umd.js",
@@ -38,7 +39,10 @@
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.2",
+    "copy-webpack-plugin": "^5.0.4",
     "core-js": "3",
+    "echarts": "^4.1.0",
+    "echarts-for-react": "^2.0.15-beta.0",
     "enquire-js": "^0.2.1",
     "history": "^4.9.0",
     "lodash": "^4.17.4",
@@ -53,9 +57,7 @@
     "react-router-hash-link": "^1.2.2",
     "redux": "^4.0.4",
     "redux-actions": "^2.6.5",
-    "redux-persist": "^5.10.0",
-    "echarts": "^4.1.0",
-    "echarts-for-react": "^2.0.15-beta.0"
+    "redux-persist": "^5.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

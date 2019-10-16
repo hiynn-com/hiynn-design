@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["styles/index.pcss"],"sourcesContent":["@import \"./normalize.pcss\";\r\n@import \"./vars.pcss\";\r\n@import \"./app.pcss\";\r\n@import \"./override-antd.pcss\";\r\n"],"file":"index.pcss"}
+{"version":3,"names":[],"mappings":"","sources":["styles/index.pcss"],"sourcesContent":["@import \"./normalize.pcss\";\n@import \"./vars.pcss\";\n@import \"./app.pcss\";\n@import \"./override-antd.pcss\";\n"],"file":"index.pcss"}

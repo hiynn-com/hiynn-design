@@ -1,210 +1,129 @@
+import { Comment, Icon, Tooltip, Avatar } from 'antd';
 import React, { Component } from "react";
-import Vote from './vote';
 import moment from 'moment';
-import { Avatar, Button } from 'antd';
+import Reply from "./reply";
 
-
-class Comment extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            maxLength: 0,
-            isVote: true,
-            info: '',
-            showCommentAll: false,
-            data: [
-                {
-                    author: "张三",
-                    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-                    creationDate: "2019-08-28",
-                    commentId: "111",
-                    content: "66666666666666666667",
-                    like: 10,
-                    dislike: 3,
-                    children: [
-                        {
-                            author: "张三",
-                            avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-                            creationDate: "2019-08-28",
-                            commentId: "222",
-                            content: "65345436534765537564475788758",
-                            like: 10,
-                            dislike: 3,
-                        }
-                    ]
-                },
-                {
-                    author: "张三",
-                    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-                    creationDate: "2019-08-28",
-                    commentId: "111",
-                    content: "66666666666666666667",
-                    like: 10,
-                    dislike: 3,
-                    children: [
-                        {
-                            author: "张三",
-                            avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-                            creationDate: "2019-08-28",
-                            commentId: "222",
-                            content: "65345436534765537564475788758",
-                            like: 10,
-                            dislike: 3,
-                        }
-                    ]
-                },
-            ]
-        };
+class Comments extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: 0,
+      dislikes: 0,
+      action: null,
+      replyShow: false,
+      commentid: '',
+      singleComment: {}
     }
+  }
 
-    componentDidMount() {
-        this.setState({
-            maxLength: this.props.maxLength,
-            isVote: this.props.isVote,
-            data: this.props.data,
-        })
+  componentDidMount() {
+    this.setState({
+      singleComment: this.props.singleComment,
+      likes: this.props.singleComment.likes,
+      dislikes: this.props.singleComment.dislikes,
+      commentid: this.props.singleComment.commentid,
+      action: this.props.singleComment.islike,
+    })
+  }
+
+  UNSAFE_componentWillReceiveProps(nextprops) {
+    if (this.props != nextprops) {
+      this.setState({
+        singleComment: nextprops.singleComment,
+        likes: this.props.singleComment.likes,
+        dislikes: this.props.singleComment.dislikes,
+        commentid: this.props.singleComment.commentid,
+        action: this.props.singleComment.islike,
+      })
     }
+  }
 
-    UNSAFE_componentWillReceiveProps(nextprops) {
-        if (this.props != nextprops) {
-            this.setState({
-                maxLength: nextprops.maxLength,
-                isVote: nextprops.isVote,
-                data: nextprops.data
-            })
-        }
+  like = () => {
+    let action = this.state.action;
+    let likes = this.state.likes;
+    let dislikes = this.state.dislikes;
+    if (action == null) {
+      likes += 1;
+    } else if (action == 'dislike') {
+      likes += 1;
+      dislikes -= 1;
     }
+    action = 'like';
+    this.props.voteClick(likes, dislikes, this.state.commentid, action);
+  };
 
-    replyComment = (commentId, e) => {
-        let time = moment().format('YYYY-MM-DD HH:mm:ss');
-        let value = e.target.previousSibling.previousSibling.firstElementChild.value;
-        this.props.replySubmit(commentId, value, time);
+  dislike = () => {
+    let action = this.state.action;
+    let likes = this.state.likes;
+    let dislikes = this.state.dislikes;
+    if (action == null) {
+      dislikes += 1;
+    } else if (action == 'like') {
+      dislikes += 1;
+      likes -= 1;
     }
+    action = 'dislike';
+    this.props.voteClick(likes, dislikes, this.state.commentid, action);
+  };
 
-    //显示回复框
-    showCommentTag = (e) => {
-        e.currentTarget.nextSibling.style.display = 'block';
+  replyClick = () => {
+    this.setState({ replyShow: true });
+  }
+
+  onCancel = () => {
+    this.setState((preState) => {
+      return {
+        replyShow: !preState.replyShow
+      }
+    })
+  }
+
+  render() {
+    const { replyShow, likes, dislikes, action, singleComment } = this.state;
+    const { isMain } = this.props;
+    let actions = [
+      <span key="comment-basic-like">
+        <Tooltip title="Like">
+          <Icon
+            type="like"
+            theme={action === 'like' ? 'filled' : 'outlined'}
+            onClick={this.like}
+          />
+        </Tooltip>
+        <span style={{ paddingLeft: 8, cursor: 'auto' }}>{likes}</span>
+      </span>,
+      <span key=' key="comment-basic-dislike"'>
+        <Tooltip title="Dislike">
+          <Icon
+            type="dislike"
+            theme={action === 'dislike' ? 'filled' : 'outlined'}
+            onClick={this.dislike}
+          />
+        </Tooltip>
+        <span style={{ paddingLeft: 8, cursor: 'auto' }}>{dislikes}</span>
+      </span>
+    ];
+    if (isMain === false) {
+      actions.push(<span onClick={this.replyClick} key="comment-basic-reply-to">回复</span>);
     }
+    return (
+      <div>
+        <Comment actions={actions} {...singleComment} >
+          {
+            replyShow
+              ?
+              <Reply
+                loginInfo={this.props.loginInfo}
+                commentid={singleComment.commentid}
+                replySubmit={this.props.replySubmit}
+                onCancel={this.onCancel} />
+              : ''
+          }
+          {this.props.children}
+        </Comment>
 
-    //取消回复
-    closeComment = (e) => {
-        e.target.previousSibling.firstElementChild.value = '';
-        this.setState({
-            info: `还可以输入${this.props.maxLength}个字！`
-        })
-        e.target.parentNode.style.display = 'none';
-    }
-
-    //展开评论
-    showCommentAll = () => {
-        this.setState({
-            showCommentAll: true
-        })
-    }
-    mergeComment = () => {
-        this.setState({
-            showCommentAll: false
-        })
-    }
-
-    voteClick = (val, commentId) => {
-        this.props.voteClick(val, commentId);
-    }
-
-    changeWords(e) {
-        let maxLength = this.state.maxLength;
-        let val = e.target.value;
-        let length = val.length;
-        if (length > maxLength) {
-            e.target.nextSibling.value = `不能输入超过${maxLength}个字!`;
-            e.target.value = val.slice(0, maxLength);
-        } else {
-            e.target.nextSibling.value = `还可以输入${maxLength - length}个字！`;
-        }
-    }
-
-    render() {
-        const { showCommentAll, data, maxLength, isVote } = this.state;
-        return (
-            <div className='comment-box' key={data.commentId}>
-                <div className='comment-avatar'>
-                    <Avatar src={data.avatar} alt={data.author} />
-                </div>
-                <div style={{ width: '100%' }}>
-                    <div>
-                        <span className='author-style'>{data.author ? data.author : '匿名'}</span>
-                        <span className='time-style'>{data.creationDate}</span>
-                    </div>
-                    <p className='content-style'>{data.content}</p>
-
-                    <div style={{ width: '100%' }}>
-                        {isVote ? <Vote voteClick={this.voteClick} commentId={data.commentId} like={data.like} dislike={data.dislike} /> : ''}
-                        <span onClick={this.showCommentTag.bind(this)} className='click-style'>回复</span>
-                        <div className='answer-second' >
-                            <div>
-                                <textarea maxLength={maxLength} onChange={this.changeWords.bind(this)}></textarea>
-                                <input disabled value={this.state.info} />
-                            </div>
-                            <Button onClick={this.closeComment.bind(this)}>取消</Button>
-                            <Button type="primary" onClick={this.replyComment.bind(this, data.commentId)}>回复</Button>
-                        </div>
-                    </div>
-
-                    <div className='comment-reply'>
-                        {
-                            data.children ?
-                                (showCommentAll == false ?
-                                    data.children.slice(0, 3).map((item, index) =>
-                                        <div key={index}>
-                                            <div className='comment-avatar'>
-                                                <Avatar src={item.avatar} alt={item.author} />
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <span className='author-style'>{item.author ? item.author : '匿名'}</span>
-                                                    <span className='time-style'>{item.creationDate}</span>
-                                                </div>
-                                                <p className='content-style'>{item.content}</p>
-                                                {isVote ? <Vote voteClick={this.voteClick} commentId={item.commentId} like={item.like} dislike={item.dislike} /> : ''}
-                                            </div>
-                                        </div>
-                                    )
-                                    :
-                                    data.children.map((item, index) =>
-                                        <div key={index}>
-                                            <div className='comment-avatar'>
-                                                <Avatar src={item.avatar} alt={item.author} />
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <span className='author-style'>{item.author ? item.author : '匿名'}</span>
-                                                    <span className='time-style'>{item.creationDate}</span>
-                                                </div>
-                                                <p className='content-style'>{item.content}</p>
-                                                {isVote ? <Vote voteClick={this.voteClick} commentId={item.commentId} like={item.like} dislike={item.dislike} /> : ''}
-                                            </div>
-                                        </div>
-                                    )
-                                )
-                                :
-                                null
-                        }
-                        {data.children ? (data.children.length > 3
-                            ?
-                            (
-                                showCommentAll == false ? <p className='click-style' onClick={this.showCommentAll}>查看全部{data.children.length}条回复 ></p>
-                                    :
-                                    <p className='click-style' onClick={this.mergeComment}>收起</p>
-                            )
-                            :
-                            ''
-                        ) : ''
-                        }
-                    </div>
-                </div>
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 }
-
-export default Comment;
+export default Comments;
