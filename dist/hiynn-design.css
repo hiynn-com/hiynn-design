@@ -633,6 +633,47 @@ template {
 .hd-card-wrap.block .hd-card-content-cell {
       display: block;
     }
+
+    .hd-checkbox-bar .ant-carousel .slick-slide {
+      pointer-events: auto
+    }
+.hd-checkbox-bar .ant-carousel .slick-slide + .slick-slide {
+        margin-left: 5px;
+      }
+.hd-checkbox-bar .ant-carousel .slick-prev,
+    .hd-checkbox-bar .ant-carousel .slick-prev:hover,
+    .hd-checkbox-bar .ant-carousel .slick-prev:focus-within {
+      background: url("../image/arrow-prev.png") no-repeat center;
+    }
+.hd-checkbox-bar .ant-carousel .slick-next,
+    .hd-checkbox-bar .ant-carousel .slick-next:hover,
+    .hd-checkbox-bar .ant-carousel .slick-next:focus-within {
+      background: url("../image/arrow-next.png") no-repeat center;
+    }
+.hd-checkbox-bar .hd-checkbox {
+    height: 20px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background-color: rgba(20, 150, 241, 0.17);
+    color: #1496f1;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer
+  }
+.hd-checkbox-bar .hd-checkbox.hd-checkbox-checked {
+      background-color: rgba(20, 150, 241, 0.57);
+      color: #ffffff;
+    }
+.hd-checkbox-bar .hd-checkbox > .hd-checkbox-icon {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 6px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+
 .hd-codearea {
     border: 1px solid lightgray;
     overflow: hidden;
@@ -1121,6 +1162,12 @@ li.ant-calendar-time-picker-select-option-selected {
           content: none;
         }
 
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+.hd-searchForm-box{
+    margin-top:20px;
+    margin-left:20px;
+}
 .ranking {
   background: var(--verse-background-color);
   display: flex;
@@ -1210,12 +1257,6 @@ li.ant-calendar-time-picker-select-option-selected {
     left: -1px;
   }
 
-@import "../../styles/vars.pcss";
-@import "../../styles/animate.pcss";
-.hd-searchForm-box{
-    margin-top:20px;
-    margin-left:20px;
-}
 
   .select .ant-select-selection {
     border: 1px solid #128dcd;
@@ -1257,6 +1298,8 @@ li.ant-calendar-time-picker-select-option-selected {
   background: var(--select-dropdown-activecolor);
 }
 
+
+
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -1295,8 +1338,6 @@ li.ant-calendar-time-picker-select-option-selected {
 .ant-tabs-tab-next:hover {
   color: #fff;
 }
-
-
 
 
 .hd-vgroup {

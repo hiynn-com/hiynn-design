@@ -20,7 +20,8 @@ import HdTab from "./tab";
 import HdButton from "./button";
 import HdRadio from "./radio";
 import EcharsTitle from "./echarsTitle";
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEchars, HdAdmin, HdDatePicker, HdDropDown, HdFormValidation, HdRanking, HdSelect, HdTab, HdButton, HdRadio, EcharsTitle };
+import HdCheckboxBar from "./checkboxBar";
+export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEchars, HdAdmin, HdDatePicker, HdDropDown, HdFormValidation, HdRanking, HdSelect, HdTab, HdButton, HdRadio, EcharsTitle, HdCheckboxBar };
 export default {
   HdLayout: HdLayout,
   HdMaster: HdMaster,
@@ -43,6 +44,7 @@ export default {
   HdTab: HdTab,
   HdButton: HdButton,
   HdRadio: HdRadio,
-  EcharsTitle: EcharsTitle
+  EcharsTitle: EcharsTitle,
+  HdCheckboxBar: HdCheckboxBar
 };
 //# sourceMappingURL=index.js.map
