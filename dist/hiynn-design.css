@@ -1085,31 +1085,6 @@ li.ant-calendar-time-picker-select-option-selected {
   height: calc(100% - 64px);
 }
 
-.hd-panel {
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, .1);
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, .2)
-}
-.hd-panel .hd-panel-title {
-        width: 100%;
-        box-sizing: border-box;  
-        -webkit-user-select: none;  
-           -moz-user-select: none;  
-            -ms-user-select: none;  
-                user-select: none;
-        /* background: #25AFF3; */
-        /* color: white; */
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 5px 10px;
-        /* border-radius: 5px 5px 0 0; */
-    }
-.hd-panel .hd-panel-content {
-        width: 100%;
-        box-sizing: border-box;
-        height: auto;
-    }
 
     .hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper {
       height: 15px;
@@ -1162,6 +1137,31 @@ li.ant-calendar-time-picker-select-option-selected {
           content: none;
         }
 
+.hd-panel {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, .2)
+}
+.hd-panel .hd-panel-title {
+        width: 100%;
+        box-sizing: border-box;  
+        -webkit-user-select: none;  
+           -moz-user-select: none;  
+            -ms-user-select: none;  
+                user-select: none;
+        /* background: #25AFF3; */
+        /* color: white; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px 10px;
+        /* border-radius: 5px 5px 0 0; */
+    }
+.hd-panel .hd-panel-content {
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+    }
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 .hd-searchForm-box{
@@ -1298,8 +1298,6 @@ li.ant-calendar-time-picker-select-option-selected {
   background: var(--select-dropdown-activecolor);
 }
 
-
-
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -1355,6 +1353,8 @@ li.ant-calendar-time-picker-select-option-selected {
     width: var(--width);
     height: var(--height);
 }
+
+
 .article-container {
     width: 80%;
     margin: 0 auto;
