@@ -633,46 +633,6 @@ template {
 .hd-card-wrap.block .hd-card-content-cell {
       display: block;
     }
-.hd-codearea {
-    border: 1px solid lightgray;
-    overflow: hidden;
-    height: 150px;
-    border-radius: 3px;
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: nowrap
-}
-.hd-codearea > p.hd-codearea-p {
-        min-width: 15px;
-        flex-grow: 0;
-        height: 100%;
-        background-color: #F2F2F2;
-        margin: 0;
-        padding: 2px;
-        border-radius: 3px 0 0 3px;
-        font-size: 12px;
-        line-height: 15px;
-        text-align: center;
-        white-space: pre-line;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-        color: gray;
-        overflow: hidden;
-    }
-.hd-codearea > textarea.hd-codearea-textarea {
-        flex-grow: 1;
-        height: 100%;
-        border: none;
-        outline: none;
-        border-radius: 0 3px 3px 0;
-        font-size: 12px;
-        line-height: 15px;
-        white-space: pre;
-        padding-left: 5px;
-        resize: none;
-    }
 
     .hd-checkbox-bar .ant-carousel .slick-slide {
       pointer-events: auto
@@ -714,6 +674,46 @@ template {
       vertical-align: middle;
     }
 
+.hd-codearea {
+    border: 1px solid lightgray;
+    overflow: hidden;
+    height: 150px;
+    border-radius: 3px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: nowrap
+}
+.hd-codearea > p.hd-codearea-p {
+        min-width: 15px;
+        flex-grow: 0;
+        height: 100%;
+        background-color: #F2F2F2;
+        margin: 0;
+        padding: 2px;
+        border-radius: 3px 0 0 3px;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        white-space: pre-line;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        color: gray;
+        overflow: hidden;
+    }
+.hd-codearea > textarea.hd-codearea-textarea {
+        flex-grow: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 0 3px 3px 0;
+        font-size: 12px;
+        line-height: 15px;
+        white-space: pre;
+        padding-left: 5px;
+        resize: none;
+    }
 .hd-codezone {
     border: 1px solid lightgray;
     overflow: hidden;
@@ -754,36 +754,6 @@ template {
         padding-left: 5px;
         resize: none;
     }
-
-
-  .dropdown .ant-select-selection {
-    border: 1px solid #128dcd;
-    background: var(--select-dropdown-bgcolor);
-  }
-.dropdown .ant-select-arrow {
-    color: #fff;
-  }
-.dropdown .ant-select-selection-selected-value {
-    color: #fff;
-  }
-.ant-select-dropdown {
-  background-color: var(--select-dropdown-bgcolor) !important;
-}
-
-/* 2161B7 */
-.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
-  background: #2161b7;
-}
-.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
-  background: #2161b7;
-}
-.ant-select-dropdown-menu-item {
-  color: #fff;
-}
-.ant-select-dropdown-menu-item-selected {
-  background: #2161b7;
-}
-
 .chartTitle_wrap {
   border-bottom: 1px solid #0c7884
 
@@ -825,6 +795,35 @@ template {
       line-height: 30px;
       background: url('../img/title_bg2.png') repeat-x;
     }
+
+
+  .dropdown .ant-select-selection {
+    border: 1px solid #128dcd;
+    background: var(--select-dropdown-bgcolor);
+  }
+.dropdown .ant-select-arrow {
+    color: #fff;
+  }
+.dropdown .ant-select-selection-selected-value {
+    color: #fff;
+  }
+.ant-select-dropdown {
+  background-color: var(--select-dropdown-bgcolor) !important;
+}
+
+/* 2161B7 */
+.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+  background: #2161b7;
+}
+.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+  background: #2161b7;
+}
+.ant-select-dropdown-menu-item {
+  color: #fff;
+}
+.ant-select-dropdown-menu-item-selected {
+  background: #2161b7;
+}
 
 .hd-filter-box {
   margin: 20px
@@ -882,21 +881,7 @@ template {
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
-.hd-hgroup {
-    /** 
-    --width: 宽度，由js设置此属性
-    --height: 高度，由js设置此属性
-    --vertical-align: 垂直对齐方式，由js设置此属性
-    --horizontal-align: 水平对齐方式，由js设置此属性
-     */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: var(--horizontal-align);
-    align-items: var(--vertical-align);
-    width: var(--width);
-    height: var(--height);
-}
+
 
   .datePicker .datePicker-title {
     color: #545456;
@@ -987,14 +972,21 @@ li.ant-calendar-time-picker-select-option-selected {
   color: #fff;
 }
 
-
-  .demo-container.demo-wrapper {
-    color: red;
+.hd-hgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
+    flex-direction: row;
+    justify-content: var(--horizontal-align);
+    align-items: var(--vertical-align);
+    width: var(--width);
+    height: var(--height);
+}
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -1084,6 +1076,14 @@ li.ant-calendar-time-picker-select-option-selected {
   overflow-x: hidden;
   height: calc(100% - 64px);
 }
+
+
+  .demo-container.demo-wrapper {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
 .hd-panel {
     box-sizing: border-box;
@@ -1339,6 +1339,7 @@ li.ant-calendar-time-picker-select-option-selected {
   color: #fff;
 }
 
+
 .hd-vgroup {
     /** 
     --width: 宽度，由js设置此属性
@@ -1354,7 +1355,6 @@ li.ant-calendar-time-picker-select-option-selected {
     width: var(--width);
     height: var(--height);
 }
-
 .article-container {
     width: 80%;
     margin: 0 auto;

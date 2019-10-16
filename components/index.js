@@ -9,7 +9,7 @@ import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
 import HdFilter from "./filter";
-import HdEchars from "./echars";
+import HdEchars from "./hd-echarts";
 import HdAdmin from "./admin";
 import HdDatePicker from "./hd-date-picker";
 import HdDropDown from "./dropDown";
