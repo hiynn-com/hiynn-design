@@ -11,7 +11,7 @@ import Panel from "./panel";
 import HdFilter from "./filter";
 import HdEchars from "./echars";
 import HdAdmin from "./admin";
-import HdDatePicker from "./hdDatePicker";
+import HdDatePicker from "./hd-date-picker";
 import HdDropDown from "./dropDown";
 import HdFormValidation from "./formValidation";
 import HdRanking from "./ranking";
