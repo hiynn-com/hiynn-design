@@ -12,8 +12,24 @@ class HdEchars extends Component {
         this.state = {
             value: 0,
             dataArray: [],
-            // 数据
-            seriesData: [],
+            /**
+             * seriesData    
+               通过json或者初始化静态数据
+               apiData
+               通过接口获取
+             */
+            seriesData: [
+                { value: 335, name: '直接访问' },
+                { value: 320, name: '邮件营销' },
+                { value: 234, name: '联盟广告' },
+                { value: 125, name: '视频广告' },
+                { value: 1548, name: '搜索引擎' }
+            ],
+            apiData: [],
+            // 小图例
+            legendData: [],
+            //xAxisData 用于折线图 横坐标(x轴)
+            xAxisData: [],
             option: {}
         };
     }
@@ -33,29 +49,60 @@ class HdEchars extends Component {
 
     async shouldComponentUpdate(nextProps, nextState) {
         // 接受url参数
-        if (nextProps.fetchUrl != undefined && nextProps.fetchUrl != "") {
+        // if (nextProps.fetchUrl != undefined && nextProps.fetchUrl != "") {
+        if (JSON.stringify(nextProps.fetchUrl) != JSON.stringify(this.props.fetchUrl)) {
             await this.axiosData("get", nextProps.fetchUrl)
-            return true;
         } else {
-            console.log("fetchUrl为空,不需要走请求");
+            console.log("没有请求方法");
         }
 
-        // echars变化的数据
-        // if (nextProps.fetchUrl != undefined && nextProps.fetchUrl != "") {
+        if (JSON.stringify(this.state.apiData) != JSON.stringify(nextState.apiData)) {
+            return true
+        }
 
-        // } 
+        //JSON 传入的数据  
+        if (JSON.stringify(nextProps.seriesData) != JSON.stringify(this.props.seriesData)) {
+            console.log("nextProps.seriesData", nextProps.seriesData.data);
+            if (nextProps.seriesData.data.xAxisData == undefined) {
+                this.setState({
+                    apiData: nextProps.seriesData.data.seriesData,
+                    legendData: nextProps.seriesData.data.legendData,
+                })
+            } else if (nextProps.seriesData.data.xAxisData != []) {
+                console.log("进去了折线图json");
+                this.setState({
+                    xAxisData: nextProps.seriesData.data.xAxisData,
+                    legendData: nextProps.seriesData.data.legendData,
+                })
+            }
+            return true
+        }
         return false;
     }
 
-    // 简单的一个axios封装
+    //简单的一个axios封装
     axiosData = (type, url) => {
         return axios({
             method: type,
             url: url
         })
             .then((res) => {
-                console.log(res.data)
-                seriesFetchData = res.data;
+                if (res.data.code == 200) {
+                    // 判断是否饼图还是折线图or饼图
+                    // xAxisData  存在就是折线图，否则就是饼图
+                    if (res.data.data.xAxisData == undefined) {
+                        this.setState({
+                            apiData: res.data.data.seriesData,
+                            legendData: res.data.data.legendData,
+                        })
+                    } else {
+                        this.setState({
+                            xAxisData: res.data.data.xAxisData,
+                            apiData: res.data.data.seriesData,
+                            legendData: res.data.data.legendData,
+                        })
+                    }
+                }
             })
             .catch((error) => {
                 console.log(error)
@@ -67,8 +114,8 @@ class HdEchars extends Component {
         const { value, dataArray, option } = this.state
         // 判断什么类型的echars,组装不同的option
         let type = typeName ? typeName : "pie";
+        console.log("renderlimian de seriesData", seriesData)
         let optionProp;
-        console.log("seriesFetchData", seriesFetchData);
         if (type == "pie") {
             // 重新组合option 这是饼图
             optionProp = {
@@ -94,7 +141,7 @@ class HdEchars extends Component {
                     // 小图例所在位置
                     left: legendLeft ? legendLeft : 'left',
                     // 小图例具体显示名称---数组格式
-                    data: legendData ? legendData : ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+                    data: this.state.legendData.length > 0 ? this.state.legendData : ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
                 },
                 series: [
                     {
@@ -121,13 +168,7 @@ class HdEchars extends Component {
                         // roseType: 'area',
                         // 自定义颜色
                         color: seriesColor ? seriesColor : ["#3aa1ff", "#36cbcb", "#4ecb73", "#fbd437", "#f2637b", "#975fe5", "#ff8352", "#8fc31f", "#3d71f1", "#e067b7", "#f4aa22", "#d3dd34", "#6fce40", "#b365d3"],
-                        data: seriesData ? seriesData : [
-                            { value: 335, name: '直接访问' },
-                            { value: 310, name: '邮件营销' },
-                            { value: 234, name: '联盟广告' },
-                            { value: 135, name: '视频广告' },
-                            { value: 1548, name: '搜索引擎' }
-                        ],
+                        data: this.state.apiData.length > 0 ? this.state.apiData : this.state.seriesData,
                         itemStyle: {
                             borderWidth: 2,
                             borderColor: "#fff",
@@ -158,13 +199,13 @@ class HdEchars extends Component {
                 },
                 legend: {
                     top: 15,
-                    data: legendData ? legendData : ['蒸发量', '降水量', '平均温度']
+                    data: this.state.legendData.length > 0 ? this.state.legendData : ['蒸发量', '降水量', '平均温度']
                 },
                 calculable: true,
                 xAxis: [
                     {
                         type: 'category',
-                        data: xAxisData ? xAxisData : ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                        data: this.state.xAxisData.length > 0 ? this.state.xAxisData : ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
                     }
                 ],
                 yAxis: [
@@ -191,7 +232,7 @@ class HdEchars extends Component {
                     bottom: '20px',
                     containLabel: true
                 },
-                series: seriesData ? seriesData : [
+                series: this.state.apiData.length > 0 ? this.state.apiData : (seriesData ? seriesData.data.seriesData : [
                     {
                         name: '蒸发量',
                         type: type,
@@ -207,7 +248,7 @@ class HdEchars extends Component {
                         type: type,
                         data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
                     }
-                ],
+                ]),
                 backgroundColor: backgroundColor ? backgroundColor : "rgb(0, 0, 0,0)"
             }
         }
