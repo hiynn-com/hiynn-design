@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import HdRanking from "../../../components/ranking";
-import "../../../components/ranking/style";
+import HdRanking from "../../../components/hd-ranking";
+import "../../../components/hd-ranking/style";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import IndexMD from "./md/index.md";
 import ApiMD from "./md/api.md";
