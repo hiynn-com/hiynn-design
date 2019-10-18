@@ -19,7 +19,7 @@ import HdSelect from "./hd-select";
 import HdTab from "./tab";
 import HdButton from "./hd-button";
 import HdRadio from "./hd-radio";
-import EcharsTitle from "./echarsTitle";
+import EcharsTitle from "./echars-title";
 import HdCheckboxBar from "./hd-checkbox-bar";
 
 export {
