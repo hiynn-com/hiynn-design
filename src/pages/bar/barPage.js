@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HdBar from "../../../components/echars";
+import HdBar from "../../../components/hd-echarts";
 import { PreviewLayout, MdPreviewer, CodePreviewer } from "react-code-previewer";
 import install from "./md/install.md";
 import apiMd from "./md/api.md";
@@ -9,7 +9,8 @@ class HdBarPage extends Component {
         return (
             <PreviewLayout>
                 <MdPreviewer md={install}></MdPreviewer>
-                <CodePreviewer code={`<HdLine
+                <CodePreviewer
+                    code={`<HdLine
                     typeName="line"
                     title="这是测试的标题"
                     titleSubtext="这是副标题"

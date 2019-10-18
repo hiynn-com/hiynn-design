@@ -9,9 +9,9 @@ import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
 import HdFilter from "./filter";
-import HdEchars from "./echars";
+import HdEcharts from "./hd-echarts";
 import HdAdmin from "./admin";
-import HdDatePicker from "./datePicker";
+import HdDatePicker from "./hd-date-picker";
 import HdDropDown from "./dropDown";
 import HdFormValidation from "./formValidation";
 import HdRanking from "./ranking";
@@ -21,7 +21,7 @@ import HdButton from "./button";
 import HdRadio from "./radio";
 import EcharsTitle from "./echarsTitle";
 import HdCheckboxBar from "./checkboxBar";
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEchars, HdAdmin, HdDatePicker, HdDropDown, HdFormValidation, HdRanking, HdSelect, HdTab, HdButton, HdRadio, EcharsTitle, HdCheckboxBar };
+export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEcharts, HdAdmin, HdDatePicker, HdDropDown, HdFormValidation, HdRanking, HdSelect, HdTab, HdButton, HdRadio, EcharsTitle, HdCheckboxBar };
 export default {
   HdLayout: HdLayout,
   HdMaster: HdMaster,
@@ -34,7 +34,7 @@ export default {
   CodeArea: CodeArea,
   Panel: Panel,
   HdFilter: HdFilter,
-  HdEchars: HdEchars,
+  HdEcharts: HdEcharts,
   HdAdmin: HdAdmin,
   HdDatePicker: HdDatePicker,
   HdDropDown: HdDropDown,

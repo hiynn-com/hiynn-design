@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import HdDatePicker from "../../../components/datePicker";
-import "../../../components/datePicker/style";
+import HdDatePicker from "../../../components/hd-date-picker";
+import "../../../components/hd-date-picker/style";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import moment from "moment";
 import IndexMD from "./md/index.md";

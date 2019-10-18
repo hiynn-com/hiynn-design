@@ -9,13 +9,13 @@ import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
 import HdFilter from "./filter";
-import HdEchars from "./echars";
+import HdEcharts from "./hd-echarts";
 import HdAdmin from "./admin";
-import HdDatePicker from "./datePicker";
+import HdDatePicker from "./hd-date-picker";
 import HdDropDown from "./dropDown";
 import HdFormValidation from "./formValidation";
-import HdRanking from "./ranking";
-import HdSelect from "./select";
+import HdRanking from "./hd-ranking";
+import HdSelect from "./hd-select";
 import HdTab from "./tab";
 import HdButton from "./button";
 import HdRadio from "./radio";
@@ -34,7 +34,7 @@ export {
   CodeArea,
   Panel,
   HdFilter,
-  HdEchars,
+  HdEcharts,
   HdAdmin,
   HdDatePicker,
   HdDropDown,
@@ -59,7 +59,7 @@ export default {
   CodeArea,
   Panel,
   HdFilter,
-  HdEchars,
+  HdEcharts,
   HdAdmin,
   HdDatePicker,
   HdDropDown,
