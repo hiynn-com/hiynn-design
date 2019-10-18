@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {PreviewLayout, MdPreviewer, CodePreviewer} from "react-code-previewer";
 import ApiMD from "./md/api.md";
 import IndexMD from "./md/index.md";
-import HdCheckboxBar from "../../../components/checkboxBar";
-import "../../../components/checkboxBar/style";
+import HdCheckboxBar from "../../../components/hd-checkbox-bar";
+import "../../../components/hd-checkbox-bar/style";
 
 const options = [
   {icon: '#1496f1', label: '柳工', value: '0'},
