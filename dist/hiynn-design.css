@@ -1036,7 +1036,8 @@ li.ant-calendar-time-picker-select-option-selected {
   justify-content: space-between;
   box-sizing: border-box;
   position: relative;
-  padding: 10px 0
+  padding: 10px 0;
+  height: 100%
 }
 .ranking div {
     flex: 1;
