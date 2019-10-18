@@ -17,16 +17,41 @@ class HdRanking extends Component {
         .then(response => {
           this.setState(
             {
-              data: response.data.data
+              data: response.data.data.data
             },
             () => {
-              console.log(this.state.data);
+              // console.log(this.state.data);
             }
           );
         })
         .catch(error => {
           console.log(error);
         });
+    }
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.url) {
+      axios
+        .get(this.props.url)
+        .then(response => {
+          this.setState(
+            {
+              data: response.data.data.data
+            },
+            () => {
+              // console.log(this.state.data);
+            }
+          );
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    } else {
+      if (nextProps.data) {
+        this.setState({
+          data: nextProps.data
+        });
+      }
     }
   }
 

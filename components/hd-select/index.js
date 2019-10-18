@@ -1,5 +1,6 @@
 import { Select } from "antd";
 import React, { Component } from "react";
+import axios from "axios";
 
 const { Option } = Select;
 
@@ -7,7 +8,7 @@ class HdSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {}
+      data: ""
     };
   }
 
@@ -19,16 +20,42 @@ class HdSelect extends Component {
         .then(response => {
           this.setState(
             {
-              data: response.data.data
+              data: response.data.data.options
             },
             () => {
-              console.log(this.state.data);
+              // console.log(this.state.data);
             }
           );
         })
         .catch(error => {
           console.log(error);
         });
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.url) {
+      axios
+        .get(this.props.url)
+        .then(response => {
+          this.setState(
+            {
+              data: response.data.data.options
+            },
+            () => {
+              // console.log(this.state.data);
+            }
+          );
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    } else {
+      if (nextProps.data) {
+        this.setState({
+          data: nextProps.data
+        });
+      }
     }
   }
 
@@ -52,8 +79,8 @@ class HdSelect extends Component {
           </Select>
         ) : (
           <Select placeholder={placeholder} defaultValue={defaultValue} mode={mode} size={size} loading={loading} onChange={onChange} style={style}>
-            {data
-              ? data.map((item, index) => {
+            {this.state.data
+              ? this.state.data.map((item, index) => {
                   return (
                     <Option key={index} value={item.value}>
                       {item.name}
