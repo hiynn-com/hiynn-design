@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import EcharsTitle from "../../../components/echarsTitle";
-import "../../../components/echarsTitle/style";
+import EcharsTitle from "../../../components/echars-title";
+import "../../../components/echars-title/style";
 
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import echarsTitleMd from "./md/echarsTitle.md";
