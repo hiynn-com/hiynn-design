@@ -2,6 +2,8 @@ import {Carousel} from 'antd';
 import classNames from 'classnames';
 import React from 'react';
 
+const returnName = 'label';
+
 const settings = {
   arrows: true,
   centerMode: false,
@@ -28,7 +30,7 @@ class HdCheckboxBar extends React.Component {
     }, () => {
       this.props.onChange &&
       this.props.onChange(this.state.options.filter(item => item.checked).map(item => ({
-        name: 'HdCheckboxBar',
+        name: returnName,
         value: item.value,
       })));
     });

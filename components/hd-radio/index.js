@@ -1,6 +1,8 @@
 import {Radio} from 'antd';
 import React from 'react';
 
+const returnName = 'title';
+
 class HdRadio extends React.Component {
   render() {
     const {
@@ -22,7 +24,7 @@ class HdRadio extends React.Component {
           buttonStyle,
         }}
         onChange={ev => onChange && onChange({
-          name: 'HdRadio',
+          name: returnName,
           value: ev.target.value,
         })}
       >
