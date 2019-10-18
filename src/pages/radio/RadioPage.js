@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {PreviewLayout, MdPreviewer, CodePreviewer} from "react-code-previewer";
 import ApiMD from "./md/api.md";
 import IndexMD from "./md/index.md";
-import HdRadio from "../../../components/radio";
-import "../../../components/radio/style";
+import HdRadio from "../../../components/hd-radio";
+import "../../../components/hd-radio/style";
 
 const options1 = [
   {label: '同比', value: '0'},

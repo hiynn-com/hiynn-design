@@ -9,9 +9,9 @@ import VGroup from "./vGroup";
 import CodeArea from "./codeArea";
 import Panel from "./panel";
 import HdFilter from './filter'
-import HdButton from './button'
-import HdRadio from './radio'
-import HdCheckboxBar from './checkboxBar'
+import HdButton from './hd-button'
+import HdRadio from './hd-radio'
+import HdCheckboxBar from './hd-checkbox-bar'
 
 export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdButton, HdRadio, HdCheckboxBar };
 export default { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdButton, HdRadio, HdCheckboxBar };
