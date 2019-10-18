@@ -59,13 +59,20 @@ class HdSelect extends Component {
     }
   }
 
+  onChange = value => {
+    this.props.onChange({
+      name: "value",
+      value: value
+    });
+  };
+
   render() {
     let { size, loading, onChange, style, mode, defaultValue, placeholder, label, data, url } = this.props;
     return (
       <div className={"select"}>
         {label ? <span className={"select-label"}>{label} :</span> : ""}
         {
-          <Select placeholder={placeholder} defaultValue={defaultValue} mode={mode} size={size} loading={loading} onChange={onChange} style={style}>
+          <Select placeholder={placeholder} defaultValue={defaultValue} mode={mode} size={size} loading={loading} onChange={this.onChange} style={style}>
             {this.state.data
               ? this.state.data.map((item, index) => {
                   return (

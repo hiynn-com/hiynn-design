@@ -14,12 +14,12 @@ export default class DatePickerPage extends Component {
       import { HdDatePicker } from 'hiynn-design';
       import moment from "moment";
 
-      onChange = (date, dateString) => {
-        console.log(date, dateString);
+      onChange = value => {
+        console.log("选择后的值", value);
       };
 
       onOk = value => {
-        console.log(value[0]._d);
+        console.log(value[0]);
       };
 
       <HdDatePicker type="month" label={"日期选择"} onOk={this.onOk} onChange={this.onChange} size={"small"}></HdDatePicker>
@@ -35,7 +35,7 @@ export default class DatePickerPage extends Component {
       };
 
       onOk = value => {
-        console.log(value[0]._d);
+        console.log(value[0]);
       };
 
       <HdDatePicker type="range" label={"日期选择"} onOk={this.onOk} onChange={this.onChange} size={"small"}></HdDatePicker>
@@ -46,12 +46,12 @@ export default class DatePickerPage extends Component {
       import { HdDatePicker } from 'hiynn-design';
       import moment from "moment";
 
-      onChange = (date, dateString) => {
-        console.log(date, dateString);
+      onChange = value => {
+        console.log("选择后的值", value);
       };
       
       onOk = value => {
-        console.log(value[0]._d);
+        console.log(value[0]);
       };
           
       <HdDatePicker type="range" label={"日期时间选择"} onOk={this.onOk} showTime={{ format: "HH:mm" }} onChange={this.onChange}></HdDatePicker>
@@ -60,12 +60,12 @@ export default class DatePickerPage extends Component {
       import { HdDatePicker } from 'hiynn-design';
       import moment from "moment";
 
-      onChange = (date, dateString) => {
-        console.log(date, dateString);
+      onChange = value => {
+        console.log("选择后的值", value);
       };
       
       onOk = value => {
-        console.log(value[0]._d);
+        console.log(value);
       };
           
       <HdDatePicker
@@ -83,11 +83,11 @@ export default class DatePickerPage extends Component {
 
   componentDidMount() {}
 
-  onChange = (date, dateString) => {
-    console.log(date, dateString);
+  onChange = value => {
+    console.log("选择后的值", value);
   };
   onOk = value => {
-    console.log(value[0]._d);
+    console.log(value);
   };
 
   render() {
