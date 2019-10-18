@@ -1,7 +1,5 @@
+import { Button, Form, Input, Select } from "antd";
 import React, { Component } from "react";
-import { Form, Input, Button, Checkbox, message, Select } from "antd";
-import { fromJs, Map, Set } from "immutable";
-import PropTypes from "prop-types";
 
 const { Option } = Select;
 
@@ -22,7 +20,7 @@ class HdFormValidation extends Component {
 
   render() {
     const { getFieldDecorator } = this.props.form;
-    const { Hdbtn, Hdchange, Hddata, Hdsubmit, layout } = this.props;
+    const { Hdbtn, Hdchange, Hddata, Hdsubmit, layout, data } = this.props;
 
     return (
       <div>
@@ -31,26 +29,7 @@ class HdFormValidation extends Component {
             return (
               <Form.Item key={index} label={item.label} labelCol={{ span: item.labelCol }} wrapperCol={{ span: item.wrapperCol }}>
                 {getFieldDecorator(`${item.key}`, {
-                  rules: [
-                    { required: item.required, message: `${item.placeholder}` },
-                    { pattern: item.reg, message: item.message }
-                    // {
-                    //   validator: (rule, value, callback, source, options) => {
-                    //     let patten = new RegExp(item.reg);
-                    //     if (!patten.test(value)) {
-                    //       let key = item.key;
-                    //       console.log(key);
-                    //       // message.warning("输入有误");
-                    //       this.props.form.setFieldsValue({
-                    //         [key]: value.substring(0, value.length - 1)
-                    //       });
-                    //       return callback("输入有误");
-                    //     } else {
-                    //       // return callback("输入有误!!!");
-                    //     }
-                    //   }
-                    // }
-                  ]
+                  rules: [{ required: item.required, message: `${item.placeholder}` }, { pattern: item.reg, message: item.message }]
                 })(
                   item.type == "password" ? (
                     <Input.Password type={`${item.type}`} placeholder={item.placeholder} />

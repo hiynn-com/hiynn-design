@@ -231,14 +231,46 @@ class LayoutContainer extends Component {
               </SubMenu>
               <SubMenu key="v-0" title={<span>可视化组件</span>}>
                 <Menu.ItemGroup key="v-echart" title="Echarts">
+                  <Menu.Item key="v-echart-0">
+                    <NavLink to="/docs/components/echarsTitle">EcharsTitle</NavLink>
+                  </Menu.Item>
                   <Menu.Item key="v-echart-1">
-                    <NavLink to="/docs/components/article">Pie</NavLink>
+                    <NavLink to="/docs/components/Pie">Pie</NavLink>
                   </Menu.Item>
                   <Menu.Item key="v-echart-2">
-                    <NavLink to="/docs/components/comment">Line</NavLink>
+                    <NavLink to="/docs/components/Line">Line</NavLink>
                   </Menu.Item>
                   <Menu.Item key="v-echart-3">
-                    <NavLink to="/docs/components/echarsTitle">EcharsTitle</NavLink>
+                    <NavLink to="/docs/components/Bar">Bar</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-echart-4">
+                    <NavLink to="/docs/components/Stack">Stack</NavLink>
+                  </Menu.Item>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup key="v-interaction" title="Interaction">
+                  <Menu.Item key="v-interaction-1">
+                    <NavLink to="/docs/components/ranking">Ranking</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-2">
+                    <NavLink to="/docs/components/datePicker">DatePicker</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-3">
+                    <NavLink to="/docs/components/tab">Tab</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-4">
+                    <NavLink to="/docs/components/dropdown">DropDown</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-5">
+                    <NavLink to="/docs/components/select">Select</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-6">
+                    <NavLink to="/docs/components/button">Button</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-7">
+                    <NavLink to="/docs/components/radio">Radio</NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="v-interaction-8">
+                    <NavLink to="/docs/components/checkboxBar">CheckboxBar</NavLink>
                   </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>

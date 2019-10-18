@@ -25,6 +25,20 @@ const EcharsTitle = loadable(() => import("../pages/echarsTitle/echarsTitle"), {
 
 const FormValidationPages = loadable(() => import("../pages/formValidation/FormValidationPages"), { fallback: <Loading /> });
 const Admin = loadable(() => import("../pages/admin/AdminPage"), { fallback: <Loading></Loading> });
+const Ranking = loadable(() => import("../pages/ranking/RankingPage"), { fallback: <Loading></Loading> });
+const DatePicker = loadable(() => import("../pages/datePicker/DatePickerPage"), { fallback: <Loading></Loading> });
+const Tab = loadable(() => import("../pages/tab/TabPage"), { fallback: <Loading></Loading> });
+const DropDown = loadable(() => import("../pages/dropDown/DropDown"), { fallback: <Loading></Loading> });
+const Select = loadable(() => import("../pages/select/Select"), { fallback: <Loading /> });
+
+const PiePage = loadable(() => import("../pages/pie/PiePage"), { fallback: <Loading></Loading> });
+const LinePage = loadable(() => import("../pages/line/linePage"), { fallback: <Loading></Loading> });
+const BarPage = loadable(() => import("../pages/bar/barPage"), { fallback: <Loading></Loading> });
+const StackPage = loadable(() => import("../pages/stack/stackPage"), { fallback: <Loading></Loading> });
+
+const ButtonPage = loadable(() => import("../pages/button/ButtonPage"), { fallback: <Loading /> });
+const RadioPage = loadable(() => import("../pages/radio/RadioPage"), { fallback: <Loading /> });
+const CheckboxBarPage = loadable(() => import("../pages/checkboxBar/CheckboxBarPage"), { fallback: <Loading /> });
 
 const routes = [
   {
@@ -155,11 +169,87 @@ const routes = [
             path: "/docs/components/formValidation",
             component: FormValidationPages
           },
+          // 饼图
           {
             key: "256",
+            name: "HdPie",
+            path: "/docs/components/Pie",
+            component: PiePage
+          },
+          // 折线图
+          {
+            key: "257",
+            name: "HdLine",
+            path: "/docs/components/Line",
+            component: LinePage
+          },
+          // 柱状图
+          {
+            key: "258",
+            name: "HdLine",
+            path: "/docs/components/Bar",
+            component: BarPage
+          },
+          // 堆叠图
+          {
+            key: "259",
+            name: "HdLine",
+            path: "/docs/components/Stack",
+            component: StackPage
+          },
+          {
+            key: "260",
+            name: "RankingPage",
+            path: "/docs/components/ranking",
+            component: Ranking
+          },
+          {
+            key: "261",
+            name: "DatePickerPage",
+            path: "/docs/components/datePicker",
+            component: DatePicker
+          },
+          {
+            key: "262",
+            name: "TabPage",
+            path: "/docs/components/Tab",
+            component: Tab
+          },
+          {
+            key: "263",
+            name: "DropDown",
+            path: "/docs/components/dropdown",
+            component: DropDown
+          },
+          {
+            key: "264",
+            name: "Select",
+            path: "/docs/components/select",
+            component: Select
+          },
+          {
+            key: "265",
+            name: "HdButtonPage",
+            path: "/docs/components/button",
+            component: ButtonPage
+          },
+          {
+            key: "266",
+            name: "HdRadioPage",
+            path: "/docs/components/radio",
+            component: RadioPage
+          },
+          {
+            key: "267",
             name: "EcharsTitle",
             path: "/docs/components/echarsTitle",
             component: EcharsTitle
+          },
+          {
+            key: "268",
+            name: "HdCheckboxBarPage",
+            path: "/docs/components/checkboxBar",
+            component: CheckboxBarPage
           }
         ]
       }
