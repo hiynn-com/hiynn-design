@@ -19,15 +19,18 @@ class HdRadio extends React.Component {
           defaultValue,
           disabled,
           name,
-          onChange,
           buttonStyle,
         }}
+        onChange={ev => onChange && onChange({
+          name: 'HdRadio',
+          value: ev.target.value,
+        })}
       >
         {options.map(item => {
           const {
             checked,
             value,
-            label,
+            name,
           } = item;
           return <Radio.Button
             key={value}
@@ -35,7 +38,7 @@ class HdRadio extends React.Component {
               checked,
               value,
             }}
-          >{label}</Radio.Button>
+          >{name}</Radio.Button>
         })}
       </Radio.Group>
     )

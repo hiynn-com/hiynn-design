@@ -6,13 +6,13 @@ import HdRadio from "../../../components/hd-radio";
 import "../../../components/hd-radio/style";
 
 const options1 = [
-  {label: '同比', value: '0'},
-  {label: '环比', value: '1'},
+  {name: '同比', value: '0'},
+  {name: '环比', value: '1'},
 ];
 
 const options2 = [
-  {label: '第四次', value: '2'},
-  {label: '第五次', value: '3'},
+  {name: '第四次', value: '2'},
+  {name: '第五次', value: '3'},
 ];
 
 export default class RadioPage extends Component {
@@ -22,19 +22,27 @@ export default class RadioPage extends Component {
       code: `import { HdRadio } from "hiynn-design";
 
 const options1 = [
-  {label: '同比', value: '0'},
-  {label: '环比', value: '1'},
+  {name: '同比', value: '0'},
+  {name: '环比', value: '1'},
 ];
 
 const options2 = [
-  {label: '第四次', value: '2'},
-  {label: '第五次', value: '3'},
+  {name: '第四次', value: '2'},
+  {name: '第五次', value: '3'},
 ];
 
+onChange = checkedItem => {
+  console.log(checkedItem)
+};
+
 <HdRadio options={options1} defaultValue="0" buttonStyle="solid"/>
-<HdRadio options={options2} defaultValue="2"/>`
+<HdRadio options={options2} defaultValue="2" onChange={this.onChange}/>`
     };
   }
+
+  onChange = checkedItem => {
+    console.log(checkedItem)
+  };
 
   render() {
     return (
@@ -43,7 +51,7 @@ const options2 = [
         <CodePreviewer code={this.state.code} showCode>
           <HdRadio options={options1} defaultValue="0" buttonStyle="solid"/>
           <br/><br/>
-          <HdRadio options={options2} defaultValue="2"/>
+          <HdRadio options={options2} defaultValue="2" onChange={this.onChange}/>
         </CodePreviewer>
         <MdPreviewer md={ApiMD}/>
       </PreviewLayout>
