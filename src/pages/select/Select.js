@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import HdSelect from "../../../components/select";
-import "../../../components/select/style";
+import HdSelect from "../../../components/hd-select";
+import "../../../components/hd-select/style";
 
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import moment from "moment";

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import HdTab from "../../../components/tab";
-import HdRanking from "../../../components/ranking";
 import "../../../components/tab/style";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import IndexMD from "./md/index.md";
