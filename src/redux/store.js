@@ -4,6 +4,8 @@ import { routerMiddleware } from "connected-react-router/immutable";
 import immutableTransform from "redux-persist-transform-immutable";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import logger from "redux-logger";
+
 import createRootReducer from "./reducers";
 export const history = createBrowserHistory({
   // 如果 package.json 里面设置了 homepage 那么这里就可以 不用设置
@@ -26,7 +28,8 @@ export default function configureStore(preloadedState) {
     preloadedState,
     compose(
       applyMiddleware(
-        routerMiddleware(history) // for dispatching history actions
+        routerMiddleware(history) // for dispatching history actions,
+        // logger
         // ... other middlewares ...
       )
     )

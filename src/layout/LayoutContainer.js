@@ -19,7 +19,7 @@ const { Search } = Input;
 @withRouter
 @connect(
   ({ layoutReducer }) => ({ layoutReducer }),
-  { saveMenuIndex: layoutAction.saveMenuIndex }
+  { saveMenuIndex: layoutAction.saveMenuIndex, setMenuOpenKeys: layoutAction.setMenuOpenKeys }
 )
 class LayoutContainer extends Component {
   constructor(props) {
@@ -90,6 +90,9 @@ class LayoutContainer extends Component {
   clickMenu = ({ item, key, keyPath }) => {
     this.props.saveMenuIndex(keyPath);
   };
+  openChange = openKeys => {
+    this.props.setMenuOpenKeys(openKeys);
+  };
   toggleCollapse = () => {
     this.setState({
       sider: this.state.sider.set("collapsed", !this.state.sider.get("collapsed"))
@@ -155,10 +158,11 @@ class LayoutContainer extends Component {
               className="content-layout-sider-menu"
               mode="inline"
               theme="light"
-              defaultSelectedKeys={[layoutReducer.get("index")]}
+              // defaultSelectedKeys={[layoutReducer.get("index")]}
               selectedKeys={[layoutReducer.get("index")]}
-              defaultOpenKeys={[layoutReducer.get("subIndex")]}
+              openKeys={layoutReducer.get("openKeys").toJS()}
               onClick={this.clickMenu}
+              onOpenChange={this.openChange}
             >
               <Menu.Item key="1">
                 <NavLink to="/docs/introduction">介绍</NavLink>
@@ -229,7 +233,7 @@ class LayoutContainer extends Component {
                   </Menu.Item>
                 </Menu.ItemGroup>
               </SubMenu>
-              <SubMenu key="v-0" title={<span>可视化组件</span>}>
+              <SubMenu key="5" title={<span>可视化组件</span>}>
                 <Menu.ItemGroup key="v-echart" title="Echarts">
                   <Menu.Item key="v-echart-0">
                     <NavLink to="/docs/components/echarsTitle">EcharsTitle</NavLink>
