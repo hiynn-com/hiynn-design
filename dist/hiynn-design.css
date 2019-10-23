@@ -884,6 +884,7 @@ template {
       vertical-align: middle;
     }
 
+
 .datePicker {
   white-space: nowrap
 }
@@ -900,7 +901,8 @@ template {
     color: #128dcd;
   }
 .ant-calendar {
-  background: var(--select-dropdown-bgcolor);
+  /* background: var(--select-dropdown-bgcolor) !important; */
+  background: var(--select-dropdown-bgcolor) !important;
   border: transparent;
   color: #fff;
 }
@@ -975,7 +977,6 @@ li.ant-calendar-time-picker-select-option-selected {
   background: var(--select-dropdown-bgcolor);
   color: #fff;
 }
-
 
 
     .hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper {
