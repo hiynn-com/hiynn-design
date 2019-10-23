@@ -1,6 +1,9 @@
-import React from 'react';
 import {Carousel} from 'antd';
+import axios from 'axios';
 import classNames from 'classnames';
+import React from 'react';
+
+const returnName = 'label';
 
 const settings = {
   arrows: true,
@@ -21,26 +24,65 @@ class HdCheckboxBar extends React.Component {
     };
   }
 
+  componentWillMount() {
+    if (this.props.url) {
+      this.fetchOptions(this.props.url);
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.url !== nextProps.url) {
+      this.fetchOptions(nextProps.url);
+    } else if (this.props.options !== nextProps.options) {
+      const options = nextProps.options || [];
+      this.setState({options}, () => {
+        this.refs.carousel.goTo(0);
+      });
+    }
+  }
+
+  fetchOptions = url => {
+    axios.get(url).then(res => {
+      if (res.data.code != 200) return;
+      this.setState({
+        options: res.data.data.options,
+      }, () => {
+        this.refs.carousel.goTo(0);
+        this.props.onChange &&
+        this.props.onChange(this.state.options.filter(item => item.checked).map(item => ({
+          name: returnName,
+          value: item.value,
+        })));
+      });
+    }).catch(err => {
+      console.log(err);
+    });
+  };
+
   onChange = item => {
     item.checked = !item.checked;
     this.setState({
       options: [...this.state.options]
     }, () => {
-      this.props.onChange(this.state.options.filter(item => item.checked));
+      this.props.onChange &&
+      this.props.onChange(this.state.options.filter(item => item.checked).map(item => ({
+        name: returnName,
+        value: item.value,
+      })));
     });
   };
 
   render() {
     return (
       <div className="hd-checkbox-bar">
-        <Carousel {...settings}>
+        <Carousel ref="carousel" {...settings}>
           {this.state.options.map(item => (
             <div key={item.value}>
               <div className={classNames('hd-checkbox', {
                 'hd-checkbox-checked': item.checked,
               })} onClick={() => this.onChange(item)}>
                 <i className="hd-checkbox-icon" style={{backgroundColor: item.icon || 'transparent'}}/>
-                <span>{item.label}</span>
+                <span>{item.name}</span>
               </div>
             </div>
           ))}

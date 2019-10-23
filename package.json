@@ -1,6 +1,6 @@
 {
   "name": "hiynn-design",
-  "version": "0.3.12",
+  "version": "0.3.14",
   "description": "base on react and antd layout framework",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -57,6 +57,7 @@
     "react-router-hash-link": "^1.2.2",
     "redux": "^4.0.4",
     "redux-actions": "^2.6.5",
+    "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0"
   },
   "devDependencies": {

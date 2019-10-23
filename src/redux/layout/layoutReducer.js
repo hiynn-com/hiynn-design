@@ -4,7 +4,9 @@ import { Map, fromJS, merge, List } from "immutable";
 
 const initState = fromJS({
   index: "1",
-  subIndex: "4"
+  //subIndex暂时没起作用
+  subIndex: "4",
+  openKeys: ["4", "5"]
 });
 
 const layoutReducer = handleActions(
@@ -19,6 +21,12 @@ const layoutReducer = handleActions(
       return state.merge({
         index: index,
         subIndex: subIndex
+      });
+    },
+    [layoutTypes.SET_MENU_OPEN_KEYS]: (state, action) => {
+      const openkeys = action.payload.openkeys;
+      return state.merge({
+        openKeys: List(openkeys)
       });
     }
   },

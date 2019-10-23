@@ -5,45 +5,59 @@ import IndexMD from "./md/index.md";
 import HdRadio from "../../../components/hd-radio";
 import "../../../components/hd-radio/style";
 
-const options1 = [
-  {label: '同比', value: '0'},
-  {label: '环比', value: '1'},
-];
-
-const options2 = [
-  {label: '第四次', value: '2'},
-  {label: '第五次', value: '3'},
-];
-
 export default class RadioPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       code: `import { HdRadio } from "hiynn-design";
 
-const options1 = [
-  {label: '同比', value: '0'},
-  {label: '环比', value: '1'},
+const options = [
+  {name: '同比', value: '0'},
+  {name: '环比', value: '1'},
 ];
 
-const options2 = [
-  {label: '第四次', value: '2'},
-  {label: '第五次', value: '3'},
-];
+onChange = checkedItem => {
+  console.log(checkedItem);
+};
 
-<HdRadio options={options1} defaultValue="0" buttonStyle="solid"/>
-<HdRadio options={options2} defaultValue="2"/>`
+<HdRadio options={this.state.options} buttonStyle="solid"/>
+<HdRadio url={this.state.url} onChange={this.onChange}/>`,
+      options: [
+        {name: '同比', value: '0'},
+        {name: '环比', value: '1'},
+      ],
+      url: 'http://yapi.demo.qunar.com/mock/11526/getRadioOptions',
     };
   }
+
+  onChange = checkedItem => {
+    console.log(checkedItem);
+  };
 
   render() {
     return (
       <PreviewLayout>
         <MdPreviewer md={IndexMD}/>
         <CodePreviewer code={this.state.code} showCode>
-          <HdRadio options={options1} defaultValue="0" buttonStyle="solid"/>
+          <HdRadio options={this.state.options} buttonStyle="solid"/>
           <br/><br/>
-          <HdRadio options={options2} defaultValue="2"/>
+          <button onClick={() => {
+            this.setState({
+              options: [...this.state.options, {name: `测试`, value: `${Math.random()}`}],
+            });
+          }}
+          >Change Options
+          </button>
+          <br/><br/>
+          <HdRadio url={this.state.url} onChange={this.onChange}/>
+          <br/><br/>
+          <button onClick={() => {
+            this.setState({
+              url: `${this.state.url}?t=${Date.now()}`,
+            });
+          }}
+          >Change Url
+          </button>
         </CodePreviewer>
         <MdPreviewer md={ApiMD}/>
       </PreviewLayout>
