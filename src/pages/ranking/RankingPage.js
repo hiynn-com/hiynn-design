@@ -229,8 +229,8 @@ export default class RankingPage extends Component {
 
   render() {
     const style = {
-      height: "300px",
-      width: "200px",
+      // height: "500px",
+      width: "240px",
       border: "1px solid #E8E8E8",
       fontSize: "16px"
     };
@@ -249,7 +249,7 @@ export default class RankingPage extends Component {
           <HdRanking data={this.state.data} showTop style={style}></HdRanking>
         </CodePreviewer>
         <CodePreviewer code={this.state.code3} showCode={true}>
-          <HdRanking data={this.state.data} url={"http://yapi.demo.qunar.com/mock/93290/xushanpei/test"} corner showTop style={style}></HdRanking>
+          <HdRanking data={this.state.data} url={"http://10.0.91.189:19101/verse-service/ping/_api/rank"} corner={true} showTop={true} style={style}></HdRanking>
         </CodePreviewer>
         <MdPreviewer md={ApiMD}></MdPreviewer>
       </PreviewLayout>

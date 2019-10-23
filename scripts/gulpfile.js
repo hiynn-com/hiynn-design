@@ -21,6 +21,15 @@ const libDir = resolve("../lib");
 const esDir = resolve("../es");
 const postcssDir = resolve("../components/**/*.pcss");
 const indexJsDir = resolve("../components/**/style/index.js");
+const imgDir = resolve("../components/**/img/*.png");
+
+// 复制 img 文件到 lib es 文件夹下
+gulp.task("copy-img", () => {
+  return gulp
+    .src(imgDir)
+    .pipe(gulp.dest(libDir))
+    .pipe(gulp.dest(esDir));
+});
 
 // 复制 sass 文件到 lib es 文件夹下
 gulp.task("copy-postcss", () => {
@@ -113,4 +122,4 @@ gulp.task("dist-css", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-postcss", "replace-indexjs", "compile-postcss", "dist-css")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-img", "copy-postcss", "replace-indexjs", "compile-postcss", "dist-css")));

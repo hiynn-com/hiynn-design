@@ -11,5 +11,5 @@
 | icon | 设置按钮的图标类型 | string | - | ---- |
 | loading | 设置按钮载入状态 | boolean \| { delay: number } | false | ---- |
 | target | 相当于 a 链接的 target 属性，href 存在时生效 | string | - | ---- |
-| type | 设置按钮类型，可选值为 primary dashed danger link(3.17 中增加) 或者不设 | string | - | ---- |
+| type | 设置按钮类型，可选值为 primary dashed danger link 或者不设 | string | - | ---- |
 | onClick | 点击按钮时的回调 | (event) => void | - | ---- |

@@ -14,13 +14,13 @@ import HdAdmin from "./admin";
 import HdDatePicker from "./hd-date-picker";
 import HdDropDown from "./dropDown";
 import HdFormValidation from "./formValidation";
-import HdRanking from "./ranking";
-import HdSelect from "./select";
+import HdRanking from "./hd-ranking";
+import HdSelect from "./hd-select";
 import HdTab from "./tab";
-import HdButton from "./button";
-import HdRadio from "./radio";
-import EcharsTitle from "./echarsTitle";
-import HdCheckboxBar from "./checkboxBar";
+import HdButton from "./hd-button";
+import HdRadio from "./hd-radio";
+import EcharsTitle from "./echars-title";
+import HdCheckboxBar from "./hd-checkbox-bar";
 export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEcharts, HdAdmin, HdDatePicker, HdDropDown, HdFormValidation, HdRanking, HdSelect, HdTab, HdButton, HdRadio, EcharsTitle, HdCheckboxBar };
 export default {
   HdLayout: HdLayout,

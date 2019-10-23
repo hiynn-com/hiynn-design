@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {PreviewLayout, MdPreviewer, CodePreviewer} from "react-code-previewer";
 import ApiMD from "./md/api.md";
 import IndexMD from "./md/index.md";
-import HdButton from "../../../components/button";
-import "../../../components/button/style";
+import HdButton from "../../../components/hd-button";
+import "../../../components/hd-button/style";
 
 export default class ButtonPage extends Component {
   constructor(props) {

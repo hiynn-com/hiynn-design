@@ -1,5 +1,6 @@
 import { Select } from "antd";
 import React, { Component } from "react";
+import axios from "axios";
 
 const { Option } = Select;
 
@@ -7,7 +8,7 @@ class HdSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {}
+      data: this.props.data
     };
   }
 
@@ -19,10 +20,10 @@ class HdSelect extends Component {
         .then(response => {
           this.setState(
             {
-              data: response.data.data
+              data: response.data.data.options
             },
             () => {
-              console.log(this.state.data);
+              // console.log(this.state.data);
             }
           );
         })
@@ -32,13 +33,59 @@ class HdSelect extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.url) {
+      axios
+        .get(this.props.url)
+        .then(response => {
+          this.setState(
+            {
+              data: response.data.data.options
+            },
+            () => {
+              // console.log(this.state.data);
+            }
+          );
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    } else {
+      if (nextProps.data) {
+        this.setState({
+          data: nextProps.data
+        });
+      }
+    }
+  }
+
+  onChange = value => {
+    this.props.onChange({
+      name: "value",
+      value: value
+    });
+  };
+
   render() {
     let { size, loading, onChange, style, mode, defaultValue, placeholder, label, data, url } = this.props;
     return (
       <div className={"select"}>
         {label ? <span className={"select-label"}>{label} :</span> : ""}
+        {
+          <Select placeholder={placeholder} defaultValue={defaultValue} mode={mode} size={size} loading={loading} onChange={this.onChange} style={style}>
+            {this.state.data
+              ? this.state.data.map((item, index) => {
+                  return (
+                    <Option key={index} value={item.value}>
+                      {item.name}
+                    </Option>
+                  );
+                })
+              : ""}
+          </Select>
+        }
 
-        {url ? (
+        {/* {url ? (
           <Select placeholder={placeholder} defaultValue={defaultValue} mode={mode} size={size} loading={loading} onChange={onChange} style={style}>
             {this.state.data
               ? this.state.data.map((item, index) => {
@@ -52,8 +99,8 @@ class HdSelect extends Component {
           </Select>
         ) : (
           <Select placeholder={placeholder} defaultValue={defaultValue} mode={mode} size={size} loading={loading} onChange={onChange} style={style}>
-            {data
-              ? data.map((item, index) => {
+            {this.state.data
+              ? this.state.data.map((item, index) => {
                   return (
                     <Option key={index} value={item.value}>
                       {item.name}
@@ -62,7 +109,7 @@ class HdSelect extends Component {
                 })
               : ""}
           </Select>
-        )}
+        )} */}
       </div>
     );
   }

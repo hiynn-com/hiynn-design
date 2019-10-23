@@ -17,10 +17,10 @@ import HdFormValidation from "./formValidation";
 import HdRanking from "./hd-ranking";
 import HdSelect from "./hd-select";
 import HdTab from "./tab";
-import HdButton from "./button";
-import HdRadio from "./radio";
-import EcharsTitle from "./echarsTitle";
-import HdCheckboxBar from "./checkboxBar";
+import HdButton from "./hd-button";
+import HdRadio from "./hd-radio";
+import EcharsTitle from "./echars-title";
+import HdCheckboxBar from "./hd-checkbox-bar";
 
 export {
   HdLayout,

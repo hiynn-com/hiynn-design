@@ -70,7 +70,14 @@ export default class DropDownPage extends Component {
         <CodePreviewer code={this.state.code} showCode={true}>
           <HdSelect label={"加载"} data={this.state.data} placeholder={"请选择"} size={"small"} loading={true} onChange={this.onChange} style={{ width: 120 }}></HdSelect>
           <br />
-          <HdSelect label={"单选"} data={this.state.data} placeholder={"请选择"} onChange={this.onChange} style={{ width: 120 }}></HdSelect>
+          <HdSelect
+            label={"单选"}
+            url={"http://10.0.91.189:19101/verse-service/ping/_api/select"}
+            data={this.state.data}
+            placeholder={"请选择"}
+            onChange={this.onChange}
+            style={{ width: 120 }}
+          ></HdSelect>
           <br />
           <HdSelect label={"多选"} data={this.state.data} placeholder={"请选择"} mode={"multiple"} onChange={this.onChange} style={{ width: 300 }}></HdSelect>
         </CodePreviewer>
