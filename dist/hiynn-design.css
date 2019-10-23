@@ -749,12 +749,6 @@ template {
       background: url('../img/title_bg2.png') repeat-x;
     }
 
-@import "../../styles/vars.pcss";
-@import "../../styles/animate.pcss";
-.hd-searchForm-box{
-    margin-top:20px;
-    margin-left:20px;
-}
 .hd-filter-box {
   margin: 20px
 }
@@ -802,6 +796,12 @@ template {
       height: 0;
     }
 
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+.hd-searchForm-box{
+    margin-top:20px;
+    margin-left:20px;
+}
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -978,6 +978,7 @@ li.ant-calendar-time-picker-select-option-selected {
 }
 
 
+
     .hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper {
       height: 15px;
       border: none;
@@ -1028,7 +1029,6 @@ li.ant-calendar-time-picker-select-option-selected {
 .hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper + .ant-radio-button-wrapper:before {
           content: none;
         }
-
 
 .ranking {
   background: var(--verse-background-color);
@@ -1301,14 +1301,13 @@ li.ant-calendar-time-picker-select-option-selected {
         box-sizing: border-box;
         height: auto;
     }
-
-
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 .hd-searchForm-box{
     margin-top:20px;
     margin-left:20px;
 }
+
 
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
@@ -1348,6 +1347,7 @@ li.ant-calendar-time-picker-select-option-selected {
 .ant-tabs-tab-next:hover {
   color: #fff;
 }
+
 
 .hd-vgroup {
     /** 
