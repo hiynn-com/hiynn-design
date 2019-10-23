@@ -249,7 +249,7 @@ export default class RankingPage extends Component {
           <HdRanking data={this.state.data} showTop style={style}></HdRanking>
         </CodePreviewer>
         <CodePreviewer code={this.state.code3} showCode={true}>
-          <HdRanking data={this.state.data} url={"http://10.0.91.189:19101/verse-service/ping/_api/rank"} corner={true} showTop={true} style={style}></HdRanking>
+          <HdRanking data={this.state.data} corner={true} showTop={true} style={style}></HdRanking>
         </CodePreviewer>
         <MdPreviewer md={ApiMD}></MdPreviewer>
       </PreviewLayout>
