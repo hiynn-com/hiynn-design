@@ -17,8 +17,8 @@
 .ant-calendar {
   /* background: var(--select-dropdown-bgcolor) !important; */
   background: var(--select-dropdown-bgcolor) !important;
-  border: transparent;
-  color: #fff;
+  border: transparent !important;
+  color: #fff !important;
 }
 .ant-calendar-range .ant-calendar-input,
 .ant-calendar-range .ant-calendar-time-picker-input {
@@ -90,4 +90,7 @@ li.ant-calendar-time-picker-select-option-selected {
 .ant-calendar-input {
   background: var(--select-dropdown-bgcolor) !important;
   color: #fff !important;
+}
+.ant-calendar-picker-container {
+  z-index: 99999 !important;
 }
