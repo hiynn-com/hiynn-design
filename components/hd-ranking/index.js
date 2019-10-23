@@ -34,7 +34,7 @@ class HdRanking extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.url) {
       axios
-        .get(this.props.url)
+        .get(nextProps.url)
         .then(response => {
           this.setState(
             {
