@@ -21,7 +21,7 @@ const libDir = resolve("../lib");
 const esDir = resolve("../es");
 const postcssDir = resolve("../components/**/*.pcss");
 const indexJsDir = resolve("../components/**/style/index.js");
-const imgDir = resolve("../components/**/img/*.png");
+const imgDir = resolve("../components/**/*.png");
 
 // 复制 img 文件到 lib es 文件夹下
 gulp.task("copy-img", () => {
