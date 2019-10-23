@@ -5,6 +5,12 @@ import {
 import React from 'react';
 
 class HdButton extends React.Component {
+  componentWillReceiveProps(nextProps) {
+    if (this.props.onChange && this.props.title !== nextProps.title) {
+      this.props.onChange();
+    }
+  }
+
   render() {
     return (
       <ConfigProvider autoInsertSpaceInButton={false}>
