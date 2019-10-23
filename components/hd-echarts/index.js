@@ -155,7 +155,10 @@ class HdEcharts extends Component {
           // 小图例所在位置
           left: legendLeft ? legendLeft : "left",
           // 小图例具体显示名称---数组格式
-          data: this.state.legendData.length > 0 ? this.state.legendData : ["直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎"]
+          data: this.state.legendData.length > 0 ? this.state.legendData : ["直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎"],
+          textStyle: {
+            color: "rgb(255, 255, 255)"
+          }
         },
         series: [
           {
@@ -215,7 +218,10 @@ class HdEcharts extends Component {
         },
         legend: {
           top: 15,
-          data: this.state.legendData.length > 0 ? this.state.legendData : ["蒸发量", "降水量", "平均温度"]
+          data: this.state.legendData.length > 0 ? this.state.legendData : ["蒸发量", "降水量", "平均温度"],
+          textStyle: {
+            color: "rgb(255, 255, 255)"
+          }
         },
         calculable: true,
         xAxis: [
@@ -252,8 +258,8 @@ class HdEcharts extends Component {
           this.state.apiData.length > 0
             ? this.state.apiData
             : seriesData
-            ? seriesData.data.seriesData
-            : [
+              ? seriesData.data.seriesData
+              : [
                 {
                   name: "蒸发量",
                   type: type,
