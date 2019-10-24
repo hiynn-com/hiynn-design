@@ -68,7 +68,7 @@ export default class DropDownPage extends Component {
       <PreviewLayout>
         <MdPreviewer md={IndexMD}></MdPreviewer>
         <CodePreviewer code={this.state.code} showCode={true}>
-          <HdSelect label={"加载"} data={this.state.data} placeholder={"请选择"} size={"small"} loading={true} onChange={this.onChange} style={{ width: 120 }}></HdSelect>
+          <HdSelect label={"加载"} data={this.state.data} placeholder={"请选择"} size={"small"} loading={true} onChange={this.onChange}></HdSelect>
           <br />
           <HdSelect
             label={"单选"}
@@ -77,9 +77,10 @@ export default class DropDownPage extends Component {
             placeholder={"请选择"}
             onChange={this.onChange}
             style={{ width: 120 }}
+            width={200}
           ></HdSelect>
           <br />
-          <HdSelect label={"多选"} data={this.state.data} placeholder={"请选择"} mode={"multiple"} onChange={this.onChange} style={{ width: 300 }}></HdSelect>
+          <HdSelect label={"多选"} data={this.state.data} placeholder={"请选择"} mode={"multiple"} onChange={this.onChange}></HdSelect>
         </CodePreviewer>
         <MdPreviewer md={ApiMD}></MdPreviewer>
       </PreviewLayout>
