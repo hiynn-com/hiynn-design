@@ -74,7 +74,14 @@ class HdCheckboxBar extends React.Component {
 
   render() {
     return (
-      <div className="hd-checkbox-bar">
+      <div
+        className="hd-checkbox-bar"
+        style={{
+          ...this.props.style,
+          width: this.props.width,
+          height: this.props.height,
+        }}
+      >
         <Carousel ref="carousel" {...settings}>
           {this.state.options.map(item => (
             <div key={item.value}>
