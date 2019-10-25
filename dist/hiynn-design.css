@@ -846,7 +846,7 @@ template {
     line-height: 1
   }
 .hd-checkbox-bar .ant-carousel .slick-slide {
-      pointer-events: auto
+      pointer-events: auto !important
     }
 .hd-checkbox-bar .ant-carousel .slick-slide + .slick-slide {
         margin-left: 5px;
@@ -997,6 +997,7 @@ li.ant-calendar-time-picker-select-option-selected {
       height: 15px;
       border: none;
       padding: 0 8px;
+      background: transparent !important;
       color: #b6bfd0;
       font-size: 14px;
       font-weight: 400;
@@ -1135,21 +1136,6 @@ li.ant-calendar-time-picker-select-option-selected {
     left: -1px;
   }
 
-.hd-hgroup {
-    /** 
-    --width: 宽度，由js设置此属性
-    --height: 高度，由js设置此属性
-    --vertical-align: 垂直对齐方式，由js设置此属性
-    --horizontal-align: 水平对齐方式，由js设置此属性
-     */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: var(--horizontal-align);
-    align-items: var(--vertical-align);
-    width: var(--width);
-    height: var(--height);
-}
 
   .select .ant-select-selection {
     border: 1px solid #128dcd;
@@ -1193,6 +1179,21 @@ li.ant-calendar-time-picker-select-option-selected {
   background: var(--select-dropdown-activecolor) !important;
 }
 
+.hd-hgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: var(--horizontal-align);
+    align-items: var(--vertical-align);
+    width: var(--width);
+    height: var(--height);
+}
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
