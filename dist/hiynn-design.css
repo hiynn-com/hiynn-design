@@ -749,6 +749,12 @@ template {
       background: url('../img/title_bg2.png') repeat-x;
     }
 
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+.hd-searchForm-box{
+    margin-top:20px;
+    margin-left:20px;
+}
 .hd-filter-box {
   margin: 20px
 }
@@ -798,12 +804,6 @@ template {
 
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
-.hd-searchForm-box{
-    margin-top:20px;
-    margin-left:20px;
-}
-@import "../../styles/vars.pcss";
-@import "../../styles/animate.pcss";
 
 
   .hd-button + .hd-button {
@@ -812,6 +812,7 @@ template {
 .hd-button.ant-btn-primary {
     width: 81px;
     height: 31px;
+    padding: 0;
     border-radius: 4px;
     border-color: #1496f1;
     background-color: #1496f1;
@@ -982,58 +983,6 @@ li.ant-calendar-time-picker-select-option-selected {
 }
 
 
-
-    .hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper {
-      height: 15px;
-      border: none;
-      padding: 0 8px;
-      color: #b6bfd0;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 15px;
-      letter-spacing: 1.4px
-    }
-.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper:focus-within {
-        outline: none;
-      }
-.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
-        color: #14f1e9;
-        font-weight: 700;
-        box-shadow: none;
-      }
-.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper + .ant-radio-button-wrapper {
-        border-left: 1px solid #b6bfd0
-      }
-.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper + .ant-radio-button-wrapper:before {
-          content: none;
-        }
-.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper {
-      width: 80px;
-      height: 26px;
-      border: none;
-      border-radius: 4px;
-      background: url("../image/radio-bg.png") no-repeat;
-      color: #1496f1;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 26px;
-      letter-spacing: 1.4px;
-      text-align: center
-    }
-.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper:focus-within {
-        outline: none;
-      }
-.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
-        background: #1496f1 none;
-        color: #ffffff;
-      }
-.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper + .ant-radio-button-wrapper {
-        margin-left: 10px
-      }
-.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper + .ant-radio-button-wrapper:before {
-          content: none;
-        }
-
 .ranking {
   background: var(--verse-background-color);
   display: flex;
@@ -1123,6 +1072,68 @@ li.ant-calendar-time-picker-select-option-selected {
     bottom: -1px;
     left: -1px;
   }
+
+.hd-radio-group {
+  display: flex
+}
+.hd-radio-group > label {
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper {
+      height: 15px;
+      border: none;
+      padding: 0 8px;
+      color: #b6bfd0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 1.4px
+    }
+.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper:focus-within {
+        outline: none;
+      }
+.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        color: #14f1e9;
+        font-weight: 700;
+        box-shadow: none;
+      }
+.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper + .ant-radio-button-wrapper {
+        border-left: 1px solid #b6bfd0
+      }
+.hd-radio-group.ant-radio-group-outline > .ant-radio-button-wrapper + .ant-radio-button-wrapper:before {
+          content: none;
+        }
+.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper {
+      width: 80px;
+      height: 26px;
+      border: none;
+      border-radius: 4px;
+      background: url("../image/radio-bg.png") no-repeat;
+      background-size: 100% 100%;
+      color: #1496f1;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 1.4px;
+      text-align: center
+    }
+.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper:focus-within {
+        outline: none;
+      }
+.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        background: #1496f1 none;
+        color: #ffffff;
+      }
+.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper + .ant-radio-button-wrapper {
+        margin-left: 10px
+      }
+.hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper + .ant-radio-button-wrapper:before {
+          content: none;
+        }
 
 
   .select .ant-select-selection {
