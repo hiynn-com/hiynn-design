@@ -102,6 +102,22 @@ class HdEcharts extends Component {
       });
   };
 
+  // echart 点击事件
+  onChartClick = (e) => {
+    console.log("e", e);
+    let typeName = this.props.typeName;
+    let data = [];
+    if (typeName == "pie") {
+      data.push(e.data);
+    } else if (typeName == "bar" || typeName == "line") {
+      data.push({ name: e.name, value: e.value })
+    }
+
+    this.props.onChange && this.props.onChange(data);
+
+  }
+
+
   render() {
     const {
       title,
@@ -279,7 +295,15 @@ class HdEcharts extends Component {
         backgroundColor: backgroundColor ? backgroundColor : "rgb(0, 0, 0,0)"
       };
     }
-    return <ReactEcharts option={optionProp} notMerge={true} lazyUpdate={true} style={{ width: width ? width + "px" : "100%", height: height ? height + "px" : "100%" }} />;
+    return <ReactEcharts
+      onEvents={{
+        'click': this.onChartClick,
+      }}
+      option={optionProp}
+      notMerge={true}
+      lazyUpdate={true}
+      style={{ width: width ? width + "px" : "100%", height: height ? height + "px" : "100%" }}
+    />;
   }
 }
 HdEcharts.defaultProps = {
