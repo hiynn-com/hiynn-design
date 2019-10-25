@@ -79,6 +79,11 @@ class HdRadio extends React.Component {
     return (
       <Radio.Group
         className="hd-radio-group"
+        style={{
+          ...this.props.style,
+          width: this.props.width,
+          height: this.props.height,
+        }}
         {...{
           onChange,
           disabled,

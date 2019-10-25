@@ -34,7 +34,7 @@ class HdRanking extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.url) {
       axios
-        .get(this.props.url)
+        .get(nextProps.url)
         .then(response => {
           this.setState(
             {
@@ -73,7 +73,7 @@ class HdRanking extends Component {
 
     return (
       <div className="ranking" style={style}>
-        {this.state.data
+        {this.state.data && this.state.data.constructor == Array && this.state.data != []
           ? this.state.data.map((item, index) => {
               return (
                 <div key={index}>
