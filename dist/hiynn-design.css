@@ -707,6 +707,48 @@ template {
   background: #2161b7 !important;
 }
 
+.chartTitle_wrap {
+  border-bottom: 1px solid #0c7884
+
+  /* border-bottom: 1px solid #14f1e9; */
+}
+.chartTitle_wrap>.chartTitle {
+    padding-left: 25px;
+    padding-right: 100px;
+    height: 30px;
+    display: inline-block;
+    position: relative
+  }
+.chartTitle_wrap>.chartTitle::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 25px;
+      height: 30px;
+      background: url('../img/title_bg1.png') no-repeat;
+    }
+.chartTitle_wrap>.chartTitle::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 100px;
+      height: 30px;
+      background: url('../img/title_bg3.png') no-repeat;
+    }
+.chartTitle_wrap>.chartTitle>.title {
+      font-size: 16px;
+      color: #14f1e9;
+      display: inline-block;
+      min-width: 200px;
+      height: 100%;
+      line-height: 30px;
+      background: url('../img/title_bg2.png') repeat-x;
+    }
+
 .hd-filter-box {
   margin: 20px
 }
@@ -754,57 +796,15 @@ template {
       height: 0;
     }
 
-.chartTitle_wrap {
-  border-bottom: 1px solid #0c7884
-
-  /* border-bottom: 1px solid #14f1e9; */
-}
-.chartTitle_wrap>.chartTitle {
-    padding-left: 25px;
-    padding-right: 100px;
-    height: 30px;
-    display: inline-block;
-    position: relative
-  }
-.chartTitle_wrap>.chartTitle::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: block;
-      width: 25px;
-      height: 30px;
-      background: url('../img/title_bg1.png') no-repeat;
-    }
-.chartTitle_wrap>.chartTitle::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      display: block;
-      width: 100px;
-      height: 30px;
-      background: url('../img/title_bg3.png') no-repeat;
-    }
-.chartTitle_wrap>.chartTitle>.title {
-      font-size: 16px;
-      color: #14f1e9;
-      display: inline-block;
-      min-width: 200px;
-      height: 100%;
-      line-height: 30px;
-      background: url('../img/title_bg2.png') repeat-x;
-    }
-
-@import "../../styles/vars.pcss";
-@import "../../styles/animate.pcss";
-
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 .hd-searchForm-box{
     margin-top:20px;
     margin-left:20px;
 }
+@import "../../styles/vars.pcss";
+@import "../../styles/animate.pcss";
+
 
   .hd-button + .hd-button {
     margin-left: 19px;
@@ -982,6 +982,7 @@ li.ant-calendar-time-picker-select-option-selected {
   z-index: 99999 !important;
 }
 
+
 .hd-radio-group {
   display: flex
 }
@@ -1044,7 +1045,6 @@ li.ant-calendar-time-picker-select-option-selected {
 .hd-radio-group.ant-radio-group-solid > .ant-radio-button-wrapper + .ant-radio-button-wrapper:before {
           content: none;
         }
-
 
 .ranking {
   background: var(--verse-background-color);
@@ -1194,6 +1194,14 @@ li.ant-calendar-time-picker-select-option-selected {
     width: var(--width);
     height: var(--height);
 }
+
+  .demo-container.demo-wrapper {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -1278,13 +1286,11 @@ li.ant-calendar-time-picker-select-option-selected {
   width: var(--header-dropdown-menu-item-height);
 }
 
-
-  .demo-container.demo-wrapper {
-    color: red;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+.hd-sider-menu-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 64px);
+}
 
 .hd-panel {
     box-sizing: border-box;
@@ -1311,11 +1317,7 @@ li.ant-calendar-time-picker-select-option-selected {
         box-sizing: border-box;
         height: auto;
     }
-.hd-sider-menu-container {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: calc(100% - 64px);
-}
+
 
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
@@ -1323,8 +1325,6 @@ li.ant-calendar-time-picker-select-option-selected {
     margin-top:20px;
     margin-left:20px;
 }
-
-
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
