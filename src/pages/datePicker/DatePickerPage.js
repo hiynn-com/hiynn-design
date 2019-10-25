@@ -109,7 +109,7 @@ export default class DatePickerPage extends Component {
         </CodePreviewer>
         <CodePreviewer code={this.state.code2} showCode={true}>
           {/* 带有时间选择的 */}
-          <HdDatePicker type="range" label={"日期时间选择"} onOk={this.onOk} showTime={{ format: "HH:mm" }} onChange={this.onChange}></HdDatePicker>
+          <HdDatePicker width={1000} type="range" label={"日期时间选择"} onOk={this.onOk} showTime={{ format: "HH:mm" }} onChange={this.onChange}></HdDatePicker>
         </CodePreviewer>
         <CodePreviewer code={this.state.code3} showCode={true}>
           {/* 可设置默认时间的 */}
