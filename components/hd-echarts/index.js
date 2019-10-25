@@ -258,8 +258,8 @@ class HdEcharts extends Component {
           this.state.apiData.length > 0
             ? this.state.apiData
             : seriesData
-              ? seriesData.data.seriesData
-              : [
+            ? seriesData.data.seriesData
+            : [
                 {
                   name: "蒸发量",
                   type: type,
