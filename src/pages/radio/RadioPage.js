@@ -20,8 +20,8 @@ onChange = checkedItem => {
   console.log(checkedItem);
 };
 
-<HdRadio options={this.state.options} buttonStyle="solid"/>
-<HdRadio url={this.state.url} onChange={this.onChange}/>`,
+<HdRadio options={this.state.options} buttonStyle="solid" width={170}/>
+<HdRadio url={this.state.url} onChange={this.onChange} width="50%"/>`,
       options: [
         {name: '同比', value: '0'},
         {name: '环比', value: '1'},
@@ -39,7 +39,7 @@ onChange = checkedItem => {
       <PreviewLayout>
         <MdPreviewer md={IndexMD}/>
         <CodePreviewer code={this.state.code} showCode>
-          <HdRadio options={this.state.options} buttonStyle="solid"/>
+          <HdRadio options={this.state.options} buttonStyle="solid" width={170}/>
           <br/><br/>
           <button onClick={() => {
             this.setState({
@@ -49,7 +49,7 @@ onChange = checkedItem => {
           >Change Options
           </button>
           <br/><br/>
-          <HdRadio url={this.state.url} onChange={this.onChange}/>
+          <HdRadio url={this.state.url} onChange={this.onChange} width="50%"/>
           <br/><br/>
           <button onClick={() => {
             this.setState({

@@ -14,7 +14,16 @@ class HdButton extends React.Component {
   render() {
     return (
       <ConfigProvider autoInsertSpaceInButton={false}>
-        <Button className="hd-button" type="primary" {...this.props}>{this.props.title}</Button>
+        <Button
+          className="hd-button"
+          type="primary"
+          style={{
+            ...this.props.style,
+            width: this.props.width,
+            height: this.props.height,
+          }}
+          {...this.props}
+        >{this.props.title}</Button>
       </ConfigProvider>
     )
   }
