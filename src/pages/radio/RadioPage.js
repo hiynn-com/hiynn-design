@@ -12,7 +12,7 @@ export default class RadioPage extends Component {
       code: `import { HdRadio } from "hiynn-design";
 
 const options = [
-  {name: '同比', value: '0'},
+  {name: '同比', value: '0', checked: true},
   {name: '环比', value: '1'},
 ];
 
@@ -23,7 +23,7 @@ onChange = checkedItem => {
 <HdRadio options={this.state.options} buttonStyle="solid" width={170}/>
 <HdRadio url={this.state.url} onChange={this.onChange} width="50%"/>`,
       options: [
-        {name: '同比', value: '0'},
+        {name: '同比', value: '0', checked: true},
         {name: '环比', value: '1'},
       ],
       url: 'http://yapi.demo.qunar.com/mock/11526/getRadioOptions',
