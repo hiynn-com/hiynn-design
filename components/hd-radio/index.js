@@ -9,7 +9,7 @@ class HdRadio extends React.Component {
     super(props);
     this.state = (() => {
       const options = this.props.options || [];
-      const value = options.length ? options[0].value : undefined;
+      const value = (options.find(item => item.checked) || {}).value;
       return {options, value};
     })();
   }
@@ -25,7 +25,7 @@ class HdRadio extends React.Component {
       this.fetchOptions(nextProps.url);
     } else if (this.props.options !== nextProps.options) {
       const options = nextProps.options || [];
-      const value = options.length ? options[0].value : undefined;
+      const value = (options.find(item => item.checked) || {}).value;
       this.setState({options, value});
     }
   }
@@ -35,7 +35,7 @@ class HdRadio extends React.Component {
       if (res.data.code != 200) return;
       this.setState({
         options: res.data.data.options,
-        value: res.data.data.options[0].value,
+        value: (res.data.data.options.find(item => item.checked) || {}).value,
       }, () => {
         this.props.onChange && this.props.onChange({
           name: returnName,
@@ -94,14 +94,12 @@ class HdRadio extends React.Component {
       >
         {options.map(item => {
           const {
-            checked,
             value,
             name,
           } = item;
           return <Radio.Button
             key={value}
             {...{
-              checked,
               value,
             }}
           >{name}</Radio.Button>
