@@ -1194,14 +1194,6 @@ li.ant-calendar-time-picker-select-option-selected {
     width: var(--width);
     height: var(--height);
 }
-
-  .demo-container.demo-wrapper {
-    color: red;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -1286,6 +1278,14 @@ li.ant-calendar-time-picker-select-option-selected {
   width: var(--header-dropdown-menu-item-height);
 }
 
+
+  .demo-container.demo-wrapper {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
 .hd-sider-menu-container {
   overflow-y: auto;
   overflow-x: hidden;
@@ -1317,14 +1317,14 @@ li.ant-calendar-time-picker-select-option-selected {
         box-sizing: border-box;
         height: auto;
     }
-
-
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 .hd-searchForm-box{
     margin-top:20px;
     margin-left:20px;
 }
+
+
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
