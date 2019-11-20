@@ -44,34 +44,47 @@ module.exports = {
         use: "raw-loader"
       },
       {
-        test: /\.(pc|sc|c)ss$/,
+        test: /\.pcss$/,
         use: [
-          MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-              importLoaders: 1
-            }
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
           },
           {
             loader: "postcss-loader",
             options: {
               ident: "postcss",
-              sourceMap: true,
               plugins: () => [
-                require("postcss-apply"),
                 postcssPresetEnv({
                   stage: 3,
                   features: {
                     "custom-properties": true,
-                    "nesting-rules": true,
-                    "color-mod-function": { unresolved: "warn" }
+                    "nesting-rules": true
                   },
                   browsers: "last 2 versions"
                 })
               ]
             }
+          }
+        ]
+      },
+      {
+        test: /\.(sc|c)ss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {}
           }
         ]
       },
@@ -89,26 +102,8 @@ module.exports = {
             }
           },
           {
-            loader: "postcss-loader",
-            options: {
-              ident: "postcss",
-              sourceMap: true,
-              plugins: () => [
-                postcssPresetEnv({
-                  stage: 3,
-                  features: {
-                    "custom-properties": true,
-                    "nesting-rules": true
-                  },
-                  browsers: "last 2 versions"
-                })
-              ]
-            }
-          },
-          {
             loader: "less-loader",
             options: {
-              sourceMap: true,
               javascriptEnabled: true
             }
           }

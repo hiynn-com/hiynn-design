@@ -1179,21 +1179,6 @@ li.ant-calendar-time-picker-select-option-selected {
   background: var(--select-dropdown-activecolor) !important;
 }
 
-.hd-hgroup {
-    /** 
-    --width: 宽度，由js设置此属性
-    --height: 高度，由js设置此属性
-    --vertical-align: 垂直对齐方式，由js设置此属性
-    --horizontal-align: 水平对齐方式，由js设置此属性
-     */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: var(--horizontal-align);
-    align-items: var(--vertical-align);
-    width: var(--width);
-    height: var(--height);
-}
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -1278,6 +1263,21 @@ li.ant-calendar-time-picker-select-option-selected {
   width: var(--header-dropdown-menu-item-height);
 }
 
+.hd-hgroup {
+    /** 
+    --width: 宽度，由js设置此属性
+    --height: 高度，由js设置此属性
+    --vertical-align: 垂直对齐方式，由js设置此属性
+    --horizontal-align: 水平对齐方式，由js设置此属性
+     */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: var(--horizontal-align);
+    align-items: var(--vertical-align);
+    width: var(--width);
+    height: var(--height);
+}
 
   .demo-container.demo-wrapper {
     color: red;
@@ -1323,8 +1323,6 @@ li.ant-calendar-time-picker-select-option-selected {
     margin-top:20px;
     margin-left:20px;
 }
-
-
 @import "../../styles/vars.pcss";
 @import "../../styles/animate.pcss";
 
@@ -1363,6 +1361,8 @@ li.ant-calendar-time-picker-select-option-selected {
 .ant-tabs-tab-next:hover {
   color: #fff;
 }
+
+
 
 
 .hd-vgroup {
