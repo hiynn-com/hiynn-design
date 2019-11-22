@@ -4,14 +4,16 @@ const path = require("path");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
+const sass = require("gulp-sass");
+
 const postcssPresetEnv = require("postcss-preset-env");
 const postcssImport = require("postcss-import");
 const concat = require("gulp-concat");
 const replace = require("gulp-replace");
-// const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const size = require("gulp-filesize");
+const log = require("fancy-log");
 // const cssnano = require("gulp-cssnano");
 const { name } = require("../package.json");
 
@@ -19,7 +21,7 @@ const resolve = dir => path.join(__dirname, ".", dir);
 const distDir = resolve("../dist");
 const libDir = resolve("../lib");
 const esDir = resolve("../es");
-const postcssDir = resolve("../components/**/*.pcss");
+const scssDir = resolve("../components/**/*.scss");
 const indexJsDir = resolve("../components/**/style/index.js");
 const imgDir = resolve("../components/**/*.png");
 
@@ -32,9 +34,9 @@ gulp.task("copy-img", () => {
 });
 
 // 复制 sass 文件到 lib es 文件夹下
-gulp.task("copy-postcss", () => {
+gulp.task("copy-scss", () => {
   return gulp
-    .src(postcssDir)
+    .src(scssDir)
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(libDir))
@@ -46,7 +48,7 @@ gulp.task("replace-indexjs", () => {
   return gulp
     .src(indexJsDir)
     .pipe(sourcemaps.init())
-    .pipe(replace("pcss", "css"))
+    .pipe(replace("scss", "css"))
     .pipe(
       rename(function(path) {
         path.basename = "css";
@@ -59,17 +61,26 @@ gulp.task("replace-indexjs", () => {
 });
 
 // 编译 sass 文件到 es 和 lib 文件夹下
-gulp.task("compile-postcss", () => {
+gulp.task("compile-sass", () => {
   return (
     gulp
-      .src(postcssDir)
+      .src(scssDir)
       .pipe(sourcemaps.init())
+      .pipe(
+        sass().on("error", function(err) {
+          log.error(err.message);
+        })
+      )
       .pipe(
         postcss([
           // 编译.pcss 文件
           postcssPresetEnv({
+            autoprefixer: {
+              flexbox: "no-2009"
+            },
             stage: 3,
             features: {
+              //https://github.com/csstools/postcss-preset-env/blob/master/src/lib/plugins-by-id.js#L36
               "custom-properties": true,
               "nesting-rules": true
             },
@@ -94,13 +105,19 @@ gulp.task("compile-postcss", () => {
 gulp.task("dist-css", () => {
   return (
     gulp
-      .src(postcssDir)
+      .src(scssDir)
       .pipe(sourcemaps.init())
+      .pipe(
+        sass().on("error", function(err) {
+          log.error(err.message);
+        })
+      )
       .pipe(
         postcss([
           postcssPresetEnv({
             stage: 3,
             features: {
+              //https://github.com/csstools/postcss-preset-env/blob/master/src/lib/plugins-by-id.js#L36
               "custom-properties": true,
               "nesting-rules": true
             }
@@ -122,4 +139,4 @@ gulp.task("dist-css", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-img", "copy-postcss", "replace-indexjs", "compile-postcss", "dist-css")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-img", "copy-scss", "replace-indexjs", "compile-sass", "dist-css")));

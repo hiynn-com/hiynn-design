@@ -44,43 +44,39 @@ module.exports = {
         use: "raw-loader"
       },
       {
-        test: /\.pcss$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              ident: "postcss",
-              plugins: () => [
-                postcssPresetEnv({
-                  stage: 3,
-                  features: {
-                    "custom-properties": true,
-                    "nesting-rules": true
-                  },
-                  browsers: "last 2 versions"
-                })
-              ]
-            }
-          }
-        ]
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
       },
       {
-        test: /\.(sc|c)ss$/,
+        test: /\.css$/,
         use: [
-          {
-            loader: "style-loader"
-          },
+          "style-loader",
           {
             loader: "css-loader",
             options: {
               importLoaders: 1
             }
+          },
+          {
+            loader: "postcss-loader"
+          }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1
+            }
+          },
+          {
+            loader: "postcss-loader"
           },
           {
             loader: "sass-loader",
@@ -92,14 +88,15 @@ module.exports = {
         // 编译less
         test: /\.less$/,
         use: [
-          {
-            loader: "style-loader"
-          },
+          "style-loader",
           {
             loader: "css-loader",
             options: {
               importLoaders: 1
             }
+          },
+          {
+            loader: "postcss-loader"
           },
           {
             loader: "less-loader",
@@ -108,13 +105,6 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,

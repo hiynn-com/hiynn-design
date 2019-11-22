@@ -48,7 +48,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(pc|c)ss$/,
+        test: /\.css$/,
         use: [
           "style-loader",
           {

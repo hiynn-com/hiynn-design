@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./style";
 
 class EcharsTitle extends Component {
   render() {
@@ -7,10 +6,12 @@ class EcharsTitle extends Component {
     return (
       <div className="chartTitle_wrap">
         <div className="chartTitle">
-          <div className="title" style={props.titleStyle}>{props.titleContent}</div>
+          <div className="title" style={props.titleStyle}>
+            {props.titleContent}
+          </div>
         </div>
       </div>
-    )
+    );
   }
 }
 export default EcharsTitle;

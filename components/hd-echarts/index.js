@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactEcharts from "echarts-for-react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import "./style";
 
 // 存储
 let seriesFetchData = [];

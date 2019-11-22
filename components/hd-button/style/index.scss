@@ -1,0 +1,40 @@
+.hd-button {
+  &+.hd-button {
+    margin-left: 19px;
+  }
+
+  .ant-btn-primary {
+    width: 81px;
+    height: 31px;
+    padding: 0;
+    border-radius: 4px;
+    border-color: #1496f1;
+    background-color: #1496f1;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 1.4px;
+
+    &:hover,
+    & :focus {
+      border-color: #32a8fa;
+      background-color: #32a8fa;
+      color: #ffffff;
+    }
+
+    :active,
+    .active {
+      border-color: #116eb2;
+      background-color: #116eb2;
+      color: #ffffff;
+    }
+
+    [disabled],
+    [disabled]:hover {
+      border-color: #13344b;
+      background-color: #13344b;
+      color: #8e96a4;
+    }
+  }
+}

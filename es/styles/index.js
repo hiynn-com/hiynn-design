@@ -1,2 +1,2 @@
-import "./index.pcss";
+import "./index.scss";
 //# sourceMappingURL=index.js.map

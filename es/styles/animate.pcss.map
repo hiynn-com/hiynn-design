@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["styles/animate.pcss"],"sourcesContent":["@keyframes fadenum {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 1;\n  }\n}\n"],"file":"animate.pcss"}
