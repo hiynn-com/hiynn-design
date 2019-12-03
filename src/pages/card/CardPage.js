@@ -3,6 +3,7 @@ import { HdCard } from "../../../components";
 import { PreviewLayout, MdPreviewer, CodePreviewer } from "react-code-previewer";
 import install from "./md/install.md";
 import apiMd from "./md/api.md";
+import "../../../components/card/style";
 
 class HdCardPage extends Component {
   render() {

@@ -4,7 +4,7 @@ import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer"
 import articleMd from "./md/article.md";
 import exampleMd from "./md/example.md";
 import apiMd from "./md/api.md";
-import "../../../components/article/demo/style";
+import "../../../components/article/style";
 
 class DemoPage extends Component {
   constructor(props) {

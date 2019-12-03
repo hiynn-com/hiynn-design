@@ -46,7 +46,7 @@ const plugins = [
     "import",
     {
       libraryName: "antd",
-      libraryDirectory: "es",
+      // libraryDirectory: "es",
       style: true // `style: true` 会加载 less 文件
     },
     "antd"
