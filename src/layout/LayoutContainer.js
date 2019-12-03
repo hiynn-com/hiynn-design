@@ -6,7 +6,7 @@ import HdLayout from "../../components/layout";
 import layoutAction from "../redux/layout/layoutAction";
 import "../../components/layout/style";
 import "../../components/menus/style";
-import "../assets/css/layoutPage.pcss";
+import "../assets/css/layoutPage.scss";
 import logo from "../assets/images/hd_logo.jpg";
 import { Map } from "immutable";
 import routes from "../router";

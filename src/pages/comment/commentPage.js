@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Comment from "../../../components/comment/demo";
-import "../../../components/comment/demo/style";
+import Comment from "../../../components/comment";
+import "../../../components/comment/style";
 
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import commentMd from "./md/comment.md";
@@ -14,7 +14,7 @@ class DemoPage extends Component {
       loginInfo: {
         loginId: 100,
         loginName: "李四",
-        loginAvatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+        loginAvatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
       },
       data: [
         {
@@ -35,7 +35,7 @@ class DemoPage extends Component {
               content: <p>我是二级评论！</p>,
               likes: 10,
               dislikes: 3,
-              islike: null,
+              islike: null
             }
           ]
         },
@@ -80,7 +80,7 @@ class DemoPage extends Component {
             content: value,
             likes: 0,
             dislikes: 0,
-            islike: null,
+            islike: null
           });
         }
       });
@@ -116,7 +116,7 @@ class DemoPage extends Component {
             data={this.state.data} //渲染数据
             replySubmit={this.replySubmit} //点击回复的回调函数
             voteClick={this.voteClick} //点赞的回调函数
-            loginInfo={loginInfo}//当前登录人信息
+            loginInfo={loginInfo} //当前登录人信息
           />
         </CodePreviewer>
         <MdPreviewer md={apiMd}></MdPreviewer>

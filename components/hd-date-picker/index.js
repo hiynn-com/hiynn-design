@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Form, Input, Button, Checkbox, message, Select, DatePicker } from "antd";
-import locale from "antd/es/date-picker/locale/zh_CN";
 import moment from "moment";
 import "moment/locale/zh-cn";
 moment.locale("zh-cn");
@@ -38,25 +37,25 @@ class HdDatePicker extends Component {
       <div className="datePicker">
         {label ? <span className="datePicker-title">{label} ： </span> : ""}
         {defaultValue && type == "range" ? (
-          <RangePicker defaultValue={defaultValue} locale={locale} size={size} style={{ width: width }} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
+          <RangePicker defaultValue={defaultValue} size={size} style={{ width: width }} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
         ) : type == "range" ? (
-          <RangePicker locale={locale} size={size} onChange={this.onChange} style={{ width: width }} showTime={showTime} format={format} onOk={onOk} />
+          <RangePicker size={size} onChange={this.onChange} style={{ width: width }} showTime={showTime} format={format} onOk={onOk} />
         ) : (
           ""
         )}
         {defaultValue && type == "month" ? (
-          <MonthPicker defaultValue={defaultValue} style={{ width: width }} locale={locale} size={size} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
+          <MonthPicker defaultValue={defaultValue} style={{ width: width }} size={size} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
         ) : type == "month" ? (
-          <MonthPicker locale={locale} size={size} style={{ width: width }} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
+          <MonthPicker size={size} style={{ width: width }} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
         ) : (
           ""
         )}
 
         {/* DatePicker  */}
         {defaultValue && type == "date" ? (
-          <DatePicker defaultValue={defaultValue} style={{ width: width }} locale={locale} size={size} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
+          <DatePicker defaultValue={defaultValue} style={{ width: width }} size={size} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
         ) : type == "date" ? (
-          <DatePicker locale={locale} size={size} style={{ width: width }} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
+          <DatePicker size={size} style={{ width: width }} onChange={this.onChange} showTime={showTime} format={format} onOk={onOk} />
         ) : (
           ""
         )}

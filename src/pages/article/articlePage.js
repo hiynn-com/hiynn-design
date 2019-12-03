@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Article from "../../../components/article/demo";
+import Article from "../../../components/article";
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 import articleMd from "./md/article.md";
 import exampleMd from "./md/example.md";

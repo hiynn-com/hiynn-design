@@ -2,7 +2,7 @@
   overflow-y: auto;
   background: #fff;
 
-  & .header-container {
+  .header-container {
     /* position: sticky;
     top: 0;
     left: 0;
@@ -14,35 +14,35 @@
     justify-content: space-between;
     padding: 0.5rem 1rem;
 
-    & .header-left {
+    .header-left {
       color: #fff;
       font-size: 20px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
 
-      & .search {
+      .search {
         margin-left: 120px;
       }
 
-      & .title {
+      .title {
         margin-left: 8px;
         color: #fff;
       }
     }
 
-    & .header-right {
+    .header-right {
       cursor: pointer;
       display: flex;
       align-items: center;
       color: #fff;
 
-      & .menu {
+      .menu {
         display: flex;
         align-items: center;
         margin-right: 20px;
 
-        & .menu-item {
+        .menu-item {
           width: 80px;
           text-align: center;
           font-weight: normal;
@@ -50,28 +50,28 @@
 
           &:hover {
 
-            & .icon,
-            & .title {
+            .icon,
+            .title {
               color: #fff;
             }
           }
 
-          & .icon {
+          .icon {
             margin-left: 5px;
             color: hsla(0, 0%, 100%, 0.65);
             font-size: 16px;
           }
 
-          & .title {
+          .title {
             color: hsla(0, 0%, 100%, 0.65);
             font-size: 16px;
           }
 
-          & .selected {
+          .selected {
             color: #fff;
           }
 
-          & a {
+          a {
             color: hsla(0, 0%, 100%, 0.65);
             font-size: 16px;
 
@@ -82,12 +82,12 @@
         }
       }
 
-      & .icon-wrapper {
+      .icon-wrapper {
         padding: 10px;
         display: flex;
         align-items: center;
 
-        & .icon-github {
+        .icon-github {
           font-size: 28px;
           color: hsla(0, 0%, 100%, 0.65);
 
@@ -99,24 +99,24 @@
     }
   }
 
-  & .content-layout-container {
-    & .content-layout-sider {
+  .content-layout-container {
+    .content-layout-sider {
       /* overflow-x: hidden;
       overflow-y: auto; */
       border-right: 1px solid #e8e8e8;
 
-      & .ant-menu-inline {
+      .ant-menu-inline {
         border-right: none;
       }
 
-      & .content-layout-sider-menu {
-        & .ant-menu-item-group {
-          & .ant-menu-item-group-title {
+      .content-layout-sider-menu {
+        .ant-menu-item-group {
+          .ant-menu-item-group-title {
             padding-left: 4rem !important;
           }
 
-          & .ant-menu-item-group-list {
-            & .ant-menu-item {
+          .ant-menu-item-group-list {
+            .ant-menu-item {
               font-size: 16px;
               padding-left: 5.7rem !important;
             }
@@ -125,27 +125,27 @@
 
         /* height: calc(100vh - 64px); */
 
-        & .ant-menu-item {
+        .ant-menu-item {
           font-size: 16px;
           padding-left: 2.7rem !important;
         }
 
-        & .ant-menu-submenu {
-          & .ant-menu-submenu-title {
+        .ant-menu-submenu {
+          .ant-menu-submenu-title {
             font-size: 16px;
             padding-left: 2.7rem !important;
           }
         }
 
-        & .ant-menu-sub {
-          & .ant-menu-item {
+        .ant-menu-sub {
+          .ant-menu-item {
             padding-left: 5.7rem !important;
           }
         }
       }
     }
 
-    & .content {
+    .content {
       background: #fff;
       color: #000;
     }
