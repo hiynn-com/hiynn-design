@@ -5,7 +5,6 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const postcssPresetEnv = require("postcss-preset-env");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -21,9 +20,10 @@ module.exports = {
     // path: resolve("dist"), // 输出目录
     path: distDir,
     filename: "[name].min.js",
-    umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
-    //不加下面几行，被引用会被报错
-    libraryTarget: "umd", // 采用通用模块定义
+    // 是否将模块名称作为 AMD 输出的命名空间
+    umdNamedDefine: true,
+    // 采用通用模块定义
+    libraryTarget: "umd",
     library: name
   },
   devtool: "#source-map",
@@ -144,13 +144,5 @@ module.exports = {
         canPrint: true
       })
     ]
-  },
-  node: {
-    setImmediate: false,
-    dgram: "empty",
-    fs: "empty",
-    net: "empty",
-    tls: "empty",
-    child_process: "empty"
   }
 };

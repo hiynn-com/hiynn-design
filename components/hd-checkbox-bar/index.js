@@ -1,7 +1,7 @@
+import React from "react";
 import { Carousel } from "antd";
 import axios from "axios";
 import classNames from "classnames";
-import React from "react";
 
 const returnName = "label";
 
@@ -24,7 +24,7 @@ class HdCheckboxBar extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (this.props.url) {
       this.fetchOptions(this.props.url);
     }
