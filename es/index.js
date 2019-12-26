@@ -2,7 +2,7 @@ import HdLayout from "./layout";
 import HdMaster from "./master";
 import HdMenus from "./menus";
 import HdCard from "./card";
-import HdArticle from "./article";
+import Article from "./article";
 import HdComment from "./comment";
 import HGroup from "./hgroup";
 import VGroup from "./vGroup";
@@ -21,13 +21,13 @@ import HdButton from "./hd-button";
 import HdRadio from "./hd-radio";
 import EcharsTitle from "./echars-title";
 import HdCheckboxBar from "./hd-checkbox-bar";
-export { HdLayout, HdMaster, HdMenus, HdCard, HdArticle, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEcharts, HdAdmin, HdDatePicker, HdDropDown, HdFormValidation, HdRanking, HdSelect, HdTab, HdButton, HdRadio, EcharsTitle, HdCheckboxBar };
+export { HdLayout, HdMaster, HdMenus, HdCard, Article, HdComment, HGroup, VGroup, CodeArea, Panel, HdFilter, HdEcharts, HdAdmin, HdDatePicker, HdDropDown, HdFormValidation, HdRanking, HdSelect, HdTab, HdButton, HdRadio, EcharsTitle, HdCheckboxBar };
 export default {
   HdLayout: HdLayout,
   HdMaster: HdMaster,
   HdMenus: HdMenus,
   HdCard: HdCard,
-  HdArticle: HdArticle,
+  Article: Article,
   HdComment: HdComment,
   HGroup: HGroup,
   VGroup: VGroup,

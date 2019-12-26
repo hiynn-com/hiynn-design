@@ -2,7 +2,7 @@ import HdLayout from "./layout";
 import HdMaster from "./master";
 import HdMenus from "./menus";
 import HdCard from "./card";
-import HdArticle from "./article";
+import Article from "./article";
 import HdComment from "./comment";
 import HGroup from "./hgroup";
 import VGroup from "./vGroup";
@@ -27,7 +27,7 @@ export {
   HdMaster,
   HdMenus,
   HdCard,
-  HdArticle,
+  Article,
   HdComment,
   HGroup,
   VGroup,
@@ -52,7 +52,7 @@ export default {
   HdMaster,
   HdMenus,
   HdCard,
-  HdArticle,
+  Article,
   HdComment,
   HGroup,
   VGroup,
