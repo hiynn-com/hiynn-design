@@ -47,7 +47,7 @@ const plugins = [
     {
       libraryName: "antd",
       // libraryDirectory: "es",
-      style: true // `style: true` 会加载 less 文件
+      style: "css" // `style: true` 会加载 less 文件
     },
     "antd"
   ],
@@ -55,7 +55,6 @@ const plugins = [
     "import",
     {
       libraryName: "react-code-previewer",
-      libraryDirectory: "es",
       style: true // `style: true` 会加载 less 文件
     },
     "rcd"
