@@ -139,4 +139,5 @@ gulp.task("dist-css", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-img", "copy-scss", "replace-indexjs", "compile-sass", "dist-css")));
+gulp.task("cssjs", gulp.series(gulp.parallel("copy-scss", "replace-indexjs")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-img", "compile-sass", "dist-css")));
