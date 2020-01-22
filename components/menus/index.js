@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Menu, Icon } from "antd";
-import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import cls from "classnames";
 
@@ -26,21 +25,21 @@ class HdMenus extends Component {
           {menu.children.map(children => {
             return children.show ? (
               <Menu.Item key={children.id}>
-                <NavLink to={children.url}>{children.title}</NavLink>
+                {/* <NavLink to={children.url}>{children.title}</NavLink> */}
               </Menu.Item>
             ) : null;
           })}
         </Menu.SubMenu>
       ) : (
-        menu.show && (
-          <Menu.Item key={menu.id}>
-            <NavLink to={menu.url}>
+          menu.show && (
+            <Menu.Item key={menu.id}>
+              {/* <NavLink to={menu.url}>
               {menu.icon ? <Icon type={menu.icon} /> : <Icon type="exclamation-circle" />}
               <span>{menu.title}</span>
-            </NavLink>
-          </Menu.Item>
+            </NavLink> */}
+            </Menu.Item>
+          )
         )
-      )
     );
     return _menus;
   };
