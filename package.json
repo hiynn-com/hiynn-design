@@ -1,6 +1,6 @@
 {
   "name": "hiynn-design",
-  "version": "0.3.34",
+  "version": "0.3.37",
   "description": "base on react and antd layout framework",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,8 +13,8 @@
   "scripts": {
     "build:css": "cd scripts && gulp compile",
     "build:umd": "cross-env BABEL_ENV=umd webpack --config scripts/webpack.config.umd.js",
-    "build:commonjs": "rimraf lib && cross-env BABEL_ENV=commonjs babel components -d lib --source-maps",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel components -d es --source-maps",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel components -d lib --source-maps",
+    "build:es": "cross-env BABEL_ENV=es babel components -d es --source-maps",
     "build:all": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css",
     "build:prod": "cross-env BABEL_ENV=preview webpack --config scripts/webpack.config.prod.js",
     "start": "cross-env BABEL_ENV=preview webpack-dev-server --port 7006 --open --config scripts/webpack.config.dev.js",
@@ -119,7 +119,7 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-apply": "^0.12.0",
     "postcss-cli": "^6.1.3",

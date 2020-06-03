@@ -52,6 +52,9 @@ import 'hiynn-design/dist/hiynn-design.css';
 - [JS 模块化 CommonJS/AMD/CMD/UMD/ES6Module 的区别](https://www.cnblogs.com/weiqinl/p/9940549.html)
 - [前端构建工具发展及其比较](https://juejin.im/entry/5ae5c8c9f265da0b9f400d8e)
 
+### 遗留问题
+- 在使用gulp编译组件的时候，打包到lib文件夹下的css.js文件没有进行commonjs的编译
+
 ### License
 
 Hiynn Design is [MIT licensed](./LICENSE).
