@@ -5,6 +5,7 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
 const sass = require("gulp-sass");
+const babel = require("gulp-babel");
 
 const postcssPresetEnv = require("postcss-preset-env");
 const postcssImport = require("postcss-import");
@@ -44,7 +45,7 @@ gulp.task("copy-scss", () => {
 });
 
 // 根据 index.js 创建一个全新的 css.js 供按需加载 styel:'css' 使用
-gulp.task("replace-indexjs", () => {
+gulp.task("es-css-js", () => {
   return gulp
     .src(indexJsDir)
     .pipe(sourcemaps.init())
@@ -56,8 +57,28 @@ gulp.task("replace-indexjs", () => {
       })
     )
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(libDir))
     .pipe(gulp.dest(esDir));
+});
+
+// 使用gulp-babel编译css.js为commonjs文件
+gulp.task("lib-css-js", () => {
+  return gulp
+    .src(indexJsDir)
+    .pipe(sourcemaps.init())
+    .pipe(replace("scss", "css"))
+    .pipe(
+      rename(function(path) {
+        path.basename = "css";
+        path.extname = ".js";
+      })
+    )
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"]
+      })
+    )
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest(libDir));
 });
 
 // 编译 sass 文件到 es 和 lib 文件夹下
@@ -139,4 +160,4 @@ gulp.task("dist-css", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-img", "copy-scss", "replace-indexjs", "compile-sass", "dist-css")));
+gulp.task("compile", gulp.series(gulp.parallel("copy-img", "copy-scss", "es-css-js", "lib-css-js", "compile-sass", "dist-css")));
