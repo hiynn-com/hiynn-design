@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["searchForm/style/index.scss"],"sourcesContent":["@import \"../../styles/vars.scss\";\n@import \"../../styles/animate.scss\";\n\n.hd-searchForm-box {\n  margin-top: 20px;\n  margin-left: 20px;\n}\n"],"file":"index.scss"}

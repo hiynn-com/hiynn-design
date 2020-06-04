@@ -1,0 +1,51 @@
+.hd-checkbox-bar {
+  .ant-carousel {
+    line-height: 1;
+
+    .slick-slide {
+      pointer-events: auto !important;
+
+      &+.slick-slide {
+        margin-left: 5px;
+      }
+    }
+
+    .slick-prev,
+    .slick-prev:hover,
+    .slick-prev:focus-within {
+      background: url("../image/arrow-prev.png") no-repeat center;
+    }
+
+    .slick-next,
+    .slick-next:hover,
+    .slick-next:focus-within {
+      background: url("../image/arrow-next.png") no-repeat center;
+    }
+  }
+
+  .hd-checkbox {
+    height: 20px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background-color: rgba(20, 150, 241, 0.17);
+    color: #1496f1;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+
+    .hd-checkbox-checked {
+      background-color: rgba(20, 150, 241, 0.57);
+      color: #ffffff;
+    }
+
+    .hd-checkbox-icon {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 6px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+  }
+}

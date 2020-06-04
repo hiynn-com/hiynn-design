@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../components/layout/style/index.js"],"names":[],"mappings":"AAAA,OAAO,yBAAP;AACA,OAAO,cAAP;AACA,OAAO,8BAAP","sourcesContent":["import \"../../styles/index.scss\";\nimport \"./index.scss\";\nimport \"../../menus/style/index.scss\";\n"],"file":"index.js"}

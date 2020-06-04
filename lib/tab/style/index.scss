@@ -1,0 +1,47 @@
+@import "../../styles/vars.scss";
+@import "../../styles/animate.scss";
+
+.ant-tabs-ink-bar-animated {
+  width: 95px !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active {
+  min-width: 95px;
+  text-align: center;
+}
+
+.ant-tabs-ink-bar {
+  width: 95px !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+  min-width: 95px;
+  text-align: center;
+}
+
+.ant-tabs {
+  background: $verse-background-color;
+}
+
+.ant-tabs {
+  color: #fff;
+}
+
+.ant-tabs-bar {
+  border-bottom: 1px solid #076373;
+}
+
+.ant-tabs-tab-prev,
+.ant-tabs-tab-next {
+  color: #fff;
+}
+
+.ant-tabs-tab-btn-disabled,
+.ant-tabs-tab-btn-disabled:hover {
+  color: #fff;
+}
+
+.ant-tabs-tab-prev:hover,
+.ant-tabs-tab-next:hover {
+  color: #fff;
+}

@@ -1,4 +1,6 @@
 const style = require("ansi-styles");
+const ProgressBar = require("progress");
+const chalk = require("chalk");
 
 let babel_env = process.env["BABEL_ENV"];
 let loose = false,
@@ -24,7 +26,7 @@ switch (babel_env) {
 }
 
 if (babel_env) {
-  console.log(`${style.blue.open}------ build by ${babel_env.toUpperCase()} ------ ${style.bgColor.close}`);
+  // console.log(`${style.blue.open}------ build by ${babel_env.toUpperCase()} ------ ${style.bgColor.close}`);
 }
 
 //useBuiltIns: true 如果为 true 且引入了polyfill
@@ -60,4 +62,23 @@ const plugins = [
     "rcd"
   ]
 ];
-module.exports = { presets, plugins };
+if (babel_env != "umd") {
+  var bar = new ProgressBar(`:bar ${chalk.green.bold(":percent")} (:current/:total) Build ${chalk.green.bold(babel_env.toUpperCase())}`, {
+    complete: chalk.green.bold("█"),
+    incomplete: chalk.white.bold("█"),
+    width: 20,
+    total: 15,
+    callback: () => {
+      console.log("\r");
+    }
+  });
+  var timer = setInterval(function() {
+    bar.tick();
+    if (bar.complete) {
+      // console.log("\ncomplete\n");
+      clearInterval(timer);
+    }
+  }, 100);
+}
+
+module.exports = { presets, plugins, comments: false };

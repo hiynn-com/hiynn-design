@@ -25,7 +25,9 @@ const esDir = resolve("../es");
 const scssDir = resolve("../components/**/*.scss");
 const indexJsDir = resolve("../components/**/style/index.js");
 const imgDir = resolve("../components/**/*.png");
-
+const progress = require("progress-stream");
+const ProgressBar = require("progress");
+const chalk = require("chalk");
 // 复制 img 文件到 lib es 文件夹下
 gulp.task("copy-img", () => {
   return gulp
@@ -160,4 +162,10 @@ gulp.task("dist-css", () => {
   );
 });
 
-gulp.task("compile", gulp.series(gulp.parallel("copy-img", "copy-scss", "es-css-js", "lib-css-js", "compile-sass", "dist-css")));
+gulp.task(
+  "compile",
+  gulp.series(gulp.parallel("copy-img", "copy-scss", "es-css-js", "lib-css-js", "compile-sass", "dist-css"), function(cb) {
+    console.log("complete");
+    cb();
+  })
+);

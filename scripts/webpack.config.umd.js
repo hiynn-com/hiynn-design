@@ -7,6 +7,8 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 const postcssPresetEnv = require("postcss-preset-env");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ProgressBarPlugin = require("progress-bar-webpack-plugin");
+const chalk = require("chalk");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
@@ -16,6 +18,8 @@ const distDir = path.join(process.cwd(), "dist");
 module.exports = {
   mode: "production",
   entry: { [name]: "./components/index.js" },
+  // 控制 Console输出结果
+  stats: "errors-only",
   output: {
     // path: resolve("dist"), // 输出目录
     path: distDir,
@@ -117,9 +121,19 @@ module.exports = {
   // https://stackoverflow.com/questions/45818937/webpack-uncaught-referenceerror-require-is-not-defined
   externals: [nodeExternals()],
   plugins: [
+    // 显示进度条
+    new ProgressBarPlugin({
+      format: `:bar ${chalk.green.bold(":percent")} (:current/:total) Build ${chalk.green.bold("UMD")}`,
+      clear: false,
+      complete: chalk.green.bold("█"),
+      incomplete: chalk.white.bold("█"),
+      summary: false
+    }),
+    // 删除要编译的文件夹
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [distDir]
     }),
+    // 压缩js
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
